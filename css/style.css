@@ -33,6 +33,10 @@ body {
   z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
+section {
+  scroll-margin-top: 60px; /* Adjust this value to match the height of your header */
+}
+
 .logo-circle {
   position: absolute;
   right: 10px; /* Adjust as needed */
@@ -165,7 +169,7 @@ body {
   font-size: 20px;
   font-weight: italic;
   color: #5e5e5e;
-  margin-left: -40px; /* Adjust this value to shift more left */
+  margin-left: -20px; /* Adjust this value to shift more left */
   margin-top: 40px;
   display: flex;
   align-items: center;
@@ -312,57 +316,8 @@ main {
   margin: 0;
   font-size: 14px;
   color: #cccccc;
-}
-
-/* .top-row,
-.middle-row,
-.bottom-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.project-name {
-  margin: 0;
-  font-size: 20px;
-  color: #ffffff;
-}
-
-.view-live {
-  font-size: 14px;
-  color: #4caf50;
   text-decoration: none;
 }
-
-.project-period {
-  margin-top: -5px;
-  font-size: 14px;
-  color: #a1a1a1;
-}
-
-.used-tech {
-  margin: 0;
-  font-size: 14px;
-  color: #cccccc;
-}
-
-.view-source {
-  font-size: 14px;
-  color: #4caf50;
-  text-decoration: none;
-}
-
-/* Adjust specific styles if needed */
-/* .card-content a:hover {
-  text-decoration: underline;
-  color: #fff200;
-  
-}
-
-.card-link {
-  text-decoration: none;
-} */
-
 
 .knowledge-title {
   text-align: center;
@@ -404,6 +359,103 @@ main {
   margin: 10px;
   margin-top: -15px;
   color: #fff;
+}
+
+.exp-title {
+  text-align: center;
+  font-size: 18px;
+  color: #ababab;
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.exp-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.exp-card {
+  background-color: #1c1f2b;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.exp-header {
+  background-image: url(../media/image/Wow-Momo-Foods.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 75px;
+  width: 150px;
+  border-radius: 15px;
+  margin-top: -35px;
+}
+
+.exp-content h3 {
+  color: white;
+}
+
+.designation {
+  font-size: 20px;
+  color: white;
+}
+
+.exp-content p {
+  color: #bebebe;
+}
+
+.edu-title {
+  text-align: center;
+  font-size: 18px;
+  color: #ababab;
+  margin-top: 5px;
+}
+
+.edu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.edu-card {
+  background-color: #1c1f2b;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.edu-header {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -45px;
+}
+
+.edu-content h3 {
+  color: white;
+}
+
+.edu-content p {
+  color: #aeaeae;
+}
+
+.course {
+  font-size: 20px;
+  color: white;
 }
 
 .highlight {
@@ -502,7 +554,6 @@ main {
   .menu-toggle {
     display: none;
   }
-
 }
 
 /* Media query for mobile view */
