@@ -1,4 +1,4 @@
-/* Define custom colors */
+/* Define custom colors for Dark Theme */
 :root {
   --primary-color: #0d1b2a; 
   --card-color-1: #1b263b;
@@ -12,6 +12,23 @@
   --overlay-color: #00000099;
   --gradient-color: linear-gradient(to right, #15616d, #000000);
 }
+
+/* Define custom colors for Light Theme */
+/* :root {
+  --primary-color: #ffffff;
+  --gradient-color: linear-gradient(to right, #15616d, #000000);
+  --profile-name:black;
+  --card-color-1: #b5bac3;
+  --card-color-2: #595959;
+  --card-font-1:#000000;
+  --card-font-2:#000000;
+  --card-font-3:#000000;
+  --font-color-1: #000000;
+  --font-color-2: #000000;
+  --font-color-3: #000000;
+  --overlay-color: #00000099;
+} */
+
 
 /* Base styles */
 body {
@@ -271,6 +288,12 @@ main {
   margin-top: 10px; /* Remove top margin since it's now managed by the container */
 }
 
+.email-button a:hover,
+.resume-button a:hover {
+  color: #07bbf7;/* Remove top margin since it's now managed by the container */
+  box-shadow: 0 2px 8px #07bbf7;
+}
+
 .email-button a, 
 .resume-button a {
   display: inline-block;
@@ -460,12 +483,6 @@ main {
 .exp-content {
   color: var(--card-font-2);
 }
-
-/* .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 #com-des {
   color: var(--font-color-1);

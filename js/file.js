@@ -37,21 +37,6 @@ function handleSwipe() {
 }
 
 /**
- * Filters cards based on the search input
- */
-function filterCards() {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-
-    cardLinks.forEach(cardLink => {
-        const cardContent = cardLink.querySelector('.card-content');
-        const title = cardContent.querySelector('h3').innerText.toLowerCase();
-        const description = cardContent.querySelector('p').innerText.toLowerCase();
-
-        cardLink.style.display = (title.includes(searchTerm) || description.includes(searchTerm)) ? 'block' : 'none';
-    });
-}
-
-/**
  * Scrolls smoothly to the given section
  */
 function scrollToSection(section) {
