@@ -200,6 +200,10 @@ section {
   margin-top: 30px;
 }
 
+.sidebar ul li :hover {
+  color: #07bbf7;
+}
+
 .sidebar .section-title {
   font-size: 20px;
   font-weight: italic;
@@ -248,7 +252,7 @@ main {
 }
 
 .profile-image {
-  background-image: url('../media/image/profileImage.jpeg');
+  background-image: url('/media/image/profileImage.jpeg');
   background-size: cover;
   background-position: center;
   width: 100px;
@@ -336,6 +340,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   height: 300px; /* Adjust this height to ensure square cards */
+  transition: opacity 0.5s, height 0.5s;
+  overflow: hidden;
+  pointer-events: auto; /* Ensures the card is interactable */
 }
 
 .card:hover {

@@ -117,3 +117,26 @@ window.onscroll = function() {
 document.getElementById("scrollButton").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+  
+    searchInput.addEventListener('input', function() {
+      const query = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const technologies = card.querySelector('p').textContent.toLowerCase();
+        if (title.includes(query) || technologies.includes(query)) {
+          card.style.opacity = '1';
+          card.style.pointerEvents = 'auto';
+        } else {
+          card.style.opacity = '0';
+          card.style.pointerEvents = 'none';
+        }
+      });
+    });
+});
+  
+  
+  
