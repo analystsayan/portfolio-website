@@ -252,8 +252,7 @@ main {
 }
 
 .profile-image {
-  background-color: white;
-  background-image: url('/media/image/profileImage.jpeg');
+  background-image: url('/media/image/profileimage.jpeg');
   background-size: cover;
   background-position: center;
   width: 100px;
