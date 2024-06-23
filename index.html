@@ -15,6 +15,8 @@ summary of the key components and functionalities: -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <!-- Font Awesome Kit -->
   <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
 </head>
@@ -31,9 +33,7 @@ summary of the key components and functionalities: -->
         <input type="search" placeholder="Search keywords" id="searchInput">
       </div>
     </div>
-    <div class="logo-circle">
-      <a href="index.html"><img src="media/image/logo.png" alt="Logo"></a>
-    </div>
+    <button class="toggle" id="theme-switch">🌓</button>
   </header>
 
   <!-- Three-line menu icon -->
@@ -51,6 +51,7 @@ summary of the key components and functionalities: -->
       <li><a href="#" id="techStackLink"><i class="fa-solid fa-wand-magic-sparkles"></i>TechStack</a></li>
       <li><a href="#" id="experienceLink"><i class="fas fa-briefcase"></i> Experience</a></li>
       <li><a href="#" id="educationLink"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#"><i class="fas fa-paintbrush"></i>Hobby</a></li>
       <!-- <li><a href="#"><i class="fas fa-fire"></i>Trending</a></li> -->
       <li class="section-title">Social</li>
       <li><a href="https://linkedin.openinapp.co/8yt54" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
@@ -88,7 +89,33 @@ summary of the key components and functionalities: -->
       <h2 class="projects-title">My Projects</h2>
       <div class="card-container">
         <div class="card">
-          <div class="card-image" style="background-image: url(media/image/portfolioImage3.png);"></div>
+          <div class="card-image" style="background-image: url(media/image/HrDataAnalytics.jpg);"></div>
+          <div class="card-content">
+            <div class="card-text">
+              <h3>HR Data Analytics</h3>
+              <p>Python, Power BI, MS Excel</p>
+              <div class="link-section">
+                <a class="link-highlight" href="" target="_blank">Live</a>
+                <a class="link-highlight" href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image" style="background-image: url(https://help.nflxext.com/43e0db2f-fea0-4308-bfb9-09f2a88f6ee4_what_is_netflix_1_en.png);"></div>
+          <div class="card-content">
+            <div class="card-text">
+              <h3>Netflix Clone</h3>
+              <p>HTML, CSS, Java Script</p>
+              <div class="link-section">
+                <a class="link-highlight" href="" target="_blank">Live</a>
+                <a class="link-highlight" href="" target="_blank">Source Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image" style="background-image: url(media/image/portfolioImage.png);"></div>
           <div class="card-content">
             <div class="card-text">
               <h3>Portfolio Website</h3>
@@ -101,40 +128,14 @@ summary of the key components and functionalities: -->
           </div>
         </div>
         <div class="card">
-          <div class="card-image" style="background-image: url(media/image/inprogress.png);"></div>
-          <div class="card-content">
-            <div class="card-text">
-              <h3></h3>
-              <p></p>
-              <div class="link-section">
-                <a class="link-highlight" href="" target="_blank">Live</a>
-                <a class="link-highlight" href="" target="_blank">Source Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image" style="background-image: url(media/image/inprogress.png);"></div>
-          <div class="card-content">
-            <div class="card-text">
-              <h3></h3>
-              <p></p>
-              <div class="link-section">
-                <a class="link-highlight" href="" target="_blank">Live</a>
-                <a class="link-highlight" href="" target="_blank">Source Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image" style="background-image: url(media/image/amazon-clone.webp);"></div>
+          <div class="card-image" style="background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);"></div>
           <div class="card-content">
             <div class="card-text">
               <h3>Amazon Clone</h3>
               <p>HTML, CSS, JavaScript</p>
               <div class="link-section">
                 <a class="link-highlight" href="#" target="_blank">Live</a>
-                <a class="link-highlight" href="https://github.com/analystsayan/AmazonClone" target="_blank">Source Code</a>
+                <a class="link-highlight" href="#" target="_blank">Source Code</a>
               </div>
             </div>
           </div>
@@ -195,11 +196,20 @@ summary of the key components and functionalities: -->
       <h2 class="exp-title">My Experience</h2>
       <div class="exp-container">
         <div class="exp-card">
+          <div class="exp-header" style="background-image: url('https://scontent.fccu10-1.fna.fbcdn.net/v/t39.30808-6/438778191_839059834920706_4239724563791940726_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=NpUUvrLUQncQ7kNvgE4Fl3I&_nc_ht=scontent.fccu10-1.fna&oh=00_AYCjV0lOGovwWClc-A53faiBOB8FR-wKlQKf3q2T0JrabQ&oe=667BBB93');"></div>
+          <div class="exp-content">
+            <h3 id="com-des">Parekh Integrated Services Pvt. Ltd.</h3>
+            <p id="com-des">Executive</p>
+            <p>June,2024 - Present</p>
+            <p>Full Time, In office</p>
+          </div>
+        </div>
+        <div class="exp-card">
           <div class="exp-header" style="background-image: url(media/image/Wow-Momo-Foods.jpg);"></div>
           <div class="exp-content">
             <h3 id="com-des">Wow Momo Foods Pvt. Ltd.</h3>
             <p id="com-des">Senior Team Member<br>☆☆☆</p>
-            <p>Dec,2023 - Present</p>
+            <p>Dec,2023 - June,2024</p>
             <p>Full time, In office</p>
           </div>
         </div>

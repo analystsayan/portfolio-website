@@ -1,34 +1,66 @@
 /* Define custom colors for Dark Theme */
-:root {
+
+:root.dark-theme {
   --primary-color: #0d1b2a; 
   --card-color-1: #1b263b;
   --card-color-2: #415a77;
+  --card-color-3: #23314f;
   --card-font-1:#ffffff;
   --card-font-2:#d6d6d6;
   --card-font-3:#778da9;
+  --card-link-hover-font: #00ff00;
+  --card-link-hover-shadow: 0 2px 8px #00ff00;
   --font-color-1: #ffffff;
   --font-color-2: #c3c3c3;
   --font-color-3: #6a6a6a;
   --overlay-color: #00000099;
-  --gradient-color: linear-gradient(to right, #15616d, #000000);
+  --card-color-link:#c8c8c8;
+  --action-bg: #feff16;
+  --action-font: #000000;
+  --action-hover-shadow: 0 2px 8px #000000;
+  --action-hover-font: #000000;
+  --profile-bg: linear-gradient(to right, #15616d, #1b263b);
+  --profile-name:#ffffff;
+  --profile-username: #ffffffad;
+  --sidebar-hover-font: #feff16;
+  --theme-switch-font: #ffffff;
+  --theme-switch-bg: #415a77;
+  --scroll-button-font: #ffffff;
+  --scroll-button-bg: #0d1b2a;
+  --exp-header-shadow: #ffffff93;
 }
 
 /* Define custom colors for Light Theme */
-/* :root {
+
+:root.light-theme {
   --primary-color: #ffffff;
-  --gradient-color: linear-gradient(to right, #15616d, #000000);
-  --profile-name:black;
-  --card-color-1: #b5bac3;
-  --card-color-2: #595959;
+  --card-color-1: #cbf3f0;
+  --card-color-2: #ffbf69;
+  --card-color-3: #2ec4b6;
   --card-font-1:#000000;
   --card-font-2:#000000;
   --card-font-3:#000000;
+  --card-link-hover-font: #e63946;
+  --card-link-hover-shadow: 0 2px 8px #e63946;
   --font-color-1: #000000;
-  --font-color-2: #000000;
+  --font-color-2: #4b4b4b;
   --font-color-3: #000000;
   --overlay-color: #00000099;
-} */
-
+  --card-color-link:#3a3737;
+  --action-bg: #e63946;
+  --action-font: #ffffff;
+  --action-hover-shadow: 0 2px 8px #000000;
+  --action-hover-font: #ffffff;
+  --profile-bg: linear-gradient(to right, #f0ebd8, #cbf3f0);
+  --profile-name:#000000;
+  --profile-username: #0000008e;
+  --sidebar-hover-font: #2ec4b6;
+  --theme-switch-font: #ffffff;
+  --theme-switch-bg: #2ec4b6;
+  --scroll-button-font: #000000;
+  --scroll-button-bg: #cbf3f0;
+  --exp-header-shadow: #000000;
+}
 
 /* Base styles */
 body {
@@ -72,26 +104,20 @@ section {
   scroll-margin-top: 60px; /* Adjust this value to match the height of your header */
 }
 
-.logo-circle {
+#theme-switch {
+  color: var(--theme-switch-font);
+  background-color: var(--theme-switch-bg);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
   position: absolute;
-  right: 10px; /* Adjust as needed */
+  right: 15px; /* Adjust as needed */
   top: 55%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 15px;
-}
-
-.logo-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  margin-bottom: 5px;
+  font-size: 32px;
 }
 
 .search-bar {
@@ -167,7 +193,7 @@ section {
 /* Sidebar styles */
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: -270px;
   width: 270px;
   height: 100%;
@@ -192,16 +218,17 @@ section {
 }
 
 .sidebar ul li a {
-  color: var(--font-color-2);
+  color: var(--font-color-1);
+  /* font-family: poppins; */
   text-decoration: none;
   font-size: 22px;
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .sidebar ul li :hover {
-  color: #07bbf7;
+  color: var(--sidebar-hover-font);
 }
 
 .sidebar .section-title {
@@ -248,7 +275,7 @@ main {
   align-items: center;
   padding: 20px;
   text-align: center;
-  background-image: var(--gradient-color);
+  background-image: var(--profile-bg);
 }
 
 .profile-image {
@@ -273,13 +300,13 @@ main {
 
 .profile-name {
   font-size: 28px;
-  color: var(--font-color-1);
+  color: var(--profile-name);
   font-family: 'Caudex', serif;
 }
 
 .username {
   font-size: 16px;
-  color: var(--font-color-2);
+  color: var(--profile-username);
 }
 
 .button-container {
@@ -294,15 +321,15 @@ main {
 
 .email-button a:hover,
 .resume-button a:hover {
-  color: #07bbf7;/* Remove top margin since it's now managed by the container */
-  box-shadow: 0 2px 8px #07bbf7;
+  color: var(--action-hover-font);/* Remove top margin since it's now managed by the container */
+  box-shadow: var(--action-hover-shadow);
 }
 
 .email-button a, 
 .resume-button a {
   display: inline-block;
-  background-color: var(--primary-color); /* Button background color */
-  color: var(--font-color-2); /* Button text color */
+  background-color: var(--action-bg); /* Button background color */
+  color: var(--action-font); /* Button text color */
   padding: 10px 10px; /* Adjust padding as needed */
   border-radius: 40px; /* Adjust border radius to round the button */
   text-decoration: none; /* Remove underline from link */
@@ -381,23 +408,18 @@ main {
   text-decoration: none;
 }
 
-.link-section {
-  display: inline;
-  color: #ffffff;
-}
-
 .link-highlight {
   background-color: var(--primary-color); /* Highlight background color */
   padding: 5px 10px;
   border-radius: 5px;
   display: inline-block;
   margin: 10px 0;
-  color: #9cb0c8;
+  color: var(--card-color-link);
 }
 
 .link-highlight:hover {
-  color: #89df50;
-  box-shadow:0 2px 15px #20824a;
+  color: var(--card-link-hover-font);
+  box-shadow: var(--card-link-hover-shadow);
 }
 
 .knowledge-title {
@@ -485,6 +507,7 @@ main {
   width: 230px;
   border-radius: 15px;
   margin-top: -45px;
+  box-shadow: 0 2px 8px var(--exp-header-shadow);
 }
 
 .exp-content {
@@ -512,7 +535,7 @@ main {
 }
 
 .edu-card {
-  background-color: var(--card-color-1);
+  background-color: var(--card-color-3);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -658,7 +681,7 @@ main {
   .username {
     margin-top: 5px; /* Add margin between name and username */
     font-size: 16px; /* Reset font size */
-    color: var(--font-color-2); /* Reset color */
+    color: var(--profile-username); /* Reset color */
   }
 
   .search-bar {
@@ -709,10 +732,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   z-index: -1;
 }
 .scroll-button {
-  color: #ffffff;
+  color: var(--scroll-button-font);
   width: 50px;
   height: 50px;
-  background-color: #0d1b2a;
+  background-color: var(--scroll-button-bg);
   border: none;
   border-radius: 50%;
   cursor: pointer;
