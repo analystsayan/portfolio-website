@@ -24,7 +24,9 @@
   --profile-username: #ffffffad;
   --sidebar-hover-font: #feff16;
   --theme-switch-font: #ffffff;
-  --theme-switch-bg: #415a77;
+  --theme-switch-image: url('https://cdn-icons-png.flaticon.com/512/5261/5261906.png');
+  --theme-switch-bg: #feff16;
+  --theme-switch-shadow: #ffffff;
   --scroll-button-font: #ffffff;
   --scroll-button-bg: #0d1b2a;
   --exp-header-shadow: #ffffff93;
@@ -54,9 +56,11 @@
   --profile-bg: linear-gradient(to right, #f0ebd8, #cbf3f0);
   --profile-name:#000000;
   --profile-username: #0000008e;
-  --sidebar-hover-font: #2ec4b6;
+  --sidebar-hover-font: #e63946;
   --theme-switch-font: #ffffff;
-  --theme-switch-bg: #2ec4b6;
+  --theme-switch-image: url('https://cdn-icons-png.flaticon.com/512/5261/5261906.png');
+  --theme-switch-bg: #e63946;
+  --theme-switch-shadow: #ffffff;
   --scroll-button-font: #000000;
   --scroll-button-bg: #cbf3f0;
   --exp-header-shadow: #000000;
@@ -106,17 +110,19 @@ section {
 
 #theme-switch {
   color: var(--theme-switch-font);
+  background-image: var(--theme-switch-image);
   background-color: var(--theme-switch-bg);
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50%;
-  height: 32px;
-  width: 32px;
+  border: none;
+  box-shadow: 0 0 8px var(--theme-switch-shadow);
+  height: 40px;
+  width: 40px;
   position: absolute;
   right: 15px; /* Adjust as needed */
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 32px;
 }
 
@@ -345,7 +351,8 @@ main {
   margin-top: 20px;
 }
 
-.card-container {
+.project-card-container {
+  font-family: poppins;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -353,11 +360,11 @@ main {
   margin-top: -15px;
 }
 
-.card-link {
+.project-card-link {
   text-decoration: none;
 }
 
-.card {
+.project-card {
   background-color: var(--card-color-1);
   border-radius: 15px;
   overflow: hidden;
@@ -370,36 +377,36 @@ main {
   pointer-events: auto; /* Ensures the card is interactable */
 }
 
-.card:hover {
+.project-card:hover {
   transform: scale(1.05); /* Zoom effect */
 }
 
-.card h3,
-.card p {
+.project-card h3,
+.project-card p {
   text-decoration: none; /* Remove underline from text */
 }
 
-.card-image {
+.project-card-image {
   flex: 2;
   background-size: cover;
   background-position: center;
   z-index: 1;
 }
 
-.card-content {
+.project-card-content {
   flex: 1;
   padding: 15px;
   text-align: center;
   text-decoration: none;
 }
 
-.card h3 {
+.project-card h3 {
   margin: 10px 0;
   font-size: 20px;
   color: var(--card-font-1);
 }
 
-.card p {
+.project-card p {
   margin: 0;
   font-size: 14px;
   color: var(--card-font-2);
@@ -429,6 +436,7 @@ main {
 }
 
 .knowledge-container {
+  font-family: poppins;
   margin-top: -50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -479,6 +487,7 @@ main {
 }
 
 .exp-container {
+  font-family: poppins;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -505,7 +514,7 @@ main {
   width: 230px;
   border-radius: 15px;
   margin-top: -45px;
-  box-shadow: 0 2px 8px var(--exp-header-shadow);
+  box-shadow: 0 0 8px var(--exp-header-shadow);
 }
 
 .exp-content {
@@ -525,6 +534,7 @@ main {
 }
 
 .edu-container {
+  font-family: poppins;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -544,7 +554,7 @@ main {
 }
 
 .edu-header:hover {
-  box-shadow: 0 8px 20px #415a77;
+  box-shadow: 0 0 20px #415a77;
   transform: scale(1.05); /* Zoom effect */
 }
 
