@@ -19,17 +19,17 @@
   --action-font: #000000;
   --action-hover-shadow: 0 2px 8px #000000;
   --action-hover-font: #000000;
-  --profile-bg: linear-gradient(to right, #15616d, #1b263b);
+  --profile-bg: linear-gradient(to right, #1b263b, #1b263b);
   --profile-name:#ffffff;
   --profile-username: #ffffffad;
   --sidebar-hover-font: #feff16;
   --theme-switch-font: #ffffff;
-  --theme-switch-image: url('https://cdn-icons-png.flaticon.com/512/5261/5261906.png');
   --theme-switch-bg: #feff16;
   --theme-switch-shadow: #ffffff;
   --scroll-button-font: #ffffff;
   --scroll-button-bg: #0d1b2a;
   --exp-header-shadow: #ffffff93;
+  --searchBar-component: #ffffff80;
 }
 
 /* Define custom colors for Light Theme */
@@ -46,7 +46,7 @@
   --card-link-hover-shadow: 0 2px 8px #e63946;
   --font-color-1: #000000;
   --font-color-2: #4b4b4b;
-  --font-color-3: #000000;
+  --font-color-3: #656464;
   --overlay-color: #00000099;
   --card-color-link:#3a3737;
   --action-bg: #e63946;
@@ -58,15 +58,18 @@
   --profile-username: #0000008e;
   --sidebar-hover-font: #e63946;
   --theme-switch-font: #ffffff;
-  --theme-switch-image: url('https://cdn-icons-png.flaticon.com/512/5261/5261906.png');
   --theme-switch-bg: #e63946;
   --theme-switch-shadow: #ffffff;
   --scroll-button-font: #000000;
   --scroll-button-bg: #cbf3f0;
   --exp-header-shadow: #000000;
+  --searchBar-component: #00000080;
 }
 
-/* Base styles */
+* {
+  text-decoration: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -74,12 +77,7 @@ body {
   background-color: var(--primary-color);
 }
 
-* {
-  text-decoration: none;
-}
-
-/* Container styles */
-.container {
+.header-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 10px;
@@ -110,7 +108,7 @@ section {
 
 #theme-switch {
   color: var(--theme-switch-font);
-  background-image: var(--theme-switch-image);
+  background-image: url('https://cdn-icons-png.flaticon.com/512/5261/5261906.png');
   background-color: var(--theme-switch-bg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -140,13 +138,13 @@ section {
   right: 35px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--font-color-3);
+  color: var(--searchBar-component);
 }
 
 .search-bar input {
   width: calc(100% - 30px); /* Stretch input to fill search bar */
   padding: 10px;
-  border: 2px solid var(--font-color-3);
+  border: 2px solid var(--searchBar-component);
   border-radius: 50px;
   background-color: var(--primary-color); /* Change input background color */
   color: var(--font-color-1); /* Change text color */
