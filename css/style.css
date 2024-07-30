@@ -28,7 +28,7 @@
   --theme-switch-shadow: #ffffff;
   --scroll-button-font: #ffffff;
   --scroll-button-bg: #0d1b2a;
-  --exp-header-shadow: #ffffff93;
+  --exp-header-shadow: #ffffff00;
   --searchBar-component: #ffffff80;
 }
 
@@ -62,7 +62,7 @@
   --theme-switch-shadow: #ffffff;
   --scroll-button-font: #000000;
   --scroll-button-bg: #cbf3f0;
-  --exp-header-shadow: #000000;
+  --exp-header-shadow: #00000000;
   --searchBar-component: #00000080;
 }
 
