@@ -36,14 +36,6 @@ function handleSwipe() {
     }
 }
 
-/**
- * Scrolls smoothly to the given section
- */
-function scrollToSection(section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-    closeSidebar();
-}
-
 // Event listener to toggle sidebar visibility
 menuToggle.addEventListener('click', function() {
     menuToggle.classList.toggle('active');
@@ -155,3 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', newTheme);
     });
 });
+
+
+

@@ -102,6 +102,10 @@ body {
   z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
+section {
+  scroll-margin-top: 60px; /* Adjust this value to match the height of your header */
+}
+
 #theme-switch {
   color: var(--theme-switch-font);
   background-image: url('https://cdn-icons-png.flaticon.com/512/5261/5261906.png');
@@ -234,6 +238,10 @@ body {
   font-size: 23px;
 }
 
+.sidebar:active {
+  color: var(--sidebar-hover-font);
+}
+
 .sidebar .section-title {
   font-size: 20px;
   font-weight: italic;
@@ -270,8 +278,314 @@ main {
   padding-top: 60px; /* Adjust this value based on the height of your header */
 }
 
-.footer {
+/* Profile Info styles */
+.profile-info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background-image: var(--profile-bg);
+}
+
+.profile-image {
+  background-image: url('/media/image/profileimage.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.profile-name {
+  font-size: 28px;
+  color: var(--profile-name);
+  font-family: 'Caudex', serif;
+}
+
+.username {
+  font-size: 16px;
+  color: var(--profile-username);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Adjust the gap between buttons as needed */
+}
+
+.email-button,
+.resume-button {
+  margin-top: 10px; /* Remove top margin since it's now managed by the container */
+}
+
+.email-button a:hover,
+.resume-button a:hover {
+  color: var(--action-hover-font);/* Remove top margin since it's now managed by the container */
+  box-shadow: var(--action-hover-shadow);
+}
+
+.email-button a, 
+.resume-button a {
+  display: inline-block;
+  background-color: var(--action-bg); /* Button background color */
+  color: var(--action-font); /* Button text color */
+  padding: 10px 10px; /* Adjust padding as needed */
+  border-radius: 40px; /* Adjust border radius to round the button */
+  text-decoration: none; /* Remove underline from link */
+}
+
+.email-button a i,
+.resume-button a i {
+  margin-right: 10px; /* Add spacing between icon and text */
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 18px;
+  color: var(--font-color-2);
+  margin-top: 20px;
+}
+
+.project-card-container {
+  font-family: poppins;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: -15px;
+}
+
+.project-card-link {
+  text-decoration: none;
+}
+
+.project-card {
+  background-color: var(--card-color-1);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Adjust this height to ensure square cards */
+  transition: opacity 0.5s, height 0.5s;
+  overflow: hidden;
+  pointer-events: auto; /* Ensures the card is interactable */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.project-card h3,
+.project-card p {
+  text-decoration: none; /* Remove underline from text */
+}
+
+.project-card-image {
+  flex: 2;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.project-card-content {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.project-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: var(--card-font-1);
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--card-font-2);
+  text-decoration: none;
+}
+
+.link-highlight {
+  background-color: var(--primary-color); /* Highlight background color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px 0;
+  color: var(--card-color-link);
+}
+
+.link-highlight:hover {
+  color: var(--card-link-hover-font);
+  box-shadow: var(--card-link-hover-shadow);
+}
+
+.knowledge-title {
+  text-align: center;
+  font-size: 18px;
+  color: var(--font-color-2);
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.knowledge-container {
+  font-family: poppins;
+  margin-top: -50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.knowledge-card {
+  background-color: var(--card-color-2);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.knowledge-content h4 {
+  margin-top: 5px;
+  color: var(--card-font-2);
+  padding: 10px;
+}
+
+.knowledge-content p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px;
+  margin-top: -15px;
   color: var(--font-color-1);
+}
+
+.highlight {
+  background-color: var(--primary-color); /* Highlight background color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.exp-title {
+  text-align: center;
+  font-size: 18px;
+  color: var(--font-color-2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.exp-container {
+  font-family: poppins;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.exp-card {
+  background-color: var(--card-color-1);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.exp-header {
+  background-color: #fffc57;
+  background-size:cover;
+  background-position: center;
+  height: 90px;
+  width: 230px;
+  border-radius: 15px;
+  margin-top: -45px;
+  box-shadow: 0 0 8px var(--exp-header-shadow);
+}
+
+.exp-content {
+  color: var(--card-font-2);
+}
+
+#com-des {
+  color: var(--font-color-1);
+}
+
+.edu-title {
+  text-align: center;
+  font-size: 18px;
+  color: var(--font-color-2);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.edu-container {
+  font-family: poppins;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.edu-card {
+  background-color: var(--card-color-3);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.edu-header:hover {
+  box-shadow: 0 0 20px #415a77;
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.edu-header {
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -45px;
+}
+
+.edu-content p {
+  color: var(--card-font-2);
+}
+
+#dig-dep {
+  color: var(--card-font-1);
+}
+
+.course {
+  font-size: 20px;
+}
+
+.footer {
+  color: var(--font-color-2);
   text-align: center;
 }
 
@@ -310,9 +624,81 @@ main {
     z-index: 1000; /* Ensure it stays on top of other elements */
   }
 
+  .search-bar {
+    margin-left: 350px;
+  }
+
+  .footer {
+    margin-left: 350px;
+  }
+
+  /* Profile Info */
+  .profile-info {
+    position: relative;
+    display: flex; /* Ensure profile info is displayed as flex */
+    justify-content: center; /* Center align the content */
+    padding: 33px;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 22px;
+    margin-right: 20px;
+
+  }
+
+  /* Profile Image */
+  .profile-image {
+    margin-right: 20px; /* Maintain spacing */
+  }
+
+  /*Profile-name */
+  .profile-details {
+    margin-top: -5px;
+  }
+
+  .email-button {
+    position: absolute;
+    top: 5px;
+    right: -200px;
+  }
+
+  .email-button{
+    padding-top: 49px;
+    margin-right: 160px;
+    margin-top: 10px; /* Remove top margin since it's now managed by the container */
+  }
+
   /* Hide the toggle bar */
   .menu-toggle {
     display: none;
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .profile-info {
+    flex-direction: row; /* Change flex-direction to row */
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center; /* Align items vertically */
+    text-align: left; /* Align text to the left */
+  }
+
+  .profile-image {
+    margin-right: 20px; /* Maintain spacing */
+  }
+
+  .profile-details {
+    margin-top: 0; /* Remove margin */
+  }
+
+  .username {
+    margin-top: 5px; /* Add margin between name and username */
+    font-size: 16px; /* Reset font size */
+    color: var(--profile-username); /* Reset color */
+  }
+
+  .search-bar {
+    margin-left: 55px;
   }
 }
 
@@ -373,62 +759,4 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 .scroll-button:focus {
   outline: none;
-}
-
-.secondbg {
-  background-color: black;
-  border-radius: 10px;
-  margin-right: 20px;
-  margin-left: 20px;
-  padding: 20px;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-}
-
-.img {
-  max-width: 100%;
-  height:auto;
-  align-items: center;
-  margin-top: -40px;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.name {
-  color: var(--action-bg);
-  text-align: center;
-  font-family: "Verdana","Helvetica";
-}
-
-.username {
-  color: white;
-  text-align: right;
-  font-family: "Caveat";
-  font-size: 24px;
-}
-
-.role {
-  color: white;
-  text-align: center;
-}
-
-.para {
-  color: var(--action-bg);
-  font-family: "Caveat";
-  font-size: 18px;
-  text-align: justify;
-}
-
-.userpara {
-  margin-top: -100px;
-}
-
-.button-container {
-  color: white;
-  background-color: #00ff00;
 }
