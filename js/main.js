@@ -2,9 +2,7 @@
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
-
-let touchStartX = 0;
-let touchEndX = 0;
+const searchIcon = document.querySelector('.search-icon');
 
 /**
  * Toggles the color of the menu toggle icon based on sidebar visibility
@@ -22,6 +20,22 @@ function closeSidebar() {
     sidebar.classList.remove('show');
     overlay.classList.remove('show');
     toggleMenuToggleColor();
+}
+
+// Function to toggle sidebar visibility
+function toggleSidebar() {
+    const isSidebarVisible = sidebar.classList.contains('show');
+    
+    if (isSidebarVisible) {
+      sidebar.classList.remove('show');
+      overlay.classList.remove('show');
+    } else {
+      sidebar.classList.add('show');
+      overlay.classList.add('show');
+    }
+    
+    // Ensure menu toggle button is always on top
+    menuToggle.style.zIndex = isSidebarVisible ? '1001' : '1001';
 }
 
 /**
@@ -71,3 +85,32 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', newTheme);
     });
 });
+
+let lastScrollY = window.scrollY;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > lastScrollY) {
+    // Scrolling down
+    header.style.top = '-100px'; // Move header out of view
+  } else {
+    // Scrolling up
+    header.style.top = '0'; // Bring header back into view
+  }
+  lastScrollY = window.scrollY;
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const footerName = document.querySelector('.footername');
+
+    footerName.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        document.querySelector('#top').scrollIntoView({
+            behavior: 'smooth', // Smooth scroll
+            block: 'start'      // Scroll to the start of the element
+        });
+    });
+});
+

@@ -1,3 +1,4 @@
+<a id="top"></a>
 <!-- The above code is an HTML document that represents a portfolio website for Analyst Sayan. Here is a
 summary of the key components and functionalities: -->
 <!DOCTYPE html>
@@ -6,8 +7,7 @@ summary of the key components and functionalities: -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnalystSayan-Portfolio</title>
-  <link rel="icon" type="png" 
-  href="media/image/favicon.png">
+  <link rel="icon" type="png" href="media/image/favicon.png">
   <link rel="image_src" href="media/image/websiteLogo.png">
   <!-- External CSS -->
   <link rel="stylesheet" href="css/portfolio.css">
@@ -23,37 +23,36 @@ summary of the key components and functionalities: -->
 
 <body>
   <!-- Header Section -->
-  <header class="header">
-    <div class="header-container">
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <div class="search-icon">
-          <i class="fas fa-search"></i>
-        </div>
-        <input type="search" placeholder="Search keywords" id="searchInput">
+  <div class="header">
+    <!-- Three-line menu icon -->
+    <div class="menu-toggle" id="menuToggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <div class="search-arrow">
+        <a><i class="fas fa-arrow-left"></i></a>
+      </div>
+      <input type="search" placeholder="Search keywords" id="searchInput">
+      <div class="search-icon">
+        <a><i class="fas fa-search"></i></a>
       </div>
     </div>
-    <button alt="Change-Theme" class="toggle" id="theme-switch"></button>
-  </header>
-
-  <!-- Three-line menu icon -->
-  <div class="menu-toggle" id="menuToggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
   </div>
 
   <!-- Sidebar Navigation -->
   <nav class="sidebar" id="sidebar">
     <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i>Portfolio</a></li>
-        <li><a href="Community.html"><i class="fa-solid fa-users"></i>Community</a></li>
-        <li class="section-title">Social</li>
-        <li><a href="https://linkedin.openinapp.co/8yt54" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://openinapp.link/ki4mu" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-        <li><a href="https://profile.google.com/qyefrf4a" target="_blank"><i class="fa-brands fa-google"></i>Notes</a></li>
-        <li><a href="https://openinapp.link/ewlip" target="_blank"><i class="fas fa-link"></i> Ohers</a></li>
+      <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+      <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i>Portfolio</a></li>
+      <li><a href="Community.html"><i class="fa-solid fa-users"></i>Community</a></li>
+      <li class="section-title">Social</li>
+      <li><a href="https://linkedin.openinapp.co/8yt54" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://openinapp.link/ki4mu" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+      <li><a href="https://profile.google.com/qyefrf4a" target="_blank"><i class="fa-brands fa-google"></i>Notes</a></li>
+      <button alt="Change-Theme" class="toggle" id="theme-switch"><i class="fa-solid fa-lightbulb"></i>&nbsp;Switch Theme</button>
     </ul>
   </nav>
 
@@ -63,7 +62,7 @@ summary of the key components and functionalities: -->
       <div class="profile-image" alt="Profile-Image"></div>
       <div class="profile-details">
         <div class="profile-name">Sayan Mondal</div>
-        <div class="username">@analystsayan</div>
+        <a class="username" href="https://openinapp.link/ewlip">@analystsayan</a>
         <div class="button-container">
           <div class="resume-button">
             <a alt="Resume" href="media/pdf/Resume_Sayan_Mondal_003.pdf">
@@ -81,7 +80,14 @@ summary of the key components and functionalities: -->
     
     <!-- Project Section -->
     <section id="projectSection">
-      <h2 class="projects-title">My Projects</h2>
+
+      <div class="all-projects">
+        <p class="projects-title">Featured Projects</p>
+        <a href="#" class="projects-title2">
+          All Projects <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
       <div class="project-card-container">
         <div class="project-card">
           <div class="project-card-image" style="background-image: url(media/image/HrDataAnalytics.jpg);"></div>
@@ -277,16 +283,12 @@ summary of the key components and functionalities: -->
   <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-container">
-      <p>&copy; 2024 Analyst Sayan</p>
+        <a class="footername" href="#top">Sayan Mondal</a>
+        <p>&copy; 2024 All rights reserved Sayan Mondal</p>
     </div>
   </footer>
 
-  <div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-    <button class="scroll-button" id="scrollButton">&#8593;</button>
-  </div>
-
   <!-- External JavaScript -->
-  <script src="js/file.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
