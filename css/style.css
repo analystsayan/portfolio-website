@@ -33,6 +33,8 @@
   --searchbaractive: #11253a;
   --placeholderfont:#ffffff6c;
   --aboutme:#ffffff;
+  --backgroundbg: linear-gradient(to right, #000000, #000000);
+  --bgoverlay: #0a1521a5;
 }
 
 /* Define custom colors for Light Theme */
@@ -70,6 +72,8 @@
   --searchbaractive: #e6e6e6;
   --placeholderfont:#000000a2;
   --aboutme:#000000;
+  --backgroundbg: linear-gradient(to right, #ff4665, #ff6430);
+  --bgoverlay: #0a1521a5;
 }
 
 *{
@@ -80,6 +84,7 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  background-color: var(--primary-color);
 }
 
 /* Header styles */
@@ -282,22 +287,61 @@ body {
   display: block; /* Show the overlay when the sidebar is open */
 }
 
-.baground {
-  background-image: var(--profile-bg);
-  height: 800px;
+.background {
+  height: 650px;
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+  justify-content: center;
 }
+
+.background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.background .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bgoverlay); /* Dark overlay */
+  z-index: 2;
+}
+
+.background .logocontainer,
+.background .details {
+  position: relative;
+  z-index: 3;
+  color: #fff; /* Ensure text is visible over the dark background */
+}
+
+.background .logocontainer, 
+.background .details {
+  position: relative;
+  z-index: 2; /* Ensures content appears on top of the video */
+  color: #fff; /* Ensure the text is visible over the video */
+  text-align: center;
+  padding: 20px;
+}
+
 
 .logocontainer {
   height:70px;
   width:70px;
-  padding-bottom: 200px;
-  padding-top: 50px;
+  position: relative;
+  bottom:150px;
 }
 
 .logocontainer img {
@@ -318,11 +362,11 @@ main {
 }
 
 .main22 h2{
-  color: black;
+  color: var(--font-color-1);
 }
 
 .main22 p{
-  color: black;
+  color: var(--font-color-2);
   padding-left: 20px;
   padding-right: 20px;
   text-justify: auto;
@@ -402,4 +446,51 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (max-width:600px) {
+  .picture {
+    width: 350px;
+  }
+  
+  .logocontainer {
+    height:90px;
+    width:90px;
+    padding-bottom: 200px;
+    padding-top: 50px;
+  }
+
+  .background {
+    height: 850px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    justify-content: center;
+  }
+}
+
+@media (min-width:800px) {
+  .details h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    color: White;
+    font-weight: bold;
+  }
+  
+  .details p {
+    color:rgba(255, 255, 255, 0.844);
+    font-size: 16px;
+  }
+
+  .logocontainer {
+    position: relative;
+    height:90px;
+    width:90px;
+    padding-bottom: 70px;
+    top: 10px;
+  }
 }

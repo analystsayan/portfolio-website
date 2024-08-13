@@ -96,6 +96,7 @@ body {
   position: fixed; /* Fix the header at the top */
   transition: top 0.3s; /* Smooth transition */
   right:-10px;
+  z-index: 999;
 }
 
 
@@ -364,17 +365,23 @@ main {
   margin-right: 10px; /* Add spacing between icon and text */
 }
 
+.all-projects {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .projects-title {
   text-align: center;
   color: var(--font-color-2);
-  margin-top: 20px;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .projects-title2 {
   text-align: center;
   color: var(--font-color-1);
-  margin-top: 20px;
   font-size: 14px;
   cursor: pointer;
   color: var(--font-color-2); /* Ensure text color is inherited */
