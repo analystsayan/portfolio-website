@@ -35,6 +35,7 @@
   --backgroundbg: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/media/image/osman-rana-yM3T1vYh8Oc-unsplash.jpg");
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #ffffff4b;
+  --mainbgimg: url(/media/image/adelin-preda--tOr_T4qTpQ-unsplash.jpg);
 }
 
 /* Define custom colors for Light Theme */
@@ -74,6 +75,7 @@
   --backgroundbg: linear-gradient(to right, #ff4665, #ff6430);
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #0000004b;
+  --mainbgimg: white;
 }
 
 *{
@@ -84,7 +86,9 @@
 
 body {
   text-decoration: none;
-  background-color: var(--primary-color);
+  background-image: var(--mainbgimg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #theme-switch {
@@ -253,6 +257,24 @@ html {
   scroll-behavior: smooth;
 }
 
+.details {
+  padding: 100px;
+  color:rgb(255, 255, 255);
+}
+
+.details p {
+  text-align: justify;
+  color:rgba(255, 255, 255, 0.844);
+  font-family: poppins;
+  font-size: 24px;
+}
+
+.details h6 {
+  padding: 20px;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 28px;
+}
+
 @media (max-width:1200px) {
   /* Header styles */
   .header {
@@ -331,7 +353,7 @@ html {
   }
 
   .background {
-    height: 850px;
+    height: 100vh;
     width: 100%;
     position: relative;
     display: flex;
@@ -369,6 +391,24 @@ html {
   .logocontainer img {
     max-width: 100%;
     height: auto;
+  }
+
+  .details {
+    padding: 10px;
+    color:rgb(255, 255, 255);
+  }
+  
+  .details p {
+    text-align: justify;
+    color:rgba(255, 255, 255, 0.844);
+    font-family: poppins;
+    font-size: 24px;
+  }
+  
+  .details h6 {
+    padding: 20px;
+    font-family: "Reenie Beanie", cursive;
+    font-size: 28px;
   }
 
   .main22 {
@@ -409,17 +449,14 @@ html {
 
   .main44 h2 {
     font-size: 38px;
-    font-family: "Reenie Beanie", cursive;
+    font-family: "Caveat", cursive;
+    font-size: 30px;
   }
 
   .main44 p {
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 35px;
-  }
-  
-  .details p {
-    color:rgba(255, 255, 255, 0.844);
   }
   
   .aboutme {
@@ -633,15 +670,6 @@ html {
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 35px;
-  }
-
-  .details {
-    color:rgb(255, 255, 255);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-
-  .details p {
-    color:rgba(255, 255, 255, 0.844);
   }
 
   .aboutme {
