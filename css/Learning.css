@@ -70,10 +70,13 @@
   --placeholderfont:#000000a2;
 }
 
-.progress {
+.progressscreen {
+  width: 100%;
+  height: 100vh;
   color: var(--font-color-1);
-  
   position: relative;
+  display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  font-size: 100px;
 }
