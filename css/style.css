@@ -258,13 +258,15 @@ html {
 }
 
 .details {
+  line-height: 15px;
   padding: 100px;
-  color:rgb(255, 255, 255);
+  color: red;
 }
 
 .details p {
+  line-height: 35px;
   text-align: justify;
-  color:rgba(255, 255, 255, 0.844);
+  color: #ffffffc4;
   font-family: poppins;
   font-size: 24px;
 }
@@ -273,6 +275,7 @@ html {
   padding: 20px;
   font-family: "Reenie Beanie", cursive;
   font-size: 28px;
+  color: #ffffffb1;
 }
 
 @media (max-width:1200px) {
@@ -385,7 +388,7 @@ html {
     height:70px;
     width:70px;
     position: relative;
-    bottom:150px;
+    bottom:90px;
   }
 
   .logocontainer img {
@@ -399,7 +402,8 @@ html {
   }
   
   .details p {
-    text-align: justify;
+    line-height: 35px;
+    text-align: center;
     color:rgba(255, 255, 255, 0.844);
     font-family: poppins;
     font-size: 24px;
@@ -409,6 +413,7 @@ html {
     padding: 20px;
     font-family: "Reenie Beanie", cursive;
     font-size: 28px;
+    color: #ffffffb7;
   }
 
   .main22 {
@@ -506,12 +511,6 @@ html {
     font-weight: bold;
   }
   
-  .details p {
-    color:rgba(255, 255, 255, 0.844);
-    font-size: 16px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
 
   .logocontainer {
     position: relative;
