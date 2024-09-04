@@ -1,7 +1,7 @@
 /* Define custom colors for Dark Theme */
 
 :root.dark-theme {
-  --primary-color: #0d1b2a; 
+  --primary-color: #0d1b2a;
   --card-color-1: #1b263b;
   --card-color-2: #415a77;
   --card-color-3: #23314f;
@@ -10,15 +10,14 @@
   --card-font-3:#778da9;
   --card-link-hover-shadow: 0 2px 8px #00ff00;
   --font-color-1: #ffffff;
-  --font-color-2: #ffffffc6;
+  --font-color-2: #ffffffa1;
   --font-color-3: #ffffff52;
   --overlay-color: #00000099;
   --card-color-link:#c8c8c8;
-  --action-bg: #feff16;
+  --action-bg: #f1faee;
   --action-font: #000000;
   --action-hover-shadow: 0 2px 8px #000000;
   --action-hover-font: #000000;
-  --profile-bg: linear-gradient(to right, #1b263b, #1b263b);
   --profile-name:#ffffff;
   --profile-username: #ffffffad;
   --sidebar-hover-font: #feff16;
@@ -34,17 +33,18 @@
   --aboutme:#ffffff;
   --backgroundbg: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/media/image/osman-rana-yM3T1vYh8Oc-unsplash.jpg");
   --bgoverlay: #0a1521a5;
-  --sidebar-shadow: 3px 0px 20px #ffffff4b;
-  --mainbgimg: url(/media/image/adelin-preda--tOr_T4qTpQ-unsplash.jpg);
+  --sidebar-shadow: 3px 0px 20px #ffffff30;
+  --mainbgimg: url("/media/image/adelin-preda--tOr_T4qTpQ-unsplash.jpg");
+  --aboutme-details:#00000032;
 }
 
 /* Define custom colors for Light Theme */
 
 :root.light-theme {
   --primary-color: #ffffff;
-  --card-color-1: #A8DADC;
-  --card-color-2: #457B9D;
-  --card-color-3: #1D3557;
+  --card-color-1: #CED4DA;
+  --card-color-2: #343A40;
+  --card-color-3: #212529;
   --card-font-1:#000000;
   --card-font-2:#000000;
   --card-font-3:#000000;
@@ -58,24 +58,31 @@
   --action-font: #1D3557;
   --action-hover-shadow: 0 2px 8px #000000;
   --action-hover-font: #ffffff;
-  --profile-bg: linear-gradient(to right, #ff4665, #ff6430);
   --profile-name:#000000;
   --profile-username: #0000008e;
   --sidebar-hover-font: #e63946;
   --theme-switch-font: #ffffff;
   --theme-switch-bg: #e63946;
-  --theme-switch-shadow: #ffffff;
+  --theme-switch-shadow: #f1faee;
   --scroll-button-font: #000000;
   --scroll-button-bg: #cbf3f0;
   --exp-header-shadow: #00000000;
   --searchBar-component: #00000080;
-  --searchbaractive: #e6e6e6;
+  --searchbaractive: #ADB5BD;
   --placeholderfont:#000000a2;
   --aboutme:#000000;
   --backgroundbg: linear-gradient(to right, #ff4665, #ff6430);
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #0000004b;
-  --mainbgimg: white;
+  --mainbgimg: #f1faee;
+  --aboutme-details:#ffffff00;
+}
+
+#mainbody {
+  background-image: var(--mainbgimg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 *{
@@ -86,9 +93,6 @@
 
 body {
   text-decoration: none;
-  background-image: var(--mainbgimg);
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #theme-switch {
@@ -99,6 +103,7 @@ body {
   padding: 10px;
   color: #000000;
   background-color: var(--font-color-3);
+  font-family: poppins;
   border-radius: 17px;
   border: none;
   cursor: pointer;
@@ -107,7 +112,6 @@ body {
 
 #theme-switch:hover {
   background-color: var(--sidebar-hover-font);
-  font-size: 15px;
 }
 
 /* Menu toggle button */
@@ -125,13 +129,12 @@ body {
   background-color: var(--font-color-2); /* Change to white */
   margin-bottom: 5px;
   border-radius: 10px; /* Adjust the roundness of the bars */
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Sidebar styles */
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 0px;
   left: -270px;
   width: 270px;
   height: 100%;
@@ -140,6 +143,7 @@ body {
   transition: left 0.3s ease;
   box-sizing: border-box;
   z-index: 1000;
+  padding: 80px 20px 20px 20px;
 }
 
 .sidebar.show {
@@ -149,48 +153,33 @@ body {
 
 .sidebar ul {
   list-style: none;
-  padding: 10px;
-  margin: 40px;
-}
-
-.sidebar ul li {
-  margin-bottom: 15px;
 }
 
 .sidebar ul li a {
   color: var(--font-color-1);
-  /* font-family: poppins; */
   text-decoration: none;
-  font-size: 22px;
+  font-size: 26px;
   display: flex;
-  align-items: left;
-  margin-top: 25px;
+  align-items:baseline;
+  padding-top: 25px;
   border-radius: 7px;
-  padding-left: 5px;
 }
 
 .sidebar ul li :hover {
   color: var(--sidebar-hover-font);
-  font-size: 23px;
-}
-
-.sidebar:active {
-  color: var(--sidebar-hover-font);
+  font-size: 27px;
 }
 
 .sidebar .section-title {
-  font-size: 20px;
-  font-weight: italic;
-  color: var(--font-color-3);
-  margin-left: -10px; /* Adjust this value to shift more left */
-  margin-top: 40px;
+  font-size: 22px;
+  padding-top: 25px;
+  color: var(--font-color-2);
   display: flex;
-  align-items: center;
-  margin-right: 10px;
+  align-items: left;
 }
 
 .sidebar ul li i {
-  margin-right: 20px; /* Spacing between icon and text */
+  padding-right: 20px;
 }
 
 /* Dark Overlay Styles */
@@ -260,13 +249,12 @@ html {
 .details {
   line-height: 15px;
   padding: 100px;
-  color: red;
 }
 
 .details p {
+  color: #ffffffd7;
   line-height: 35px;
   text-align: justify;
-  color: #ffffffc4;
   font-family: poppins;
   font-size: 24px;
 }
@@ -336,12 +324,14 @@ html {
     position:relative;
     left: 30px;
     z-index: 1;
+    cursor: pointer;
   }
   
   .search-icon {
     color: var(--font-color-1);
     position: relative;
     right:30px;
+    cursor: pointer;
   }
 
   .picture {
@@ -398,13 +388,13 @@ html {
 
   .details {
     padding: 10px;
-    color:rgb(255, 255, 255);
+    color:#ffffff;
   }
   
   .details p {
     line-height: 35px;
     text-align: center;
-    color:rgba(255, 255, 255, 0.844);
+    color:#ffffffd7;
     font-family: poppins;
     font-size: 24px;
   }
@@ -429,10 +419,7 @@ html {
   }
   
   .main22 p{
-    color: var(--font-color-2);
     padding: 20px;
-    text-justify: auto;
-    line-height: 22px;
   }
 
   .main33 {
@@ -462,6 +449,7 @@ html {
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 35px;
+    color: var(--font-color-2);
   }
   
   .aboutme {
@@ -500,14 +488,13 @@ html {
 
 @media (min-width:1200px) {
   main {
-    top: 60px;
     margin-left: 270px;
   }
 
   .details h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 60px;
-    color: White;
+    color: #ffffff;
     font-weight: bold;
   }
   
@@ -526,10 +513,9 @@ html {
 
   .sidebar {
     position: fixed;
-    top: 0px;
     left: 0px;
     width: 270px;
-    height: 100%;
+    height: 100vh;
     overflow-x: hidden;
     background-color: var(--primary-color);
     transition: left 0.3s ease;
@@ -596,6 +582,7 @@ html {
     position:relative;
     left: 30px;
     z-index: 1002;
+    cursor: pointer;
   }
   
   .search-icon {
@@ -603,6 +590,7 @@ html {
     position: relative;
     right:30px;
     z-index: 1002;
+    cursor: pointer;
   }
 
   .background {
@@ -632,11 +620,7 @@ html {
   }
 
   .main22 p{
-    color: var(--font-color-2);
     padding: 20px;
-    text-justify: auto;
-    line-height: 22px;
-    right: 0px;
   }
 
   .main33 {
@@ -656,6 +640,12 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: var(--aboutme-details);
+    margin-right: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #ffffff42;
   }
 
   .main44 h2 {
@@ -669,6 +659,7 @@ html {
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 35px;
+    color: var(--font-color-2);
   }
 
   .aboutme {
@@ -692,7 +683,6 @@ html {
 
   .footer {
     position:relative;
-    margin-top: 20px;
     padding:20px;
     color: white;
     align-items: center;

@@ -73,6 +73,7 @@
 .progressscreen {
   width: 100%;
   height: 100vh;
+  background-color: var(--primary-color);
   color: var(--font-color-1);
   position: relative;
   display: flex;

@@ -1,7 +1,6 @@
 /* Define custom colors for Dark Theme */
 
 :root.dark-theme {
-  --primary-color: #0d1b2a; 
   --card-color-1: #1b263b;
   --card-color-2: #415a77;
   --card-color-3: #23314f;
@@ -13,13 +12,13 @@
   --font-color-1: #ffffff;
   --font-color-2: #ffffffb8;
   --font-color-3: #ffffff52;
-  --overlay-color: #00000099;
+  --section-font: #E0E1DD;
   --card-color-link:#c8c8c8;
-  --action-bg: #feff16;
+  --action-bg: #f1faee;
   --action-font: #000000;
   --action-hover-shadow: 0 2px 8px #000000;
   --action-hover-font: #000000;
-  --profile-bg: linear-gradient(to right, #1b263b, #1b263b);
+  --profile-bg: #1b263b;
   --profile-name:#ffffff;
   --profile-username: #ffffffad;
   --sidebar-hover-font: #feff16;
@@ -39,10 +38,9 @@
 /* Define custom colors for Light Theme */
 
 :root.light-theme {
-  --primary-color: #ffffff;
-  --card-color-1: #A8DADC;
-  --card-color-2: #457B9D;
-  --card-color-3: #1D3557;
+  --card-color-1: #CED4DA;
+  --card-color-2: #343A40;
+  --card-color-3: #212529;
   --card-font-1:#000000;
   --card-font-2:#000000;
   --card-font-3:#000000;
@@ -51,13 +49,14 @@
   --font-color-1: #000000;
   --font-color-2: #0000009e;
   --font-color-3: #0000004f;
+  --section-font: #1D3557;
   --overlay-color: #00000099;
   --card-color-link:#3a3737;
-  --action-bg: #F1FAEE;
+  --action-bg: #f1faee;
   --action-font: #1D3557;
   --action-hover-shadow: 0 2px 8px #000000;
   --action-hover-font: #ffffff;
-  --profile-bg: linear-gradient(to right, #f0ebd8, #cbf3f0);
+  --profile-bg: #6C757D;
   --profile-name:#000000;
   --profile-username: #0000008e;
   --sidebar-hover-font: #e63946;
@@ -68,7 +67,7 @@
   --scroll-button-bg: #cbf3f0;
   --exp-header-shadow: #00000000;
   --searchBar-component: #00000080;
-  --searchbaractive: #e6e6e6;
+  --searchbaractive: #f1faee;
   --placeholderfont:#000000a2;
   --project-link-hover: red;
   --project-link-hover-font:#F1FAEE;
@@ -83,6 +82,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--primary-color);
+  text-align: center;
 }
 
 /* Profile Info styles */
@@ -94,7 +94,7 @@ body {
   flex-direction: row;
   padding: 20px;
   text-align: center;
-  background-image: var(--profile-bg);
+  background-color: var(--profile-bg);
 }
 
 .profile-image {
@@ -139,16 +139,16 @@ body {
 .email-button a, 
 .resume-button a {
   display: inline-block;
-  background-color: var(--action-bg); /* Button background color */
-  color: var(--action-font); /* Button text color */
-  padding: 10px 10px; /* Adjust padding as needed */
-  border-radius: 40px; /* Adjust border radius to round the button */
-  text-decoration: none; /* Remove underline from link */
+  background-color: var(--action-bg);
+  color: var(--action-font);
+  padding: 10px 10px;
+  border-radius: 40px;
+  text-decoration: none;
 }
 
 .email-button a:hover,
 .resume-button a:hover {
-  font-weight: bold;
+  background-color: var(--sidebar-hover-font);
   box-shadow: var(--action-hover-shadow);
   font-size: 17px;
 }
@@ -161,28 +161,26 @@ body {
 .all-projects {
   display: flex;
   position: relative;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content:space-between;
+  align-items: center;
+  padding:0 20px 0 20px;
 }
-
-.projects-title {
-  font-family: "Caveat", cursive;
-  font-size: 20px;
-  text-align: center;
-  color: var(--font-color-2);
-}
-  
 
 .projects-title2 {
   font-family: "Caveat", cursive;
-  text-align: center;
-  color: var(--font-color-1);
-  font-size: 18px;
+  color: var(--section-font);
   cursor: pointer;
+  right: 20px;
 }
 
 .projects-title2:hover {
   color: var(--card-link-hover-font);
+}
+
+#sectionTitle {
+  font-family: "Caveat", cursive;
+  color: var(--section-font);
+  padding: 20px 0 20px 0;
 }
 
 .project-card-container {
@@ -190,8 +188,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
-  margin-top: -15px;
+  padding: 0 20px 0 20px;
 }
 
 .project-card-link {
@@ -262,41 +259,29 @@ body {
   color: var(--project-link-hover-font);
 }
 
-
-.knowledge-title {
-  font-family: "Caveat", cursive;
-  font-size: 20px;
-  text-align: center;
-  font-size: 18px;
-  color: var(--font-color-2);
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
 .knowledge-container {
   font-family: poppins;
-  margin-top: -50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 40px;
+  padding: 0 20px 0 20px;
 }
 
 .knowledge-card {
   background-color: var(--card-color-2);
-  border-radius: 5px;
+  border-radius: 15px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   position: relative;
+  text-align: left;
 }
 
 .knowledge-content h4 {
-  margin-top: 5px;
-  color: var(--card-font-2);
-  padding: 10px;
+  color: #ffffff;
+  padding: 10px 0 20px 10px;
 }
 
 .knowledge-content p {
@@ -320,22 +305,12 @@ body {
   margin: 2px 0;
 }
 
-.exp-title {
-  font-family: "Caveat", cursive;
-  font-size: 20px;
-  text-align: center;
-  font-size: 18px;
-  color: var(--font-color-2);
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .exp-container {
   font-family: poppins;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   justify-content: center;
 }
 
@@ -355,10 +330,9 @@ body {
   background-size:cover;
   background-position: center;
   height: 90px;
-  width: 230px;
+  width: 50%;
   border-radius: 15px;
   margin-top: -45px;
-  box-shadow: 0 0 8px var(--exp-header-shadow);
 }
 
 .exp-content {
@@ -373,22 +347,12 @@ body {
   color: var(--font-color-1);
 }
 
-.edu-title {
-  font-family: "Caveat", cursive;
-  font-size: 20px;
-  text-align: center;
-  font-size: 18px;
-  color: var(--font-color-2);
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
 .edu-container {
   font-family: poppins;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   justify-content: center;
 }
 
@@ -403,11 +367,6 @@ body {
   margin-top: 30px;
 }
 
-.edu-header:hover {
-  box-shadow: 0 0 20px #415a77;
-  transform: scale(1.05); /* Zoom effect */
-}
-
 .edu-header {
   background-size: cover;
   background-position: center;
@@ -415,6 +374,11 @@ body {
   width: 100px;
   border-radius: 50%;
   margin-top: -45px;
+}
+
+.edu-header:hover {
+  box-shadow: 0 0 20px #415a77;
+  transform: scale(1.05); /* Zoom effect */
 }
 
 .edu-content p {
@@ -451,5 +415,4 @@ body {
     align-items: left;
     text-align: left;
   }
-
 }
