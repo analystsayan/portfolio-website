@@ -161,7 +161,7 @@ body {
   font-size: 26px;
   display: flex;
   align-items:baseline;
-  padding-top: 25px;
+  margin-top: 25px;
   border-radius: 7px;
 }
 
@@ -244,26 +244,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 html {
   scroll-behavior: smooth;
-}
-
-.details {
-  line-height: 15px;
-  padding: 100px;
-}
-
-.details p {
-  color: #ffffffd7;
-  line-height: 35px;
-  text-align: justify;
-  font-family: poppins;
-  font-size: 24px;
-}
-
-.details h6 {
-  padding: 20px;
-  font-family: "Reenie Beanie", cursive;
-  font-size: 28px;
-  color: #ffffffb1;
 }
 
 @media (max-width:1200px) {
@@ -365,14 +345,13 @@ html {
   }
 
   .background .logocontainer, 
-  .background .details {
+  .background {
   position: relative;
   z-index: 2; /* Ensures content appears on top of the video */
   color: #fff; /* Ensure the text is visible over the video */
-  text-align: center;
+  text-align: left;
   padding: 20px;
   }
-
 
   .logocontainer {
     height:70px;
@@ -387,23 +366,24 @@ html {
   }
 
   .details {
-    padding: 10px;
+    padding: 20px;
     color:#ffffff;
+    text-align: left;
   }
-  
+
   .details p {
-    line-height: 35px;
-    text-align: center;
     color:#ffffffd7;
     font-family: poppins;
     font-size: 24px;
+    text-align: left;
   }
   
   .details h6 {
-    padding: 20px;
     font-family: "Reenie Beanie", cursive;
     font-size: 28px;
     color: #ffffffb7;
+    text-align: left;
+    padding-top: 10px;;
   }
 
   .main22 {
@@ -416,10 +396,6 @@ html {
   
   .main22 h2{
     color: var(--font-color-1);
-  }
-  
-  .main22 p{
-    padding: 20px;
   }
 
   .main33 {
@@ -605,6 +581,26 @@ html {
     overflow: hidden;
     justify-content: center;
 
+  }
+
+  .details {
+    line-height: 15px;
+    padding: 100px;
+  }
+  
+  .details p {
+    color: #ffffffd7;
+    line-height: 35px;
+    text-align: justify;
+    font-family: poppins;
+    font-size: 24px;
+  }
+  
+  .details h6 {
+    padding: 20px;
+    font-family: "Reenie Beanie", cursive;
+    font-size: 28px;
+    color: #ffffffb1;
   }
 
   .main22 {
