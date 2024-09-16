@@ -97,7 +97,7 @@ body {
 
 #theme-switch {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
@@ -143,7 +143,7 @@ body {
   transition: left 0.3s ease;
   box-sizing: border-box;
   z-index: 1000;
-  padding: 80px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
 }
 
 .sidebar.show {
@@ -222,6 +222,50 @@ body {
   justify-content: center;
 }
 
+.social-card-container {
+  width: 100%;
+  position:relative;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  padding: 40px 20px 40px 20px;
+  gap: 20px;
+}
+
+.social-card {
+  height: auto;
+  width: 200px;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 80px;
+  box-shadow: 0 0 10px #ffffff42;
+  cursor: pointer;
+}
+
+#linkedin {
+  background-color: #0077B5;
+  padding: 40px;
+}
+
+#instagram {
+  background-image: linear-gradient(to bottom, #4c68d7, #cd486b, #fbad50, #fccc63);
+  padding: 40px;
+}
+
+#facebook {
+  background-color: #1877F2;
+  padding: 40px;
+}
+
+#youtube {
+  background-color: #FF0000;
+  padding: 40px;
+}
+
 /* Hide scrollbar for the sidebar */
 .sidebar {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -244,6 +288,20 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 html {
   scroll-behavior: smooth;
+}
+
+/*mobile view*/
+@media (max-width:650px) {
+  .social-card-container {
+    width: 100%;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 40px 20px;
+    gap: 20px;
+  }
 }
 
 @media (max-width:1200px) {
@@ -314,17 +372,6 @@ html {
     cursor: pointer;
   }
 
-  .picture {
-    width: 350px;
-  }
-  
-  .logocontainer {
-    height:90px;
-    width:90px;
-    padding-bottom: 200px;
-    padding-top: 50px;
-  }
-
   .background {
     height: 100vh;
     width: 100%;
@@ -337,27 +384,11 @@ html {
     justify-content: center;
   }
 
-  .background .logocontainer,
-  .background .details {
-  position: relative;
-  z-index: 3;
-  color: #fff; /* Ensure text is visible over the dark background */
-  }
-
-  .background .logocontainer, 
-  .background {
-  position: relative;
-  z-index: 2; /* Ensures content appears on top of the video */
-  color: #fff; /* Ensure the text is visible over the video */
-  text-align: left;
-  padding: 20px;
-  }
-
   .logocontainer {
     height:70px;
     width:70px;
     position: relative;
-    bottom:90px;
+    bottom:70px;
   }
 
   .logocontainer img {
@@ -365,25 +396,23 @@ html {
     height: auto;
   }
 
-  .details {
-    padding: 20px;
-    color:#ffffff;
-    text-align: left;
-  }
-
   .details p {
     color:#ffffffd7;
-    font-family: poppins;
+    font-family: "Roboto";
     font-size: 24px;
     text-align: left;
   }
+
+  .hello {
+    font-size: 40px;
+  }
   
-  .details h6 {
+  .sign {
     font-family: "Reenie Beanie", cursive;
     font-size: 28px;
     color: #ffffffb7;
     text-align: left;
-    padding-top: 10px;;
+    padding-top: 10px;
   }
 
   .main22 {
@@ -447,7 +476,6 @@ html {
     width: 100%;
     padding-top:20px;
     padding-bottom:20px;
-    color: white;
     text-align: center;
     background-color: #0e0e21;
   }
@@ -467,7 +495,7 @@ html {
     margin-left: 270px;
   }
 
-  .details h1 {
+  .hello {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 60px;
     color: #ffffff;
