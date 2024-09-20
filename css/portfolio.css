@@ -93,6 +93,7 @@ body {
   display: flex;
   flex-direction: row;
   padding: 20px;
+  margin-bottom: 20px;
   text-align: center;
   background-color: var(--profile-bg);
 }
@@ -180,7 +181,6 @@ body {
 #sectionTitle {
   font-family: "Caveat", cursive;
   color: var(--section-font);
-  padding: 20px 0 20px 0;
 }
 
 .project-card-container {
@@ -188,7 +188,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px 0 20px;
+  padding: 20px;
 }
 
 .project-card-link {
@@ -264,7 +264,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px 0 20px;
+  padding: 20px;
 }
 
 .knowledge-card {
@@ -310,7 +310,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px 0 20px;
+  padding: 20px;
   justify-content: center;
 }
 
@@ -352,7 +352,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px 20px 20px;
+  padding: 20px;
   justify-content: center;
 }
 
