@@ -1,79 +1,10 @@
-/* Define custom colors for Dark Theme */
-
-:root.dark-theme {
-  --primary-color: #0d1b2a; 
-  --card-color-1: #1b263b;
-  --card-color-2: #415a77;
-  --card-color-3: #23314f;
-  --card-font-1:#ffffff;
-  --card-font-2:#d6d6d6;
-  --card-font-3:#778da9;
-  --card-link-hover-font: #00ff00;
-  --card-link-hover-shadow: 0 2px 8px #00ff00;
-  --font-color-1: #ffffff;
-  --font-color-2: #ffffffb8;
-  --font-color-3: #ffffff52;
-  --overlay-color: #00000099;
-  --card-color-link:#c8c8c8;
-  --action-bg: #feff16;
-  --action-font: #000000;
-  --action-hover-shadow: 0 2px 8px #000000;
-  --action-hover-font: #000000;
-  --profile-bg: linear-gradient(to right, #1b263b, #1b263b);
-  --profile-name:#ffffff;
-  --profile-username: #ffffffad;
-  --sidebar-hover-font: #feff16;
-  --theme-switch-font: #ffffff;
-  --theme-switch-bg: #feff16;
-  --theme-switch-shadow: #ffffff;
-  --scroll-button-font: #ffffff;
-  --scroll-button-bg: #0d1b2a;
-  --exp-header-shadow: #ffffff00;
-  --searchBar-component: #ffffff80;
-  --searchbaractive: #11253a;
-  --placeholderfont:#ffffff6c;
-}
-
-/* Define custom colors for Light Theme */
-
-:root.light-theme {
-  --primary-color: #ffffff;
-  --card-color-1: #cbf3f0;
-  --card-color-2: #ffbf69;
-  --card-color-3: #2ec4b6;
-  --card-font-1:#000000;
-  --card-font-2:#000000;
-  --card-font-3:#000000;
-  --card-link-hover-font: #e63946;
-  --card-link-hover-shadow: 0 2px 8px #e63946;
-  --font-color-1: #000000;
-  --font-color-2: #0000009e;
-  --font-color-3: #0000004f;
-  --overlay-color: #00000099;
-  --card-color-link:#3a3737;
-  --action-bg: #e63946;
-  --action-font: #ffffff;
-  --action-hover-shadow: 0 2px 8px #000000;
-  --action-hover-font: #ffffff;
-  --profile-bg: linear-gradient(to right, #f0ebd8, #cbf3f0);
-  --profile-name:#000000;
-  --profile-username: #0000008e;
-  --sidebar-hover-font: #e63946;
-  --theme-switch-font: #ffffff;
-  --theme-switch-bg: #e63946;
-  --theme-switch-shadow: #ffffff;
-  --scroll-button-font: #000000;
-  --scroll-button-bg: #cbf3f0;
-  --exp-header-shadow: #00000000;
-  --searchBar-component: #00000080;
-  --searchbaractive: #e6e6e6;
-  --placeholderfont:#000000a2;
+html {
+  background-color: var(--primary-color);
 }
 
 .progressscreen {
   width: 100%;
   height: 100vh;
-  background-color: var(--primary-color);
   color: var(--font-color-1);
   position: relative;
   display: flex;
