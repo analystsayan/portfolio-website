@@ -1,16 +1,7 @@
-// Get references to the menu toggle, sidebar, overlay, search input, and card elements
+// Get references to the menu toggle, sidebar, and overlay elements
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
-const searchIcon = document.querySelector('.search-icon');
-
-/**
- * Toggles the color of the menu toggle icon based on sidebar visibility
- */
-function toggleMenuToggleColor() {
-    const isSidebarVisible = sidebar.classList.contains('show');
-    menuToggle.classList.toggle('white', isSidebarVisible);
-}
 
 /**
  * Closes the sidebar and resets related elements
@@ -20,22 +11,6 @@ function closeSidebar() {
     sidebar.classList.remove('show');
     overlay.classList.remove('show');
     toggleMenuToggleColor();
-}
-
-// Function to toggle sidebar visibility
-function toggleSidebar() {
-    const isSidebarVisible = sidebar.classList.contains('show');
-    
-    if (isSidebarVisible) {
-      sidebar.classList.remove('show');
-      overlay.classList.remove('show');
-    } else {
-      sidebar.classList.add('show');
-      overlay.classList.add('show');
-    }
-    
-    // Ensure menu toggle button is always on top
-    menuToggle.style.zIndex = isSidebarVisible ? '1001' : '1001';
 }
 
 /**
@@ -68,7 +43,8 @@ document.addEventListener('touchend', function(event) {
     handleSwipe();
 }, false);
 
-// theme switch
+
+// Theme switch functionality
 document.addEventListener('DOMContentLoaded', function() {
     const themeSwitch = document.getElementById('theme-switch');
     const currentTheme = localStorage.getItem('theme') || 'light';
@@ -86,22 +62,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// Hide header on scroll
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > lastScrollY) {
-    // Scrolling down
-    header.style.top = '-100px'; // Move header out of view
-  } else {
-    // Scrolling up
-    header.style.top = '0'; // Bring header back into view
-  }
-  lastScrollY = window.scrollY;
+    if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        header.style.top = '-100px'; // Move header out of view
+    } else {
+        // Scrolling up
+        header.style.top = '0'; // Bring header back into view
+    }
+    lastScrollY = window.scrollY;
 });
 
 
-
+// Scroll to top from footer
 document.addEventListener('DOMContentLoaded', () => {
     const footerName = document.querySelector('.footername');
 
@@ -113,4 +91,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
