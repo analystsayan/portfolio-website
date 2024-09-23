@@ -107,7 +107,7 @@ body {
   text-decoration: none;
 }
 
-.theme-switch {
+#theme-switch {
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -121,7 +121,7 @@ body {
   text-align: center;
 }
 
-.theme-switch:hover {
+#theme-switch:hover {
   background-color: var(--theme-switch-hover-bg);
   color: var(--theme-switch-hover-font);
   transition: ease-in-out 0.3s;
