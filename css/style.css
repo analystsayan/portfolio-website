@@ -30,7 +30,7 @@
   --searchbaractive: #11253a;
   --placeholderfont:#ffffff6c;
   --aboutme:#ffffff;
-  --backgroundbg: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("/media/image/second-bg.jpg");
+  --backgroundbg: linear-gradient(rgba(0,0,0, 0.766), rgba(0, 0, 0, 0.766)), url("/media/image/second-bg.png");
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #ffffff30;
   --mainbgimg: url("/media/image/main-bg.jpg");
@@ -90,7 +90,7 @@
   --off-bg-color-hover: #1d3557;
 }
 
-#mainbody {
+html {
   background-image: var(--mainbgimg);
   background-attachment: fixed;
   background-size: cover;
@@ -107,7 +107,7 @@ body {
   text-decoration: none;
 }
 
-#theme-switch {
+.theme-switch {
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -121,27 +121,10 @@ body {
   text-align: center;
 }
 
-#theme-switch:hover {
+.theme-switch:hover {
   background-color: var(--theme-switch-hover-bg);
   color: var(--theme-switch-hover-font);
   transition: ease-in-out 0.3s;
-}
-
-/* Menu toggle button */
-.menu-toggle {
-  position: relative;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* Styles for menu toggle icon bars */
-.menu-toggle .bar {
-  width: 30px;
-  height: 3px;
-  background-color: var(--font-color-2); /* Change to white */
-  margin-bottom: 5px;
-  border-radius: 10px; /* Adjust the roundness of the bars */
 }
 
 /* Sidebar styles */
@@ -258,23 +241,38 @@ body {
 }
 
 .LandingSocial {
-  color: var(--off-color);
+  color: #f1faeeb0;
   font-size: 32px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
+.LandingSocial:hover {
+  color: #f1faee;
+  transition: ease-in-out 0.3s;
+}
+
 .visitPortfolio {
   text-decoration: none;
-  color: white;
+  color: #f1faee;
   margin-top: 20px;
+  background-color: #ff2b52;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.visitPortfolio:hover {
+  text-decoration: none;
+  color: #f1faee;
+  margin-top: 20px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .visitPortfolio a {
   padding: 10px;
-  background-color: #ff2b52;
   border-radius: 40px;
-  color: white;
 }
 
 /* Hide scrollbar for the sidebar */
@@ -309,49 +307,57 @@ hr {
   /* Header styles */
   .header {
     width: 100%;
+    height: 60px;
     background-color: var(--primary-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     position: fixed; /* Fix the header at the top */
+    justify-content: space-evenly;
+    align-items: center;
     transition: top 0.3s; /* Smooth transition */
-    right:-10px;
     z-index: 998;
   }
 
+  /* Menu toggle button */
+  .menu-toggle {
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* Styles for menu toggle icon bars */
+  .menu-toggle .bar {
+    width: 32px;
+    height: 3px;
+    background-color: var(--off-color); /* Change to white */
+    margin: 5px 0 5px 0;
+    border-radius: 10px; /* Adjust the roundness of the bars */
+  }
+
   .search-bar {
-    width: 100%;
+    width: calc(100% - 60px);
     height: 40px;
+    background-color: var(--searchbaractive);
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     position: relative;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
-    margin-right: 5px;
   }
   
-  #searchInput {
+  .searchInput {
     height: 100%;
-    width: 100%;
+    width: auto;
     border-radius: 30px;
     border: none;
-    background-color: var(--searchbaractive);
+    background-color: transparent;
     color: var(--font-color-1); /* Change text color */
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    column-rule-style:var(--action-bg);
+    margin-left: 40px;
+    padding-left: 5px;
+    column-rule-style: red;
     font-size: 18px;
+    outline: none;
   }
 
   #searchInput::placeholder {
@@ -360,49 +366,65 @@ hr {
   }
   
   .search-arrow {
-    color: var(--font-color-1);
-    position:relative;
-    left: 30px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 5px;
     z-index: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--off-color);
     cursor: pointer;
   }
   
   .search-icon {
-    color: var(--font-color-1);
-    position: relative;
-    right:30px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 5px;
+    z-index: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--off-color);
     cursor: pointer;
   }
 
   .background {
     height: 100vh;
     width: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
+    position: relative;
+    justify-content: center;
     align-items: center;
     text-align: center;
     overflow: hidden;
-    justify-content: center;
-  }
-
-  .logocontainer {
-    height:70px;
-    width:70px;
-    position: relative;
-    bottom:70px;
   }
 
   .logocontainer img {
-    max-width: 100%;
+    max-width: 20%;
     height: auto;
   }
 
+  .details {
+    text-align: center;
+    padding: 0 16px 0 16px;
+  }
+
   .details p {
-    color:#ffffffd7;
+    color:#f1faee;
     font-size: 24px;
     text-align: center;
     padding: 20px;
+  }
+
+  .hello {
+    font-size: 60px;
+    color: #f1faee;
+    font-weight: bold;
+    text-align: center;
   }
 
   .main22 {
@@ -483,13 +505,6 @@ hr {
     margin-left: 270px;
   }
 
-  .hello {
-    font-size: 60px;
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-
   .logocontainer {
     position: relative;
     height:90px;
@@ -529,60 +544,63 @@ hr {
     align-items: center;
     transition: top 0.3s; /* Smooth transition */
     margin-left: 270px;
-    padding: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
   }
 
   .search-bar {
     width: 100%;
-    height: 50px;
+    height: 40px;
+    background-color: var(--searchbaractive);
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     position: relative;
+    margin: 0 20px 0 20px;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 0px;
   }
   
-  #searchInput {
+  .searchInput {
     height: 100%;
     width: 100%;
-    border-radius: 7px;
+    border-radius: 30px;
     border: none;
-    background-color: var(--searchbaractive);
+    background-color: transparent;
     color: var(--font-color-1); /* Change text color */
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    column-rule-style:var(--action-bg);
-    z-index: 1001;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 5px;
+    column-rule-style: red;
     font-size: 18px;
+    outline: none;
   }
 
   #searchInput::placeholder {
     color: var(--placeholderfont); /* Change placeholder text color */
     font-size: 18px;
-    font-family: "Inter", sans-serif;
   }
   
   .search-arrow {
-    color: var(--font-color-1);
-    position:relative;
-    left: 30px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 5px;
     z-index: 1002;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--off-color);
     cursor: pointer;
   }
   
   .search-icon {
-    color: var(--font-color-1);
-    position: relative;
-    right:30px;
-    z-index: 1002;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 5px;
+    z-index: 1001;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--off-color);
     cursor: pointer;
   }
 
@@ -601,15 +619,22 @@ hr {
   }
 
   .details {
-    line-height: 15px;
-    padding: 100px;
+    text-align: center;
+    padding: 0 56px 0 56px;
   }
-  
+
   .details p {
-    color: #ffffffd7;
-    line-height: 35px;
-    text-align: justify;
+    color:#ffffffd7;
     font-size: 24px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hello {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
   }
 
   .main22 {
