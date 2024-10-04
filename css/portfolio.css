@@ -186,7 +186,7 @@ body {
 }
 
 .knowledge-container {
-  font-family: poppins;
+  font-family: "inter", sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -232,7 +232,7 @@ body {
 }
 
 .exp-container {
-  font-family: poppins;
+  font-family:  "inter", sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -274,7 +274,7 @@ body {
 }
 
 .edu-container {
-  font-family: poppins;
+  font-family:  "inter", sans-serif;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;

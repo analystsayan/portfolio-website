@@ -91,3 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+//alert Function
+function myFunction() {
+    alert("You will be redirected to my portfolio !");
+}

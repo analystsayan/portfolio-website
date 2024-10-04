@@ -30,7 +30,7 @@
   --searchbaractive: #11253a;
   --placeholderfont:#ffffff6c;
   --aboutme:#ffffff;
-  --backgroundbg: linear-gradient(rgba(0,0,0, 0.766), rgba(0, 0, 0, 0.766)), url("/media/image/second-bg.png");
+  --backgroundbg: linear-gradient(rgba(0,0,0, 0.766), rgba(0, 0, 0, 0.766));
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #ffffff30;
   --mainbgimg: url("/media/image/main-bg.jpg");
