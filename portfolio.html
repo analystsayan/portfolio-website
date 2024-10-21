@@ -3,269 +3,350 @@
 summary of the key components and functionalities: -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnalystSayan-Portfolio</title>
-  <link rel="icon" type="png" href="media/image/favicon.png">
-  <link rel="image_src" href="media/image/websiteLogo.png">
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/portfolio.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Google Fonts - Caudex, Noto Serif Bengali, and Quattrocento -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-  </style>
-  <!-- Font Awesome Kit -->
-  <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnalystSayan-Portfolio</title>
+    <link rel="icon" type="png" href="media/image/favicon.png">
+    <link rel="image_src" href="media/image/websiteLogo.png" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts - Caudex, Noto Serif Bengali, and Quattrocento -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    </style>
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
+  </head>
 
-<body>
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar" id="sidebar">
-    <ul>
+  <body>
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
         <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
         <li><a href="portfolio.html"><i class="fa-solid fa-briefcase"></i>Portfolio</a></li>
         <li><a href="creativeZone.html"><i class="fa-brands fa-artstation"></i>Creative Zone</a></li>
         <li class="section-title">Social</li>
         <li><a href="https://www.linkedin.com/in/analystsayan/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="https://github.com/analystsayan" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-        <li><a href="https://profile.google.com/qyefrf4a" target="_blank"><i class="fa-brands fa-google"></i>Notes</a></li>
-        <button alt="Change-Theme" Id="theme-switch"><i class="fa-solid fa-lightbulb"></i>&nbsp;Switch Theme</button>
-    </ul>
-  </nav>
+        <li>
+          <a href="https://github.com/analystsayan" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        <li>
+          <a href="https://profile.google.com/qyefrf4a" target="_blank"
+            ><i class="fa-brands fa-google"></i>Notes</a
+          >
+        </li>
+        <button alt="Change-Theme" id="theme-switch">
+          <i class="fa-solid fa-lightbulb"></i>&nbsp;Switch Theme
+        </button>
+      </ul>
+    </nav>
 
-  <!-- Header Section -->
-  <div class="header">
-    <!-- Three-line menu icon -->
-    <div class="menu-toggle" id="menuToggle">
+    <!-- Header Section -->
+    <div class="header">
+      <!-- Three-line menu icon -->
+      <div class="menu-toggle" id="menuToggle">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-    </div>
-    <!-- Search Bar -->
-    <div class="search-bar">
+      </div>
+      <!-- Search Bar -->
+      <div class="search-bar">
         <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
-        <input type="search" placeholder="Search" class="searchInput">
+        <input type="search" placeholder="Search" class="searchInput" />
         <button class="search-icon"><i class="fas fa-search"></i></button>
-    </div>
-  </div>
-
-  <!-- Main Content -->
-  <main>
-    <div class="profile-info">
-      <div class="profile-image" alt="Profile-Image"></div>
-      <div class="profile-details">
-        <div class="profile-name">Sayan Mondal</div>
-        <a class="username" href="https://analystsayan.bio.link/" target="_blank">@analystsayan</a>
-        <div class="button-container">
-          <div class="resume-button">
-            <a alt="Resume" href="media/pdf/Resume_Sayan_Mondal_003.pdf">
-              <i alt="Download" class="fas fa-download"></i> Resume
-            </a>
-          </div>
-          <div alt="e-mail" class="email-button">
-            <a href="mailto:analystsayan1@gmail.com">
-              <i class="fas fa-envelope"></i> Hire me
-            </a>
-          </div>
-        </div>
       </div>
     </div>
-    
-    <!-- Project Section -->
-    <section id="projectSection">
 
-      <div class="all-projects">
-        <h2 id="sectionTitle" class="projects-title">My Projects</h2>
-        <a href="allProjects.html">
-          <h2 class="projects-title2">Explore all projects
-            <i class="fa-solid fa-arrow-right"></i>
-          </h2>
-        </a>
-      </div>
-
-      <div class="project-card-container">
-        <div class="project-card">
-          <div class="project-card-image" style="background-image: url(media/image/HrDataAnalytics.jpg);"></div>
-          <div class="project-card-content">
-            <div class="project-card-text">
-              <h3>HR Data Analytics</h3>
-              <p>Python, Power BI, MS Excel</p>
-              <div class="link-section">
-                <a class="link-highlight" href="" target="_blank">Live</a>
-                <a class="link-highlight" href="" target="_blank">Source Code</a>
-              </div>
+    <!-- Main Content -->
+    <main>
+      <div class="profile-info">
+        <div class="profile-image" alt="Profile-Image"></div>
+        <div class="profile-details">
+          <div class="profile-name">Sayan Mondal</div>
+          <a
+            class="username"
+            href="https://analystsayan.bio.link/"
+            target="_blank"
+            >@analystsayan</a
+          >
+          <div class="button-container">
+            <div class="resume-button">
+              <a alt="Resume" href="media/pdf/Resume_Sayan_Mondal_003.pdf">
+                <i alt="Download" class="fas fa-download"></i> Resume
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-image" style="background-image: url(media/image/ClothingStoreDA.png);"></div>
-          <div class="project-card-content">
-            <div class="project-card-text">
-              <h3>Sales Dashboard</h3>
-              <p>MS Excel, Power Query</p>
-              <div class="link-section">
-                <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Live</a>
-                <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Source Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-image" style="background-image: url(media/image/portfolioimageWeb.png);"></div>
-          <div class="project-card-content">
-            <div class="project-card-text">
-              <h3>Portfolio Website</h3>
-              <p>HTML, CSS, JavaScript</p>
-              <div class="link-section">
-                <a class="link-highlight" href="https://analystsayan.vercel.app" target="_blank">Live</a>
-                <a class="link-highlight" href="https://github.com/analystsayan/Portfolio" target="_blank">Source Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="project-card">
-          <div class="project-card-image" style="background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);"></div>
-          <div class="project-card-content">
-            <div class="project-card-text">
-              <h3>Amazon Clone</h3>
-              <p>HTML, CSS, JavaScript</p>
-              <div class="link-section">
-                <a class="link-highlight" href="#" target="_blank">Live</a>
-                <a class="link-highlight" href="#" target="_blank">Source Code</a>
-              </div>
+            <div alt="e-mail" class="email-button">
+              <a href="mailto:analystsayan1@gmail.com">
+                <i class="fas fa-envelope"></i> Hire me
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- TechStack Section -->
-    <section id="techStackSection">
-     <h2 id="sectionTitle" class="knowledge-title">What I Know</h2>
-     <div class="knowledge-container">
-       <div class="knowledge-card">
-         <div class="knowledge-content">
-           <h4>Programming & Data Manipulation</h4>
-           <p>
-             <span class="highlight">Microsoft Power Query</span>
-             <span class="highlight">Python</span>
-           </p>
-         </div>
-       </div>
-       <div class="knowledge-card">
-         <div class="knowledge-content">
-           <h4>Data Visualization Tools</h4>
-           <p>
-             <span class="highlight">Microsoft Excel</span>
-             <span class="highlight">Power BI</span>
-             <span class="highlight">Matplotlib</span>
-           </p>
-         </div>
-       </div>
-       <div class="knowledge-card">
-         <div class="knowledge-content">
-           <h4>Database</h4>
-           <p>
-            <span class="highlight">MySql</span>
-           </p>
-         </div>
-       </div>
-       <div class="knowledge-card">
-        <div class="knowledge-content">
-          <h4>Frontend</h4>
-          <p>
-           <span class="highlight">HTML</span>
-           <span class="highlight">CSS</span>
-           <span class="highlight">Java Script</span>
-          </p>
+      <!-- Project Section -->
+      <section id="projectSection">
+        <div class="all-projects">
+          <h2 id="sectionTitle" class="projects-title">My Projects</h2>
+          <a href="allProjects.html">
+            <h2 class="projects-title2">
+              Explore all projects
+              <i class="fa-solid fa-arrow-right"></i>
+            </h2>
+          </a>
         </div>
-      </div>
-     </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experienceSection">
-      <h2 id="sectionTitle" class="exp-title">My Experience</h2>
-      <div class="exp-container">
-        <div class="exp-card">
-          <div class="exp-header" style="background-image: url('https://www.pispl.in/images/logo1.png');"></div>
-          <div class="exp-content">
-            <h3 id="com-des">Parekh Integrated Services Pvt. Ltd.</h3>
-            <p id="com-des">MIS Executive <br> (Data Analyst Role)</p>
-            <p>June,2024 - Oct,2024</p>
-            <p>Full Time, In office</p>
+        <div class="project-card-container">
+          <div class="project-card">
+            <div
+              class="project-card-image"
+              style="background-image: url(media/image/HrDataAnalytics.jpg)"
+            ></div>
+            <div class="project-card-content">
+              <div class="project-card-text">
+                <h3>HR Data Analytics</h3>
+                <p>Python, Power BI, MS Excel</p>
+                <div class="link-section">
+                  <a class="link-highlight" href="" target="_blank">Live</a>
+                  <a class="link-highlight" href="" target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div
+              class="project-card-image"
+              style="background-image: url(media/image/ClothingStoreDA.png)"
+            ></div>
+            <div class="project-card-content">
+              <div class="project-card-text">
+                <h3>Sales Dashboard</h3>
+                <p>MS Excel, Power Query</p>
+                <div class="link-section">
+                  <a
+                    class="link-highlight"
+                    href="https://github.com/analystsayan/Vrinda-Store-Annual-Report"
+                    target="_blank"
+                    >Live</a
+                  >
+                  <a
+                    class="link-highlight"
+                    href="https://github.com/analystsayan/Vrinda-Store-Annual-Report"
+                    target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div
+              class="project-card-image"
+              style="background-image: url(media/image/portfolioimageWeb.png)"
+            ></div>
+            <div class="project-card-content">
+              <div class="project-card-text">
+                <h3>Portfolio Website</h3>
+                <p>HTML, CSS, JavaScript</p>
+                <div class="link-section">
+                  <a
+                    class="link-highlight"
+                    href="https://analystsayan.vercel.app"
+                    target="_blank"
+                    >Live</a
+                  >
+                  <a
+                    class="link-highlight"
+                    href="https://github.com/analystsayan/Portfolio"
+                    target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div
+              class="project-card-image" style="background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);"></div>
+            <div class="project-card-content">
+              <div class="project-card-text">
+                <h3>Amazon Clone</h3>
+                <p>HTML, CSS, JavaScript</p>
+                <div class="link-section">
+                  <a class="link-highlight" href="#" target="_blank">Live</a>
+                  <a class="link-highlight" href="#" target="_blank"
+                    >Source Code</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="exp-card">
-          <div class="exp-header" style="background-image: url(media/image/Wow-Momo-Foods.jpg);"></div>
-          <div class="exp-content">
-            <h3 id="com-des">Wow Momo Foods Pvt. Ltd.</h3>
-            <p id="com-des">Senior Team Member<br>☆☆☆</p>
-            <p>Dec,2023 - June,2024</p>
-            <p>Full time, In office</p>
-          </div>
-        </div>
-        <div class="exp-card">
-          <div class="exp-header" style="background-image: url('https://vaanahaa.com/wp-content/uploads/2018/09/think-again-lab-logo.png');"></div>
-          <div class="exp-content">
-            <h3 id="com-des">Think Again Lab</h3>
-            <p id="com-des">Data Scientist</p>
-            <p>Dec,2022 - Mar,2023</p>
-            <p>Internship, In office</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Education Section -->
-    <section id="educationSection">
-      <h2 id="sectionTitle" class="edu-title">My Education</h2>
-      <div class="edu-container">
-        <div class="edu-card">
-          <a href="https://makautwb.ac.in/"><div class="edu-header" style="background-image: url(media/image/makaut-logo.jpeg);"></div></a>
-          <div class="edu-content">
-            <h3 id="dig-dep">Bachelor of Science</h3>
-            <p id="dig-dep" class="course">Information Technology <br>(Data Science)</p>
-            <p>2020 - 2023</p>
-            <p>West Bengal University of Technology (WBUT)</p>
+      <!-- TechStack Section -->
+      <section id="techStackSection">
+        <h2 id="sectionTitle" class="knowledge-title">What I Know</h2>
+        <div class="knowledge-container">
+          <div class="knowledge-card">
+            <div class="knowledge-content">
+              <h4>Programming & Data Manipulation</h4>
+              <p>
+                <span class="highlight">Microsoft Power Query</span>
+                <span class="highlight">Python</span>
+              </p>
+            </div>
+          </div>
+          <div class="knowledge-card">
+            <div class="knowledge-content">
+              <h4>Data Visualization Tools</h4>
+              <p>
+                <span class="highlight">Microsoft Excel</span>
+                <span class="highlight">Power BI</span>
+                <span class="highlight">Matplotlib</span>
+              </p>
+            </div>
+          </div>
+          <div class="knowledge-card">
+            <div class="knowledge-content">
+              <h4>Database</h4>
+              <p>
+                <span class="highlight">MySql</span>
+              </p>
+            </div>
+          </div>
+          <div class="knowledge-card">
+            <div class="knowledge-content">
+              <h4>Frontend</h4>
+              <p>
+                <span class="highlight">HTML</span>
+                <span class="highlight">CSS</span>
+                <span class="highlight">Java Script</span>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="edu-card">
-          <a id="wbchse" href="https://wbchse.wb.gov.in/home/"><div class="edu-header" style="background-image: url('https://shorturl.at/45HKS');"></div></a>
-          <div class="edu-content">
-            <h3 id="dig-dep">High Secondary</h3>
-            <p id="dig-dep" class="course">Science</p>
-            <p>2020</p>
-            <p>Lego R.B.R.K. Vidyapith</p>
-          </div>
-        </div>
-        <div class="edu-card">
-          <a id="wbbse" href="https://shorturl.at/QSmaY"><div class="edu-header" style="background-image: url('https://wbbse.wb.gov.in/img/logo.png');"></div></a>
-          <div class="edu-content">
-            <h3 id="dig-dep">Secondary Education</h3>
-            <p id="dig-dep" class="course">General Science</p>
-            <p>2018</p>
-            <p>Aswinkota Vidyasagar Vidyamandir(High)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- Dark Overlay -->
-  <div id="overlay"></div>
+      <!-- Experience Section -->
+      <section id="experienceSection">
+        <h2 id="sectionTitle" class="exp-title">My Experience</h2>
+        <div class="exp-container">
+          <div class="exp-card">
+            <div
+              class="exp-header"
+              style="
+                background-image: url('https://www.pispl.in/images/logo1.png');
+              "
+            ></div>
+            <div class="exp-content">
+              <h3 id="com-des">Parekh Integrated Services Pvt. Ltd.</h3>
+              <p id="com-des">
+                MIS Executive <br />
+                (Data Analyst Role)
+              </p>
+              <p>June,2024 - Oct,2024</p>
+              <p>Full Time, In office</p>
+            </div>
+          </div>
+          <div class="exp-card">
+            <div
+              class="exp-header"
+              style="background-image: url(media/image/Wow-Momo-Foods.jpg)"
+            ></div>
+            <div class="exp-content">
+              <h3 id="com-des">Wow Momo Foods Pvt. Ltd.</h3>
+              <p id="com-des">Senior Team Member<br />☆☆☆</p>
+              <p>Dec,2023 - June,2024</p>
+              <p>Full time, In office</p>
+            </div>
+          </div>
+          <div class="exp-card">
+            <div
+              class="exp-header"
+              style="
+                background-image: url('https://vaanahaa.com/wp-content/uploads/2018/09/think-again-lab-logo.png');
+              "
+            ></div>
+            <div class="exp-content">
+              <h3 id="com-des">Think Again Lab</h3>
+              <p id="com-des">Data Scientist</p>
+              <p>Dec,2022 - Mar,2023</p>
+              <p>Internship, In office</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
+      <!-- Education Section -->
+      <section id="educationSection">
+        <h2 id="sectionTitle" class="edu-title">My Education</h2>
+        <div class="edu-container">
+          <div class="edu-card">
+            <a href="https://makautwb.ac.in/"
+              ><div
+                class="edu-header"
+                style="background-image: url(media/image/makaut-logo.jpeg)"
+              ></div
+            ></a>
+            <div class="edu-content">
+              <h3 id="dig-dep">Bachelor of Science</h3>
+              <p id="dig-dep" class="course">
+                Information Technology <br />(Data Science)
+              </p>
+              <p>2020 - 2023</p>
+              <p>West Bengal University of Technology (WBUT)</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <a id="wbchse" href="https://wbchse.wb.gov.in/home/"
+              ><div
+                class="edu-header"
+                style="background-image: url('https://shorturl.at/45HKS')"
+              ></div
+            ></a>
+            <div class="edu-content">
+              <h3 id="dig-dep">High Secondary</h3>
+              <p id="dig-dep" class="course">Science</p>
+              <p>2020</p>
+              <p>Lego R.B.R.K. Vidyapith</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <a id="wbbse" href="https://shorturl.at/QSmaY"
+              ><div
+                class="edu-header"
+                style="
+                  background-image: url('https://wbbse.wb.gov.in/img/logo.png');
+                "
+              ></div
+            ></a>
+            <div class="edu-content">
+              <h3 id="dig-dep">Secondary Education</h3>
+              <p id="dig-dep" class="course">General Science</p>
+              <p>2018</p>
+              <p>Aswinkota Vidyasagar Vidyamandir(High)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Dark Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
         <a class="footername" href="#top">Sayan Mondal</a>
         <p>&copy; 2024 All rights reserved Sayan Mondal</p>
-    </div>
-  </footer>
+      </div>
+    </footer>
 
-  <!-- External JavaScript -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- External JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

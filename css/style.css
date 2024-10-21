@@ -73,13 +73,13 @@
   --scroll-button-bg: #cbf3f0;
   --exp-header-shadow: #00000000;
   --searchBar-component: #00000080;
-  --searchbaractive: #ADB5BD;
+  --searchbaractive: #adb5bd94;
   --placeholderfont:#000000a2;
   --aboutme:#000000;
   --backgroundbg: linear-gradient(to right, #ff4665, #ff6430);
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #0000004b;
-  --mainbgimg: #f1faee;
+  --mainbgimg: url("/media/image/main-bg-img-2.jpg");
   --aboutme-details:#ffffff00;
   --section-title-hover-font: rgb(0, 0, 255);
   --project-link-hover-font: #f1faee;
@@ -457,7 +457,7 @@ hr {
 
   .main44 p {
     font-size: 20px;
-    line-height: 35px;
+    line-height: 30px;
     color: var(--font-color-2);
     padding: 0 20px 0 20px;
   }

@@ -23,7 +23,7 @@ function handleSwipe() {
 }
 
 // Event listener to toggle sidebar visibility
-menuToggle.addEventListener('click', function() {
+menuToggle.addEventListener('click', function () {
     menuToggle.classList.toggle('active');
     sidebar.classList.toggle('show');
     overlay.classList.toggle('show');
@@ -34,24 +34,24 @@ menuToggle.addEventListener('click', function() {
 overlay.addEventListener('click', closeSidebar);
 
 // Touch event listeners to detect swipe
-document.addEventListener('touchstart', function(event) {
+document.addEventListener('touchstart', function (event) {
     touchStartX = event.changedTouches[0].screenX;
 }, false);
 
-document.addEventListener('touchend', function(event) {
+document.addEventListener('touchend', function (event) {
     touchEndX = event.changedTouches[0].screenX;
     handleSwipe();
 }, false);
 
 
 // Theme switch functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const themeSwitch = document.getElementById('theme-switch');
     const currentTheme = localStorage.getItem('theme') || 'light';
-    
+
     document.documentElement.classList.add(currentTheme + '-theme');
 
-    themeSwitch.addEventListener('click', function() {
+    themeSwitch.addEventListener('click', function () {
         let newTheme = 'light';
         if (document.documentElement.classList.contains('light-theme')) {
             newTheme = 'dark';
@@ -96,3 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
 function myFunction() {
     alert("You will be redirected to my portfolio !");
 }
+

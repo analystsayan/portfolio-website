@@ -325,15 +325,14 @@ body {
 
 /* Media query for mobile view */
 @media (max-width: 1200px) {
-  main {
-    margin-top: 60px; 
-  }
+  
   .profile-info {
     position: relative;
     display: flex;
     flex-direction: row; /* Change flex-direction to row */
     justify-content: flex-start; /* Align content to the left */
     align-items: left; /* Align items vertically */
+    padding: 80px 20px 20px 20px;
   }
 
   .profile-details {
