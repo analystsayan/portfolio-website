@@ -42,6 +42,7 @@
   --off-bg-color: #1d3557;
   --off-color-hover: #1d3557;
   --off-bg-color-hover: #f1faee;
+  --git-btn: #f1faee;
 }
 
 /* Define custom colors for Light Theme */
@@ -88,6 +89,7 @@
   --off-bg-color: #f1faee;
   --off-color-hover: #f1faee;
   --off-bg-color-hover: #1d3557;
+  --git-btn: #222229;
 }
 
 html {
@@ -303,7 +305,7 @@ hr {
   margin: 20px 0 20px 0;
 }
 
-@media (max-width:1200px) {
+@media (max-width:680px) {
   /* Header styles */
   .header {
     width: 100%;
@@ -500,7 +502,7 @@ hr {
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width:681px) {
   main {
     margin-left: 270px;
   }

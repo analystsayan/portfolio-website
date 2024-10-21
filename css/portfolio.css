@@ -27,11 +27,12 @@ body {
   background-image: url('/media/image/profileimage.jpeg');
   background-size: cover;
   background-position: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  min-width: 100px; /* Limit maximum size for larger screens */
+  min-height: 100px; /* Limit maximum size for larger screens */
+  border-radius: 50%; /* Ensure it stays round */
   margin-right: 20px;
 }
+
 
 .profile-details {
   align-items: left;
@@ -107,6 +108,71 @@ body {
 #sectionTitle {
   font-family: "Caveat", cursive;
   color: var(--section-font);
+}
+
+/* From Uiverse.io by aguerquin */ 
+.button-icon {
+  display: flex;
+  border: 3px #fff solid;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.icon {
+  background-color: #fff;
+  padding: 10px 10px 5px 10px;
+}
+
+.icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.cube {
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 20px;
+}
+
+.button-icon:hover {
+  border-color: var(--git-btn);
+}
+
+.button-icon:hover .cube {
+  transform: rotateX(90deg);
+}
+
+.side {
+  position: absolute;
+  height: 47px;
+  width: 200px;
+  display: flex;
+  font-size: 0.8em;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.top {
+  background: red;
+  color: var(--font-color-1);
+  transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
+}
+
+.front {
+  background: #222229;
+  color: #fff;
+  transform: translate3d(0, 0, 1em);
+}
+
+.github-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .project-card-container {
@@ -324,7 +390,7 @@ body {
 }
 
 /* Media query for mobile view */
-@media (max-width: 1200px) {
+@media (max-width: 680px) {
   
   .profile-info {
     position: relative;
@@ -339,5 +405,11 @@ body {
     position: relative;
     align-items: left;
     text-align: left;
+  }
+}
+
+@media (max-width: 390px) {
+  .button-container {
+    font-size: 14px;
   }
 }
