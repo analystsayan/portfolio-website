@@ -108,6 +108,7 @@ body {
   font-family: "Caveat", cursive;
   color: var(--section-font);
   font-size: clamp(10px, 12vw, 26px);
+  position: relative;
 }
 
 /* From Uiverse.io by aguerquin */
@@ -399,6 +400,78 @@ h3 {
   font-size: 20px;
 }
 
+#achievementSection {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px var(--off-bg-color);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  background-size: cover;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 8px 16px var(--off-bg-color);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: var(--off-bg-color-hover);
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--reverse-font-color-1);
+  font-weight: 600;
+}
+
+.card:hover img {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: var(--reverse-font-color-2);
+  line-height: 1.4;
+}
+
 /* Media query for mobile view */
 @media (max-width: 680px) {
   .profile-info {
@@ -414,5 +487,14 @@ h3 {
     position: relative;
     align-items: left;
     text-align: left;
+  }
+
+  #achievementSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
   }
 }

@@ -84,7 +84,7 @@ main h3 {
   font-size: 24px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 680px) {
   .canvacontainer {
     width: 100%;
     display: flex;
