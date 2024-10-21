@@ -1,24 +1,66 @@
 html {
   background-color: var(--primary-color);
 }
-main {
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   text-align: center;
 }
 
 .canvacontainer {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   align-items: center;
+  position: relative;
   gap: 20px;
   padding: 20px;
 }
 
 .canvacard {
-  height: 300px;
-  width: 200px;
+  position: relative;
+  height: 480px;
+  width: 300px;
   background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Buttons styling */
+.download-btn, .canvas-link-btn {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Show overlay and buttons on hover */
+.canvacard:hover .overlay {
+  opacity: 1;
+}
+
 main h3 {
   font-family: "Caveat", cursive;
   color: var(--off-color);
@@ -36,6 +78,7 @@ main h3 {
     padding: 0 20px 20px 20;
     overflow-x: auto; /* Enable horizontal scrolling */
     scroll-behavior: smooth; /* Optional: smooth scrolling */
+    white-space: nowrap; /* Keeps items in a single line */
   }
   
   .canvacard {
@@ -52,6 +95,13 @@ main h3 {
     padding: 10px;
     font-size: 24px;
     padding: 70px 10px 10px 10px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 }
 
