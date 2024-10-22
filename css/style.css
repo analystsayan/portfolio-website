@@ -247,21 +247,96 @@ body {
   align-items: center;
 }
 
-.con1 {
+/* From Uiverse.io by david-mohseni */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: auto;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.LandingSocial {
-  color: #f1faeeb0;
-  font-size: 32px;
-  margin-left: 10px;
-  margin-right: 10px;
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.LandingSocial:hover {
-  color: #f1faee;
-  transition: ease-in-out 0.3s;
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: linear-gradient(to top,
+      #feda75,
+      #fa7e1e,
+      #d62976,
+      #962fbf,
+      #4f5bd5);
+  color: #fff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background: #ff002f;
+  color: #fff;
 }
 
 .visitPortfolio {
@@ -424,10 +499,11 @@ hr {
     display: flex;
     flex-direction: column;
     position: relative;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
     overflow: hidden;
+    padding-top: 80px;
   }
 
   .logocontainer img {
@@ -444,7 +520,6 @@ hr {
     color: #f1faee;
     font-size: 24px;
     text-align: center;
-    padding: 20px;
   }
 
   .hello {
@@ -452,6 +527,7 @@ hr {
     color: #f1faee;
     font-weight: bold;
     text-align: center;
+    padding: 20px;
   }
 
   .main22 {
@@ -644,8 +720,8 @@ hr {
     align-items: center;
     text-align: center;
     overflow: hidden;
-    justify-content: center;
-
+    justify-content: start;
+    padding-top: 10px;
   }
 
   .details {
@@ -657,7 +733,6 @@ hr {
     color: #ffffffd7;
     font-size: 24px;
     text-align: center;
-    padding: 20px;
   }
 
   .hello {
@@ -665,6 +740,7 @@ hr {
     color: #ffffff;
     font-weight: bold;
     text-align: center;
+    padding: 20px;
   }
 
   .main22 {
@@ -677,10 +753,6 @@ hr {
 
   .main22 h2 {
     color: var(--font-color-1);
-  }
-
-  .main22 p {
-    padding: 20px;
   }
 
   .main33 {
