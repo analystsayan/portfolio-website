@@ -45,6 +45,7 @@
   --off-color-hover: #1d3557;
   --off-bg-color-hover: #f1faee;
   --git-btn: #f1faee;
+  --card-shadow: #f1faee90;
 }
 
 /* Define custom colors for Light Theme */
@@ -94,6 +95,7 @@
   --off-color-hover: #f1faee;
   --off-bg-color-hover: #1d3557;
   --git-btn: #222229;
+  --card-shadow: #1d355790;
 }
 
 html {
@@ -247,7 +249,6 @@ body {
   align-items: center;
 }
 
-/* From Uiverse.io by david-mohseni */
 .wrapper {
   display: inline-flex;
   list-style: none;
@@ -255,7 +256,7 @@ body {
   width: 100%;
   font-family: "Poppins", sans-serif;
   justify-content: center;
-  padding-top: 20px;
+  padding: 20px 0 20px 0;
 }
 
 .wrapper .icon {
@@ -339,27 +340,94 @@ body {
   color: #fff;
 }
 
-.visitPortfolio {
-  text-decoration: none;
-  color: #f1faee;
-  margin-top: 20px;
-  background-color: #ff2b52;
-  padding: 10px;
-  border-radius: 20px;
+.primary-button {
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  border: 1px solid #0E1822;
+  padding: 0.8rem 2.1rem;
+  background-image: linear-gradient(red, red);
+  background-color: #0E1822;
+  background-size: 200%;
+  background-position: 200%;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+  transition-property: background-position, border, color;
+  position: relative;
+  z-index: 1;
 }
 
-.visitPortfolio:hover {
-  text-decoration: none;
-  color: #f1faee;
-  margin-top: 20px;
-  background-color: red;
-  padding: 10px;
-  border-radius: 20px;
+.primary-button:hover {
+  border: 1px solid #FF4655;
+  color: white;
+  background-position: 40%;
 }
 
-.visitPortfolio a {
-  padding: 10px;
-  border-radius: 40px;
+.primary-button:before {
+  content: "";
+  position: absolute;
+  background-color: #0E1822;
+  width: 0.2rem;
+  height: 0.2rem;
+  top: -1px;
+  left: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.primary-button:hover:before {
+  background-color: white;
+}
+
+.primary-button:hover:after {
+  background-color: white;
+}
+
+.primary-button:after {
+  content: "";
+  position: absolute;
+  background-color: #FF4655;
+  width: 0.3rem;
+  height: 0.3rem;
+  bottom: -1px;
+  right: -1px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.button-borders {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.button-borders:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.5em);
+  height: 50%;
+  left: -0.3em;
+  top: -0.3em;
+  border: 1px solid #F1FAEE;
+  border-bottom: 0px;
+  /* opacity: 0.3; */
+}
+
+.button-borders:after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.5em);
+  height: 50%;
+  left: -0.3em;
+  bottom: -0.3em;
+  border: 1px solid #F1FAEE;
+  border-top: 0px;
+  /* opacity: 0.3; */
+  z-index: 0;
+}
+
+.shape {
+  fill: #0E1822;
 }
 
 /* Hide scrollbar for the sidebar */
@@ -832,8 +900,7 @@ hr {
   }
 }
 
-/* From Uiverse.io by Yaya12085 */
-.cookie-card {
+/* .cookie-card {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -921,4 +988,4 @@ hr {
 .accept:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
+} */
