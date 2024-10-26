@@ -173,7 +173,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  padding: 20px 0;
 }
 
 .project-card-container {
@@ -202,7 +202,6 @@ body {
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 8px var(--card-shadow);
   /* Zoom effect */
 }
 
@@ -258,113 +257,172 @@ body {
 
 .knowledge-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 10px;
   padding: 0 10px;
   overflow-x: hidden;
- }
+}
 
 .knowledge-card {
-  width: 170px;
-  height: 236px;
+  width: 300px;
+  height: 220px;
   margin: 0 auto;
-  background-color: #011522;
+  background-color: var(--special-card-bg);
   border-radius: 8px;
   z-index: 1;
- }
- 
- .tools {
+}
+
+.tools {
   display: flex;
   align-items: center;
   padding: 9px;
- }
- 
- .circle {
+}
+
+.circle {
   padding: 0 4px;
- }
- 
- .box {
+}
+
+.box {
   display: inline-block;
   align-items: center;
   width: 10px;
   height: 10px;
   padding: 1px;
   border-radius: 50%;
- }
- 
- .red {
+}
+
+.red {
   background-color: #ff605c;
- }
- 
- .yellow {
+}
+
+.yellow {
   background-color: #ffbd44;
- }
- 
- .green {
+}
+
+.green {
   background-color: #00ca4e;
- }
- 
- .knowledge-card-content {
+}
+
+.knowledge-card-content {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 20px;
-  color: #9eed00;
-  padding: 0px 10px;
+  padding: 10px 10px 0 10px;
   text-align: left;
- }
+}
 
- .knowledge-card-content h4 {
+.knowledge-card-content h4 {
+  color: var(--special-card-font-header);
   font-size: 14px;
   font-family: "Fira Code", monospace;
- }
- 
- .knowledge-card-content p {
+}
+
+.knowledge-card-content p {
   font-size: 14px;
-  color: #00ffff;
+  color: var(--special-card-font-para);
   font-family: "Fira Code", monospace;
- }
+}
 
 .exp-container {
-  font-family: "inter", sans-serif;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-  justify-content: center;
+  background-color: Black;
+  padding: 0 20px 20px;
 }
 
-.exp-card {
-  background-color: var(--card-color-1);
-  border-radius: 15px;
+.exp-bill-board {
+  color: #fff;
+  font-size: 3.9rem;
+  text-align: left;
+}
+
+.exp-num {
+  font-size: 80px;
+  color: #f1faee81;
+}
+
+/* Accordion Container */
+.accordion {
+  width: 100%;
+  border-radius: 8px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: start;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 35px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
-.exp-header {
-  background-color: #fffc57;
-  background-size: cover;
-  background-position: center;
-  height: 90px;
-  width: 50%;
-  border-radius: 15px;
-  margin-top: -45px;
+/* Accordion Toggle Button */
+.accordion-toggle {
+  width: 100%;
+  background-color: #1b263b;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 8px 8px 0 0;
+  padding: 30px 10px;
 }
 
-.exp-content {
-  color: var(--card-font-2);
+.accordion-item {
+  width: 400px;
 }
 
-.exp-content p,
-h3 {
-  padding: 7px;
+.accordion-toggle:hover {
+  background-color: #1d3557;
 }
 
-#com-des {
-  color: var(--font-color-1);
+/* Accordion Content */
+.accordion-content {
+  width: 100%;
+  background: var(--special-card-bg);
+  display: none;
+  border-radius: 0 0 8px 8px;
+  border-bottom: 1px solid #ff0000;
+}
+
+/* Show content when active */
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Transition for smooth expanding */
+.accordion-content p {
+  margin: 0;
+}
+
+/* Additional Styling */
+.accordion-content p {
+  color: #f1faee;
+  padding: 10px;
+  font-size: 1.3rem;
+}
+
+/* Add icons to the button */
+.accordion-toggle::before {
+  content: '+';
+  font-weight: bold;
+  margin-right: 10px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+/* Rotate icon when active */
+.accordion-item.active .accordion-toggle::before {
+  transform: rotate(45deg);
+}
+
+.accordion-item .pispl {
+  color: #627cfe;
+}
+.accordion-item .wow-momo {
+  color: #ff6f00;
+}
+.accordion-item .think-again-lab {
+  color: #ffee00;
 }
 
 .edu-container {
@@ -402,13 +460,13 @@ h3 {
   /* Zoom effect */
 }
 
-.edu-content p {
-  color: #f1faeebe;
+.edu-content {
+  line-height: 24px;
+  padding-bottom: 10px;
 }
 
-.edu-content p,
-h3 {
-  padding: 7px;
+.edu-content p {
+  color: #f1faeebe;
 }
 
 #dig-dep {
@@ -513,5 +571,32 @@ h3 {
     gap: 20px;
     justify-content: center;
     align-items: center;
+  }
+
+  .accordion {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .accordion-item {
+    width: 100%;
+  }
+
+  .knowledge-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+  
+
+  .knowledge-card {
+    width: 170px;
+    height: 236px;
+    margin: 0 auto;
+    background-color: var(--special-card-bg);
+    border-radius: 8px;
+    z-index: 1;
   }
 }

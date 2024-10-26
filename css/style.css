@@ -46,6 +46,9 @@
   --off-bg-color-hover: #f1faee;
   --git-btn: #f1faee;
   --card-shadow: #f1faee90;
+  --special-card-bg: #011522;
+  --special-card-font-header: #9eed00;
+  --special-card-font-para: #00ffff;
 }
 
 /* Define custom colors for Light Theme */
@@ -96,6 +99,9 @@
   --off-bg-color-hover: #1d3557;
   --git-btn: #222229;
   --card-shadow: #1d355790;
+  --special-card-bg: #011522;
+  --special-card-font-header: #9eed00;
+  --special-card-font-para: #00ffff;
 }
 
 html {
@@ -465,6 +471,9 @@ html {
 hr {
   margin: 20px 0 20px 0;
 }
+
+
+/* Mobile view*/
 
 @media (max-width:680px) {
 
