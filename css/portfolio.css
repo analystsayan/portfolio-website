@@ -107,10 +107,8 @@ body {
   font-size: clamp(10px, 12vw, 50px);
   text-align: left;
   padding: 0 20px 10px;
-}
-
-.techStackSection {
-  padding: 0 10px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
 }
 
 .button-icon {
@@ -200,6 +198,8 @@ body {
   transition: opacity 0.5s, height 0.5s;
   overflow: hidden;
   pointer-events: auto;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -255,6 +255,10 @@ body {
   background-color: var(--project-link-hover-bg);
   color: var(--project-link-hover-font);
   transition: ease-in-out 0.3s;
+}
+
+.techStackSection {
+  padding: 0 10px;
 }
 
 .knowledge-container {
