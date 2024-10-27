@@ -124,3 +124,21 @@ window.addEventListener("scroll", () => {
 });
 
 
+// JavaScript function for quick navigation to sections
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth', // Smooth scrolling transition
+        block: 'start', // Scroll to the top of the section
+      });
+    }
+  }
+  
+  // Event listeners for buttons with specific IDs
+  document.getElementById('projectButton').addEventListener('click', () => scrollToSection('projectSection'));
+  document.getElementById('ExperienceButton').addEventListener('click', () => scrollToSection('experienceSection'));
+  document.getElementById('educationButton').addEventListener('click', () => scrollToSection('educationSection'));
+  
+  
+
