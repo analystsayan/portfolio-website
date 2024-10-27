@@ -1,15 +1,14 @@
 /* Define custom colors for Dark Theme */
 
-:root.dark-theme {
-  --primary-color: #0d1b2a;
+:root {
+  --primary-color: #000000;
   --card-color-1: #1b263b;
-  --card-color-2: #1d3557;
-  --card-font-1: #ffffff;
-  --card-font-2: #d6d6d6;
-  --card-font-3: #778da9;
+  --special-card-bg: #011522;
+  --special-card-font-header: #9eed00;
+  --special-card-font-para: #00ffff;
   --font-color-1: #ffffff;
-  --font-color-2: #ffffffa1;
-  --font-color-3: #ffffff52;
+  --font-color-2: #ffffffa3;
+  --font-color-3: #e3f5dd;
   --reverse-font-color-1: #1d3557;
   --reverse-font-color-2: #457b9d;
   --overlay-color: #00000099;
@@ -35,7 +34,6 @@
   --backgroundbg: linear-gradient(rgba(0, 0, 0, 0.766), rgba(0, 0, 0, 0.766));
   --bgoverlay: #0a1521a5;
   --sidebar-shadow: 3px 0px 20px #ffffff30;
-  --mainbgimg: url("/media/image/main-bg.jpg");
   --aboutme-details: #00000032;
   --section-title-hover-font: rgb(0, 255, 0);
   --project-link-hover-font: #1d3557;
@@ -46,79 +44,24 @@
   --off-bg-color-hover: #f1faee;
   --git-btn: #f1faee;
   --card-shadow: #f1faee90;
-  --special-card-bg: #011522;
-  --special-card-font-header: #9eed00;
-  --special-card-font-para: #00ffff;
-}
-
-/* Define custom colors for Light Theme */
-
-:root.light-theme {
-  --primary-color: #ffffff;
-  --card-color-1: #CED4DA;
-  --card-color-2: #1d3557;
-  --card-font-1: #000000;
-  --card-font-2: #000000;
-  --card-font-3: #000000;
-  --font-color-1: #000000;
-  --font-color-2: #00000099;
-  --font-color-3: #0000004f;
-  --reverse-font-color-1: #f2f2f2;
-  --reverse-font-color-2: #f2f2f2a2;
-  --overlay-color: #00000099;
-  --card-color-link: #3a3737;
-  --section-font: #1D3557;
-  --action-bg: #1D3557;
-  --action-font: #f1faee;
-  --action-hover-shadow: 0 2px 8px #000000;
-  --action-hover-font: #ffffff;
-  --profile-bg: #f1faee;
-  --profile-name: #1D3557;
-  --profile-username: #1d355786;
-  --sidebar-hover-font: #e63946;
-  --theme-switch-hover-font: #ffffff;
-  --theme-switch-hover-bg: #1d3557;
-  --scroll-button-font: #000000;
-  --scroll-button-bg: #cbf3f0;
-  --exp-header-shadow: #00000000;
-  --searchBar-component: #00000080;
-  --searchbaractive: #adb5bd94;
-  --placeholderfont: #000000a2;
-  --aboutme: #000000;
-  --backgroundbg: linear-gradient(to right, #ff4665, #ff6430);
-  --bgoverlay: #0a1521a5;
-  --sidebar-shadow: 3px 0px 20px #0000004b;
-  --mainbgimg: url("/media/image/main-bg-img-2.jpg");
-  --aboutme-details: #ffffff00;
-  --section-title-hover-font: rgb(0, 0, 255);
-  --project-link-hover-font: #f1faee;
-  --project-link-hover-bg: #1d3557;
-  --off-color: #1d3557;
-  --off-bg-color: #f1faee;
-  --off-color-hover: #f1faee;
-  --off-bg-color-hover: #1d3557;
-  --git-btn: #222229;
-  --card-shadow: #1d355790;
-  --special-card-bg: #011522;
-  --special-card-font-header: #9eed00;
-  --special-card-font-para: #00ffff;
-}
-
-html {
-  background-image: var(--mainbgimg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
-  text-decoration: none;
+  background-color: var(--primary-color);
+  width: 100%;
+  text-align: center;
+  overflow-y: hidden;
 }
 
 #theme-switch {
@@ -126,7 +69,7 @@ body {
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px;
+  padding: 8px;
   color: #000000;
   background-color: var(--font-color-3);
   border-radius: 17px;
@@ -167,10 +110,8 @@ body {
 
 .sidebar ul li i {
   padding-right: 20px;
-  /* Space between icon and text */
   display: flex;
   align-items: center;
-  /* Vertically center the icon */
 }
 
 .sidebar ul li a {
@@ -244,7 +185,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .LandingSocialContainer {
@@ -627,26 +568,6 @@ hr {
     align-items: center;
   }
 
-  .main44 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0 20px 0;
-  }
-
-  .main44 p {
-    font-size: 20px;
-    line-height: 30px;
-    color: var(--font-color-2);
-    padding: 0 20px 0 20px;
-  }
-
-  .main44 h3 {
-    color: var(--font-color-1);
-    margin-bottom: 20px;
-  }
-
   .aboutme {
     color: var(--font-color-1);
   }
@@ -659,6 +580,25 @@ hr {
     width: 350px;
     height: auto;
     border-radius: 15px;
+  }
+
+  .main44 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .main44 h3 {
+    color: var(--font-color-1);
+  }
+
+  .main44 p {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--font-color-2);
+    padding: 0 20px;
   }
 
   .footer {
@@ -682,7 +622,7 @@ hr {
 
 @media (min-width:681px) {
   main {
-    margin-left: 270px;
+    margin-left: 230px;
   }
 
   .logocontainer {
@@ -700,14 +640,13 @@ hr {
   .sidebar {
     position: fixed;
     left: 0px;
-    width: 270px;
+    width: 230px;
     height: 100vh;
     overflow-x: hidden;
     background-color: var(--primary-color);
     transition: left 0.3s ease;
     box-sizing: border-box;
     z-index: 999;
-    box-shadow: var(--sidebar-shadow)
   }
 
   .menu-toggle {
@@ -723,19 +662,18 @@ hr {
     justify-content: center;
     align-items: center;
     transition: top 0.3s;
-    /* Smooth transition */
-    margin-left: 270px;
+    margin-left: 230px;
   }
 
   .search-bar {
     width: 100%;
     height: 40px;
     background-color: var(--searchbaractive);
-    border-radius: 20px;
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     position: relative;
-    margin: 0 20px 0 20px;
+    margin: 0 20px;
     align-items: center;
   }
 
@@ -851,10 +789,10 @@ hr {
     justify-content: center;
     background-color: var(--aboutme-details);
     margin-right: 30px;
-    padding: 20px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px #ffffff42;
+    padding: 20px;
   }
 
   .main44 p {
@@ -865,7 +803,6 @@ hr {
 
   .main44 h3 {
     color: var(--font-color-1);
-    margin-bottom: 20px;
   }
 
   .aboutme {
@@ -998,3 +935,135 @@ hr {
   outline: 2px solid transparent;
   outline-offset: 2px;
 } */
+
+/* Hide scrollbar for the sidebar */
+.canvacontainer {
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+}
+
+.canvacontainer::-webkit-scrollbar {
+  display: none;
+  /* for Chrome, Safari, and Opera */
+}
+
+.canvacontainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.canvacard {
+  position: relative;
+  height: 480px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Buttons styling */
+.download-btn,
+.canvas-link-btn {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Show overlay and buttons on hover */
+.canvacard:hover .overlay {
+  opacity: 1;
+}
+
+@media (max-width: 680px) {
+  .canvacontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+  }
+
+  .canvacard {
+    flex: 0 0 auto;
+    /* Prevent shrinking and keep the original size */
+    height: 400px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* From Uiverse.io by StealthWorm */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  cursor: pointer;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(#212121, #212121),
+    linear-gradient(137.48deg,
+      #ffdb3b 10%,
+      #fe53bb 45%,
+      #8f51ea 67%,
+      #0044ff 87%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  text-decoration: none !important;
+  color: white;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  text-decoration: none;
+}
+
+.template {
+  display: flex;
+  justify-content: center;
+}

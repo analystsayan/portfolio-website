@@ -43,26 +43,6 @@ document.addEventListener('touchend', function (event) {
     handleSwipe();
 }, false);
 
-
-// Theme switch functionality
-document.addEventListener('DOMContentLoaded', function () {
-    const themeSwitch = document.getElementById('theme-switch');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-
-    document.documentElement.classList.add(currentTheme + '-theme');
-
-    themeSwitch.addEventListener('click', function () {
-        let newTheme = 'light';
-        if (document.documentElement.classList.contains('light-theme')) {
-            newTheme = 'dark';
-        }
-        document.documentElement.classList.remove('light-theme', 'dark-theme');
-        document.documentElement.classList.add(newTheme + '-theme');
-        localStorage.setItem('theme', newTheme);
-    });
-});
-
-
 // Hide header on scroll
 let lastScrollY = window.scrollY;
 const header = document.querySelector('.header');
@@ -131,6 +111,16 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
         const accordionItem = button.parentElement;
         accordionItem.classList.toggle('active');
     });
+});
+
+/* JavaScript to add sticky class */
+window.addEventListener("scroll", () => {
+  const profileInfo = document.querySelector(".profile-info");
+  if (window.scrollY > 100) {
+    profileInfo.classList.add("sticky");
+  } else {
+    profileInfo.classList.remove("sticky");
+  }
 });
 
 

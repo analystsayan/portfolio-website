@@ -4,30 +4,24 @@ summary of the key components and functionalities: -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnalystSayan-Portfolio</title>
-    <link rel="icon" type="png" href="media/image/favicon.png" />
-    <link rel="image_src" href="media/image/websiteLogo.png" />
+    <link rel="icon" type="png" href="media/image/favicon.png">
+    <link rel="image_src" href="media/image/websiteLogo.png">
     <!-- External CSS -->
-    <link rel="stylesheet" href="css/portfolio.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts - Caudex, Noto Serif Bengali, and Quattrocento -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
     </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- Font Awesome Kit -->
-    <script
-      src="https://kit.fontawesome.com/01dcb3424f.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -35,37 +29,33 @@ summary of the key components and functionalities: -->
     <nav class="sidebar" id="sidebar">
       <ul>
         <li>
-          <a href="index.html"><i class="fas fa-home"></i>Home</a>
+          <a href="index.html">
+            <i class="fas fa-home"></i>Home
+          </a>
         </li>
         <li>
-          <a href="portfolio.html"
-            ><i class="fa-solid fa-briefcase"></i>Portfolio</a
-          >
+          <a href="portfolio.html">
+            <i class="fa-solid fa-briefcase"></i>Portfolio
+          </a>
+        </li>
+        <li class="section-title">
+          Social
         </li>
         <li>
-          <a href="creativeZone.html"
-            ><i class="fa-brands fa-artstation"></i>Creative Zone</a
-          >
-        </li>
-        <li class="section-title">Social</li>
-        <li>
-          <a href="https://www.linkedin.com/in/analystsayan/" target="_blank"
-            ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
+          <a href="https://www.linkedin.com/in/analystsayan/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
         </li>
         <li>
-          <a href="https://github.com/analystsayan" target="_blank"
-            ><i class="fab fa-github"></i> GitHub</a
-          >
+          <a href="https://github.com/analystsayan" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </li>
         <li>
-          <a href="https://profile.google.com/qyefrf4a" target="_blank"
-            ><i class="fa-brands fa-google"></i>Notes</a
-          >
+          <a href="https://profile.google.com/qyefrf4a" target="_blank">
+            <i class="fa-brands fa-google"></i>Notes
+          </a>
         </li>
-        <button alt="Change-Theme" id="theme-switch">
-          <i class="fa-solid fa-lightbulb"></i>&nbsp;Switch Theme
-        </button>
       </ul>
     </nav>
 
@@ -80,7 +70,7 @@ summary of the key components and functionalities: -->
       <!-- Search Bar -->
       <div class="search-bar">
         <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
-        <input type="search" placeholder="Search" class="searchInput" />
+        <input type="search" placeholder="Search" class="searchInput">
         <button class="search-icon"><i class="fas fa-search"></i></button>
       </div>
     </div>
@@ -113,18 +103,21 @@ summary of the key components and functionalities: -->
       </div>
 
       <!-- TechStack Section -->
-      <section id="techStackSection">
-        <h2 id="sectionTitle" class="knowledge-title">Tech Stack</h2>
+      <h2 id="sectionTitle" class="knowledge-title">Tech Stack</h2>
+      <p class="bill-board">
+        I often talk about<br>the tech below.
+      </p>
+      <section class="techStackSection">
         <div class="knowledge-container">
           <div class="knowledge-card">
-            <div class="tools">
-              <div class="circle">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
                 <span class="red box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="yellow box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="green box"></span>
               </div>
             </div>
@@ -137,14 +130,14 @@ summary of the key components and functionalities: -->
             </div>
           </div>
           <div class="knowledge-card">
-            <div class="tools">
-              <div class="circle">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
                 <span class="red box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="yellow box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="green box"></span>
               </div>
             </div>
@@ -160,14 +153,14 @@ summary of the key components and functionalities: -->
             </div>
           </div>
           <div class="knowledge-card">
-            <div class="tools">
-              <div class="circle">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
                 <span class="red box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="yellow box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="green box"></span>
               </div>
             </div>
@@ -180,14 +173,14 @@ summary of the key components and functionalities: -->
             </div>
           </div>
           <div class="knowledge-card">
-            <div class="tools">
-              <div class="circle">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
                 <span class="red box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="yellow box"></span>
               </div>
-              <div class="circle">
+              <div class="knowledge-circle">
                 <span class="green box"></span>
               </div>
             </div>
@@ -203,108 +196,68 @@ summary of the key components and functionalities: -->
       </section>
 
       <!-- Project Section -->
+      <h2 id="sectionTitle" class="projects-title">Projects</h2>
+      <p class="bill-board">
+        Recent Projects<br>I have worked on
+      </p>
       <section id="projectSection">
-        <h2 id="sectionTitle" class="projects-title">My Projects</h2>
         <div class="project-card-container">
           <div class="project-card">
-            <div
-              class="project-card-image"
-              style="background-image: url(media/image/HrDataAnalytics.jpg)"
-            ></div>
+            <div class="project-card-image" style="background-image: url(media/image/HrDataAnalytics.jpg)"></div>
             <div class="project-card-content">
               <div class="project-card-text">
                 <h3>HR Data Analytics</h3>
                 <p>Python, Power BI, MS Excel</p>
                 <div class="link-section">
                   <a class="link-highlight" href="" target="_blank">Live</a>
-                  <a class="link-highlight" href="" target="_blank"
-                    >Source Code</a
-                  >
+                  <a class="link-highlight" href="" target="_blank">Source Code</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="project-card">
-            <div
-              class="project-card-image"
-              style="background-image: url(media/image/ClothingStoreDA.png)"
-            ></div>
+            <div class="project-card-image" style="background-image: url(media/image/ClothingStoreDA.png)"></div>
             <div class="project-card-content">
               <div class="project-card-text">
                 <h3>Sales Dashboard</h3>
                 <p>MS Excel, Power Query</p>
                 <div class="link-section">
-                  <a
-                    class="link-highlight"
-                    href="https://github.com/analystsayan/Vrinda-Store-Annual-Report"
-                    target="_blank"
-                    >Live</a
-                  >
-                  <a
-                    class="link-highlight"
-                    href="https://github.com/analystsayan/Vrinda-Store-Annual-Report"
-                    target="_blank"
-                    >Source Code</a
-                  >
+                  <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Live</a>
+                  <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Source Code</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="project-card">
-            <div
-              class="project-card-image"
-              style="background-image: url(media/image/portfolioimageWeb.png)"
-            ></div>
+            <div class="project-card-image" style="background-image: url(media/image/portfolioimageWeb.png)"></div>
             <div class="project-card-content">
               <div class="project-card-text">
                 <h3>Portfolio Website</h3>
                 <p>HTML, CSS, JavaScript</p>
                 <div class="link-section">
-                  <a
-                    class="link-highlight"
-                    href="https://analystsayan.vercel.app"
-                    target="_blank"
-                    >Live</a
-                  >
-                  <a
-                    class="link-highlight"
-                    href="https://github.com/analystsayan/Portfolio"
-                    target="_blank"
-                    >Source Code</a
-                  >
+                  <a class="link-highlight" href="https://analystsayan.vercel.app" target="_blank">Live</a>
+                  <a class="link-highlight" href="https://github.com/analystsayan/Portfolio" target="_blank">Source Code</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="project-card">
-            <div
-              class="project-card-image"
-              style="
-                background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);
-              "
-            ></div>
+            <div class="project-card-image" style="background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);"></div>
             <div class="project-card-content">
               <div class="project-card-text">
                 <h3>Amazon Clone</h3>
                 <p>HTML, CSS, JavaScript</p>
                 <div class="link-section">
                   <a class="link-highlight" href="#" target="_blank">Live</a>
-                  <a class="link-highlight" href="#" target="_blank"
-                    >Source Code</a
-                  >
+                  <a class="link-highlight" href="#" target="_blank">Source Code</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <a
-        href="https://github.com/analystsayan?tab=repositories"
-        class="github-link"
-      >
-        <div
-          class="button-icon"
-        >
+      <a href="https://github.com/analystsayan?tab=repositories" class="github-link">
+        <div class="button-icon">
           <div class="icon">
             <svg viewBox="0 0 24 24">
               <path
@@ -321,16 +274,18 @@ summary of the key components and functionalities: -->
       </a>
 
       <!-- Experience Section -->
+      <h2 id="sectionTitle" class="exp-title">Work Experience</h2>
+      <p class="bill-board">
+        Companies I have worked<br>for in the past.
+      </p>
       <section id="experienceSection">
         <div class="exp-container">
-          <h2 id="sectionTitle" class="exp-title">Work Experience</h2>
-          <p class="exp-bill-board">Companies I have worked<br>for in the Past.</p>
           <div class="accordion">
             <div class="accordion-item">
               <p class="exp-num">01</p>
               <button class="accordion-toggle">
-                <span class="pispl">Parekh Integrated Services</span><br>Data Analyst<br>Jun
-                2024 - Oct 2024
+                <span class="pispl">Parekh Integrated Services</span><br />Data
+                Analyst<br />Jun 2024 - Oct 2024
               </button>
               <div class="accordion-content">
                 <p>
@@ -343,7 +298,8 @@ summary of the key components and functionalities: -->
             <div class="accordion-item">
               <p class="exp-num">02</p>
               <button class="accordion-toggle">
-                <span class="wow-momo">Wow Momo Foods</span><br>Senior Team Member<br>Dec 2023 - June 2024
+                <span class="wow-momo">Wow Momo Foods</span><br />Senior Team
+                Member<br />Dec 2023 - June 2024
               </button>
               <div class="accordion-content">
                 <p>
@@ -356,12 +312,14 @@ summary of the key components and functionalities: -->
             <div class="accordion-item">
               <p class="exp-num">03</p>
               <button class="accordion-toggle">
-                <span class="think-again-lab">Think Again Lab</span><br>Data Science Intern<br>Dec 2022 - Mar 2023
+                <span class="think-again-lab">Think Again Lab</span><br />Data
+                Science Intern<br />Dec 2022 - Mar 2023
               </button>
               <div class="accordion-content">
                 <p>
-                  Worked on data analysis projects using Python and R, focusing on
-                  data visualization and model development for real-time insights.
+                  Worked on data analysis projects using Python and R, focusing
+                  on data visualization and model development for real-time
+                  insights.
                 </p>
               </div>
             </div>
@@ -370,12 +328,14 @@ summary of the key components and functionalities: -->
       </section>
 
       <!-- Education Section -->
+      <h2 id="sectionTitle" class="edu-title">Background</h2>
+      <p class="bill-board">
+        Education background<br> I belong to.
+      </p>
       <section id="educationSection">
-        <h2 id="sectionTitle" class="edu-title">Educational Background</h2>
         <div class="edu-container">
           <div class="edu-card">
-            <a href="https://makautwb.ac.in/"
-              ><div
+            <a href="https://makautwb.ac.in/"><div
                 class="edu-header"
                 style="background-image: url(media/image/makaut-logo.jpeg)"
               ></div
