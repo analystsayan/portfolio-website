@@ -58,7 +58,6 @@ window.addEventListener('scroll', () => {
     lastScrollY = window.scrollY;
 });
 
-
 // Scroll to top from footer
 document.addEventListener('DOMContentLoaded', () => {
     const footerName = document.querySelector('.footername');
@@ -77,36 +76,10 @@ function myFunction() {
     alert("You will be redirected to my portfolio !");
 }
 
-// // JavaScript for handling the cookie notice
-// document.addEventListener("DOMContentLoaded", function () {
-//     const cookieCard = document.querySelector(".cookie-card");
-//     const acceptButton = document.querySelector(".accept");
-//     const prefButton = document.querySelector(".pref");
-
-//     // Function to hide the cookie notice
-//     function hideCookieNotice() {
-//         cookieCard.style.display = "none";
-//     }
-
-//     // Check if the user has already accepted the cookies
-//     if (localStorage.getItem("cookiesAccepted") === "true") {
-//         hideCookieNotice();
-//     }
-
-//     // Event listener for the accept button
-//     acceptButton.addEventListener("click", function () {
-//         localStorage.setItem("cookiesAccepted", "true");
-//         hideCookieNotice();
-//     });
-
-//     // Event listener for the preferences button
-//     prefButton.addEventListener("click", function () {
-//         alert("Manage your cookie preferences."); // You can replace this with a preferences modal or page link
-//     });
-// });
 
 
-document.querySelectorAll('.accordion-toggle').forEach(button => {
+
+document.querySelectorAll('.exp-toggle').forEach(button => {
     button.addEventListener('click', () => {
         const accordionItem = button.parentElement;
         accordionItem.classList.toggle('active');
@@ -140,5 +113,3 @@ function scrollToSection(sectionId) {
   document.getElementById('ExperienceButton').addEventListener('click', () => scrollToSection('experienceSection'));
   document.getElementById('educationButton').addEventListener('click', () => scrollToSection('educationSection'));
   
-  
-

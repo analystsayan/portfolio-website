@@ -1,25 +1,25 @@
 <a id="top"></a>
-<!-- The above code is an HTML document that represents a portfolio website for Analyst Sayan. Here is a
+<!-- The above code is an HTML document that represents a portfolio website for Sayan Mondal. Here is a
 summary of the key components and functionalities: -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnalystSayan-Portfolio</title>
-    <link rel="icon" type="png" href="media/image/favicon.png">
-    <link rel="image_src" href="media/image/websiteLogo.png">
+    <!-- Title of the page -->
+    <title>Analyst Sayan Portfolio</title>
+    <meta property="og:title" content="Analyst Sayan Portfolio" /> 
+    <meta property="og:description" content="Welcome to the detailed portfolio of Sayan Mondal who is a Web Developer based in Kolkata" /> 
+    <meta property="og:image" content="media/image/user/linkpreview.png" /> 
+    <meta property="og:url" content="https://analystsayan.vercel.app/portfolio.html" />
+    <link rel="icon" type="png" href="media/image/logo/mainlogo.png">
+    <link rel="image_src" href="media/image/main-bg-img-2.jpg">
     <!-- External CSS -->
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts - Caudex, Noto Serif Bengali, and Quattrocento -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-    </style>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
@@ -28,82 +28,99 @@ summary of the key components and functionalities: -->
   <body>
     <!-- Sidebar Navigation -->
     <nav class="sidebar" id="sidebar">
-      <h1>Sayan Mondal Portfolio</h1>
+      <div class="sidebar-logo" title="Sayan Mondal"></div> <!-- Sidebar Logo -->
       <!-- Search Bar -->
-      <div class="search-bar">
-        <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
-        <input type="search" placeholder="Search" class="searchInput">
-        <button class="search-icon"><i class="fas fa-search"></i></button>
+      <div class="sidebar-search" title="Search">
+        <div class="search-bar">
+          <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
+          <input type="search" placeholder="Search" class="searchInput">
+          <button class="search-icon"><i class="fas fa-search"></i></button>
+        </div>
       </div>
+      <!-- Sidebar Menu -->
       <ul>
         <li>
-          <a href="index.html">
+          <a href="index.html" title="Home">
             <i class="fas fa-home"></i>Home
           </a>
         </li>
         <li>
-          <a href="portfolio.html">
+          <a href="portfolio.html" title="Portfolio">
             <i class="fa-solid fa-briefcase"></i>Portfolio
           </a>
         </li>
-        <li class="section-title">
+        <li class="section-title" title="Social">
           Social
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/analystsayan/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
+          <a href="https://www.linkedin.com/in/analystsayan/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://github.com/analystsayan" target="_blank">
-            <i class="fab fa-github"></i> GitHub
+          <a href="https://github.com/analystsayan" target="_blank" title="Github">
+            <i class="fab fa-github"></i>GitHub
           </a>
         </li>
         <li>
-          <a href="https://profile.google.com/qyefrf4a" target="_blank">
+          <a href="https://profile.google.com/qyefrf4a" target="_blank" title="Notes">
             <i class="fa-brands fa-google"></i>Notes
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/9547254491" target="_blank" title="Whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>Whatsapp
           </a>
         </li>
       </ul>
     </nav>
 
     <!-- Header Section -->
-    <div class="header">
-      <!-- Three-line menu icon -->
-      <div class="menu-toggle" id="menuToggle">
+    <div class="header"> <!-- Header Logo -->
+      <div class="header-logo" title="Sayan Mondal"></div> <!-- Header Search -->
+      <div class="header-search" title="Search">
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <button class="search-arrow" title="Back"><i class="fas fa-arrow-left"></i></button>
+          <input type="search" placeholder="Search" class="searchInput">
+          <button class="search-icon" title="Search"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <!-- Three-line menu Toggle -->
+      <div class="menu-toggle" id="menuToggle" title="Menu Toggle">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <h5 id="projectButton">Projects</h5>
-      <h5 id="ExperienceButton">Experience</h5>
-      <h5 id="educationButton">Education</h5>
-      <div class="three-dot" id="threeDot">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
+      <!-- Class ==> Header h5 -->
+      <h5 id="projectButton" title="Projects">Projects</h5>
+      <h5 id="ExperienceButton" title="Work Experience">Experience</h5>
+      <h5 id="educationButton" title="Education">Education</h5>
+      <!-- More Vert -->
+      <div class="three-dot" id="threeDot" title="More">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
       </div>
     </div>
 
     <!-- Main Content -->
     <main>
+      <!-- Profile Key Information -->
       <div class="profile-info">
-        <div class="profile-image" alt="Profile-Image"></div>
+        <div class="profile-image" alt="Profile-Image" title="Sayan Mondal"></div>  <!-- Profile Image -->
+        <!-- Profile Details -->
         <div class="profile-details">
-          <div class="profile-name">Sayan Mondal</div>
-          <a
-            class="username"
-            href="https://analystsayan.bio.link/"
-            target="_blank"
-            >@analystsayan</a
-          >
+          <div class="profile-name" title="Sayan Mondal">Sayan Mondal</div> <!-- Profile Name -->
+          <a class="username" href="https://analystsayan.bio.link/" target="_blank" title="@analystsayan">@analystsayan</a> <!-- Profile Username -->
+          <!-- Profile Btn Container -->
           <div class="button-container">
-            <div class="resume-button">
+            <!-- Resume Btn -->
+            <div class="resume-button" title="Download Resume">
               <a alt="Resume" href="media/pdf/Resume_Sayan_Mondal_003.pdf">
                 <i alt="Download" class="fas fa-download"></i> Resume
               </a>
             </div>
-            <div alt="e-mail" class="email-button">
+            <!-- E-mail Btn -->
+            <div alt="e-mail" class="email-button" title="Send Email">
               <a href="mailto:analystsayan1@gmail.com">
                 <i class="fas fa-envelope"></i> Hire me
               </a>
@@ -113,97 +130,96 @@ summary of the key components and functionalities: -->
       </div>
 
       <!-- TechStack Section -->
-      <section class="techStackSection">
+      <section id="techStackSection">
+        <!-- Section Header -->
         <div class="section-header">
-          <h2 id="sectionTitle" class="knowledge-title">Tech Stack</h2>
+          <h2 id="sectionTitle" class="knowledge-title">Tech Stack</h2> <!-- section title -->
           <p class="bill-board">
             I often talk about<br>the tech below.
           </p>
         </div>
-        <div class="tech-stack-section">
-          <div class="knowledge-container">
-            <div class="knowledge-card">
-              <div class="knowledge-tools">
-                <div class="knowledge-circle">
-                  <span class="red box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="yellow box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="green box"></span>
-                </div>
+        <div class="knowledge-container">
+          <div class="knowledge-card">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
+                <span class="red box"></span>
               </div>
-              <div class="knowledge-card-content">
-                <h4>Frontend</h4>
-                <p>HTML,<br />CSS,<br />JavaScript</p>
-                <br />
-                <h4>Frameworks & Libraries</h4>
-                <p>React</p>
+              <div class="knowledge-circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="knowledge-circle">
+                <span class="green box"></span>
               </div>
             </div>
-            <div class="knowledge-card">
-              <div class="knowledge-tools">
-                <div class="knowledge-circle">
-                  <span class="red box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="yellow box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="green box"></span>
-                </div>
+            <div class="knowledge-card-content">
+              <h4>Frontend</h4>
+              <p>HTML,<br />CSS,<br />JavaScript</p>
+              <br />
+              <h4>Frameworks & Libraries</h4>
+              <p>React</p>
+            </div>
+          </div>
+          <div class="knowledge-card">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
+                <span class="red box"></span>
               </div>
-              <div class="knowledge-card-content">
-                <h4>Version Control & Package Manager</h4>
-                <p>
-                  Git/Git-hub,<br />
-                  npm
-                </p>
-                <br />
-                <h4>Typography & Testing</h4>
-                <p>Tailwind, Jest</p>
+              <div class="knowledge-circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="knowledge-circle">
+                <span class="green box"></span>
               </div>
             </div>
-            <div class="knowledge-card">
-              <div class="knowledge-tools">
-                <div class="knowledge-circle">
-                  <span class="red box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="yellow box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="green box"></span>
-                </div>
+            <div class="knowledge-card-content">
+              <h4>Version Control & Package Manager</h4>
+              <p>
+                Git/Git-hub,<br />
+                npm
+              </p>
+              <br />
+              <h4>Typography & Testing</h4>
+              <p>Tailwind, Jest</p>
+            </div>
+          </div>
+          <div class="knowledge-card">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
+                <span class="red box"></span>
               </div>
-              <div class="knowledge-card-content">
-                <h4>Programming &<br />Data Manupulation</h4>
-                <p>Python,<br />Power Query</p>
-                <br />
-                <h4>Data Visualization</h4>
-                <p>Excel, Power BI, Matplotlib</p>
+              <div class="knowledge-circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="knowledge-circle">
+                <span class="green box"></span>
               </div>
             </div>
-            <div class="knowledge-card">
-              <div class="knowledge-tools">
-                <div class="knowledge-circle">
-                  <span class="red box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="yellow box"></span>
-                </div>
-                <div class="knowledge-circle">
-                  <span class="green box"></span>
-                </div>
+            <div class="knowledge-card-content">
+              <h4>Programming &<br />Data Manupulation</h4>
+              <p>Python,<br />Power Query</p>
+              <br />
+              <h4>Data Visualization</h4>
+              <p>Excel, Power BI, Matplotlib</p>
+            </div>
+          </div>
+          <div class="knowledge-card">
+            <div class="knowledge-tools">
+              <div class="knowledge-circle">
+                <span class="red box"></span>
               </div>
-              <div class="knowledge-card-content">
-                <h4>Basic UI/UX</h4>
-                <p>UI/UX Design,<br />SEO Knowledge</p>
-                <br />
-                <h4>Soft Skills</h4>
-                <p>Problem-Solving,<br />Communication,<br />Time Management</p>
+              <div class="knowledge-circle">
+                <span class="yellow box"></span>
               </div>
+              <div class="knowledge-circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="knowledge-card-content">
+              <h4>Basic UI/UX</h4>
+              <p>UI/UX Design,<br />SEO Knowledge</p>
+              <br />
+              <h4>Soft Skills</h4>
+              <p>Problem-Solving,<br />Communication,<br />Time Management</p>
             </div>
           </div>
         </div>
@@ -212,77 +228,64 @@ summary of the key components and functionalities: -->
       <!-- Project Section -->
       <section id="projectSection">
         <div class="section-header">
-          <h2 id="sectionTitle" class="projects-title">Projects</h2>
+          <h2 id="sectionTitle" class="projects-title">Projects</h2> 
           <p class="bill-board">
             Recent Projects<br>I have worked on.
           </p>
         </div>
-        <div class="project-section">
-          <div class="project-card-container">
-            <div class="project-card">
-              <div class="project-card-image" style="background-image: url(media/image/HrDataAnalytics.jpg)"></div>
-              <div class="project-card-content">
-                <div class="project-card-text">
-                  <h3>HR Data Analytics</h3>
-                  <p>Python, Power BI, MS Excel</p>
-                  <div class="link-section">
-                    <a class="link-highlight" href="" target="_blank">Live</a>
-                    <a class="link-highlight" href="" target="_blank">Source Code</a>
-                  </div>
-                </div>
+        <div class="project-card-container">
+          <div class="project-card">
+            <div class="project-card-image" style="background-image: url(media/image/HrDataAnalytics.jpg)"></div>
+            <div class="project-card-content">
+              <h3>HR Data Analytics</h3>  <!-- Project Header -->
+              <p>Python, Power BI, MS Excel</p> <!-- Used Tools-->
+              <div class="link-section">
+                <a class="link-highlight" href="" target="_blank">Live</a>
+                <a class="link-highlight" href="" target="_blank">Source Code</a>
               </div>
             </div>
-            <div class="project-card">
-              <div class="project-card-image" style="background-image: url(media/image/ClothingStoreDA.png)"></div>
-              <div class="project-card-content">
-                <div class="project-card-text">
-                  <h3>Sales Dashboard</h3>
-                  <p>MS Excel, Power Query</p>
-                  <div class="link-section">
-                    <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Live</a>
-                    <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Source Code</a>
-                  </div>
-                </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-image" style="background-image: url(media/image/ClothingStoreDA.png)"></div>
+            <div class="project-card-content">
+              <h3>Sales Dashboard</h3>
+              <p>MS Excel, Power Query</p>
+              <div class="link-section">
+                <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Live</a>
+                <a class="link-highlight" href="https://github.com/analystsayan/Vrinda-Store-Annual-Report" target="_blank">Source Code</a>
               </div>
             </div>
-            <div class="project-card">
-              <div class="project-card-image" style="background-image: url(media/image/portfolioimageWeb.png)"></div>
-              <div class="project-card-content">
-                <div class="project-card-text">
-                  <h3>Portfolio Website</h3>
-                  <p>HTML, CSS, JavaScript</p>
-                  <div class="link-section">
-                    <a class="link-highlight" href="https://analystsayan.vercel.app" target="_blank">Live</a>
-                    <a class="link-highlight" href="https://github.com/analystsayan/Portfolio" target="_blank">Source Code</a>
-                  </div>
-                </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-image" style="background-image: url(media/image/portfolioimageWeb.png)"></div>
+            <div class="project-card-content">
+              <h3>Personal Website</h3>
+              <p>HTML, CSS, JavaScript</p>
+              <div class="link-section">
+                <a class="link-highlight" href="https://analystsayan.vercel.app" target="_blank">Live</a>
+                <a class="link-highlight" href="https://github.com/analystsayan/Portfolio" target="_blank">Source Code</a>
               </div>
             </div>
-            <div class="project-card">
-              <div class="project-card-image" style="background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);"></div>
-              <div class="project-card-content">
-                <div class="project-card-text">
-                  <h3>Amazon Clone</h3>
-                  <p>HTML, CSS, JavaScript</p>
-                  <div class="link-section">
-                    <a class="link-highlight" href="#" target="_blank">Live</a>
-                    <a class="link-highlight" href="#" target="_blank">Source Code</a>
-                  </div>
-                </div>
+          </div>
+          <div class="project-card">
+            <div class="project-card-image" style="background-image: url(https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2018/07/amazon-1200x537-1-1531806703.jpg);"></div>
+            <div class="project-card-content">
+              <h3>Amazon Clone</h3>
+              <p>HTML, CSS, JavaScript</p>
+              <div class="link-section">
+                <a class="link-highlight" href="#" target="_blank">Live</a>
+                <a class="link-highlight" href="#" target="_blank">Source Code</a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Github Button to see all my projects -->
       <a href="https://github.com/analystsayan?tab=repositories" class="github-link">
         <div class="button-icon">
           <div class="icon">
-            <svg viewBox="0 0 24 24">
-              <path
-                d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
-                fill="#222229"
-              ></path>
-            </svg>
+            <i class="fa-brands fa-github"></i>
           </div>
           <div class="cube">
             <span class="side front">All Projects</span>
@@ -299,51 +302,47 @@ summary of the key components and functionalities: -->
             Companies I have worked<br>for in the past.
           </p>
         </div>
-        <div class="experience-section">
-          <div class="exp-container">
-            <div class="accordion">
-              <div class="accordion-item">
-                <p class="exp-num">01</p>
-                <button class="accordion-toggle">
-                  <span class="pispl">Parekh Integrated Services</span><br />Data
-                  Analyst<br />Jun 2024 - Oct 2024
-                </button>
-                <div class="accordion-content">
-                  <p>
-                    Responsible for analyzing large datasets and creating data
-                    dashboards to track key metrics. Improved data accuracy and
-                    efficiency by 20%.
-                  </p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <p class="exp-num">02</p>
-                <button class="accordion-toggle">
-                  <span class="wow-momo">Wow Momo Foods</span><br />Senior Team
-                  Member<br />Dec 2023 - June 2024
-                </button>
-                <div class="accordion-content">
-                  <p>
-                    Managed front-end billing operations and team coordination.
-                    Assisted with quality control and daily tracking of product
-                    inventory.
-                  </p>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <p class="exp-num">03</p>
-                <button class="accordion-toggle">
-                  <span class="think-again-lab">Think Again Lab</span><br />Data
-                  Science Intern<br />Dec 2022 - Mar 2023
-                </button>
-                <div class="accordion-content">
-                  <p>
-                    Worked on data analysis projects using Python and R, focusing
-                    on data visualization and model development for real-time
-                    insights.
-                  </p>
-                </div>
-              </div>
+        <div class="exp-container">
+          <div class="exp-card">
+            <p class="exp-num">01</p>
+            <button class="exp-toggle">
+              <span class="pispl">Parekh Integrated Services</span><br />Data
+              Analyst<br />Jun 2024 - Oct 2024
+            </button>
+            <div class="exp-content">
+              <p>
+                Responsible for analyzing large datasets and creating data
+                dashboards to track key metrics. Improved data accuracy and
+                efficiency by 20%.
+              </p>
+            </div>
+          </div>
+          <div class="exp-card">
+            <p class="exp-num">02</p>
+            <button class="exp-toggle">
+              <span class="wow-momo">Wow Momo Foods</span><br />Senior Team
+              Member<br />Dec 2023 - June 2024
+            </button>
+            <div class="exp-content">
+              <p>
+                Managed front-end billing operations and team coordination.
+                Assisted with quality control and daily tracking of product
+                inventory.
+              </p>
+            </div>
+          </div>
+          <div class="exp-card">
+            <p class="exp-num">03</p>
+            <button class="exp-toggle">
+              <span class="think-again-lab">Think Again Lab</span><br />Data
+              Science Intern<br />Dec 2022 - Mar 2023
+            </button>
+            <div class="exp-content">
+              <p>
+                Worked on data analysis projects using Python and R, focusing
+                on data visualization and model development for real-time
+                insights.
+              </p>
             </div>
           </div>
         </div>
@@ -357,54 +356,38 @@ summary of the key components and functionalities: -->
             Education background<br> I belong to.
           </p>
         </div>
-        <div class="education-section">
-          <div class="edu-container">
-            <div class="edu-card">
-              <a href="https://makautwb.ac.in/"><div
-                  class="edu-header"
-                  style="background-image: url(media/image/makaut-logo.jpeg)"
-                ></div
-              ></a>
-              <div class="edu-content">
-                <h3 id="dig-dep">Bachelor of Science</h3>
-                <p id="dig-dep" class="course">
-                  Information Technology <br />(Data Science)
-                </p>
-                <p>2020 - 2023</p>
-                <p>Maulana Abul Kalam Azad University of Technology(MAKAUT)</p>
-              </div>
-            </div>
-            <div class="edu-card">
-              <a id="wbchse" href="https://wbchse.wb.gov.in/home/"
-                ><div
-                  class="edu-header"
-                  style="background-image: url('https://shorturl.at/45HKS')"
-                ></div
-              ></a>
-              <div class="edu-content">
-                <h3 id="dig-dep">High Secondary</h3>
-                <p id="dig-dep" class="course">Science</p>
-                <p>2020</p>
-                <p>Lego R.B.R.K. Vidyapith</p>
-              </div>
-            </div>
-            <div class="edu-card">
-              <a id="wbbse" href="https://shorturl.at/QSmaY"
-                ><div
-                  class="edu-header"
-                  style="
-                    background-image: url('https://wbbse.wb.gov.in/img/logo.png');
-                  "
-                ></div
-              ></a>
-              <div class="edu-content">
-                <h3 id="dig-dep">Secondary Education</h3>
-                <p id="dig-dep" class="course">General Science</p>
-                <p>2018</p>
-                <p>Aswinkota Vidyasagar Vidyamandir(High)</p>
-              </div>
+
+        <div class="school-info-grid">
+          <div class="school-card">
+            <img src="media/image/logo/makaut-logo.jpeg" alt="Makaut" class="school-logo" />
+            <div class="school-details">
+              <h3 class="school-name">Maulana Abul Kalam Azad University of Technology</h3>
+              <p class="course">Course: Information Technology</p>
+              <p class="stream">Stream: Data Science</p>
+              <p class="year">Year: 2023</p>
             </div>
           </div>
+        
+          <div class="school-card">
+            <img src="media/image/logo/wbchselogo.jpg" alt="School 2 Logo" class="school-logo" />
+            <div class="school-details">
+              <h3 class="school-name">Lego RBRK Vidyapith (HighSchool)</h3>
+              <p class="course">Course: Higher Secondary Education</p>
+              <p class="stream">Stream: Science</p>
+              <p class="year">Year: 2020</p>
+            </div>
+          </div>
+        
+          <div class="school-card">
+            <img src="media/image/logo/wbbselogo.jpg" alt="School 3 Logo" class="school-logo" />
+            <div class="school-details">
+              <h3 class="school-name">Aswinkota Vidyasagar Vidyamandir</h3>
+              <p class="course">Course: Secondary Education</p>
+              <p class="stream">Stream: Normal</p>
+              <p class="year">Year: 2018</p>
+            </div>
+          </div>
+        </div>        
         </div>
       </section>
 
@@ -456,6 +439,24 @@ summary of the key components and functionalities: -->
           </div>
         </div>
       </section>
+
+      <!-- Social Section -->
+      <section id="socialSection">
+        <div class="section-header">
+          <h2 id="sectionTitle" class="knowledge-title">Social</h2>
+          <p class="bill-board">
+            I create, I post<br>on Socials.
+          </p>
+        </div>
+        <!-- Sociasl Container -->
+        <div class="social-container">
+          <a href="https://github.com/analystsayan/"><i class="fa-brands fa-github" title="Github"></i></a>
+          <a href="https://www.linkedin.com/in/analystsayan/"><i class="fa-brands fa-linkedin-in" title="Linkedin Profile"></i></a>
+          <a href="https://youtube.com/@analystsayan"><i class="fa-brands fa-youtube" title="Youtube"></i></a>
+          <a href="https://www.instagram.com/analystsayan/"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
+          <a href="https://www.instagram.com/analystsayan/"><i class="fa-brands fa-facebook" title="Facebook"></i></a>
+        </div>
+      </section>
     </main>
 
     <!-- Dark Overlay -->
@@ -464,8 +465,9 @@ summary of the key components and functionalities: -->
     <!-- Footer Section -->
     <footer class="footer">
       <div class="footer-container">
-        <a class="footername" href="#top">Sayan Mondal</a>
-        <p>&copy; 2024 All rights reserved Sayan Mondal</p>
+        <a class="footername" href="#top">Sayan Mondal</a><br>
+        <a class="location" target="_blank" href="https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.5353434,88.1825411,11z/data=!3m1!4b1!4m6!3m5!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.5743545!4d88.3628734!16zL20vMGN2dzk?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot"></i>  Kolkata</a>
+        <p>&copy; 2024 All rights reserved</p>
       </div>
     </footer>
 

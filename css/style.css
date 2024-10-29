@@ -7,43 +7,18 @@
   --special-card-font-header: #9eed00;
   --special-card-font-para: #00ffff;
   --font-color-1: #ffffff;
-  --font-color-2: #ffffffa3;
-  --font-color-3: #e7ffdf;
-  --reverse-font-color-1: #1d3557;
-  --reverse-font-color-2: #457b9d;
-  --overlay-color: #00000099;
+  --font-color-2: #def6ffa3;
+  --font-color-3: #e5fdeb;
+  --overlay-color: #00000098;
   --card-color-link: #c8c8c8;
-  --section-font: #f1faee;
-  --action-bg: #f1faee;
-  --action-font: #1D3557;
   --action-hover-shadow: 0 2px 8px #000000;
-  --action-hover-font: #000000;
-  --profile-bg: #1b263b;
-  --profile-name: #ffffff;
-  --profile-username: #ffffffad;
-  --sidebar-hover-font: #feff16;
-  --theme-switch-hover-font: #1d3557;
-  --theme-switch-hover-bg: #f1faee;
-  --scroll-button-font: #ffffff;
-  --scroll-button-bg: #0d1b2a;
-  --exp-header-shadow: #ffffff00;
-  --searchBar-component: #ffffff80;
-  --searchbaractive: #11253a;
-  --placeholderfont: #ffffff6c;
-  --aboutme: #ffffff;
-  --backgroundbg: linear-gradient(rgba(0, 0, 0, 0.766), rgba(0, 0, 0, 0.766));
-  --bgoverlay: #0a1521a5;
-  --sidebar-shadow: 3px 0px 20px #ffffff30;
-  --aboutme-details: #00000032;
-  --section-title-hover-font: rgb(0, 255, 0);
   --project-link-hover-font: #1d3557;
   --project-link-hover-bg: #f1faee;
   --off-color: #f1faee;
   --off-bg-color: #1d3557;
   --off-color-hover: #1d3557;
   --off-bg-color-hover: #f1faee;
-  --git-btn: #f1faee;
-  --card-shadow: #f1faee90;
+  --footer-bg: #0e0e21;
 }
 
 * {
@@ -118,6 +93,7 @@ body {
 }
 
 .sidebar ul li i {
+  font-size: 20px;
   padding-right: 20px;
   display: flex;
   align-items: center;
@@ -126,24 +102,23 @@ body {
 .sidebar ul li a {
   color: var(--off-color);
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   align-items: baseline;
   margin-top: 10px;
   border-radius: 7px;
   padding: 10px;
+  transition: background-color 0.3s;
 }
 
 .sidebar ul li :hover {
-  background-color: var(--off-bg-color-hover);
-  color: var(--off-color-hover);
-  transition: ease-in-out 0.3s;
+  background-color: var(--card-color-1);
 }
 
 .sidebar .section-title {
-  font-size: 22px;
-  padding-top: 25px;
-  color: var(--profile-username);
+  font-size: 20px;
+  padding: 10px;
+  color: var(--font-color-2);
   display: flex;
   align-items: left;
 }
@@ -153,7 +128,7 @@ body {
 }
 
 .header h5 {
-  color: var(--font-color-3);
+  color: var(--off-color);
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: clamp(8px, 5vw, 16px);
@@ -162,7 +137,7 @@ body {
 }
 
 .header h5:hover {
-  color: #7bdfb4;
+  color: #3c4bf3;
 }
 
 /* Dark Overlay Styles */
@@ -173,11 +148,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--overlay-color);
-  /* Semi-transparent black */
   z-index: 999;
-  /* Should be less than the sidebar's z-index */
   display: none;
-  /* Initially hidden */
 }
 
 #overlay.show {
@@ -350,11 +322,24 @@ hr {
 /* Mobile view*/
 
 @media (max-width:680px) {
+  .sidebar-logo {
+    width: 100%;
+    height: 50px;
+    background-image: url('/media/image/logo/nameLogo.png');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+  .header-logo {
+    display: none;
+  }
+  .header-search {
+    display: none;
+  }
   /* Header styles */
   .header {
     width: 100%;
     height: 60px;
-    background-color: transparent;
     display: flex;
     flex-direction: row;
     position: fixed;
@@ -389,15 +374,18 @@ hr {
     background-color: transparent;
     cursor: pointer;
     z-index: 1001;
+    font-size: 18px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
   }
 
-  /* Styles for menu toggle icon bars */
-  .three-dot .dot {
-    width: 4px;
-    height: 4px;
-    background-color: var(--off-color);
-    margin: 3px 0;
-    border-radius: 50%;
+  .three-dot:hover {
+    background-color: var(--special-card-bg);
   }
 
   .search-bar {
@@ -558,25 +546,42 @@ hr {
   .footer {
     position: absolute;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding:20px 0;
     text-align: center;
-    background-color: #0e0e21;
+    background-color: var(--footer-bg);
+    margin-top: 20px;
   }
 
   .footer p {
     color: #ffffff5c;
+    padding: 3px 0;
   }
 
   .footername {
     text-decoration: none;
     color: #ff2b52;
   }
+
+  .location {
+    text-decoration: none;
+    color: #ffffff5c;
+  }
 }
 
 @media (min-width:681px) {
+  .header-logo {
+    width: 15%;
+    height: 40px;
+    background-image: url('/media/image/logo/nameLogo.png');
+    background-position: center;
+    background-size: 108%;
+    cursor: pointer;
+  }
+  .sidebar-search {
+    display: none;
+  }
   main {
-    margin-left: 230px;
+    margin-left: 90px;
   }
 
   .logocontainer {
@@ -591,63 +596,94 @@ hr {
     height: auto;
   }
 
+  .sidebar ul li a i {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+  
+  .sidebar ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  .sidebar .section-title {
+    font-size: 16px;
+    padding: 25px 0;
+    color: var(--font-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .sidebar {
     position: fixed;
     left: 0px;
-    width: 230px;
+    width: 90px;
     height: 100vh;
     overflow-x: hidden;
     background-color: var(--primary-color);
     transition: left 0.3s ease;
     box-sizing: border-box;
     z-index: 999;
-    padding: 20px;
+    padding: 10px;
   }
 
   .sidebar h1 {
-    color: var(--font-color-3);
-    font-family: "Roboto Condensed", sans-serif;
-    padding-bottom: 15px;
+    color: #000;
+    font-family: 'Caudex', serif;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    padding: 5px 0;
+    margin: 5px 0 15px;
+    background-color: #fff;
+    border-radius: 3px;
   }
 
   .menu-toggle {
     display: none;
   }
 
-  /* Header styles */
   .header {
     height: 60px;
     background-color: var(--primary-color);
     position: relative;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
-    transition: top 0.3s;
-    margin-left: 230px;
+    margin-left: 90px;
     color: var(--font-color-3);
     background-color: var(--primary-color);
     padding: 0 30px;
     gap: 70px;
+    transition: top 0.3s;
   }
 
-  /* Menu toggle button */
+  /* More Vert */
   .three-dot {
     position: relative;
     background-color: transparent;
     cursor: pointer;
     z-index: 1001;
-  }
-
-  /* Styles for menu toggle icon bars */
-  .three-dot .dot {
-    width: 3px;
-    height: 3px;
-    background-color: var(--off-color);
-    margin: 3px 0;
+    font-size: 18px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     border-radius: 50%;
   }
+
+  .three-dot:hover {
+    background-color: var(--special-card-bg);
+  }
+
 
   .search-bar {
     width: 100%;
@@ -719,7 +755,6 @@ hr {
     text-align: center;
     overflow: hidden;
     justify-content: start;
-    padding-top: 10px;
   }
 
   .details {
@@ -814,18 +849,25 @@ hr {
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: #0e0e21;
-    margin-left: 270px;
+    background-color: var(--footer-bg);
+    margin-left: 90px;
     bottom: 0;
+    margin-top: 20px;
   }
 
   .footer p {
     color: #ffffff5c;
+    padding: 3px 0;
   }
 
   .footername {
     text-decoration: none;
     color: #ff2b52;
+  }
+
+  .location {
+    text-decoration: none;
+    color: #ffffff5c;
   }
 }
 
@@ -1008,7 +1050,6 @@ hr {
   }
 }
 
-/* From Uiverse.io by StealthWorm */
 .btn {
   display: flex;
   justify-content: center;
@@ -1034,8 +1075,6 @@ hr {
   text-decoration: none !important;
   color: white;
 }
-
-
 
 .template {
   display: flex;

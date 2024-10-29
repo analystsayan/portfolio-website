@@ -31,12 +31,14 @@ summary of the key components and functionalities: -->
   <body>
     <!-- Sidebar Navigation -->
     <nav class="sidebar" id="sidebar">
-      <h1>Analyst Sayan Portfolio</h1>
+      <div class="sidebar-logo"></div>
       <!-- Search Bar -->
-      <div class="search-bar">
-        <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
-        <input type="search" placeholder="Search" class="searchInput">
-        <button class="search-icon"><i class="fas fa-search"></i></button>
+      <div class="sidebar-search">
+        <div class="search-bar">
+          <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
+          <input type="search" placeholder="Search" class="searchInput">
+          <button class="search-icon"><i class="fas fa-search"></i></button>
+        </div>
       </div>
       <ul>
         <li>
@@ -67,11 +69,24 @@ summary of the key components and functionalities: -->
             <i class="fa-brands fa-google"></i>Notes
           </a>
         </li>
+        <li>
+          <a href="https://wa.me/9547254491" target="_blank" title="Whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>Whatsapp
+          </a>
+        </li>
       </ul>
     </nav>
 
     <!-- Header Section -->
     <div class="header">
+      <div class="header-logo"></div>
+      <div class="header-search">
+        <div class="search-bar">
+          <button class="search-arrow"><i class="fas fa-arrow-left"></i></button>
+          <input type="search" placeholder="Search" class="searchInput">
+          <button class="search-icon"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
       <!-- Three-line menu icon -->
       <div class="menu-toggle" id="menuToggle">
         <div class="bar"></div>
@@ -81,18 +96,26 @@ summary of the key components and functionalities: -->
       <h5 id="aboutmeButton">About Me</h5>
       <h5 id="digitalartButton">Digital Art</h5>
       <h5 id="photographyButton">Photography</h5>
-      <div class="three-dot" id="threeDot">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" 
+        height="24px" 
+        viewBox="0 -960 960 960" 
+        width="24px" 
+        fill="#e8eaed">
+        <path d="M480-160q-33 0-56.5-23.5T400-240q0-33 
+        23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 
+        56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 
+        23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 
+        56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 
+        23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 
+        56.5T480-640Z"/>
+      </svg>
     </div>
 
     <main>
       <div class="main22">
         <div class="background">
           <div class="logocontainer">
-            <img src="media/image/namelogo.png" alt="Analyst Sayan">
+            <img src="media/image/logo/namelogo2.png" alt="Analyst Sayan">
           </div>
           <div class="details">
             <p class="hello">Hello !</p>
@@ -117,7 +140,7 @@ summary of the key components and functionalities: -->
         <h1 class="aboutme">About Me</h1>
         <div class="main33">
           <div class="picture">
-            <img src="media/image/sayanMondal.png" alt="Sayan Mondal" />
+            <img src="media/image/user/sayanMondal.png" alt="Sayan Mondal" />
           </div>
           <div class="main44">
             <div class="profilelogo">
@@ -178,21 +201,10 @@ summary of the key components and functionalities: -->
     <footer class="footer">
       <div class="footer-container">
         <a class="footername" href="#top">Sayan Mondal</a>
-        <p>&copy; 2024 All rights reserved Analyst Sayan</p>
+        <a class="location" target="_blank" href="https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.5353434,88.1825411,11z/data=!3m1!4b1!4m6!3m5!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.5743545!4d88.3628734!16zL20vMGN2dzk?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot"></i>  Kolkata</a>
+        <p>&copy; 2024 All rights reserved</p>
       </div>
     </footer>
-
-    <!-- <div class="cookie-card">
-      <span class="title">🍪 Cookie Notice</span>
-      <p class="description">
-        We use cookies to ensure that we give you the best experience on our
-        website. <a href="#">Read cookies policies</a>.
-      </p>
-      <div class="actions">
-        <button class="pref">Manage your preferences</button>
-        <button class="accept">Accept</button>
-      </div>
-    </div> -->
 
     <!-- External JavaScript -->
     <script src="js/main.js"></script>
