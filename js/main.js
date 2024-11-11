@@ -112,4 +112,24 @@ function scrollToSection(sectionId) {
   document.getElementById('projectButton').addEventListener('click', () => scrollToSection('projectSection'));
   document.getElementById('ExperienceButton').addEventListener('click', () => scrollToSection('experienceSection'));
   document.getElementById('educationButton').addEventListener('click', () => scrollToSection('educationSection'));
+  document.getElementById('aboutmeBtn').addEventListener('click', () => scrollToSection('aboutmeSection'));
+  
+
+//Experience hover text with cursor
+document.querySelectorAll('.exp-toggle').forEach(card => {
+    const hoverText = document.getElementById('hoverText');
+  
+    card.addEventListener('mouseover', () => {
+      hoverText.style.display = 'block';
+    });
+  
+    card.addEventListener('mousemove', (e) => {
+      hoverText.style.left = e.pageX + 20 + 'px'; // Offset from mouse
+      hoverText.style.top = e.pageY + 20 + 'px';  // Offset from mouse
+    });
+  
+    card.addEventListener('mouseout', () => {
+      hoverText.style.display = 'none';
+    });
+  });
   

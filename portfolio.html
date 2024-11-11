@@ -63,11 +63,6 @@ summary of the key components and functionalities: -->
           </a>
         </li>
         <li>
-          <a href="https://profile.google.com/qyefrf4a" target="_blank" title="Notes">
-            <i class="fa-brands fa-google"></i>Notes
-          </a>
-        </li>
-        <li>
           <a href="https://wa.me/9547254491" target="_blank" title="Whatsapp">
             <i class="fa-brands fa-whatsapp"></i>Whatsapp
           </a>
@@ -96,10 +91,25 @@ summary of the key components and functionalities: -->
       <h5 id="projectButton" title="Projects">Projects</h5>
       <h5 id="ExperienceButton" title="Work Experience">Experience</h5>
       <h5 id="educationButton" title="Education">Education</h5>
-      <!-- More Vert -->
-      <div class="three-dot" id="threeDot" title="More">
-        <i class="fa-solid fa-ellipsis-vertical"></i>
-      </div>
+      <details>
+        <summary>
+          <i class="fa-solid fa-user"></i>
+        </summary>
+        <ul>
+          <li>Profile</li>
+          <li>
+            <details>
+              <summary>Settings</summary>
+              <ul>
+                <li>Change Theme</li>
+                <li>Change Username</li>
+                <li>Change Password</li>
+              </ul>
+            </details>
+          </li>
+          <li>Sign Out</li>
+        </ul>
+      </details>
     </div>
 
     <!-- Main Content -->
@@ -303,6 +313,7 @@ summary of the key components and functionalities: -->
           </p>
         </div>
         <div class="exp-container">
+          <div id="hoverText" class="exp-card-hover-text">Click Here</div>
           <div class="exp-card">
             <p class="exp-num">01</p>
             <button class="exp-toggle">
@@ -356,7 +367,6 @@ summary of the key components and functionalities: -->
             Education background<br> I belong to.
           </p>
         </div>
-
         <div class="school-info-grid">
           <div class="school-card">
             <img src="media/image/logo/makaut-logo.jpeg" alt="Makaut" class="school-logo" />
@@ -383,7 +393,7 @@ summary of the key components and functionalities: -->
             <div class="school-details">
               <h3 class="school-name">Aswinkota Vidyasagar Vidyamandir</h3>
               <p class="course">Course: Secondary Education</p>
-              <p class="stream">Stream: Normal</p>
+              <p class="stream">Stream: General Science</p>
               <p class="year">Year: 2018</p>
             </div>
           </div>
@@ -399,17 +409,18 @@ summary of the key components and functionalities: -->
             Course Completion Certificate.
           </p>
         </div>
-        <div class="achievement-section">
+        <div class="achievement-container">
           <div class="card">
             <img src="media/image/important/career-microsoft-linkedin.jpg" />
             <div class="card__content">
               <p class="card__title">
-                Career essentials in Data Analysis by Microsoft and linkedin
+                My Learnings
               </p>
               <p class="card__description">
-                Completed the 'Career Essentials in Data Analysis' by Microsoft
-                and LinkedIn, gaining expertise in Data Analysis, Data
-                Visualization, and Data Analytics. Certified on March 17, 2024.
+                1. Making sure my data is accurate and consistent so I can trust my analysis.<br>
+                2. Learned how to use tools like Excel, Power BI, and SQL to work with data efficiently.<br>
+                3. Create clear and engaging visualizations to communicate my findings.<br>
+                4. Have to apply my data analysis skills to make better decisions and improve business outcomes.
               </p>
             </div>
           </div>
@@ -417,23 +428,25 @@ summary of the key components and functionalities: -->
             <img src="media/image/important/intro-data-analytics-linkedin.jpg" />
             <div class="card__content">
               <p class="card__title">
-                Introduction to career skills in data Analytics
+                My Learnings
               </p>
               <p class="card__description">
-                Completed the 'Introduction to Career Skills in Data Analytics'
-                course, focusing on Data Analytics and Tech Career Skills.
-                Certified on February 21, 2024.
+                1. Data is everywhere, and understanding it is key.<br>
+                2. Tools like Excel, SQL, and Python are essential for data analysis.<br>
+                3. Visualizing data makes it more impactful and understandable.<br>
+                4. Data analysis offers exciting career opportunities. 
               </p>
             </div>
           </div>
           <div class="card">
             <img src="media/image/important/excel-greatlearning.jpg" />
             <div class="card__content">
-              <p class="card__title">Microsoft Excel for beginners</p>
+              <p class="card__title">My Learnings</p>
               <p class="card__description">
-                Completed the 'Microsoft Excel for Beginners' course, focusing on
-                Basic excel formula and some advance feature for data analysis.
-                Certified on September, 2023.
+                1. Mastered Excel basics: navigation, data input, and formulas.<br>
+                2. Learned data organization with tables and formatting.<br>
+                3. Used functions like SUM, AVERAGE, and COUNT for analysis.<br>
+                4. Created insightful charts and graphs for data visualization.                
               </p>
             </div>
           </div>
@@ -455,6 +468,7 @@ summary of the key components and functionalities: -->
           <a href="https://youtube.com/@analystsayan"><i class="fa-brands fa-youtube" title="Youtube"></i></a>
           <a href="https://www.instagram.com/analystsayan/"><i class="fa-brands fa-instagram" title="Instagram"></i></a>
           <a href="https://www.instagram.com/analystsayan/"><i class="fa-brands fa-facebook" title="Facebook"></i></a>
+          <a href="https://t.me/analystsayan"><i class="fa-brands fa-telegram" title="Telegram"></i></a>
         </div>
       </section>
     </main>
@@ -466,7 +480,6 @@ summary of the key components and functionalities: -->
     <footer class="footer">
       <div class="footer-container">
         <a class="footername" href="#top">Sayan Mondal</a><br>
-        <a class="location" target="_blank" href="https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.5353434,88.1825411,11z/data=!3m1!4b1!4m6!3m5!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.5743545!4d88.3628734!16zL20vMGN2dzk?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot"></i>  Kolkata</a>
         <p>&copy; 2024 All rights reserved</p>
       </div>
     </footer>

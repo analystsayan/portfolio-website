@@ -10,15 +10,8 @@
   --font-color-2: #def6ffa3;
   --font-color-3: #e5fdeb;
   --overlay-color: #00000098;
-  --card-color-link: #c8c8c8;
-  --action-hover-shadow: 0 2px 8px #000000;
-  --project-link-hover-font: #1d3557;
-  --project-link-hover-bg: #f1faee;
   --off-color: #f1faee;
   --off-bg-color: #1d3557;
-  --off-color-hover: #1d3557;
-  --off-bg-color-hover: #f1faee;
-  --footer-bg: #0e0e21;
 }
 
 * {
@@ -39,26 +32,35 @@ body {
   overflow-y: hidden;
 }
 
-#theme-switch {
+.header details {
+  position: relative;
+  right: 1px;
+}
+
+.header details ul {
   position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 8px;
-  color: #000000;
-  background-color: var(--font-color-3);
-  border-radius: 17px;
-  border: none;
+  right: 100%;
+  z-index: 10000;
+  list-style: none;
+  width: max-content;
+  background-color: var(--special-card-bg);
+  color: var(--font-color-3);
+  border-radius: 8px;
+}
+
+.header details li {
+  padding:5px 15px;
   cursor: pointer;
-  text-align: center;
 }
 
-#theme-switch:hover {
-  background-color: var(--theme-switch-hover-bg);
-  color: var(--theme-switch-hover-font);
-  transition: ease-in-out 0.3s;
+.header details ul li:hover {
+  background-color: var(--card-color-1);
 }
 
+.header summary {
+  list-style: none;
+  cursor: pointer;
+}
 /* Sidebar styles */
 .sidebar {
   position: fixed;
@@ -158,9 +160,7 @@ body {
 }
 
 .background {
-  background-image: var(--backgroundbg);
-  background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 60px);
   width: 100%;
   position: relative;
   display: flex;
@@ -168,21 +168,26 @@ body {
   align-items: center;
   text-align: center;
   overflow: hidden;
-  justify-content: center;
+  justify-content: start;
+  gap: 60px;
+  --s: 60px;
+  --c1: var(--card-color-1);
+  --c2: var(--special-card-bg);
+  --_g: radial-gradient(
+    25% 25% at 25% 25%,
+    var(--c1) 99%,
+    rgba(0, 0, 0, 0) 101%
+  );
+  background: var(--_g) var(--s) var(--s) / calc(2 * var(--s))
+    calc(2 * var(--s)),
+    var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)),
+    radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s)
+    var(--s),
+    repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%)
+    calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);
 }
 
-.profilelogo {
-  background-color: #ff2b52;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-/* landing Socials.................................................................................................... */
+/* landing Socials................................................................................................................. */
 .LandingSocialContainer {
   padding: 100px;
   display: flex;
@@ -444,22 +449,13 @@ hr {
     cursor: pointer;
   }
 
-  .background {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: start;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    padding-top: 80px;
-  }
-
   .logocontainer img {
     max-width: 20%;
     height: auto;
+  }
+
+  .background {
+    padding-top: 120px;
   }
 
   .details {
@@ -471,14 +467,6 @@ hr {
     color: #f1faee;
     font-size: 24px;
     text-align: center;
-  }
-
-  .hello {
-    font-size: 60px;
-    color: #f1faee;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
   }
 
   .main22 {
@@ -684,7 +672,6 @@ hr {
     background-color: var(--special-card-bg);
   }
 
-
   .search-bar {
     width: 100%;
     height: 40px;
@@ -744,19 +731,6 @@ hr {
     cursor: pointer;
   }
 
-  .background {
-    background-image: var(--backgroundbg);
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    justify-content: start;
-  }
-
   .details {
     text-align: center;
     padding: 0 56px 0 56px;
@@ -768,12 +742,8 @@ hr {
     text-align: center;
   }
 
-  .hello {
-    font-size: 60px;
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
+  .background {
+    padding-top: 100px;
   }
 
   .main22 {
@@ -871,96 +841,6 @@ hr {
   }
 }
 
-/* .cookie-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  max-width: 320px;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, .1);
-  text-align: center;
-}
-
-.title {
-  font-weight: 600;
-  color: rgb(31 41 55);
-}
-
-.description {
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: rgb(75 85 99);
-}
-
-.description a {
-  --tw-text-opacity: 1;
-  color: rgb(59 130 246);
-}
-
-.description a:hover {
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-  -moz-column-gap: 1rem;
-  column-gap: 1rem;
-  flex-shrink: 0;
-}
-
-.pref {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: rgb(31 41 55);
-  -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
-  transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
-  background-color: transparent;
-}
-
-.pref:hover {
-  color: rgb(156 163 175);
-}
-
-.pref:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.accept {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  background-color: rgb(17 24 39);
-  font-weight: 500;
-  border-radius: 0.5rem;
-  color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
-  border: none;
-  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.accept:hover {
-  background-color: rgb(55 65 81);
-}
-
-.accept:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-} */
-
 /* Hide scrollbar for the sidebar */
 .canvacontainer {
   -ms-overflow-style: none;
@@ -1020,6 +900,11 @@ hr {
   margin: 5px 0;
   border-radius: 5px;
   text-align: center;
+}
+
+.download-btn:hover,
+.canvas-link-btn:hover {
+  background-color: #0044ff;
 }
 
 /* Show overlay and buttons on hover */

@@ -65,11 +65,6 @@ summary of the key components and functionalities: -->
           </a>
         </li>
         <li>
-          <a href="https://profile.google.com/qyefrf4a" target="_blank">
-            <i class="fa-brands fa-google"></i>Notes
-          </a>
-        </li>
-        <li>
           <a href="https://wa.me/9547254491" target="_blank" title="Whatsapp">
             <i class="fa-brands fa-whatsapp"></i>Whatsapp
           </a>
@@ -93,22 +88,28 @@ summary of the key components and functionalities: -->
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
-      <h5 id="aboutmeButton">About Me</h5>
-      <h5 id="digitalartButton">Digital Art</h5>
-      <h5 id="photographyButton">Photography</h5>
-      <svg xmlns="http://www.w3.org/2000/svg" 
-        height="24px" 
-        viewBox="0 -960 960 960" 
-        width="24px" 
-        fill="#e8eaed">
-        <path d="M480-160q-33 0-56.5-23.5T400-240q0-33 
-        23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 
-        56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 
-        23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 
-        56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 
-        23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 
-        56.5T480-640Z"/>
-      </svg>
+      <h5 id="aboutmeBtn">About Me</h5>
+      <h5 id="digitalartBtn">Digital Art</h5>
+      <h5 id="photographyBtn">Photography</h5>
+      <details>
+        <summary>
+          <i class="fa-solid fa-user"></i>
+        </summary>
+        <ul>
+          <li>Profile</li>
+          <li>
+            <details>
+              <summary>Settings</summary>
+              <ul>
+                <li>Change Theme</li>
+                <li>Change Username</li>
+                <li>Change Password</li>
+              </ul>
+            </details>
+          </li>
+          <li>Sign Out</li>
+        </ul>
+      </details>
     </div>
 
     <main>
@@ -118,7 +119,6 @@ summary of the key components and functionalities: -->
             <img src="media/image/logo/namelogo2.png" alt="Analyst Sayan">
           </div>
           <div class="details">
-            <p class="hello">Hello !</p>
             <p>
               Welcome to my website, I share insights on and web development,
               data analysis, photography through my posts, videos, and social
@@ -137,30 +137,38 @@ summary of the key components and functionalities: -->
 
         <hr width="20%" size="3" color="Red" />
 
-        <h1 class="aboutme">About Me</h1>
-        <div class="main33">
-          <div class="picture">
-            <img src="media/image/user/sayanMondal.png" alt="Sayan Mondal" />
-          </div>
-          <div class="main44">
-            <div class="profilelogo">
-              <i class="fa-solid fa-user" style="color: black"></i>
+        <div id="aboutmeSection">
+          <h1 class="aboutme">About Me</h1>
+          <div class="main33">
+            <div class="picture">
+              <img src="media/image/user/sayanMondal.png" alt="Sayan Mondal" />
             </div>
-            <h3>Hi ! there, I'm Sayan</h3>
-            <p>
-              I belong to Joyrambati, The city of Holly Mother Sarada Devi. I've
-              Compleated my Schooling from Lego R.B.R.K Vidyapith. I had a
-              opportunity to join NCC in my Secondary School Aswinkota
-              Vidyasagar Vidyamandir. After many hard work I got 1st Position in
-              25m Rifel Shooting Compitition at National Thal Sainik Camp at
-              Delhi. I've compleated my graduation from MAKAUT, W.B in
-              Information Technology specialization in Data Science.
-            </p>
+            <div class="main44">
+              <div class="profilelogo">
+                <i class="fa-solid fa-user" style="color: black"></i>
+              </div>
+              <h3>Hi ! there, I'm Sayan</h3>
+              <p>
+                I belong to Joyrambati, The city of Holly Mother Sarada Devi. I've
+                Compleated my Schooling from Lego R.B.R.K Vidyapith. I had a
+                opportunity to join NCC in my Secondary School Aswinkota
+                Vidyasagar Vidyamandir. After many hard work I got 1st Position in
+                25m Rifel Shooting Compitition at National Thal Sainik Camp at
+                Delhi. I've compleated my graduation from MAKAUT, W.B in
+                Information Technology specialization in Data Science.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <h3 id="sectionTitle">Simple Wallpaper</h3>
+      <!-- Section Header -->
+      <div class="section-header">
+        <h2 id="sectionTitle" class="knowledge-title">Tech Stack</h2> <!-- section title -->
+        <p class="bill-board">
+          I often talk about<br>the tech below.
+        </p>
+      </div>
       <div class="canvacontainer">
         <div class="canvacard" style="background-image: url(/media/image/creativespace/wallpaper1.png);">
           <div class="overlay">
@@ -201,7 +209,6 @@ summary of the key components and functionalities: -->
     <footer class="footer">
       <div class="footer-container">
         <a class="footername" href="#top">Sayan Mondal</a>
-        <a class="location" target="_blank" href="https://www.google.com/maps/place/Kolkata,+West+Bengal/@22.5353434,88.1825411,11z/data=!3m1!4b1!4m6!3m5!1s0x39f882db4908f667:0x43e330e68f6c2cbc!8m2!3d22.5743545!4d88.3628734!16zL20vMGN2dzk?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot"></i>  Kolkata</a>
         <p>&copy; 2024 All rights reserved</p>
       </div>
     </footer>
