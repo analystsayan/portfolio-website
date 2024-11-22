@@ -43,21 +43,6 @@ document.addEventListener('touchend', function (event) {
     handleSwipe();
 }, false);
 
-// Hide header on scroll
-let lastScrollY = window.scrollY;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > lastScrollY) {
-        // Scrolling down
-        header.style.top = '-100px'; // Move header out of view
-    } else {
-        // Scrolling up
-        header.style.top = '0'; // Bring header back into view
-    }
-    lastScrollY = window.scrollY;
-});
-
 // Scroll to top from footer
 document.addEventListener('DOMContentLoaded', () => {
     const footerName = document.querySelector('.footername');
@@ -113,6 +98,7 @@ function scrollToSection(sectionId) {
   document.getElementById('ExperienceButton').addEventListener('click', () => scrollToSection('experienceSection'));
   document.getElementById('educationButton').addEventListener('click', () => scrollToSection('educationSection'));
   document.getElementById('aboutmeBtn').addEventListener('click', () => scrollToSection('aboutmeSection'));
+
   
 
 //Experience hover text with cursor

@@ -1,0 +1,48 @@
+:root {
+    --primary-color: #000000;
+    --card-color-1: #1b263b;
+    --special-card-bg: #011522;
+    --special-card-font-header: #9eed00;
+    --special-card-font-para: #00ffff;
+    --font-color-1: #ffffff;
+    --font-color-2: #def6ffa3;
+    --font-color-3: #e5fdeb;
+    --overlay-color: #00000098;
+    --off-color: #f1faee;
+    --off-bg-color: #1d3557;
+}
+
+
+* {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+main {
+    height: 100vh;
+}
+button {
+    color: var(--primary-color);
+    background: var(--special-card-font-header);
+    border: none; padding: 5px 8px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+iframe {
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    border: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 681px) {
+    iframe {
+      margin-top: 60px;                                                                                                                                                                                                                  ;
+    }
+}

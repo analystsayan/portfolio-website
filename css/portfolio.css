@@ -1,6 +1,6 @@
 :root {
   --primary-color: #000000;
-  --card-color-1: #1b263b;
+  --card-color-1: #161f30;
   --special-card-bg: #011522;
   --special-card-font-header: #9eed00;
   --special-card-font-para: #00ffff;
@@ -27,13 +27,6 @@ body {
   text-align: left;
 }
 
-/* sidebar */
-
-
-/* Header */
-
-/* Main */
-
 /* Profile Info */
 .profile-info {
   position: relative;
@@ -43,7 +36,7 @@ body {
   flex-direction: row;
   padding: 20px;
   text-align: center;
-  margin:  0 20px;
+  margin: 0 20px;
   border-radius: 8px;
   cursor: pointer;
   --s: 30px;
@@ -485,8 +478,9 @@ body {
 .exp-content p {
   color: #f1faee;
   padding: 10px;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0;
+  text-align: left;
 }
 
 /* Grid Layout */
@@ -494,7 +488,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 /* School Card Container */
@@ -542,7 +536,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: space-evenly;
-  padding-bottom: 20px;
+  padding: 0 20px;
 }
 
 .card {
