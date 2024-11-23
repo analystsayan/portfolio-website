@@ -87,6 +87,7 @@ body {
 /* Btn Container */
 .button-container {
   display: flex;
+  flex-direction: row;
   gap: 10px;
 }
 
@@ -100,7 +101,6 @@ body {
 /* Email and Resume Btn Font */
 .email-button a,
 .resume-button a {
-  display: inline-block;
   background-color: transparent;
   color: var(--off-color);
   outline: solid 2px var(--off-color);
@@ -108,29 +108,42 @@ body {
   border-radius: 40px;
   text-decoration: none;
   font-size: clamp(10px, 5vw, 16px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: ease 0.3s;
 }
 
 /* Email and Resume Btn Font Hover*/
 .email-button a:hover,
 .resume-button a:hover {
-  box-shadow: var(--action-hover-shadow);
+  box-shadow: #000;
   background-color: var(--off-color);
-  color: var(--off-color-hover);
-  transition: ease-in-out 0.3s;
+  color: var(--off-bg-color);
+  fill: var(--off-bg-color);
 }
 
 /* Email and Resume Btn icon */
-.email-button a i,
-.resume-button a i {
-  margin-right: 10px;
-  /* Add spacing between icon and text */
+.email-button a svg,
+.resume-button a svg {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  fill: var(--off-color);
+  transition: stroke-width 0.3s ease;
 }
 
+/* Update SVG fill on hover */
+.email-button a:hover svg,
+.resume-button a:hover svg {
+  fill: var(--off-bg-color); /* Matches the hover text color */
+  stroke-width: 40;
+}
 /* TechStack Section */
 
 /* Section Header */
 .section-header {
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 30px 20px;
 }
 
 /* Section Title */
@@ -620,8 +633,8 @@ body {
   color: var(--font-color-2);
   font-size: 30px;
   padding: 20px;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background-position: center;
   display: flex;
