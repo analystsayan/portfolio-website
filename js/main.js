@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 // JavaScript function for quick navigation to sections
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
@@ -89,28 +88,41 @@ function scrollToSection(sectionId) {
   }
 }
 // Event listeners for buttons with specific IDs
-document.getElementById('projectButton').addEventListener('click', () => scrollToSection('projectSection'));
-document.getElementById('ExperienceButton').addEventListener('click', () => scrollToSection('experienceSection'));
-document.getElementById('educationButton').addEventListener('click', () => scrollToSection('educationSection'));
+document.getElementById('projectBtn').addEventListener('click', () => scrollToSection('projectSection'));
+document.getElementById('ExperienceBtn').addEventListener('click', () => scrollToSection('experienceSection'));
+document.getElementById('educationBtn').addEventListener('click', () => scrollToSection('educationSection'));
   
   
 
+//function to show exp-content and hover effect too
+document.querySelectorAll('.exp-card').forEach(card => {
+  const hoverText = document.getElementById('hoverText');
+  const toggleButton = card.querySelector('.exp-toggle');
+  const expContent = card.querySelector('.exp-content');
 
-//Experience card hover text with cursor
-document.querySelectorAll('.exp-toggle').forEach(card => {
-    const hoverText = document.getElementById('hoverText');
-  
-    card.addEventListener('mouseover', () => {
+  // Hover Text Functionality
+  toggleButton.addEventListener('mouseover', () => {
       hoverText.style.display = 'block';
-    });
-  
-    card.addEventListener('mousemove', (e) => {
+  });
+
+  toggleButton.addEventListener('mousemove', (e) => {
       hoverText.style.left = e.pageX + 20 + 'px'; // Offset from mouse
       hoverText.style.top = e.pageY + 20 + 'px';  // Offset from mouse
-    });
-  
-    card.addEventListener('mouseout', () => {
-      hoverText.style.display = 'none';
-    });
   });
+
+  toggleButton.addEventListener('mouseout', () => {
+      hoverText.style.display = 'none';
+  });
+
+  // Toggle Experience Content
+  toggleButton.addEventListener('click', () => {
+      // Toggle the visibility of exp-content
+      if (expContent.style.display === 'block') {
+          expContent.style.display = 'none';
+      } else {
+          expContent.style.display = 'block';
+      }
+  });
+});
+
   
