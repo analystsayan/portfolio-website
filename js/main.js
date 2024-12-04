@@ -1,3 +1,4 @@
+
 // Get references to the menu toggle, sidebar, and overlay elements
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');

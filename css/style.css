@@ -33,11 +33,6 @@ body {
   overflow-y: hidden;
 }
 
-.header details {
-  
-  right: 1px;
-}
-
 .header details ul {
   position: absolute;
   right: 100%;
