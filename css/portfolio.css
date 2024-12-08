@@ -138,9 +138,11 @@ body {
 /* Update SVG fill on hover */
 .email-button a:hover svg,
 .resume-button a:hover svg {
-  fill: var(--off-bg-color); /* Matches the hover text color */
+  fill: var(--off-bg-color);
+  /* Matches the hover text color */
   stroke-width: 40;
 }
+
 /* TechStack Section */
 
 /* Section Header */
@@ -428,8 +430,10 @@ body {
   font-size: 14px;
   color: #fff;
   white-space: nowrap;
-  pointer-events: none; /* Prevent interaction */
-  z-index: 1000; /* Ensure it stays on top */
+  pointer-events: none;
+  /* Prevent interaction */
+  z-index: 1000;
+  /* Ensure it stays on top */
 }
 
 /* Exprience Number */
@@ -473,9 +477,11 @@ body {
 .exp-card .pispl {
   color: #599bff;
 }
+
 .exp-card .wow-momo {
   color: #ff6f00;
 }
+
 .exp-card .think-again-lab {
   color: #ffee00;
 }
@@ -490,7 +496,8 @@ body {
 }
 
 /* Additional Styling for experience details*/
-.exp-content ol, .exp-content ol li{
+.exp-content ol,
+.exp-content ol li {
   list-style: none;
   color: #f1faee;
   padding: .4em;
@@ -541,7 +548,9 @@ body {
   margin: 10px 0;
 }
 
-.course, .stream, .year {
+.course,
+.stream,
+.year {
   font-size: 14px;
   color: var(--font-color-2);
   margin: 5px 0;
@@ -653,6 +662,7 @@ body {
 
 /* Media query for mobile view */
 @media (max-width: 680px) {
+
   /* Profile Info */
   .profile-info {
     display: flex;
@@ -676,7 +686,7 @@ body {
     flex-direction: column;
     overflow-x: hidden;
   }
-  
+
   /* Experience card */
   .exp-card {
     width: 100%;

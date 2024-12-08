@@ -23,26 +23,31 @@
 main {
     height: 100vh;
 }
+
 button {
     color: var(--primary-color);
     background: var(--special-card-font-header);
-    border: none; padding: 5px 8px;
+    border: none;
+    padding: 5px 8px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
 }
+
 iframe {
     width: 100%;
     height: fit-content;
     min-height: 100vh;
     border: 0;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
 @media (max-width: 681px) {
     iframe {
-      margin-top: 60px;                                                                                                                                                                                                                  ;
+        margin-top: 60px;
+        ;
     }
 }
