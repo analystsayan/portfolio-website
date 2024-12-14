@@ -1,9 +1,13 @@
 {
-    "rewrites": [
-        {
-            "source": "/portfolio",
-            "destination": "/portfolio.html"
-        }
-    ],
-    "cleanUrls": true
+  "rewrites": [
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio.html"
+    },
+    {
+      "source": "/todoappbyas",
+      "destination": "/todoappbyas.html"
+    }
+  ],
+  "cleanUrls": true
 }
