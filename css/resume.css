@@ -1,36 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
 :root {
-  --primary-color: #060606;
-  --card-color-1: #161f30;
-  --special-card-bg: #011522;
+  --background-color: #010006;
+  --primary-color: #011522;
+  --secondary-color: #152238;
+  --accent-color: #5C59FF;
+  --accent-bg: #2a2880;
+  --font-color-primary: #FFFFFF;
+  --font-color-secondary: #def6ffa3;
+  --off-white: #f1faee;
+  --hover-color: #8C84FF;
+
   --special-card-font-header: #9eed00;
   --special-card-font-para: #00ffff;
-  --font-color-1: #ffffff;
-  --font-color-2: #def6ffa3;
-  --font-color-3: #e5fdeb;
-  --overlay-color: #00000098;
-  --off-color: #f1faee;
-  --off-bg-color: #1d3557;
-  --footer-bg: #0e0e21;
 }
 
-/* all */
 * {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--hover-color) #141348;
+  font-family: "Sora", serif;
+  box-sizing: border-box;
 }
 
 /* Body */
 body {
-  font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
+  overflow-x: hidden;
+}
+
+main {
+  background-color: var(--background-color);
   text-align: left;
+  margin-right: 10px;
 }
 
 /* Profile Info */
 .profile-info {
+  width: 100%;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -38,36 +48,31 @@ body {
   flex-direction: row;
   padding: 20px;
   text-align: center;
-  margin: 0 20px;
   border-radius: 8px;
-  cursor: pointer;
   --s: 30px;
-  --c: #0000, var(--special-card-bg) 0.5deg 119.5deg, #0000 120deg;
+  --c: #0000, var(--primary-color) 0.5deg 119.5deg, #0000 120deg;
   --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
   --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));
   --g3: conic-gradient(from -60deg at 50% calc(175% / 12), var(--c));
   background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
     var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
-    var(--g3) 0 calc(1.73 * var(--s)) var(--card-color-1);
+    var(--g3) 0 calc(1.73 * var(--s)) var(--secondary-color);
   background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
 }
 
 /* Profile Image */
-.profile-image {
-  background-image: url('/media/image/user/profileImage.jpeg');
+.profile-image img{
   background-size: cover;
   background-position: center;
-  width: 20vw;
-  height: 20vw;
-  max-width: 100px;
-  max-height: 100px;
+  width: clamp(50px, 20vw, 100px);
+  height: clamp(50px, 20vw, 100px);
   border-radius: 50%;
   margin-right: 20px;
 }
 
 /* Profile details */
 .profile-details {
-  align-items: left;
+  align-items: start;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -76,14 +81,14 @@ body {
 /* Profile Name */
 .profile-name {
   font-size: clamp(16px, 10vw, 30px);
-  color: var(--font-color-1);
+  color: var(--font-color-primary);
   font-family: 'Caudex', serif;
 }
 
 /* Profile Username */
 .username {
   font-size: clamp(8px, 5vw, 16px);
-  color: var(--font-color-2);
+  color: var(--font-color-secondary);
 }
 
 /* Btn Container */
@@ -103,26 +108,23 @@ body {
 /* Email and Resume Btn Font */
 .email-button a,
 .resume-button a {
-  background-color: transparent;
-  color: var(--off-color);
-  outline: solid 2px var(--off-color);
-  padding: 8px 8px;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-bg));
+  color: var(--off-white);
+  /* outline: solid 2px var(--off-white); */
+  padding: 0.6em;
   border-radius: 40px;
   text-decoration: none;
   font-size: clamp(10px, 5vw, 16px);
   display: flex;
   flex-direction: row;
   align-items: center;
-  transition: ease 0.3s;
+  transition: background step-start 0.3s;
 }
 
 /* Email and Resume Btn Font Hover*/
 .email-button a:hover,
 .resume-button a:hover {
-  box-shadow: #000;
-  background-color: var(--off-color);
-  color: var(--off-bg-color);
-  fill: var(--off-bg-color);
+  background: linear-gradient(to right, #2a2880, var(--accent-color));
 }
 
 /* Email and Resume Btn icon */
@@ -131,56 +133,52 @@ body {
   margin-right: 5px;
   display: flex;
   align-items: center;
-  fill: var(--off-color);
+  fill: var(--off-white);
   transition: stroke-width 0.3s ease;
-}
-
-/* Update SVG fill on hover */
-.email-button a:hover svg,
-.resume-button a:hover svg {
-  fill: var(--off-bg-color);
-  /* Matches the hover text color */
-  stroke-width: 40;
 }
 
 /* TechStack Section */
 
 /* Section Header */
 .section-header {
-  padding: 20px 20px 30px 20px;
+  padding: 20px 0 30px 0;
 }
 
 /* Section Title */
-#sectionTitle {
-  font-family: "Roboto Condensed", sans-serif;
-  color: var(--font-color-2);
+.section-title {
+  color: var(--font-color-secondary);
   font-size: clamp(5px, 4vw, 16px);
   position: relative;
   text-align: left;
+  max-width: fit-content;
 }
 
 /* Section Bill-board */
 .bill-board {
-  color: var(--font-color-3);
-  font-size: clamp(10px, 12vw, 50px);
+  width: 50%;
+  font-size: clamp(30px, 10vw, 50px);
   text-align: left;
   font-family: "Raleway", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
+  background-image: linear-gradient(to right, var(--accent-color), var(--hover-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex-wrap: nowrap;
 }
 
 /* TechStack or Knowledge Container */
 .knowledge-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 10px 10px;
   overflow-x: hidden;
 }
 
 /* Knowledge Card */
 .knowledge-card {
   padding: 10px;
-  background-color: var(--special-card-bg);
+  background-color: var(--primary-color);
   border-radius: 8px;
   z-index: 1;
   transition: background-color 0.3s, transform 0.3s ease-in-out;
@@ -188,7 +186,7 @@ body {
 
 /* Knowledge Card Hover */
 .knowledge-card:hover {
-  background-color: #032137;
+  background-color: var(--secondary-color);
   transform: scale(1.05);
 }
 
@@ -257,28 +255,27 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 0 20px;
+  padding-left: 10px;
 }
 
 /* Project Card */
 .project-card {
   height: 270px;
-  background-color: var(--card-color-1);
+  background-color: var(--primary-color);
   border-radius: 15px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: opacity 0.5s, height 0.5s, transform 0.3s, background-color 0.3s;
+  transition: ease opacity 0.5s, height 0.5s, transform 0.3s, background-color 0.3s;
   overflow: hidden;
   pointer-events: auto;
-  cursor: pointer;
 }
 
 /* Project Card Hover */
 .project-card:hover {
   transform: scale(1.05);
-  background-color: #1d3557;
+  background-color: var(--secondary-color);
 }
 
 /* Project Card Image */
@@ -302,7 +299,9 @@ body {
 .project-card h3 {
   margin: 10px 0;
   font-size: clamp(10px, 10vw, 20px);
-  color: var(--font-color-1);
+  background-image: linear-gradient(to right, var(--accent-color), var(--hover-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
 
@@ -310,25 +309,25 @@ body {
 .project-card p {
   margin: 0;
   font-size: clamp(6px, 10vw, 14px);
-  color: var(--font-color-2);
+  color: var(--font-color-secondary);
   text-decoration: none;
 }
 
 /* Project Card Link Highlight */
 .link-highlight {
-  background-color: var(--primary-color);
+  background-color: #ffffff22;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   display: inline-block;
   margin: 10px 0;
-  color: var(--font-color-2);
+  color: var(--font-color-secondary);
+  transition: background ease 0.3s, color ease 0.3s;
 }
 
 /* Project Card Link Highlight Hover */
 .link-highlight:hover {
-  background-color: var(--off-color);
-  color: var(--primary-color);
-  transition: ease-in-out 0.3s;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-bg));
+  color: var(--font-color-primary);
 }
 
 
@@ -343,7 +342,7 @@ body {
 /* Git-btn-icon */
 .button-icon {
   display: flex;
-  border: 3px #fff solid;
+  border: 3px var(--font-color-primary) solid;
   width: fit-content;
   height: fit-content;
   cursor: pointer;
@@ -351,7 +350,7 @@ body {
 
 /* Git-btn-icon container*/
 .icon {
-  background-color: #fff;
+  background-color: var(--font-color-primary);
   padding: 10px 10px 5px 10px;
 }
 
@@ -360,7 +359,7 @@ body {
   width: 25px;
   height: 25px;
   text-decoration: none;
-  color: #000000;
+  color: var(--background-color);
   font-size: 26px;
 }
 
@@ -386,22 +385,21 @@ body {
   font-size: 0.8em;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: bold;
 }
 
 /* Git btn title top */
 .top {
-  background: red;
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--font-color-primary);
   transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
 
 /* Git btn title front */
 .front {
-  background: #222229;
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--font-color-primary);
   transform: translate3d(0, 0, 1em);
 }
 
@@ -410,10 +408,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: start;
+  text-align: center;
   justify-content: center;
   margin: 0 auto;
   gap: 20px;
-  padding: 0 20px;
 }
 
 /* experience card */
@@ -428,27 +426,27 @@ body {
   padding: 5px;
   border-radius: 4px;
   font-size: 14px;
-  color: #fff;
+  color: var(--font-color-primary);
   white-space: nowrap;
   pointer-events: none;
   /* Prevent interaction */
-  z-index: 1000;
+  z-index: 5;
   /* Ensure it stays on top */
 }
 
 /* Exprience Number */
 .exp-num {
   font-size: 80px;
-  color: #f1faee81;
+  color: var(--font-color-secondary);
 }
 
 /* Experience Toggle Button */
 .exp-toggle {
   width: 100%;
-  background-color: var(--card-color-1);
+  background-color: var(--primary-color);
   border: none;
   outline: none;
-  color: #e0e0e0;
+  color: var(--off-white);
   font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
@@ -460,7 +458,7 @@ body {
 
 /* exp Toggle Btn Hover*/
 .exp-toggle:hover {
-  background-color: #1d3557;
+  background-color: var(--secondary-color);
 }
 
 /* Show content when active */
@@ -489,44 +487,43 @@ body {
 /* Experience Content */
 .exp-content {
   width: 100%;
-  background: var(--special-card-bg);
+  background: var(--secondary-color);
   display: none;
   border-radius: 0 0 8px 8px;
-  border-bottom: 1px solid #ff0000;
+  border-bottom: 1px solid #ff2b52;
 }
 
 /* Additional Styling for experience details*/
 .exp-content ol,
 .exp-content ol li {
   list-style: none;
-  color: #f1faee;
+  color: var(--font-color-secondary);
   padding: .4em;
   font-size: 1rem;
   margin: 0;
   text-align: left;
 }
 
-/* Grid Layout */
+/* Education Grid Layout */
 .school-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 0 20px;
+  padding-left: 10px;
 }
 
 /* School Card Container */
 .school-card {
-  background-color: var(--card-color-1);
+  background-color: var(--primary-color);
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
-  color: var(--font-color-1);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .school-card:hover {
   transform: scale(1.05);
+  background: var(--secondary-color);
 }
 
 /* School Logo Styling */
@@ -543,6 +540,7 @@ body {
 }
 
 .school-name {
+  color: var(--off-white);
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
@@ -552,7 +550,7 @@ body {
 .stream,
 .year {
   font-size: 14px;
-  color: var(--font-color-2);
+  color: var(--font-color-secondary);
   margin: 5px 0;
 }
 
@@ -561,7 +559,6 @@ body {
   display: flex;
   gap: 20px;
   justify-content: space-evenly;
-  padding: 0 20px;
 }
 
 .card {
@@ -575,7 +572,7 @@ body {
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  box-shadow: 0 0 0 5px var(--card-color-1);
+  box-shadow: 0 0 0 5px var(--secondary-color);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 0;
@@ -591,7 +588,7 @@ body {
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0px 0px 120px var(--font-color-3);
+  box-shadow: 0px 0px 70px var(--off-white);
 }
 
 .card__content {
@@ -602,7 +599,7 @@ body {
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
-  background: var(--special-card-bg);
+  background: var(--primary-color);
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -615,7 +612,7 @@ body {
 .card__title {
   margin: 0;
   font-size: 20px;
-  color: var(--font-color-1);
+  color: var(--off-white);
   font-weight: 600;
   margin-bottom: 5px;
 }
@@ -626,25 +623,28 @@ body {
 
 .card__description {
   font-size: 12px;
-  color: var(--font-color-2);
+  color: var(--font-color-secondary);
   line-height: 1.4;
 }
 
+
+/* social container */
 .social-container {
   width: 100%;
-  padding: 20px 0;
-  background-color: var(--card-color-1);
+  padding: 1em 0;
+  background-color: var(--primary-color);
   color: var(--font-color-2);
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 8px;
 }
 
 .social-container i {
-  color: var(--font-color-2);
+  color: var(--font-color-secondary);
   font-size: 30px;
-  padding: 20px;
+  padding: 30px;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -657,30 +657,42 @@ body {
 
 .social-container i:hover {
   font-size: 36px;
-  background-color: var(--special-card-bg);
+  background-color: var(--secondary-color);
 }
 
 /* Media query for mobile view */
 @media (max-width: 680px) {
-
-  /* Profile Info */
-  .profile-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: left;
-    padding: 20px;
-    margin: 60px 0 0 0;
-    border-radius: 0 0 8px 8px;
+  main {
+    margin: 0 0.5em;
   }
 
-  /* Profile Details */
-  .profile-details {
-    position: relative;
-    align-items: left;
-    text-align: left;
+  /* Section Bill-board */
+  .bill-board {
+    width: 100%;
   }
 
+  /* TechStack or Knowledge Container */
+  .knowledge-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+    gap: 5px;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Knowledge Card Hover */
+  .knowledge-card:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1);
+  }
+
+  /* Project card Container */
+  .project-card-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    gap: 15px;
+  }
+  
   /* Experience Container */
   .exp-container {
     flex-direction: column;
@@ -690,6 +702,12 @@ body {
   /* Experience card */
   .exp-card {
     width: 100%;
+  }
+
+  .school-info-grid {
+    gap: 15px;
+    padding-left: 20px;
+    margin-right: 20px;
   }
 
   .achievement-container {
