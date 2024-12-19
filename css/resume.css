@@ -13,6 +13,10 @@
 
   --special-card-font-header: #9eed00;
   --special-card-font-para: #00ffff;
+  --btnBg: linear-gradient(45deg, var(--accent-color), var(--accent-bg));
+  --btnBgHover: linear-gradient(45deg, var(--accent-bg), var(--accent-color));
+  --heading: linear-gradient(to right, var(--accent-color), var(--font-color-primary));
+  --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
 }
 
 * {
@@ -35,7 +39,7 @@ body {
 main {
   background-color: var(--background-color);
   text-align: left;
-  margin-right: 10px;
+  margin-right: 0.5em;
 }
 
 /* Profile Info */
@@ -108,7 +112,7 @@ main {
 /* Email and Resume Btn Font */
 .email-button a,
 .resume-button a {
-  background: linear-gradient(to right, var(--accent-color), var(--accent-bg));
+  background: var(--btnBg);
   color: var(--off-white);
   /* outline: solid 2px var(--off-white); */
   padding: 0.6em;
@@ -124,7 +128,7 @@ main {
 /* Email and Resume Btn Font Hover*/
 .email-button a:hover,
 .resume-button a:hover {
-  background: linear-gradient(to right, #2a2880, var(--accent-color));
+  background: var(--btnBgHover);
 }
 
 /* Email and Resume Btn icon */
@@ -155,12 +159,12 @@ main {
 
 /* Section Bill-board */
 .bill-board {
-  width: 50%;
-  font-size: clamp(30px, 10vw, 50px);
+  width: fit-content;
+  font-size: clamp(28px, 10vw, 50px);
   text-align: left;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  background-image: linear-gradient(to right, var(--accent-color), var(--hover-color));
+  background-image: var(--heading2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   flex-wrap: nowrap;
@@ -270,6 +274,31 @@ main {
   transition: ease opacity 0.5s, height 0.5s, transform 0.3s, background-color 0.3s;
   overflow: hidden;
   pointer-events: auto;
+  position: relative;
+}
+
+.projectdata {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: clamp(10px, 4vw, 16px);
+  background-color: var(--accent-bg);
+  border-radius: 0 0 0 12px;
+  padding: .3em;
+  gap: .2em;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  color: var(--font-color-secondary);
+  cursor: pointer;
+
+  svg {
+    fill: var(--font-color-secondary);
+  }
+}
+
+.projectdata:hover {
+  background-color: var(--secondary-color);
 }
 
 /* Project Card Hover */
@@ -299,9 +328,7 @@ main {
 .project-card h3 {
   margin: 10px 0;
   font-size: clamp(10px, 10vw, 20px);
-  background-image: linear-gradient(to right, var(--accent-color), var(--hover-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--off-white);
   text-decoration: none;
 }
 
@@ -330,9 +357,15 @@ main {
   color: var(--font-color-primary);
 }
 
-
+.all-projects {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 /* Github Button */
 .github-link {
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -391,7 +424,7 @@ main {
 
 /* Git btn title top */
 .top {
-  background: var(--primary-color);
+  background: var(--btnBgHover);
   color: var(--font-color-primary);
   transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
@@ -662,10 +695,23 @@ main {
 
 /* Media query for mobile view */
 @media (max-width: 680px) {
-  main {
-    margin: 0 0.5em;
+
+  nav {
+    border-bottom: .1em solid #000;
   }
 
+  main {
+    margin: 0;
+  }
+
+  /* Profile Info */
+  .profile-info {
+    border-radius: 8px;
+  }
+
+  .section-header {
+    padding: 1em .5em;
+  }
   /* Section Bill-board */
   .bill-board {
     width: 100%;
@@ -674,9 +720,9 @@ main {
   /* TechStack or Knowledge Container */
   .knowledge-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(176px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
     gap: 5px;
-    padding: 0;
+    padding: .5em;
     overflow-x: hidden;
   }
 
@@ -717,5 +763,11 @@ main {
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
+  }
+
+  /* social container */
+.social-container {
+  border-radius: 0;
+  margin-bottom: .5em;
   }
 }

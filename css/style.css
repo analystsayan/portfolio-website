@@ -13,6 +13,10 @@
 
     --special-card-font-header: #9eed00;
     --special-card-font-para: #00ffff;
+    --btnBg: linear-gradient(45deg, #5C59FF, #2a2880);
+    --btnBgHover: linear-gradient(45deg, #2a2880, #5C59FF);
+    --heading: linear-gradient(to right, #5c59ff, #fff);
+    --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
 }
 
 * {
@@ -25,12 +29,9 @@
     box-sizing: border-box;
 }
 
-
 .aboutme {
     position: relative;
     width: 100%;
-    height: 400px;
-    max-height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -42,13 +43,14 @@
 
 .index-heading {
     width: fit-content;
-    background-image: linear-gradient(to right, var(--accent-color), var(--font-color-primary));
+    background-image: var(--heading2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1em;
 }
 
 .about-child {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -70,7 +72,7 @@
 
 .aboutme p:hover {
     color: var(--off-white);
-    background: linear-gradient(to right, var(--accent-color), var(--accent-bg));
+    background: var(--btnBgHover);
     transform: scale(1.03); /* Slight zoom-in effect */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
 }

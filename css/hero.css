@@ -8,13 +8,17 @@
     --secondary-color: #152238;
     --accent-color: #5C59FF;
     --accent-bg: #2a2880;
-    --font-color-primary: #FFFFFF;
+    --font-color-primary: #FFF;
     --font-color-secondary: #def6ffa3;
     --off-white: #f1faee;
     --hover-color: #8C84FF;
 
     --special-card-font-header: #9eed00;
     --special-card-font-para: #00ffff;
+    --btnBg: linear-gradient(45deg, #5C59FF, #2a2880);
+    --btnBgHover: linear-gradient(45deg, #2a2880, #5C59FF);
+    --heading: linear-gradient(to right, #5c59ff, #fff);
+    --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
 }
 
 
@@ -37,25 +41,7 @@
     padding: 4.5em;
 }
 
-/* .hero:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 322px;
-    height: 308px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    background: -o-linear-gradient(190deg, var(--accent-bg) 0%, rgba(115, 67, 210, 0) 100%);
-    background: linear-gradient(260deg, var(--accent-bg) 0%, rgba(115, 67, 210, 0) 100%);
-    -webkit-filter: blur(150px);
-    filter: blur(150px);
-    margin-right: -5%;
-    margin-top: -5%;
-    z-index: -1;
-} */
-
-.hero:after {
+/* .hero:after {
     content: "";
     position: absolute;
     top: 300px;
@@ -66,11 +52,10 @@
     background: var(--primary-color);
     background: -o-linear-gradient(190deg, var(--accent-bg) 0%, rgba(115, 67, 210, 0) 100%);
     background: linear-gradient(260deg, var(--accent-bg) 0%, rgba(115, 67, 210, 0) 100%);
-    /* -webkit-filter: blur(150px); */
+    -webkit-filter: blur(150px);
     filter: blur(150px);
-    
     z-index: -1;
-}
+} */
 
 /* Left Content */
 .content {
@@ -90,7 +75,7 @@
     font-size: 4rem;
     flex-wrap: nowrap;
     font-weight: 700;
-    background-image: linear-gradient(to right,var(--accent-color), var(--font-color-primary));
+    background-image: var(--heading);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.1em;
@@ -113,7 +98,7 @@
 }
 
 .cv-btn {
-    background: linear-gradient(to bottom, var(--accent-color), var(--hover-color));
+    background: var(--btnBg);
     color: var(--font-color-primary);
     padding: 0.8em;
     font-size: 1rem;
@@ -125,7 +110,7 @@
 }
 
 .cv-btn:hover {
-    background: linear-gradient(to right, var(--hover-color), var(--accent-color));
+    background: var(--btnBgHover);
 }
 
 .social-links a {
@@ -203,85 +188,6 @@
 
 @media (max-width: 680px) {
     main {
-        margin: 0 .5em;
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        position: relative;
-        width: 100%;
-        min-height: calc(100vh - 40px);
-        padding: 2em;
-    }
-
-    /* Left Content */
-    .content {
-        width: 100%;
-        text-align: left;
-    }
-
-    .content h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        flex-wrap: nowrap;
-        color: var(--font-color-primary);
-        margin-bottom: 0.5em;
-    }
-
-    .content h1 {
-        font-size: 4rem;
-        flex-wrap: nowrap;
-        font-weight: 700;
-        background-image: linear-gradient(to right,var(--accent-color), var(--font-color-primary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0.1em;
-    }
-
-    .content p {
-        width: 80%;
-        font-size: 1rem;
-        color: var(--font-color-secondary);
-        line-height: 1.6;
-        margin-bottom: 2em;
-    }
-
-
-
-    /* Right Content (Image) */
-    .image-hero {
-        order: -1;
-        width: 40%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-    }
-
-    .image-wrapper {
-        filter: brightness(1.1);
-        width: 50%;
-        height: 40vh;
-        background: var(--primary-color);
-        border-radius: 50px;
-        overflow: hidden;
-        outline: 2px solid #7247ff81;
-        transition: all 0.5s ease;
-        transform: rotate(5deg);
-    }
-
-    .image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all 0.5s ease;
-    }
-
-    .image-wrapper:hover {
-        transform: rotate(0deg);
-        outline: 3px solid var(--accent-color);
+        margin: 0 0.5em;
     }
 }
