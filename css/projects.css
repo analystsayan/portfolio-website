@@ -30,7 +30,7 @@
 }
 
 .header h5 {
-    font-size: clamp(.9rem, 1.5vw, 40px);
+    font-size: clamp(.8rem, 1.5vw, 40px);
     width: fit-content;
     background-image: var(--heading2);
     -webkit-background-clip: text;

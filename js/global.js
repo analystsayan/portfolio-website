@@ -1,4 +1,56 @@
-// JavaScript function for quick navigation to sections
+document.addEventListener('DOMContentLoaded', () => {
+    // Get the menu toggle button (to open the sidebar)
+    const menuToggle = document.getElementById('menuToggle');
+    // Get the menu toggle close button (to close the sidebar)
+    const menuToggleClose = document.getElementById('menuToggleClose');
+    // Get the sidebar element
+    const sidebar = document.querySelector('aside');
+    // Get the overlay element
+    const overlay = document.getElementById('overlay');
+
+    // Variables to track touch events
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Function to open the sidebar and show the overlay
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.add('open'); // Add the 'open' class to open the sidebar
+        overlay.classList.add('active'); // Show the overlay
+    });
+
+    // Function to close the sidebar and hide the overlay
+    menuToggleClose.addEventListener('click', () => {
+        sidebar.classList.remove('open'); // Remove the 'open' class to close the sidebar
+        overlay.classList.remove('active'); // Hide the overlay
+    });
+
+    // Close the sidebar if the overlay is clicked
+    overlay.addEventListener('click', () => {
+        sidebar.classList.remove('open'); // Remove the 'open' class to close the sidebar
+        overlay.classList.remove('active'); // Hide the overlay
+    });
+
+    // Detect swipe to close the sidebar (right to left swipe)
+    document.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+
+        // Check if the swipe is from right to left
+        if (touchStartX - touchEndX > 100) {
+            sidebar.classList.remove('open'); // Remove the 'open' class to close the sidebar
+            overlay.classList.remove('active'); // Hide the overlay
+        }
+    });
+});
+
+
+
+
+
+// 2......JavaScript function for quick navigation to sections
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -37,7 +89,7 @@ document.addEventListener("DOMContentLoaded", initializeNavigation);
 
 
 
-// main sidebar toggle for desktop
+// 3........main sidebar toggle for desktop
 const toggleButton = document.getElementById('toggle-btn');
 const sidebar = document.getElementById('sideBar');
 
@@ -51,7 +103,7 @@ function toggleMaxSidebar() {
     })
 }
 
-//submenu toggle
+// 4........submenu toggle
 function toggleSubMenu(button) {
     button.nextElementSibling.classList.toggle('show')
     button.classList.toggle('rotate')
@@ -61,20 +113,4 @@ function toggleSubMenu(button) {
         toggleButton.classList.toggle('rotate')
     }
 }
-
-
-//remove default title
-document.querySelectorAll('[title]').forEach(element => {
-    element.addEventListener('mouseenter', () => {
-        const title = element.getAttribute('title');
-        element.setAttribute('custom-title', title); // Move title to custom attribute
-        element.removeAttribute('title'); // Remove default title
-    });
-
-    element.addEventListener('mouseleave', () => {
-        const customTitle = element.getAttribute('custom-title');
-        element.setAttribute('title', customTitle); // Restore title attribute
-        element.removeAttribute('custom-title'); // Remove custom attribute
-    });
-});
 

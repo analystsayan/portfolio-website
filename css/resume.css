@@ -281,7 +281,7 @@ main {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: clamp(10px, 4vw, 16px);
+  font-size: 100%;
   background-color: var(--accent-bg);
   border-radius: 0 0 0 12px;
   padding: .3em;
@@ -294,6 +294,7 @@ main {
 
   svg {
     fill: var(--font-color-secondary);
+    width: 50%;
   }
 }
 
@@ -695,10 +696,6 @@ main {
 
 /* Media query for mobile view */
 @media (max-width: 680px) {
-
-  nav {
-    border-bottom: .1em solid #000;
-  }
 
   main {
     margin: 0;
