@@ -51,6 +51,42 @@ body {
     /* For Internet Explorer */
 }
 
+.fixed-contact {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    font-size: medium;
+    color: var(--off-white);
+    background: var(--btnBg);
+    padding: .8em;
+    font-weight: 500;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    cursor: pointer;
+    white-space: nowrap;
+    z-index: 997;
+
+    svg {
+        height: 20px;
+        width: 20px;
+        fill: var(--off-white);
+    }
+}
+
+.fixed-contact::after {
+    content: "";
+    background-color: #2a2880;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    bottom: -4px;
+}
+
 nav {
     grid-area: navbar;
     width: 100%;
@@ -117,6 +153,14 @@ nav {
     justify-content: center;
     cursor: pointer;
     white-space: nowrap;
+    gap: 5px;
+    margin-left: 5px;
+
+    svg {
+        height: 20px;
+        width: 20px;
+        fill: var(--off-white);
+    }
 }
 
 .header button:hover {
@@ -202,6 +246,11 @@ aside {
     text-wrap: nowrap;
 }
 
+.sidebardiv svg path {
+    height: 24px;
+    width: 24px;
+}
+
 .close-menu {
     display: none;
 }
@@ -227,17 +276,9 @@ aside {
     .logo {
         font-weight: 600;
         background-image: var(--heading2);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    }
-}
-
-.sidebardiv ul li.active a {
-    color: var(--accent-color);
-
-    svg {
-        fill: var(--accent-color);
-        transition: all ease 0.3s;
     }
 }
 
@@ -384,7 +425,7 @@ footer {
         width: 250px;
         height: 100vh;
         background-color: var(--background-color);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease-in-out;
         z-index: 999;
     }
 
@@ -428,6 +469,8 @@ footer {
         width: 100%;
         border-radius: 0;
         background-color: transparent;
+        align-items: center;
+        justify-content: right;
     }
 
     .header svg {
@@ -514,8 +557,11 @@ footer {
     }
 
     aside.open {
-        left: 0;
-        transform: translateX(0);
+        transform: translateX(300px); /* Slide in */
+    }
+
+    aside.closed {
+        transform: translateX(-300px); /* Slide out */
     }
 
     #overlay {
@@ -538,6 +584,8 @@ footer {
     }
 
     #menuToggle {
+        position: absolute;
+        left: .5em;
         border: none;
         border-radius: 0.5em;
         background: none;

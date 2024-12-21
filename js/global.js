@@ -1,3 +1,4 @@
+// func to toggle and close the sidebar for mobile
 document.addEventListener('DOMContentLoaded', () => {
     // Get the menu toggle button (to open the sidebar)
     const menuToggle = document.getElementById('menuToggle');
@@ -113,4 +114,3 @@ function toggleSubMenu(button) {
         toggleButton.classList.toggle('rotate')
     }
 }
-
