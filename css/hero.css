@@ -82,6 +82,7 @@ main {
     white-space: nowrap;
     font-weight: 700;
     background-image: var(--heading);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.1em;
