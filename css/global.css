@@ -246,24 +246,6 @@ aside {
     text-wrap: nowrap;
 }
 
-.sidebardiv svg path {
-    height: 24px;
-    width: 24px;
-}
-
-.close-menu {
-    display: none;
-}
-
-.open-menu {
-    display: none;
-}
-
-.sidebar.close {
-    padding: 5px;
-    width: 65px;
-}
-
 .sidebardiv ul {
     list-style: none;
 }
@@ -280,6 +262,24 @@ aside {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+.sidebardiv a span,
+.sidebardiv .dropdown-btn span {
+    flex-grow: 1;
+}
+
+.close-menu {
+    display: none;
+}
+
+.open-menu {
+    display: none;
+}
+
+.sidebar.close {
+    padding: 5px;
+    width: 65px;
 }
 
 .sidebardiv a,
@@ -326,11 +326,6 @@ aside {
     width: 24px;
     flex-shrink: 0;
     fill: var(--off-white);
-}
-
-.sidebardiv a span,
-.sidebardiv .dropdown-btn span {
-    flex-grow: 1;
 }
 
 .sidebardiv .sub-menu {
@@ -400,7 +395,7 @@ main {
     font-size: 3rem;
     font-weight: bold;
     color: white;
-    animation: fadeIn 1.5s ease-in-out infinite alternate;
+    animation: fadeIn 1.5s ease-in-out infinite alternate, slideIn 1.5s ease-in-out backwards;
 }
 
 /* Keyframe for text fade-in effect */
@@ -410,6 +405,15 @@ main {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        font-size: 3rem;
+    }
+    to {
+        font-size: 0.1rem;
     }
 }
 
@@ -476,9 +480,13 @@ footer {
 
     .close-menu {
         display: block;
+    }
+
+    #menuToggleClose {
         position: absolute;
         right: -50px;
         top: 15px;
+        cursor: pointer;
     }
 
     .open-menu {
