@@ -55,7 +55,7 @@ body {
     position: fixed;
     right: 10px;
     bottom: 30px;
-    font-size: medium;
+    font-size: 2vh;
     color: var(--off-white);
     background: var(--btnBg);
     padding: .8em;
@@ -246,24 +246,6 @@ aside {
     text-wrap: nowrap;
 }
 
-.sidebardiv svg path {
-    height: 24px;
-    width: 24px;
-}
-
-.close-menu {
-    display: none;
-}
-
-.open-menu {
-    display: none;
-}
-
-.sidebar.close {
-    padding: 5px;
-    width: 65px;
-}
-
 .sidebardiv ul {
     list-style: none;
 }
@@ -280,6 +262,24 @@ aside {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+.sidebardiv a span,
+.sidebardiv .dropdown-btn span {
+    flex-grow: 1;
+}
+
+.close-menu {
+    display: none;
+}
+
+.open-menu {
+    display: none;
+}
+
+.sidebar.close {
+    padding: 5px;
+    width: 65px;
 }
 
 .sidebardiv a,
@@ -328,11 +328,6 @@ aside {
     fill: var(--off-white);
 }
 
-.sidebardiv a span,
-.sidebardiv .dropdown-btn span {
-    flex-grow: 1;
-}
-
 .sidebardiv .sub-menu {
     display: grid;
     transition: 300ms ease-in-out;
@@ -379,6 +374,52 @@ aside {
 
 main {
     grid-area: main;
+}
+
+/* Loading screen styling */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 1.5s ease-in-out;
+}
+
+.loading-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out infinite alternate, slideIn 1.5s ease-in-out backwards;
+}
+
+/* Keyframe for text fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        font-size: 3rem;
+    }
+    to {
+        font-size: 0.1rem;
+    }
+}
+
+/* Animation to slide the loading screen up */
+.loading-screen.slide-up {
+    transform: translateY(-100%);
 }
 
 footer {
@@ -433,14 +474,6 @@ footer {
         background-color: transparent;
     }
 
-    #menuToggleClose {
-        position: absolute;
-        right: -50px;
-        top: 15px;
-        height: 40px;
-        width: 40px;
-    }
-
     #toggle-btn {
         display: none;
     }
@@ -449,8 +482,22 @@ footer {
         display: block;
     }
 
+    #menuToggleClose {
+        position: absolute;
+        right: -50px;
+        top: 15px;
+        cursor: pointer;
+    }
+
     .open-menu {
         display: block;
+        position: absolute;
+        left: .5em;
+        border: none;
+        border-radius: 0.5em;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
 
     .header-logo {
@@ -458,9 +505,8 @@ footer {
     }
 
     nav {
-        padding: .5em 0;
-        background-color: #00000080;
-        border-bottom: 1.2px solid #ffffff40;
+        padding: 0.3em 0;
+        background-color: #00000009;
         backdrop-filter: blur(200px);
     }
 
@@ -581,15 +627,5 @@ footer {
     #overlay.active {
         display: block;
         /* Display the overlay when sidebar is open */
-    }
-
-    #menuToggle {
-        position: absolute;
-        left: .5em;
-        border: none;
-        border-radius: 0.5em;
-        background: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
     }
 }

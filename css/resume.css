@@ -279,11 +279,11 @@ main {
 
 .projectdata {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: .3em;
+  right: 0.3em;
   font-size: 100%;
   background-color: var(--accent-bg);
-  border-radius: 0 0 0 12px;
+  border-radius: 12px;
   padding: .3em;
   gap: .2em;
   display: flex;

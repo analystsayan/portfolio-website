@@ -44,6 +44,7 @@
 .index-heading {
     width: fit-content;
     background-image: var(--heading2);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1em;
@@ -83,6 +84,7 @@
 .about-professional {
     width: 50%;
 }
+
 
 @media (max-width: 680px){
 

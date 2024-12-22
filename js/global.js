@@ -114,3 +114,24 @@ function toggleSubMenu(button) {
         toggleButton.classList.toggle('rotate')
     }
 }
+
+
+// ...existing code...
+
+window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loading-screen");
+    const mainContent = document.querySelector(".main-content");
+
+    if (loadingScreen && mainContent) {
+        // Delay to simulate loading time (e.g., 3 seconds)
+        setTimeout(() => {
+            loadingScreen.classList.add("slide-up"); // Trigger the slide-up animation
+            setTimeout(() => {
+                loadingScreen.style.display = "none"; // Hide the loading screen after animation
+                mainContent.style.display = "block"; // Show the main content
+            }, 1500); // Match this to the duration of the transition
+        }, 500); // Loading screen duration
+    } else {
+        console.error("Loading screen or main content element not found");
+    }
+});
