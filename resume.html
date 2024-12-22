@@ -66,7 +66,7 @@
       <svg id="menuToggle" class="open-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#f1faee">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
       </svg>
-      <a href="/" class="header-logo" title="Analyst Sayan"><img src="/media/image/logo/newmainlogo.png"></a>
+      <a href="/" class="header-logo" title="Analyst Sayan"><img src="/media/image/logo/newmainlogo.png" alt="Analyst Sayan"></a>
       <!-- Header Search -->
       <div class="nav-button">
         <p id="projectBtn">Projects</p>
@@ -80,7 +80,7 @@
       <ul>
         <li>
           <span class="logo">Analyst Sayan</span>
-          <button onclick="toggleMaxSidebar()" id="toggle-btn">
+          <button onclick="toggleMaxSidebar()" id="toggle-btn" area-label="Toggle Sidebar">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
               <path
                 d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
@@ -148,11 +148,13 @@
             </svg>
           </button>
           <ul class="sub-menu">
-            <div class="project-dropdown">
-              <li><a href="projects/todoappbyas">Todo App</a></li>
-              <!-- <li><a href="#">Join Work </a></li>
-              <li><a href="#">Project</a></li> -->
-            </div>
+            <li>
+              <div class="project-dropdown">
+                <li><a href="projects/todoappbyas">Todo App</a></li>
+                <!-- <li><a href="#">Join Work </a></li>
+                <li><a href="#">Project</a></li> -->
+              </div>
+            </li>
           </ul>
         </li>
         <li>

@@ -121,6 +121,7 @@ main {
 }
 
 .social-links a {
+    width: 24px;
     display: inline-block;
     margin-right: 15px;
     font-size: 1.2rem;
