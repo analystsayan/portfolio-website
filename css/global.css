@@ -55,7 +55,7 @@ body {
     position: fixed;
     right: 10px;
     bottom: 30px;
-    font-size: medium;
+    font-size: 2vh;
     color: var(--off-white);
     background: var(--btnBg);
     padding: .8em;
@@ -470,24 +470,26 @@ footer {
         background-color: transparent;
     }
 
-    #menuToggleClose {
-        position: absolute;
-        right: -50px;
-        top: 15px;
-        height: 40px;
-        width: 40px;
-    }
-
     #toggle-btn {
         display: none;
     }
 
     .close-menu {
         display: block;
+        position: absolute;
+        right: -50px;
+        top: 15px;
     }
 
     .open-menu {
         display: block;
+        position: absolute;
+        left: .5em;
+        border: none;
+        border-radius: 0.5em;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
 
     .header-logo {
@@ -495,9 +497,8 @@ footer {
     }
 
     nav {
-        padding: .5em 0;
-        background-color: #00000080;
-        border-bottom: 1.2px solid #ffffff40;
+        padding: 0.3em 0;
+        background-color: #00000009;
         backdrop-filter: blur(200px);
     }
 
@@ -618,15 +619,5 @@ footer {
     #overlay.active {
         display: block;
         /* Display the overlay when sidebar is open */
-    }
-
-    #menuToggle {
-        position: absolute;
-        left: .5em;
-        border: none;
-        border-radius: 0.5em;
-        background: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
     }
 }

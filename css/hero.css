@@ -101,7 +101,6 @@ main {
     flex-direction: row;
     justify-content: left;
     align-items: center;
-
 }
 
 .cv-btn {
@@ -200,7 +199,7 @@ main {
     }
 
     .hero {
-        min-height: calc(100vh - 60px);
+        min-height: calc(100vh - 100px);
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -220,8 +219,9 @@ main {
     }
     
     .content h2 {
+        font-size: 4vw;
         position: absolute;
-        top: 20px;
+        top: 2vh;
         left: 50%;
         transform: translate(-50%);
         text-align: center;
@@ -230,9 +230,9 @@ main {
     }
     
     .content h1 {
-        font-size: 36px;
+        font-size: 4.5vh;
         position: absolute;
-        top: 50px;
+        top: 5vh;
         left: 50%;
         transform: translate(-50%);
         text-align: center;
@@ -242,16 +242,35 @@ main {
         -webkit-text-fill-color: transparent;
         margin-bottom: 0.1em;
     }
+
+    /* Right Content (Image) */
+    .image-hero {
+        position: absolute;
+        top: 17vh;
+        left: 50%;
+        transform: translate(-50%);
+        width: 28vh;
+        height: 32vh;
+        justify-content: center;
+        align-items: center;
+        z-index: 32;
+    }
+    
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        transform: rotate(0deg);
+    }
     
     .content p {
         text-align: center;
         position: absolute;
-        top: 450px;
+        top: 51.5vh;
         left: 50%;
         transform: translate(-50%);
         width: 100%;
         padding: 0 20px;
-        font-size: .8rem;
+        font-size: 1.7vh;
         color: var(--font-color-secondary);
         line-height: 1.6;
         margin-bottom: 2em;
@@ -262,35 +281,27 @@ main {
     }
     
     .landing-accent {
-        position: absolute;
-        top: 555px;
-        left: 50%;
-        transform: translate(-50%);
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.5vh;
         justify-content: center;
         align-items: center;
-        width: 100%;
     }
-    
+
     .cv-btn {
-        background: var(--btnBg);
-        color: var(--font-color-primary);
-        padding: 0.8em;
-        font-size: 1rem;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+        position: absolute;
+        top: 65vh;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 2vh;
         margin-right: 0;
     }
     
-    .cv-btn:hover {
-        background: var(--btnBgHover);
-    }
-    
     .social-links {
+        position: absolute;
+        top: 76vh;
+        left: 50%;
+        transform: translate(-50%);
         display: flex;
         gap: 1em;
     }
@@ -303,25 +314,5 @@ main {
         color: var(--font-color-secondary);
         text-decoration: none;
         transition: color 0.3s ease;
-    }
-    
-    /* Right Content (Image) */
-    .image-hero {
-        position: absolute;
-        top: 165px;
-        left: 50%;
-        transform: translate(-50%);
-        width: 230px;
-        height: 250px;
-        justify-content: center;
-        align-items: center;
-        z-index: 32;
-    }
-    
-    .image-wrapper {
-        width: 100%;
-        height: 100%;
-        margin-top: 10px;
-        transform: rotate(0deg);
     }
 }
