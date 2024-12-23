@@ -395,7 +395,7 @@ main {
     font-size: 3rem;
     font-weight: bold;
     color: white;
-    animation: fadeIn 1.5s ease-in-out infinite alternate, slideIn 1.5s ease-in-out backwards;
+    animation: fadeIn 1.5s ease-in-out infinite alternate;
 }
 
 /* Keyframe for text fade-in effect */
@@ -405,15 +405,6 @@ main {
     }
     to {
         opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        font-size: 3rem;
-    }
-    to {
-        font-size: 0.1rem;
     }
 }
 

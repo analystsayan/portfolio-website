@@ -165,6 +165,7 @@ main {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   background-image: var(--heading2);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   flex-wrap: nowrap;
@@ -255,7 +256,7 @@ main {
 }
 
 /* Project card Container */
-.project-card-container {
+.resume-project-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -263,7 +264,7 @@ main {
 }
 
 /* Project Card */
-.project-card {
+.resume-project-card {
   height: 270px;
   background-color: var(--primary-color);
   border-radius: 15px;
@@ -303,13 +304,13 @@ main {
 }
 
 /* Project Card Hover */
-.project-card:hover {
+.resume-project-card:hover {
   transform: scale(1.05);
   background-color: var(--secondary-color);
 }
 
 /* Project Card Image */
-.project-card-image {
+.resume-project-card-image {
   height: 100%;
   flex: 2;
   background-size: cover;
@@ -318,7 +319,7 @@ main {
 }
 
 /* Project Card Content */
-.project-card-content {
+.resume-project-card-content {
   flex: 1;
   padding: 15px;
   text-align: center;
@@ -326,7 +327,7 @@ main {
 }
 
 /* Project Card Title */
-.project-card h3 {
+.resume-project-card h3 {
   margin: 10px 0;
   font-size: clamp(10px, 10vw, 20px);
   color: var(--off-white);
@@ -334,7 +335,7 @@ main {
 }
 
 /* Project Card details */
-.project-card p {
+.resume-project-card p {
   margin: 0;
   font-size: clamp(6px, 10vw, 14px);
   color: var(--font-color-secondary);
@@ -730,7 +731,7 @@ main {
   }
 
   /* Project card Container */
-  .project-card-container {
+  .resume-project-card-container {
     padding-right: 20px;
     padding-left: 20px;
     gap: 15px;
