@@ -1,0 +1,20 @@
+{
+    "name": "Sayan's Portfolio",
+    "short_name": "Sayan's Portfolio",
+    "icons": [
+        {
+            "src": "/media/image/logo/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/media/image/logo/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0f15",
+    "theme_color": "#0a0f15"
+}

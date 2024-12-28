@@ -736,6 +736,10 @@ main {
     padding-left: 20px;
     gap: 15px;
   }
+
+  .resume-project-card:hover {
+    transform: scale(1);
+  }
   
   /* Experience Container */
   .exp-container {

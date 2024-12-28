@@ -7,6 +7,10 @@
     {
       "source": "/todoappbyas",
       "destination": "/todoappbyas.html"
+    },
+    {
+      "source": "/getprojectidea",
+      "destination": "/getprojectidea.html"
     }
   ],
   "cleanUrls": true
