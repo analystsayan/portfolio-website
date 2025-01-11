@@ -27,6 +27,7 @@
     scrollbar-color: var(--hover-color) #141348;
     font-family: "Sora", serif;
     box-sizing: border-box;
+    user-select: none;
 }
 
 html {

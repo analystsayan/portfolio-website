@@ -17,6 +17,7 @@
   --btnBgHover: linear-gradient(45deg, var(--accent-bg), var(--accent-color));
   --heading: linear-gradient(to right, var(--accent-color), var(--font-color-primary));
   --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
+  --card-img-bg: linear-gradient(to right, var(--accent-bg), var(--accent-color));
 }
 
 * {
@@ -280,12 +281,12 @@ main {
 
 .projectdata {
   position: absolute;
-  top: .3em;
-  right: 0.3em;
+  top: 0;
+  right: 0;
   font-size: 100%;
-  background-color: var(--accent-bg);
-  border-radius: 12px;
-  padding: .3em;
+  background-color: #0000007d;
+  border-radius: 0  12px;
+  padding: .2em;
   gap: .2em;
   display: flex;
   align-items: center;
@@ -311,6 +312,7 @@ main {
 
 /* Project Card Image */
 .resume-project-card-image {
+  background: #fff;
   height: 100%;
   flex: 2;
   background-size: cover;
