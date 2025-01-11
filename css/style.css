@@ -56,35 +56,40 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding: 2em;
+    gap: 2em;
+    padding: 1em;
 }
 
-.aboutme p {
+.about {
     height: 100%;
     background: linear-gradient(to right, var(--primary-color), var(--primary-color));
     color: var(--font-color-secondary);
     padding: 2em;
-    border-radius: 30px;
+    border-radius: 15px;
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+    text-align: left;
 }
 
-.aboutme p:hover {
+.personal {
+    width: 50%;
+}
+.professional {
+    width: 50%;
+}
+
+.about:hover {
     color: var(--off-white);
     background: var(--btnBgHover);
     transform: scale(1.03); /* Slight zoom-in effect */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
 }
-
-.about-personal {
-    width: 50%;
+.about ul {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
 }
-.about-professional {
-    width: 50%;
-}
-
 
 @media (max-width: 680px){
 
@@ -92,26 +97,18 @@
         flex-direction: column;
         gap: 1em;
         padding: 0;
-        margin: 1.5em;
+        margin: 1em;
     }
 
-    .aboutme p {
-        height: none;
-        padding: 1em;
+    .about {
+        padding: 1.5em;
         width: 100%;
     }
 
-    .aboutme p:hover {
-        color: var(--off-white);
-        background: var(--btnBgHover);
-        transform: scale(1); /* Slight zoom-in effect */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
-    }
-
-    .about-personal {
+    .personal {
         width: 100%;
     }
-    .about-professional {
+    .professional {
         width: 100%;
     }
 }

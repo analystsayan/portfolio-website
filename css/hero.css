@@ -195,10 +195,6 @@ main {
 }
 
 @media (max-width: 680px) {
-    main {
-        margin: 0 0.5em;
-    }
-
     .hero {
         min-height: calc(100dvh - 60px);
         display: flex;

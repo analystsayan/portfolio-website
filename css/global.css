@@ -404,6 +404,7 @@ main {
     from {
         opacity: 0.5;
     }
+
     to {
         opacity: 1;
     }
@@ -414,10 +415,42 @@ main {
     transform: translateY(-100%);
 }
 
+/* social container */
+.social-container {
+    width: 100%;
+    padding: 1em 0;
+    background-color: var(--primary-color);
+    color: var(--font-color-2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 8px;
+}
+
+.social-container i {
+    color: var(--font-color-secondary);
+    font-size: 30px;
+    padding: 30px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: font-size ease-out 0.3s, background-color 0.3s;
+}
+
+.social-container i:hover {
+    font-size: 36px;
+    background-color: var(--secondary-color);
+}
+
 footer {
     background: var(--background-color);
     grid-area: footer;
-    padding: 1em 0;
+    padding: .5em 0;
 }
 
 .footer {
@@ -471,6 +504,8 @@ footer {
 
     .close-menu {
         display: block;
+        height: 32px !important;
+        width: 32px !important;
     }
 
     #menuToggleClose {
@@ -498,7 +533,7 @@ footer {
     nav {
         padding: 0.3em 0;
         background-color: #00000009;
-        backdrop-filter: blur(200px);
+        backdrop-filter: blur(400px);
     }
 
     /* Header styles */
@@ -520,7 +555,7 @@ footer {
         gap: 8px;
     }
 
-    .logo{
+    .logo {
         margin-right: auto;
     }
 
@@ -580,6 +615,12 @@ footer {
         cursor: pointer;
     } */
 
+    /* social container */
+    .social-container {
+        border-radius: 0;
+        margin-bottom: .5em;
+    }
+
     footer {
         padding: 0;
     }
@@ -594,11 +635,13 @@ footer {
     }
 
     aside.open {
-        transform: translateX(300px); /* Slide in */
+        transform: translateX(300px);
+        /* Slide in */
     }
 
     aside.closed {
-        transform: translateX(-300px); /* Slide out */
+        transform: translateX(-300px);
+        /* Slide out */
     }
 
     #overlay {

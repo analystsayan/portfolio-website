@@ -11,6 +11,14 @@
     {
       "source": "/getprojectidea",
       "destination": "/getprojectidea.html"
+    },
+    {
+      "source": "/facebookclonebyas",
+      "destination": "/facebookclonebyas.html"
+    },
+    {
+      "source": "/microsoftclonebyas",
+      "destination": "/microsoftclonebyas.html"
     }
   ],
   "cleanUrls": true
