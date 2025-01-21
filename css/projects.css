@@ -66,5 +66,6 @@ main {
     .header h5 {
         margin-right: auto;
         margin-left: 4em;
+        font-size: clamp(.8rem, 3vw, 40px);
     }
 }

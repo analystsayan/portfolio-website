@@ -27,7 +27,6 @@
     scrollbar-color: var(--hover-color) #141348;
     font-family: "Sora", serif;
     box-sizing: border-box;
-    user-select: none;
 }
 
 html {
@@ -96,6 +95,7 @@ nav {
     top: 0;
     z-index: 997;
     background-color: var(--background-color);
+    user-select: none;
 }
 
 .header {
@@ -233,6 +233,7 @@ aside {
     background-color: var(--background-color);
     z-index: 998;
     padding: .5em;
+    user-select: none;
 }
 
 .sidebardiv {
@@ -418,14 +419,12 @@ main {
 /* social container */
 .social-container {
     width: 100%;
-    padding: 1em 0;
     background-color: var(--primary-color);
     color: var(--font-color-2);
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border-radius: 8px;
 }
 
 .social-container i {
@@ -457,9 +456,9 @@ footer {
     text-align: center;
     justify-content: center;
     background: var(--primary-color);
-    padding: 1em 0;
     border-radius: 8px;
     margin-right: .5em;
+    padding: 1em;
 }
 
 .footer p {
@@ -614,26 +613,12 @@ footer {
         color: var(--off-color);
         cursor: pointer;
     } */
-
-    /* social container */
-    .social-container {
-        border-radius: 0;
-        margin-bottom: .5em;
-    }
-
     footer {
         padding: 0;
     }
-
     .footer {
-        text-align: center;
-        justify-content: center;
-        background: var(--primary-color);
-        padding: 1.5em 0;
-        border-radius: 0;
         margin-right: 0;
     }
-
     aside.open {
         transform: translateX(300px);
         /* Slide in */

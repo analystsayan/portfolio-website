@@ -44,6 +44,7 @@ main {
     position: relative;
     min-height: 100dvh;
     padding: 4.5em;
+    padding-bottom: 0;
     background-color: transparent;
 }
 
@@ -184,6 +185,30 @@ main {
     display: none;
 }
 
+.smry {
+    color: var(--font-color-primary);
+    width: 100%;
+    display: grid;
+    gap: 20px; /* Add spacing between the grid items */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on larger screens */
+    padding: 4em;
+    padding-top: 0;
+}
+
+.smry h3 {
+    font-size: clamp(24px, 10vw, 50px);
+}
+
+.smry p {
+    font-size: clamp(12px, 1.2vw, 24px);
+}
+
+.smry-div {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
 @keyframes blink {
     0% {
         font-size: 180px;
@@ -312,4 +337,10 @@ main {
         text-decoration: none;
         transition: color 0.3s ease;
     }
+
+    
+    .smry {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+    
 }
