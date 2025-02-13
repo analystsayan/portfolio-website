@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", initializeNavigation);
 
 
 
-// 3........main sidebar toggle for desktop
+// 3........sidebar toggle for desktop
 const toggleButton = document.getElementById('toggle-btn');
 const sidebar = document.getElementById('sideBar');
 
