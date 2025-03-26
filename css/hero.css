@@ -42,7 +42,7 @@ main {
     justify-content: center;
     align-items: start;
     position: relative;
-    min-height: 100dvh;
+    min-height: 100vh;
     padding: 4.5em;
     padding-bottom: 0;
     background-color: transparent;
@@ -72,6 +72,7 @@ main {
 
 .content h2 {
     font-size: clamp(16px, 1.5vw, 28px);
+    line-height: 1.2;
     font-weight: 700;
     white-space: nowrap;
     color: var(--font-color-primary);
@@ -80,6 +81,7 @@ main {
 
 .content h1 {
     font-size: clamp(30px, 4vw, 55px);
+    line-height: 1.2;
     white-space: nowrap;
     font-weight: 700;
     background-image: var(--heading);
@@ -93,7 +95,7 @@ main {
     width: 80%;
     font-size: 1rem;
     color: var(--font-color-secondary);
-    line-height: 1.6;
+    line-height: 1.4;
     margin-bottom: 2em;
 }
 
@@ -139,6 +141,7 @@ main {
 /* Right Content (Image) */
 .image-hero {
     width: 40%;
+    height: 90%;
     position: relative;
     display: flex;
     align-items: center;
@@ -219,9 +222,9 @@ main {
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 1100px) {
     .hero {
-        min-height: calc(100dvh - 60px);
+        min-height: calc(100vh - 60px);
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -241,20 +244,20 @@ main {
     }
     
     .content h2 {
-        font-size: 4vw;
+        font-size: 1rem;
         position: absolute;
-        top: 2dvh;
+        top: 2vh;
         left: 50%;
         transform: translate(-50%);
         text-align: center;
         color: var(--font-color-primary);
-        margin-bottom: 0.5em;
+        margin-bottom: 0;
     }
     
     .content h1 {
-        font-size: 4.5vh;
+        font-size: 2rem;
         position: absolute;
-        top: 5dvh;
+        top: 5vh;
         left: 50%;
         transform: translate(-50%);
         text-align: center;
@@ -268,11 +271,11 @@ main {
     /* Right Content (Image) */
     .image-hero {
         position: absolute;
-        top: 18dvh;
+        top: 19vh;
         left: 50%;
         transform: translate(-50%);
-        width: 28dvh;
-        height: 32dvh;
+        width: 28vh;
+        height: 32vh;
         justify-content: center;
         align-items: center;
         z-index: 32;
@@ -287,16 +290,13 @@ main {
     .content p {
         text-align: center;
         position: absolute;
-        top: 51.5dvh;
+        top: 53vh;
         left: 50%;
         transform: translate(-50%);
         width: 100%;
         padding: 0 20px;
-        font-size: .9rem;
-        color: var(--font-color-secondary);
-        line-height: 1.6;
+        font-size: 1rem;
         margin-bottom: 2em;
-        display: flex;
         justify-content: center;
         align-items: center;
         z-index: 33;
@@ -312,7 +312,7 @@ main {
 
     .cv-btn {
         position: absolute;
-        top: 70dvh;
+        top: 70vh;
         left: 50%;
         transform: translate(-50%);
         font-size: 2vh;
@@ -321,7 +321,7 @@ main {
     
     .social-links {
         position: absolute;
-        top: 80dvh;
+        top: 80vh;
         left: 50%;
         transform: translate(-50%);
         display: flex;

@@ -600,16 +600,14 @@ main {
 }
 
 .achievement-container {
-  text-align: left;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  justify-content: space-evenly;
+  padding: 20px;
 }
 
 .card {
   position: relative;
-  width: 300px;
-  height: 200px;
   background: var(--primary-color);
   border-radius: 10px;
   display: flex;
@@ -656,7 +654,7 @@ main {
 
 .card__title {
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   color: var(--off-white);
   font-weight: 600;
   margin-bottom: 5px;
@@ -667,9 +665,12 @@ main {
 }
 
 .card__description {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--font-color-secondary);
-  line-height: 1.4;
+  padding-left: 20px;
+  list-style-position: outside;
+  list-style-type: disc;
+  text-align: justify;
 }
 
 
@@ -768,18 +769,9 @@ main {
     margin-right: 20px;
   }
 
-  .achievement-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-  }
-
   /* social container */
-.social-container {
-  border-radius: 0;
-  margin-bottom: .5em;
+  .social-container {
+    border-radius: 0;
+    margin-bottom: .5em;
   }
 }
