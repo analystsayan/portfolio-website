@@ -51,4 +51,9 @@
         grid-area: footer;
         padding: .5em 0;
     }
+
+    .footer {
+        border-radius: 8px;
+        margin-right: .5em;
+    }
 }

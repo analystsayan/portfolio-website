@@ -3,8 +3,8 @@ nav {
     position: sticky;
     top: 0;
     padding: 0.5em 0;
-    background-color: #00000009;
-    backdrop-filter: blur(400px);
+    background-color: transparent;
+    backdrop-filter: blur(800px);
     user-select: none;
     z-index: 997;
 }
@@ -24,13 +24,39 @@ nav {
     align-items: center;
     justify-content: right;
     z-index: 10;
-    margin-right: .5em;
 }
 
 .header svg {
     height: 40px;
     width: 40px;
     fill: var(--off-white);
+}
+
+.header button {
+    font-size: clamp(4px, 1.8vh, 16px);
+    color: var(--font-color-primary);
+    background: var(--btnBg);
+    border: none;
+    padding: .8em;
+    font-weight: 600;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    gap: 5px;
+    margin-left: 5px;
+
+    svg {
+        height: 20px;
+        width: 20px;
+        fill: var(--off-white);
+    }
+}
+
+.header button:hover {
+    background: var(--btnBgHover);
 }
 
 .open-menu {
@@ -58,18 +84,32 @@ nav {
     margin-right: auto;
 }
 
+/* .welcome {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+    padding: .5em;
+} */
+
+
 /* Media queries */
 @media screen and (min-width: 1024px) {
     nav {
+        width: 100%;
         grid-area: navbar;
         background-color: var(--background-color);
     }
     
     .header {
+        width: 100%;
         background-color: var(--primary-color);
         border-radius: 30px;
         justify-content: space-between;
+        margin-right: 1em;
     }
+
     .header-logo {
         display: block;
     }
@@ -82,36 +122,8 @@ nav {
     }
     
     .nav-button p:hover {
-        /* background-color: var(--font-color-secondary); */
         color: var(--accent-color);
         cursor: pointer;
-    }
-    
-    .header button {
-        font-size: clamp(4px, 1.8vh, 16px);
-        color: var(--font-color-primary);
-        background: var(--btnBg);
-        border: none;
-        padding: .8em;
-        font-weight: 600;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        white-space: nowrap;
-        gap: 5px;
-        margin-left: 5px;
-    
-        svg {
-            height: 20px;
-            width: 20px;
-            fill: var(--off-white);
-        }
-    }
-    
-    .header button:hover {
-        background: var(--btnBgHover);
     }
 
     .open-menu {
