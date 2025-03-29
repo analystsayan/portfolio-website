@@ -36,7 +36,7 @@
     color: var(--font-color-secondary);
     padding: 1.5em;
     list-style-position: outside;
-    border-radius: 15px;
+    border-radius: var(--br1);
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
@@ -82,7 +82,7 @@
     gap: 1em;
     background-color: var(--primary-color);
     padding: 1.5em;
-    border-radius: 10px;
+    border-radius: var(--br1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -101,7 +101,7 @@
 .contact-form button {
     width: 100%;
     padding: 1.5em;
-    border-radius: 5px;
+    border-radius: var(--br1);
     border: none;
     margin-bottom: 15px;
     border: solid 1px var(--secondary-color);

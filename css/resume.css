@@ -40,7 +40,6 @@ body {
 main {
   background-color: var(--background-color);
   text-align: left;
-  margin-right: 0.5em;
 }
 
 /* Profile Info */
@@ -51,9 +50,9 @@ main {
   justify-content: center;
   display: flex;
   flex-direction: row;
-  padding: 20px;
+  padding: 1em;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 0 0 var(--br1) var(--br1);
   --s: 30px;
   --c: #0000, var(--primary-color) 0.5deg 119.5deg, #0000 120deg;
   --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
@@ -72,7 +71,7 @@ main {
   width: clamp(50px, 20vw, 100px);
   height: clamp(50px, 20vw, 100px);
   border-radius: 50%;
-  margin: 0 20px;
+  margin-right: .5em;
 }
 
 /* Profile details */
@@ -101,12 +100,12 @@ main {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  margin-top: .5em;
 }
 
 /* Email and Resume Btn */
 .email-button,
 .resume-button {
-  margin-top: 10px;
   white-space: nowrap;
 }
 
@@ -117,7 +116,7 @@ main {
   color: var(--off-white);
   /* outline: solid 2px var(--off-white); */
   padding: 0.6em;
-  border-radius: 40px;
+  border-radius: var(--br2);
   text-decoration: none;
   font-size: clamp(10px, 5vw, 16px);
   display: flex;
@@ -146,7 +145,7 @@ main {
 
 /* Section Header */
 .section-header {
-  padding: 20px 0 30px 0;
+  padding: var(--stdem) var(--stdem2);
 }
 
 /* Section Title */
@@ -160,7 +159,7 @@ main {
 
 /* Section Bill-board */
 .bill-board {
-  width: fit-content;
+  width: 100%;
   font-size: clamp(28px, 10vw, 50px);
   text-align: left;
   font-family: "Raleway", sans-serif;
@@ -175,37 +174,33 @@ main {
 /* TechStack or Knowledge Container */
 .knowledge-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 10px 10px;
-  overflow-x: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: var(--stdem2);
+  padding: 0 var(--stdem2);
 }
 
 /* Knowledge Card */
 .knowledge-card {
   padding: 10px;
   background-color: var(--primary-color);
-  border-radius: 8px;
+  border-radius: var(--br1);
   z-index: 1;
   transition: background-color 0.3s, transform 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Knowledge Card Hover */
 .knowledge-card:hover {
   background-color: var(--secondary-color);
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 /* Knowledge Tools Container */
 .knowledge-tools {
   display: flex;
   align-items: center;
-  padding: 9px;
-}
-
-/* Knowledge Tools Element */
-.knowledge-circle {
-  padding: 0 4px;
+  gap: .5em;
 }
 
 /* Knowledge Tools Eliment Icon */
@@ -237,8 +232,7 @@ main {
 .knowledge-card-content {
   font-family: "Fira Code", monospace;
   font-size: 14px;
-  line-height: 20px;
-  padding: 10px 10px 0 10px;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -260,54 +254,46 @@ main {
 .resume-project-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding-left: 10px;
+  padding: 0 var(--stdem);
+  gap: var(--stdem);
 }
 
 /* Project Card */
 .resume-project-card {
   height: 270px;
   background-color: var(--primary-color);
-  border-radius: 15px;
-  overflow: hidden;
+  border-radius: var(--br1);
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: ease opacity 0.5s, height 0.5s, transform 0.3s, background-color 0.3s;
-  overflow: hidden;
   pointer-events: auto;
   position: relative;
+  overflow: hidden;
 }
 
 .projectdata {
   position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 100%;
-  background-color: #0000007d;
-  border-radius: 0  12px;
-  padding: .2em;
-  gap: .2em;
+  top: .5em;
+  right: .5em;
   display: flex;
   align-items: center;
   z-index: 2;
-  color: var(--font-color-secondary);
   cursor: pointer;
 
   svg {
-    fill: var(--font-color-secondary);
-    width: 50%;
+    fill: var(--off-white);
+    width: 2em;
+    height: 2em;
+    background-color: var(--accent-color);
+    border-radius: 50%;
   }
-}
-
-.projectdata:hover {
-  background-color: var(--secondary-color);
 }
 
 /* Project Card Hover */
 .resume-project-card:hover {
-  transform: scale(1.05);
   background-color: var(--secondary-color);
+  transform: scale(1.04);
 }
 
 /* Project Card Image */
@@ -322,7 +308,8 @@ main {
 
 /* Project Card Content */
 .resume-project-card-content {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   text-align: center;
   text-decoration: none;
@@ -348,7 +335,7 @@ main {
 .link-highlight {
   background-color: #ffffff22;
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: var(--br1);
   display: inline-block;
   margin: 10px 0;
   color: var(--font-color-secondary);
@@ -366,6 +353,7 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: var(--stdem);
 }
 /* Github Button */
 .github-link {
@@ -373,7 +361,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
 }
 
 /* Git-btn-icon */
@@ -443,12 +430,13 @@ main {
 /* Experience Container */
 .exp-container {
   display: flex;
-  flex-direction: row;
   align-items: start;
   text-align: center;
   justify-content: center;
-  margin: 0 auto;
-  gap: 20px;
+  padding: 0 var(--stdem);
+  gap: var(--stdem);
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* experience card */
@@ -461,9 +449,9 @@ main {
   display: none;
   background-color: var(--primary-color);
   padding: 5px;
-  border-radius: 4px;
+  border-radius: var(--br1);
   font-size: 12px;
-  color: var(--font-color-primary);
+  color: var(--font-color-secondary);
   white-space: nowrap;
   pointer-events: none;
   /* Prevent interaction */
@@ -489,8 +477,9 @@ main {
   text-align: left;
   cursor: pointer;
   transition: background-color 0.3s;
-  border-radius: 8px 8px 0 0;
-  padding: 30px 10px;
+  border-radius: var(--br1) var(--br1) 0 0;
+  padding: var(--stdem);
+  white-space: nowrap;
 }
 
 /* exp Toggle Btn Hover*/
@@ -534,7 +523,7 @@ main {
   width: 100%;
   background: var(--secondary-color);
   display: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--br1) var(--br1);
   border-bottom: 1px solid #ff2b52;
 }
 
@@ -553,21 +542,21 @@ main {
 .school-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding-left: 10px;
+  gap: var(--stdem);
+  padding: 0 var(--stdem);
 }
 
 /* School Card Container */
 .school-card {
   background-color: var(--primary-color);
-  border-radius: 10px;
+  border-radius: var(--br1);
   overflow: hidden;
   text-align: center;
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .school-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   background: var(--secondary-color);
 }
 
@@ -602,14 +591,14 @@ main {
 .achievement-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: var(--stdem);
+  padding: 0 var(--stdem);
 }
 
 .card {
   position: relative;
   background: var(--primary-color);
-  border-radius: 10px;
+  border-radius: var(--br1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -630,7 +619,7 @@ main {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   box-shadow: 0px 0px 70px var(--off-white);
 }
 
@@ -640,7 +629,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: var(--stdem);
   box-sizing: border-box;
   background: var(--primary-color);
   transform: rotateX(-90deg);
@@ -657,7 +646,7 @@ main {
   font-size: 22px;
   color: var(--off-white);
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: var(--stdem2);
 }
 
 .card:hover img {
@@ -684,7 +673,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 8px;
+  margin-bottom: .5em;
 }
 
 .social-container i {
@@ -707,71 +696,66 @@ main {
 }
 
 /* Media query for mobile view */
-@media (max-width: 680px) {
+@media screen and (min-width: 1024px) {
 
   main {
-    margin: 0;
+    margin-right: var(--stdem2);
   }
 
-  /* Profile Info */
   .profile-info {
-    border-radius: 8px;
+    border-radius: var(--br1);
   }
 
   .section-header {
-    padding: 1em 1em;
+    padding: var(--stdem) 0;
   }
+
   /* Section Bill-board */
   .bill-board {
-    width: 100%;
+    width: fit-content;
   }
 
   /* TechStack or Knowledge Container */
   .knowledge-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(172px, 1fr));
-    gap: 5px;
-    padding: .5em;
-    overflow-x: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--stdem);
+    padding: 0 var(--stdem2);
   }
 
   /* Knowledge Card Hover */
   .knowledge-card:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1);
+    transform: scale(1.04);
   }
 
   /* Project card Container */
   .resume-project-card-container {
-    padding-right: 20px;
-    padding-left: 20px;
-    gap: 15px;
+    gap: var(--stdem);
+    padding: 0 var(--stdem2);
   }
 
   .resume-project-card:hover {
-    transform: scale(1);
+    transform: scale(1.04);
   }
   
   /* Experience Container */
   .exp-container {
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-
-  /* Experience card */
-  .exp-card {
-    width: 100%;
+    flex-direction: row;
+    gap: var(--stdem);
+    padding: 0;
   }
 
   .school-info-grid {
-    gap: 15px;
-    padding-left: 20px;
-    margin-right: 20px;
+    padding: 0 var(--stdem2);
+  }
+
+  .achievement-container {
+    gap: calc(var(--stdem) * 2);
+    padding: 0 calc(var(--stdem) * 2);
   }
 
   /* social container */
   .social-container {
-    border-radius: 0;
-    margin-bottom: .5em;
+    border-radius: var(--br1);
+    margin-bottom: 0;
   }
 }

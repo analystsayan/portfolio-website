@@ -17,6 +17,12 @@
     --btnBgHover: linear-gradient(45deg, #2a2880, #5C59FF);
     --heading: linear-gradient(to right, #5c59ff, #fff);
     --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
+
+    --br1: 10px;
+    --br2: 40px;
+    --stdem: 1em;
+    --stdem2: .5em;
+    --padding1: 1em;
 }
 
 * {
@@ -55,7 +61,7 @@ body::-webkit-scrollbar {
     background: var(--btnBg);
     padding: .8em;
     font-weight: 500;
-    border-radius: 30px;
+    border-radius: var(--br2);
     display: flex;
     align-items: center;
     justify-content: center;

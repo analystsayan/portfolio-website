@@ -4,7 +4,7 @@ aside {
     left: -300px;
     width: 250px;
     height: 100vh;
-    padding: .5em;
+    padding: var(--stdem2);
     background-color: var(--primary-color);
     transition: transform 0.3s ease-in-out;
     z-index: 999;
@@ -52,7 +52,7 @@ aside.closed {
 .sidebardiv a,
 .sidebardiv .dropdown-btn,
 .sidebardiv .logo {
-    border-radius: .5rem;
+    border-radius: var(--br1);
     padding: 0.7em;
     text-decoration: none;
     color: var(--off-white);
@@ -142,7 +142,7 @@ aside.closed {
     }
     
     .sidebardiv {
-        border-radius: 8px;
+        border-radius: var(--br1);
     }
     
     .sidebar>.sidebardiv>ul>li:first-child {
@@ -167,7 +167,7 @@ aside.closed {
         margin-left: auto;
         padding: 1em;
         border: none;
-        border-radius: 0.5em;
+        border-radius: var(--br1);
         background: none;
         cursor: pointer;
         transition: all 0.3s ease;

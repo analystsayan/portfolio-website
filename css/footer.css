@@ -32,7 +32,7 @@
     text-align: center;
     justify-content: center;
     background: var(--primary-color);
-    padding: 1em;
+    padding: var(--padding1);
 }
 
 .footer p {
@@ -53,7 +53,7 @@
     }
 
     .footer {
-        border-radius: 8px;
+        border-radius: var(--br1);
         margin-right: .5em;
     }
 }

@@ -73,7 +73,7 @@ main {
     filter: brightness(1.1);
     width: 62%;
     background: var(--primary-color);
-    border-radius: 40px;
+    border-radius: var(--br2);
     overflow: hidden;
     outline: 2px solid #7247ff81;
     transition: all 0.5s ease;
@@ -124,7 +124,7 @@ main {
     padding: 0.8em;
     font-size: 2vh;
     border: none;
-    border-radius: 30px;  
+    border-radius: var(--br2);  
     margin-right: 0;
     cursor: pointer;
     white-space: nowrap;
@@ -179,7 +179,7 @@ main {
 
 
 @media screen and (min-width: 1024px) {
-    
+
     .hero:after {
         content: "";
         position: absolute;
