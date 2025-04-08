@@ -77,6 +77,8 @@
   <!-- <div class="loading-screen" id="loading-screen">
     <div class="loading-text">Sayan</div>
   </div> -->
+  <button id="backToTopBtn" title="Go to top">⬆</button>
+
   <div id="top"></div>
   <nav id="navBar" class="navbar">
     <!-- Header Section -->
@@ -88,7 +90,9 @@
       <a href="/" class="header-logo" title="Analyst Sayan"><img src="/media/image/logo/favicon.png"
           alt="Analyst Sayan"></a> <!-- Header Search -->
       <div class="nav-button">
-        <p id="aboutmeBtn">About Me</p>
+        <p id="galleryBtn">Gallery</p>
+        <p id="aboutmeBtn">About</p>
+        <p id="contactmeBtn">Contact</p>
       </div>
     </header>
   </nav>
@@ -259,9 +263,32 @@
         </div>
       </div>
     </section>
+
+
+    <section id="gallerySection" class="gallery">
+      <h1 class="index-heading">AI Art & Wallpapers</h1>
+      <hr>
+      <div class="gallery-list">
+        <img src="media/image/gallery/dog-starry-night.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/gallery/lion-and-baby.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/gallery/cat-green-wall.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/gallery/camel-sunset.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/creativespace/wallpaper1.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/creativespace/wallpaper2.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/creativespace/wallpaper3.png" alt="dog-night" onclick="openFullscreen(this)">
+        <img src="media/image/creativespace/wallpaper4.png" alt="dog-night" onclick="openFullscreen(this)">
+      </div>
+
+      <!-- Fullscreen Viewer -->
+      <div id="fullscreenViewer" onclick="closeFullscreen()">
+        <img id="fullscreenImg" src="" alt="Fullscreen Image">
+      </div>
+    </section>
+
+
     <section id="aboutmeSection" class="aboutme">
       <h1 class="index-heading">About Me</h1>
-      <hr width="15%" size="3" color="#ff2b52" />
+      <hr>
       <div class="about-child">
         <div class="about personal">
           <ul>
@@ -293,7 +320,7 @@
     </section>
     <section id="contactSection" class="contact">
       <h1 class="index-heading">Contact Me</h1>
-      <hr width="15%" size="3" color="#ff2b52" />
+      <hr>
       <div class="contact-details">
         <div class="contact-form">
           <h2 class="index-heading">Lemme help you !</h2>
@@ -377,22 +404,25 @@
   <div id="overlay"></div>
 
   <!-- Footer Section -->
-  <footer>
-    <div class="footer">
-      <!-- Sociasl Container -->
-      <div class="social-container">
-        <a href="https://www.linkedin.com/in/analystsayan/" target="_blank"><i class="fa-brands fa-linkedin-in"
-            title="Linkedin Profile"></i></a>
-        <a href="https://youtube.com/@analystsayan" target="_blank"><i class="fa-brands fa-youtube"
-            title="Youtube"></i></a>
-        <a href="https://www.instagram.com/analystsayan/" target="_blank"><i class="fa-brands fa-instagram"
-            title="Instagram"></i></a>
-        <a href="https://www.facebook.com/analystsayan/" target="_blank"><i class="fa-brands fa-facebook"
-            title="Facebook"></i></a>
-        <a href="https://t.me/analystsayan" target="_blank"><i class="fa-brands fa-telegram" title="Telegram"></i></a>
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2025 Sayan Mondal. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/terms-and-conditions.html">Terms & Conditions</a>
       </div>
-      <a class="footername" href="#top">Sayan Mondal</a><br>
-      <p>All rights reserved &copy; 2025 Sayan M.</p>
+      <div class="social-icons">
+        <a href="https://instagram.com/@sayandiaries" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/in/analystsayan" target="_blank" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:analystsayan1@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
     </div>
   </footer>
 

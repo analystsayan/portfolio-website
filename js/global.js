@@ -55,14 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        section.scrollIntoView({
-            behavior: "smooth", // Smooth scrolling transition
-            block: "start", // Scroll to the top of the section
+        const offset = 70; // height of your fixed header
+        const topPos = section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+            top: topPos,
+            behavior: "smooth"
         });
     } else {
         console.error(`Section with ID "${sectionId}" not found.`);
     }
 }
+
 
 // Initialize event listeners for buttons
 function initializeNavigation() {
@@ -71,6 +75,8 @@ function initializeNavigation() {
         { buttonId: "experienceBtn", sectionId: "experienceSection" },
         { buttonId: "educationBtn", sectionId: "educationSection" },
         { buttonId: "aboutmeBtn", sectionId: "aboutmeSection" },
+        { buttonId: "galleryBtn", sectionId: "gallerySection" },
+        { buttonId: "contactmeBtn", sectionId: "contactSection" },
     ];
 
     navigationConfig.forEach(({ buttonId, sectionId }) => {
@@ -135,3 +141,41 @@ window.addEventListener("load", () => {
         console.error("Loading screen or main content element not found");
     }
 });
+
+
+//full screen images
+function openFullscreen(img) {
+    const viewer = document.getElementById('fullscreenViewer');
+    const fullImg = document.getElementById('fullscreenImg');
+    fullImg.src = img.src;
+    viewer.style.display = 'flex';
+}
+
+function closeFullscreen() {
+    document.getElementById('fullscreenViewer').style.display = 'none';
+}
+
+
+
+// tap to top
+// Show button when scrolled 10% of the page height
+window.addEventListener("scroll", function () {
+    const scrollBtn = document.getElementById("backToTopBtn");
+    const scrollY = window.scrollY || window.pageYOffset;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (scrollY > documentHeight * 0.1) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+
+// Smooth scroll to top on click
+document.getElementById("backToTopBtn").addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+

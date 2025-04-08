@@ -35,6 +35,28 @@
     box-sizing: border-box;
 }
 
+#backToTopBtn {
+    position: fixed;
+    bottom: 90px;
+    right: .5em;
+    z-index: 999;
+    font-size: 20px;
+    height: 60px;
+    width: 60px;
+    background: var(--btnBg, #9eed00);
+    color: var(--off-white, #fff);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#backToTopBtn:hover {
+    background: var(--btnBgHover, #9eed00);
+}
+
 html {
     scrollbar-width: none;
 }

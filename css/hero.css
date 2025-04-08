@@ -25,11 +25,11 @@ main {
     text-align: justify;
     align-items: start;
     grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "box1"
-            "box2"
-            "box3";
+    grid-template-rows: auto;
+    grid-template-areas:
+        "box1"
+        "box2"
+        "box3";
 }
 
 .content-heading {
@@ -38,7 +38,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:.5em
+    gap: .5em
 }
 
 .content h2 {
@@ -124,7 +124,7 @@ main {
     padding: 0.8em;
     font-size: 2vh;
     border: none;
-    border-radius: var(--br2);  
+    border-radius: var(--br2);
     margin-right: 0;
     cursor: pointer;
     white-space: nowrap;
@@ -196,26 +196,26 @@ main {
         z-index: -1;
         display: block;
     }
-    
+
     /* Left Content */
     .content {
         width: 100%;
         text-align: left;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
+        grid-template-areas:
             "box1 box2"
             "box3 box2";
     }
-    
+
     .content h2 {
         font-size: clamp(16px, 1.5vw, 28px);
     }
-    
+
     .content h1 {
         font-size: clamp(30px, 4vw, 55px);
     }
-    
+
     .content p {
         font-size: clamp(16px, 1vw, 28px);
         padding: 0;
@@ -226,6 +226,7 @@ main {
         height: 100%;
         justify-content: end;
     }
+
     .content-details {
         height: 100%;
         padding: 0 1em;
@@ -238,17 +239,17 @@ main {
         align-items: center;
         padding: 1em;
     }
-    
+
     .landing-accent {
         flex-direction: row;
         justify-content: left;
         gap: 2em;
     }
-    
+
     .image-wrapper {
         transform: rotate(5deg);
     }
-    
+
     .image-wrapper:hover {
         transform: rotate(0deg);
     }
@@ -257,11 +258,11 @@ main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     .smry h3 {
         font-size: clamp(24px, 10vw, 50px);
     }
-    
+
     .smry p {
         font-size: clamp(12px, 1.2vw, 24px);
     }
