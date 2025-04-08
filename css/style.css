@@ -21,7 +21,7 @@ hr {
 }
 
 .gallery-list {
-    columns: 165px;
+    columns: 160px;
     column-gap: .5em;
 }
 

@@ -287,6 +287,7 @@ main {
     height: 2em;
     background-color: var(--accent-color);
     border-radius: 50%;
+    opacity: .7;
   }
 }
 
@@ -335,7 +336,7 @@ main {
 .link-highlight {
   background-color: #ffffff22;
   padding: 5px 10px;
-  border-radius: var(--br1);
+  border-radius: var(--br2);
   display: inline-block;
   margin: 10px 0;
   color: var(--font-color-secondary);
@@ -433,7 +434,7 @@ main {
   align-items: start;
   text-align: center;
   justify-content: center;
-  padding: 0 var(--stdem);
+  padding: 0 var(--stdem2);
   gap: var(--stdem);
   flex-direction: column;
   overflow: hidden;
@@ -706,10 +707,6 @@ main {
     border-radius: var(--br1);
   }
 
-  .section-header {
-    padding: var(--stdem) 0;
-  }
-
   /* Section Bill-board */
   .bill-board {
     width: fit-content;
@@ -741,7 +738,7 @@ main {
   .exp-container {
     flex-direction: row;
     gap: var(--stdem);
-    padding: 0;
+    padding: 0 var(--stdem2);
   }
 
   .school-info-grid {

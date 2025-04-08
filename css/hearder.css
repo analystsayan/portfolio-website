@@ -13,7 +13,7 @@ nav {
 .header {
     width: 100%;
     height: 50px;
-    padding: 0 .5em;
+    padding: 0 1em;
     color: var(--font-color-secondary);
     position: relative;
     display: flex;
