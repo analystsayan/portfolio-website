@@ -32,12 +32,6 @@ hr {
     border-radius: 8px;
 }
 
-.gallery img:hover {
-    scale: 1.2;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
 /* other images will scale down while only hover img will scale up */
 
 
@@ -233,6 +227,12 @@ hr {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .gallery img:hover {
+        scale: 1.2;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
 
     .about-child {
         flex-direction: row;
