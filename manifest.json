@@ -1,14 +1,14 @@
 {
-    "name": "Sayan's Portfolio",
+    "name": "Analyst Sayan Portfolio | Sayan Mondal | Data Analyst",
     "short_name": "Sayan's Portfolio",
     "icons": [
         {
-            "src": "/media/image/logo/favicon-192x192.png",
+            "src": "/media/image/logo/mainfavicon.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/media/image/logo/favicon-512x512.png",
+            "src": "/media/image/logo/mainfavicon.png",
             "sizes": "512x512",
             "type": "image/png"
         }
