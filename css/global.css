@@ -41,15 +41,15 @@
     right: .5em;
     z-index: 999;
     font-size: 20px;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     background: var(--btnBg, #9eed00);
     color: var(--off-white, #fff);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     display: none;
-    transition: opacity 0.3s ease;
+    transition: ease-in 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -81,22 +81,35 @@ body::-webkit-scrollbar {
     font-size: 2vh;
     color: var(--off-white);
     background: var(--btnBg);
-    padding: .8em;
+    padding: .8em 1em;
     font-weight: 500;
     border-radius: var(--br2);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px;
     cursor: pointer;
     white-space: nowrap;
     z-index: 997;
+    transition: all 0.3s ease-in-out;
+}
 
-    svg {
-        height: 20px;
-        width: 20px;
-        fill: var(--off-white);
-    }
+.fixed-contact svg {
+    height: 24px;
+    width: 24px;
+    fill: var(--off-white);
+    transition: all 0.3s ease-in-out;
+}
+
+.fixed-contact .contact-text {
+    display: inline;
+    transition: all 0.3s ease-in-out;
+}
+
+.fixed-contact.hide-text .contact-text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    margin-left: 0;
 }
 
 .fixed-contact::after {
@@ -109,6 +122,7 @@ body::-webkit-scrollbar {
     right: -5px;
     bottom: -4px;
 }
+
 
 #overlay {
     position: fixed;
@@ -126,7 +140,7 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (min-width: 1024px) {
-    
+
     html {
         scrollbar-width: thin;
         scroll-behavior: smooth;
@@ -141,7 +155,7 @@ body::-webkit-scrollbar {
             "sidebar main"
             "sidebar footer";
     }
-    
+
     main {
         grid-area: main;
     }

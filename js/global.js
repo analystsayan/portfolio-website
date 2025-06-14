@@ -144,16 +144,17 @@ window.addEventListener("load", () => {
 
 
 //full screen images
-function openFullscreen(img) {
-    const viewer = document.getElementById('fullscreenViewer');
-    const fullImg = document.getElementById('fullscreenImg');
-    fullImg.src = img.src;
-    viewer.style.display = 'flex';
-}
+// function openFullscreen(imgElement) {
+//     const fullscreenViewer = document.getElementById('fullscreenViewer');
+//     const fullscreenImg = document.getElementById('fullscreenImg');
+//     fullscreenImg.src = imgElement.src;
+//     fullscreenViewer.style.display = 'flex';
+// }
 
-function closeFullscreen() {
-    document.getElementById('fullscreenViewer').style.display = 'none';
-}
+// function closeFullscreen() {
+//     const fullscreenViewer = document.getElementById('fullscreenViewer');
+//     fullscreenViewer.style.display = 'none';
+// }
 
 
 
@@ -178,4 +179,28 @@ document.getElementById("backToTopBtn").addEventListener("click", function () {
         behavior: "smooth",
     });
 });
+
+
+
+
+
+
+let lastScrollTop = 0;
+const contactBtn = document.querySelector('.fixed-contact');
+
+window.addEventListener('scroll', () => {
+let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+if (scrollTop > lastScrollTop) {
+      // Scrolling Down
+    contactBtn.classList.add('hide-text');
+} else {
+      // Scrolling Up
+    contactBtn.classList.remove('hide-text');
+}
+
+lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scroll
+}, false);
+
+
 

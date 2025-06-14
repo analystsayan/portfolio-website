@@ -117,6 +117,19 @@ hr {
     gap: .5em;
 }
 
+.video-gallery-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 0 var(--stdem);
+}
+
+.video-gallery-list iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: var(--br1);
+}
+
 .contact {
     display: flex;
     flex-direction: column;

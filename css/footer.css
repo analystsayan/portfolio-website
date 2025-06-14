@@ -29,9 +29,9 @@
 }
 
 .social-icons a i {
-    width: 32px;
-    height: 32px;
+    font-size: 20px;
     vertical-align: middle;
+    margin-right: var(--stdem2);
     filter: brightness(0) invert(1);
     /* makes SVG white */
     transition: transform 0.2s ease;
