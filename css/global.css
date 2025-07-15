@@ -37,8 +37,9 @@
 
 #backToTopBtn {
     position: fixed;
-    bottom: 90px;
-    right: .5em;
+    bottom: 3%;
+    right: 50%;
+    transform: translateX(50%);
     z-index: 999;
     font-size: 20px;
     height: 45px;

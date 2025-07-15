@@ -44,13 +44,7 @@ aside.closed {
     }
 }
 
-.sidebardiv a span,
-.sidebardiv .dropdown-btn span {
-    flex-grow: 1;
-}
-
 .sidebardiv a,
-.sidebardiv .dropdown-btn,
 .sidebardiv .logo {
     border-radius: var(--br1);
     padding: 0.7em;
@@ -63,8 +57,7 @@ aside.closed {
     transition: all ease 0.3s;
 }
 
-.sidebardiv a:hover,
-.sidebardiv .dropdown-btn:hover {
+.sidebardiv a:hover {
     background-color: var(--secondary-color);
     color: var(--accent-color);
     transition: all ease 0.3s;
@@ -95,30 +88,8 @@ aside.closed {
     fill: var(--off-white);
 }
 
-.sidebardiv .sub-menu {
-    display: grid;
-    transition: 300ms ease-in-out;
-    grid-template-rows: 0fr;
-
-    >div {
-        overflow: hidden;
-    }
-}
-
-.sidebardiv .sub-menu.show {
-    grid-template-rows: 1fr;
-}
-
 .dropdown-btn svg {
     transition: 200ms ease;
-}
-
-.rotate svg:last-child {
-    rotate: -180deg;
-}
-
-.sidebardiv .sub-menu {
-    padding-left: 2.5em;
 }
 
 #toggle-btn {
@@ -177,6 +148,12 @@ aside.closed {
             transition: rotate 150ms ease;
         }
     }
+
+    #toggle-btn.rotate svg {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+    }
+
     
     #toggle-btn:hover {
         background-color: var(--secondary-color);

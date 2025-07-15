@@ -19,6 +19,14 @@
     {
       "source": "/microsoftclonebyas",
       "destination": "/microsoftclonebyas.html"
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects.html"
+    },
+    {
+      "source": "/sales-data-analysis",
+      "destination": "/sales-data-analysis.html"
     }
   ],
   "cleanUrls": true

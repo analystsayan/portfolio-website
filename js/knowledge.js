@@ -1,22 +1,22 @@
 // js/knowledge.js
 const knowledgeData = [
     {
-        heading1: "Frontend",
-        items1: ["HTML", "CSS", "JavaScript"],
-        heading2: "Frameworks & Libraries",
-        items2: ["React"],
+        heading1: "Programming & Data Manupulation",
+        items1: ["Python", "Power Query"],
+        heading2: "Visualization",
+        items2: ["MS Excel", "Power BI", "Matplotlib"],
+    },
+    {
+        heading1: "Data Handling & Querying",
+        items1: ["SQL", "Power Pivot", "Google Sheets"],
+        heading2: "Platforms",
+        items2: ["PBI Service", "Google Data Studio"]
     },
     {
         heading1: "VS Control & Package Manager",
         items1: ["Git/Git-hub", "npm"],
-        heading2: "Typography & Testing",
-        items2: ["Tailwind", "Jest"],
-    },
-    {
-        heading1: "Programming & Data Manupulation",
-        items1: ["Python", "Power Query"],
-        heading2: "Visualization",
-        items2: ["Excel", "Power BI", "Matplotlib"],
+        heading2: "Frontend",
+        items2: ["HTML", "CSS", "JavaScript"],
     },
     {
         heading1: "Basic UI/UX",

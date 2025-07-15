@@ -97,64 +97,15 @@ document.addEventListener("DOMContentLoaded", initializeNavigation);
 
 
 // 3........sidebar toggle for desktop
-const toggleButton = document.getElementById('toggle-btn');
-const sidebar = document.getElementById('sideBar');
-
 function toggleMaxSidebar() {
-    sideBar.classList.toggle('close');
-    toggleButton.classList.toggle('rotate');
+    const sidebar = document.getElementById('sideBar');
+    const toggleBtn = document.getElementById('toggle-btn');
 
-    Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-        ul.classList.remove('show');
-        ul.previousElementSibling.classList.remove('rotate');
-    })
+    if (!sidebar || !toggleBtn) return;
+
+    sidebar.classList.toggle('close');
+    toggleBtn.classList.toggle('rotate'); // ⬅️ adds class for rotation
 }
-
-// 4........submenu toggle
-function toggleSubMenu(button) {
-    button.nextElementSibling.classList.toggle('show')
-    button.classList.toggle('rotate')
-
-    if (sidebar.classList.contains('close')) {
-        sidebar.classList.toggle('close')
-        toggleButton.classList.toggle('rotate')
-    }
-}
-
-
-// ...existing code...
-
-window.addEventListener("load", () => {
-    const loadingScreen = document.getElementById("loading-screen");
-    const mainContent = document.querySelector(".main-content");
-
-    if (loadingScreen && mainContent) {
-        // Delay to simulate loading time (e.g., 3 seconds)
-        setTimeout(() => {
-            loadingScreen.classList.add("slide-up"); // Trigger the slide-up animation
-            setTimeout(() => {
-                loadingScreen.style.display = "none"; // Hide the loading screen after animation
-                mainContent.style.display = "block"; // Show the main content
-            }, 1500); // Match this to the duration of the transition
-        }, 500); // Loading screen duration
-    } else {
-        console.error("Loading screen or main content element not found");
-    }
-});
-
-
-//full screen images
-// function openFullscreen(imgElement) {
-//     const fullscreenViewer = document.getElementById('fullscreenViewer');
-//     const fullscreenImg = document.getElementById('fullscreenImg');
-//     fullscreenImg.src = imgElement.src;
-//     fullscreenViewer.style.display = 'flex';
-// }
-
-// function closeFullscreen() {
-//     const fullscreenViewer = document.getElementById('fullscreenViewer');
-//     fullscreenViewer.style.display = 'none';
-// }
 
 
 

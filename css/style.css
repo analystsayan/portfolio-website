@@ -7,56 +7,6 @@ hr {
     border-radius: 4px;
 }
 
-.gallery {
-    gap: .5em;
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    padding: 0 1em 2em;
-}
-
-.gallery-list {
-    columns: 160px;
-    column-gap: .5em;
-}
-
-.gallery-list img {
-    width: 100%;
-    margin-bottom: .2em;
-    border: 1px solid #ffffff33;
-    border-radius: 8px;
-}
-
-/* other images will scale down while only hover img will scale up */
-
-
-/* Fullscreen Viewer */
-#fullscreenViewer {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #000000ee;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-#fullscreenViewer img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #ffffff33;
-}
-
-
 .aboutme {
     position: relative;
     width: 100%;
@@ -115,19 +65,6 @@ hr {
     display: flex;
     flex-direction: column;
     gap: .5em;
-}
-
-.video-gallery-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-    padding: 0 var(--stdem);
-}
-
-.video-gallery-list iframe {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: var(--br1);
 }
 
 .contact {

@@ -253,14 +253,23 @@ main {
 /* Project card Container */
 .resume-project-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   padding: 0 var(--stdem);
   gap: var(--stdem);
 }
 
 /* Project Card */
+
+.project-link {
+  text-decoration: none;
+  color: var(--font-color-primary);
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+}
+
 .resume-project-card {
-  height: 270px;
+  height: 100%;
   background-color: var(--primary-color);
   border-radius: var(--br1);
   display: flex;
@@ -272,7 +281,7 @@ main {
   overflow: hidden;
 }
 
-.projectdata {
+/* .projectdata {
   position: absolute;
   top: .5em;
   right: .5em;
@@ -289,19 +298,12 @@ main {
     border-radius: 50%;
     opacity: .7;
   }
-}
-
-/* Project Card Hover */
-.resume-project-card:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.04);
-}
+} */
 
 /* Project Card Image */
 .resume-project-card-image {
   background: #fff;
-  height: 100%;
-  flex: 2;
+  height: 60%;
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -309,10 +311,11 @@ main {
 
 /* Project Card Content */
 .resume-project-card-content {
+  height: 40%;
   display: flex;
   flex-direction: column;
-  padding: 15px;
   text-align: center;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -701,6 +704,12 @@ main {
 
   main {
     margin-right: var(--stdem2);
+  }
+
+  /* Project Card Hover */
+  .resume-project-card:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.04);
   }
 
   .profile-info {
