@@ -138,6 +138,20 @@ body::-webkit-scrollbar {
     display: block;
 }
 
+button,
+.global-btn{
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* 🔥 Removes mobile tap square */
+    -webkit-touch-callout: none; /* Optional: disables iOS text menu */
+    -webkit-user-select: none; /* Optional: no accidental text selection */
+    user-select: none;
+}
+
+.global-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 @media screen and (min-width: 1024px) {
 
     html {

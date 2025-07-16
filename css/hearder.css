@@ -76,7 +76,6 @@ nav {
 }
 
 .nav-button {
-    gap: var(--stdem2);
     display: flex;
     flex-direction: row;
 }
@@ -84,7 +83,7 @@ nav {
 .nav-button p {
     font-size: 2vh;
     color: var(--off-white);
-    padding: .8em 1em;
+    padding: .8em .6em;
     font-weight: 500;
     border-radius: var(--br2);
     display: flex;
