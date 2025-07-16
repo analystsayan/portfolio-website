@@ -8,28 +8,28 @@ const projects = [
         image: "/media/image/projectimg/sales-data-analysis.png"
     },
     {
+        title: "Sales Insights Dashboard",
+        tech: "Power BI • My SQL • Power BI Service",
+        liveLink: "https://getprojectidea.vercel.app",
+        sourceCode: "https://github.com/analystsayan/get-project-idea",
+        gotoProject: "/projects/sales-insights-dashboard",
+        image: "/media/image/projectimg/sales-insights-dashboard.png"
+    },
+    {
         title: "Portfolio Website",
         tech: "HTML • CSS • JavaScript",
         liveLink: "https://sayanmondal.in/resume",
         sourceCode: "https://github.com/analystsayan/Portfolio",
         gotoProject: "/projects/portfolio-website",
-        image: "/media/image/projectimg/portfolioimage.png"
+        image: "/media/image/projectimg/portfolioImage.png"
     },
     {
-        title: "Get Project !dea",
-        tech: "Java Script • CSS • HTML",
-        liveLink: "https://getprojectidea.vercel.app",
-        sourceCode: "https://github.com/analystsayan/get-project-idea",
-        readme: "https://github.com/analystsayan/get-project-idea/blob/main/README.md",
-        image: "/media/image/projectimg/getprojectidea.png"
-    },
-    {
-        title: "Login Page Clone",
-        tech: "HTML, Tailwind CSS",
-        liveLink: "https://facebookclonebyas.vercel.app",
-        sourceCode: "https://github.com/analystsayan/facebook-loginpage-clone",
-        readme: "https://github.com/analystsayan/facebook-loginpage-clone/blob/master/README.md",
-        image: "/media/image/projectimg/facebook2.png"
+        title: "My Sql Reporting",
+        tech: "My SQL • Query • Reporting",
+        liveLink: "https://sayanmondal.in/resume",
+        sourceCode: "https://github.com/analystsayan/Portfolio",
+        gotoProject: "/projects/my-sql-reporting",
+        image: "/media/image/projectimg/my-sql-reporting.png"
     }
 ];
 

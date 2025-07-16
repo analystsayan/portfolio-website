@@ -27,6 +27,14 @@
     {
       "source": "/sales-data-analysis",
       "destination": "/sales-data-analysis.html"
+    },
+    {
+      "source": "/sales-insights-dashboard",
+      "destination": "/sales-insights-dashboard.html"
+    },
+    {
+      "source": "/my-sql-reporting",
+      "destination": "/my-sql-reporting.html"
     }
   ],
   "cleanUrls": true
