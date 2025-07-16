@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/hearder.css" />
     <link rel="stylesheet" href="/css/sidebar.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/resume.css" />
     <link rel="manifest" href="/manifest.json">
@@ -89,11 +90,18 @@
     <main>
         <!-- Project Section -->
         <section id="projectSection">
-            <div class="section-header">
-                <p class="bill-board">
-                    Featured projects
-                </p>
+            <!-- Option Bar -->
+            <div class="filter-bar">
+                <div class="filter-bar-inner">
+                    <button class="filter-btn active" data-tag="all">All</button>
+                    <button class="filter-btn" data-tag="excel">Excel</button>
+                    <button class="filter-btn" data-tag="powerbi">Power BI</button>
+                    <button class="filter-btn" data-tag="sql">SQL</button>
+                    <button class="filter-btn" data-tag="python">Python</button>
+                    <button class="filter-btn" data-tag="webdev">WebDev</button>
+                </div>
             </div>
+
 
             <div class="resume-project-card-container" id="ProjectContainer"></div>
 

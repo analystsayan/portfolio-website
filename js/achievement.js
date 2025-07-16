@@ -1,5 +1,14 @@
 const achievementsData = [
     {
+        imgSrc: "/media/image/important/excel-mother-of-business.jpg",
+        learnings: [
+            "Proficient in func including VLOOKUP, INDEX MATCH, and PivotTables.",
+            "Experienced in P Query for efficient data transformation and automation.",
+            "Practiced ETL process with real-world datasets for analytical understanding.",
+            "Created interactive dashboards and visualizations for actionable business insights."
+        ]
+    },
+    {
         imgSrc: "/media/image/important/gen-ai.jpg",
         learnings: [
             "Gained a strong foundation in Generative AI, including its real life applications and working principles.",

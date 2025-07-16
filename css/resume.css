@@ -145,7 +145,7 @@ main {
 
 /* Section Header */
 .section-header {
-  padding: var(--stdem) var(--stdem2);
+  padding: var(--stdem2);
 }
 
 /* Section Title */
@@ -155,12 +155,13 @@ main {
   position: relative;
   text-align: left;
   max-width: fit-content;
+  padding-top: var(--stdem2);
 }
 
 /* Section Bill-board */
 .bill-board {
   width: 100%;
-  font-size: clamp(28px, 10vw, 50px);
+  font-size: clamp(26px, 9vw, 50px);
   text-align: left;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
@@ -269,6 +270,7 @@ main {
 }
 
 .resume-project-card {
+  max-width: 370px;
   height: 100%;
   background-color: var(--primary-color);
   border-radius: var(--br1);
@@ -281,32 +283,14 @@ main {
   overflow: hidden;
 }
 
-/* .projectdata {
-  position: absolute;
-  top: .5em;
-  right: .5em;
-  display: flex;
-  align-items: center;
-  z-index: 2;
-  cursor: pointer;
-
-  svg {
-    fill: var(--off-white);
-    width: 2em;
-    height: 2em;
-    background-color: var(--accent-color);
-    border-radius: 50%;
-    opacity: .7;
-  }
-} */
-
 /* Project Card Image */
 .resume-project-card-image {
   background: #fff;
   height: 60%;
   background-size: cover;
   background-position: center;
-  z-index: 1;
+  z-index: 2;
+  transition: transform 0.3s ease;
 }
 
 /* Project Card Content */
@@ -317,6 +301,7 @@ main {
   text-align: center;
   justify-content: center;
   text-decoration: none;
+  z-index: 1;
 }
 
 /* Project Card Title */
@@ -741,6 +726,10 @@ main {
 
   .resume-project-card:hover {
     transform: scale(1.04);
+
+    .resume-project-card-image {
+      transform: scale(1.05);
+    }
   }
   
   /* Experience Container */

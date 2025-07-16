@@ -1,10 +1,11 @@
 hr {
     border: none;
-    height: 2px;
-    background-color: #ff2b52;
-    width: 8em;
+    height: 1px;
+    background-color: var(--hover-bg);
+    width: 100%;
     opacity: 1;
     border-radius: 4px;
+    margin: .4em 0;
 }
 
 .aboutme {

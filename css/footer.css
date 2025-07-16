@@ -48,6 +48,7 @@
         background: var(--background-color);
         grid-area: footer;
         padding: .5em 0;
+        margin-bottom: var(--stdem2);
     }
 
     .footer {

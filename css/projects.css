@@ -1,36 +1,56 @@
-.header h5 {
-    width: fit-content;
-    background-image: var(--heading2);
-    margin-right: auto;
-    margin-left: 4em;
-    font-size: clamp(1rem, 3vw, 40px);
-    background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+.filter-bar {
+    flex-direction: column;
+    margin: var(--stdem);
 }
 
-iframe {
-    width: 100%;
-    min-height: 100vh;
+.filter-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+.filter-bar {
+    overscroll-behavior-x: contain;
+}
+
+/* Updated from grid to flex with scroll */
+.filter-bar-inner {
+    display: flex;
+    gap: 0.5em;
+    border: solid 2px var(--secondary-color);
+    border-radius: var(--br2);
+    padding: 0.4em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    white-space: nowrap;
     border: none;
-    overflow-y: scroll;
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--font-color-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-main {
-    margin-right: 0;
+.filter-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--off-white);
 }
 
-@media screen and (min-width: 1024px) {
-    .header h5 {
-        font-size: clamp(.8rem, 1.5vw, 40px);
-        margin-right: 0;
-    }
-    
-    iframe {
-        border-radius: var(--std);
-    }
-    
-    main {
-        margin-right: .5em;
+.filter-btn.active {
+    background-image: var(--btnBg);
+    color: var(--off-white);
+    transform: scale(1.05);
+}
+
+/* Desktop layout: switch back to grid */
+@media (min-width: 768px) {
+    .filter-bar-inner {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        width: 100%;
     }
 }

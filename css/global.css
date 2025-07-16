@@ -4,12 +4,14 @@
     --background-color: #0a0f15;
     --primary-color: #011522;
     --secondary-color: #152238;
+    --tertiary-color: #222e43;
     --accent-color: #5C59FF;
     --accent-bg: #2a2880;
     --font-color-primary: #FFFFFF;
     --font-color-secondary: #def6ffa3;
     --off-white: #f1faee;
     --hover-color: #8C84FF;
+    --hover-bg: #68677069;
 
     --special-card-font-header: #9eed00;
     --special-card-font-para: #00ffff;
@@ -21,7 +23,7 @@
     --br1: 10px;
     --br2: 40px;
     --stdem: 1em;
-    --stdem2: .5em;
+    --stdem2: .4em;
     --padding1: 1em;
 }
 
@@ -40,11 +42,10 @@
     bottom: 3%;
     right: 50%;
     transform: translateX(50%);
-    z-index: 999;
     font-size: 20px;
-    height: 45px;
-    width: 45px;
-    background: var(--btnBg, #9eed00);
+    height: 52px;
+    width: 52px;
+    background: var(--tertiary-color);
     color: var(--off-white, #fff);
     border: none;
     border-radius: 50%;
@@ -52,10 +53,7 @@
     display: none;
     transition: ease-in 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#backToTopBtn:hover {
-    background: var(--btnBgHover, #9eed00);
+    z-index: 999;
 }
 
 html {
@@ -81,7 +79,7 @@ body::-webkit-scrollbar {
     bottom: 30px;
     font-size: 2vh;
     color: var(--off-white);
-    background: var(--btnBg);
+    background: var(--tertiary-color);
     padding: .8em 1em;
     font-weight: 500;
     border-radius: var(--br2);
@@ -115,7 +113,7 @@ body::-webkit-scrollbar {
 
 .fixed-contact::after {
     content: "";
-    background-color: #2a2880;
+    background-color: var(--tertiary-color);
     width: 12px;
     height: 12px;
     border-radius: 50%;
