@@ -51,7 +51,7 @@ aside.closed {
 
 .sidebar-btn,
 .sidebardiv .logo {
-    border-radius: var(--br2);
+    border-radius: var(--radius-full);
     padding: 0.6em 0.8em;
     text-decoration: none;
     color: var(--off-white);
@@ -102,12 +102,12 @@ aside.closed {
     aside {
         grid-area: sidebar;
         position: sticky;
-        padding: var(--stdem2);
+        padding: var(--space-xs);
         background-color: var(--background-color);
     }
     
     .sidebardiv {
-        border-radius: var(--br1);
+        border-radius: var(--radius-sm);
     }
     
     .sidebar>.sidebardiv>ul>li:first-child {
@@ -123,27 +123,18 @@ aside.closed {
         display: none;
     }
     
-    .sidebar.close {
-        padding: var(--stdem2);
-        width: 92px;
-
-        .sidebar-btn {
-            color: var(--primary-color);
-        }
-    }
-    
     #toggle-btn {
         margin-left: auto;
         padding: 1em;
         border: none;
-        border-radius: var(--br1);
+        border-radius: var(--radius-sm);
         background: none;
         cursor: pointer;
         transition: all 0.3s ease;
         display: block;
     
         svg {
-            transition: rotate, transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
     }
 
@@ -154,5 +145,26 @@ aside.closed {
     
     #toggle-btn:hover {
         background-color: var(--secondary-color);
+    }
+
+    .sidebar.close {
+        padding: var(--space-xs);
+        width: 98px;
+
+        .sidebar-btn {
+            color: var(--primary-color);
+        }
+
+        .sidebardiv .logo {
+            display: none;
+        }
+
+        #toggle-btn {
+            margin: auto;
+        }
+
+        .sidebar-btn span {
+            display: none;
+        }
     }
 }

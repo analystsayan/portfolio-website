@@ -74,7 +74,7 @@ main {
     filter: brightness(1.1);
     width: 62%;
     background: var(--primary-color);
-    border-radius: var(--br2);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     outline: 2px solid #7247ff81;
     transition: all 0.5s ease;
@@ -125,7 +125,7 @@ main {
     padding: 0.8em;
     font-size: 2vh;
     border: none;
-    border-radius: var(--br2);
+    border-radius: var(--radius-full);
     margin-right: 0;
     cursor: pointer;
     white-space: nowrap;
@@ -134,6 +134,7 @@ main {
 
 .cv-btn:hover {
     background: var(--btnBgHover);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
 }
 
 .social-links {

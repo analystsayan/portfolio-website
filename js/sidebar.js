@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </svg>
             </li>
             <li>
-                <hr width="100%">
+                <hr>
                 <a title="Home" class="sidebar-btn active global-btn" href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                         <path
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                         <path
                         d="m226-559 78 33q14-28 29-54t33-52l-56-11-84 84Zm142 83 114 113q42-16 90-49t90-75q70-70 109.5-155.5T806-800q-72-5-158 34.5T492-656q-42 42-75 90t-49 90Zm178-65q-23-23-23-56.5t23-56.5q23-23 57-23t57 23q23 23 23 56.5T660-541q-23 23-57 23t-57-23Zm19 321 84-84-11-56q-26 18-52 32.5T532-299l33 79Zm313-653q19 121-23.5 235.5T708-419l20 99q4 20-2 39t-20 33L538-80l-84-197-171-171-197-84 167-168q14-14 33.5-20t39.5-2l99 20q104-104 218-147t235-24ZM157-321q35-35 85.5-35.5T328-322q35 35 34.5 85.5T327-151q-25 25-83.5 43T82-76q14-103 32-161.5t43-83.5Zm57 56q-10 10-20 36.5T180-175q27-4 53.5-13.5T270-208q12-12 13-29t-11-29q-12-12-29-11.5T214-265Z" />
-                    </svg>Projects
+                    </svg><span>Projects</span>
                 </a>
             </li>
             <li>
@@ -53,8 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                         <path
                         d="M560-564v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-600q-38 0-73 9.5T560-564Zm0 220v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-380q-38 0-73 9t-67 27Zm0-110v-68q33-14 67.5-21t72.5-7q26 0 51 4t49 10v64q-24-9-48.5-13.5T700-490q-38 0-73 9.5T560-454ZM260-320q47 0 91.5 10.5T440-278v-394q-41-24-87-36t-93-12q-36 0-71.5 7T120-692v396q35-12 69.5-18t70.5-6Zm260 42q44-21 88.5-31.5T700-320q36 0 70.5 6t69.5 18v-396q-33-14-68.5-21t-71.5-7q-47 0-93 12t-87 36v394Zm-40 118q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q46-24 96-36t102-12q58 0 113.5 15T480-740q51-30 106.5-45T700-800q52 0 102 12t96 36q11 5 16.5 15t5.5 21v482q0 23-19.5 35t-40.5 1q-37-20-77.5-31T700-240q-60 0-116 21t-104 59ZM280-494Z" />
-                    </svg>
-                    Blogs
+                    </svg><span>Blogs</span>
                 </a>
             </li>
             <li>
@@ -62,8 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
                         <path
                         d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
-                    </svg>
-                    Shop
+                    </svg><span>Shop</span>
                 </a>
             </li>
             <li>
@@ -88,36 +86,33 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     `;
 
-
-
-    const sidebarBtns = sidebar.querySelectorAll('.sidebar-btn');
+    const sidebarBtns = sidebar.querySelectorAll(".sidebar-btn");
     const currentPath = window.location.pathname;
 
-    sidebarBtns.forEach(btn => {
-        const href = btn.getAttribute('href');
+    sidebarBtns.forEach((btn) => {
+        const href = btn.getAttribute("href");
 
         // Skip external links (starting with http)
-        if (href.startsWith('http')) return;
+        if (href.startsWith("http")) return;
 
         // Convert to absolute path
         const linkPath = new URL(href, window.location.origin).pathname;
 
         // Exact match for Home
-        if (linkPath === '/' && currentPath === '/') {
-            btn.classList.add('active');
+        if (linkPath === "/" && currentPath === "/") {
+            btn.classList.add("active");
         }
         // Exact match for other internal paths
-        else if (linkPath !== '/' && currentPath.startsWith(linkPath)) {
-            btn.classList.add('active');
+        else if (linkPath !== "/" && currentPath.startsWith(linkPath)) {
+            btn.classList.add("active");
         } else {
-            btn.classList.remove('active');
+            btn.classList.remove("active");
         }
 
         // Optional: Click fallback (for SPA or dynamic sidebar)
-        btn.addEventListener('click', () => {
-            sidebarBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+        btn.addEventListener("click", () => {
+            sidebarBtns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
         });
     });
-
 });

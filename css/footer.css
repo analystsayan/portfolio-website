@@ -1,3 +1,8 @@
+footer {
+    background: var(--background-color);
+    padding: .5em 0;
+}
+
 .footer {
     background-color: var(--primary-color);
     color: var(--off-white);
@@ -5,7 +10,6 @@
     padding: 1.5em 1em;
     font-size: 0.9rem;
     border-top: 1px solid var(--border-color);
-    margin-top: 1em;
 }
 
 .footer-container {
@@ -32,7 +36,7 @@
 .social-icons a i {
     font-size: 20px;
     vertical-align: middle;
-    margin-right: var(--stdem2);
+    margin-right: var(--space-xs);
     filter: brightness(0) invert(1);
     /* makes SVG white */
     transition: transform 0.2s ease;
@@ -45,14 +49,12 @@
 
 @media screen and (min-width: 1024px) {
     footer {
-        background: var(--background-color);
         grid-area: footer;
-        padding: .5em 0;
-        margin-bottom: var(--stdem2);
+        margin-bottom: var(--space-xs);
     }
 
     .footer {
-        border-radius: var(--br1);
+        border-radius: var(--radius-sm);
         margin-right: .5em;
     }
 }

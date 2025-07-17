@@ -5,36 +5,52 @@
       "destination": "/resume.html"
     },
     {
-      "source": "/todoappbyas",
-      "destination": "/todoappbyas.html"
-    },
-    {
-      "source": "/getprojectidea",
-      "destination": "/getprojectidea.html"
-    },
-    {
-      "source": "/facebookclonebyas",
-      "destination": "/facebookclonebyas.html"
-    },
-    {
-      "source": "/microsoftclonebyas",
-      "destination": "/microsoftclonebyas.html"
-    },
-    {
       "source": "/projects",
       "destination": "/projects.html"
     },
     {
-      "source": "/sales-data-analysis",
-      "destination": "/sales-data-analysis.html"
+      "source": "/terms-and-conditions",
+      "destination": "/terms-and-conditions.html"
     },
     {
-      "source": "/sales-insights-dashboard",
-      "destination": "/sales-insights-dashboard.html"
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
     },
     {
-      "source": "/my-sql-reporting",
-      "destination": "/my-sql-reporting.html"
+      "source": "/disclaimer",
+      "destination": "/disclaimer.html"
+    },
+    {
+      "source": "/atliq-hardware-sales-analysis-with-excel",
+      "destination": "/atliq-hardware-sales-analysis-with-excel.html"
+    },
+    {
+      "source": "/atliq-tech-sales-dashboard-with-powerbi",
+      "destination": "/atliq-tech-sales-dashboard-with-powerbi.html"
+    },
+    {
+      "source": "/bookmyshow-reporting-with-mysql",
+      "destination": "/bookmyshow-reporting-with-mysql.html"
+    },
+    {
+      "source": "/portfolio-website",
+      "destination": "/portfolio-website.html"
+    },
+    {
+      "source": "/todolist-as",
+      "destination": "/todolist-as.html"
+    },
+    {
+      "source": "/project-finder-as",
+      "destination": "/project-finder-as.html"
+    },
+    {
+      "source": "/facebook-clone-as",
+      "destination": "/facebook-clone-as.html"
+    },
+    {
+      "source": "/microsoft-clone-as",
+      "destination": "/microsoft-clone-as.html"
     }
   ],
   "cleanUrls": true

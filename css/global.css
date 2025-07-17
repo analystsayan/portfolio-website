@@ -20,11 +20,15 @@
     --heading: linear-gradient(to right, #5c59ff, #fff);
     --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
 
-    --br1: 10px;
-    --br2: 40px;
-    --stdem: 1em;
-    --stdem2: .4em;
-    --padding1: 1em;
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 999px;
+
+    --space-xxs: 0.4em;
+    --space-xs:  0.6em;
+    --space-sm:  0.8em;
+    --space-md:  1em;
 }
 
 * {
@@ -39,7 +43,7 @@
 
 #backToTopBtn {
     position: fixed;
-    bottom: 3%;
+    bottom: 8%;
     right: 50%;
     transform: translateX(50%);
     font-size: 20px;
@@ -82,7 +86,7 @@ body::-webkit-scrollbar {
     background: var(--tertiary-color);
     padding: .8em 1em;
     font-weight: 500;
-    border-radius: var(--br2);
+    border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +143,7 @@ body::-webkit-scrollbar {
 }
 
 button,
+a,
 .global-btn{
     outline: none;
     -webkit-tap-highlight-color: transparent; /* 🔥 Removes mobile tap square */

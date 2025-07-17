@@ -1,20 +1,22 @@
+
+
 const projects = [
     {
-        title: "Sales Data Analysis",
+        title: "AtliQ Hardware Sales Data Analysis with Excel",
         tech: "Excel • Power Query • Power Pivot",
         filter: "excel",
-        liveLink: "https://microsoftclonebyas.vercel.app",
-        sourceCode: "https://github.com/analystsayan/microsoft-landing-tailwind",
-        gotoProject: "/projects/sales-data-analysis",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/atliq-hardware-sales-analysis-with-excel",
         image: "/media/image/projectimg/sales-data-analysis.png"
     },
     {
-        title: "Sales Insights Dashboard",
+        title: "AtliQ Tech Sales Insights Dashboard with Power BI",
         tech: "Power BI • My SQL • Power BI Service",
         filter: "powerbi sql",
-        liveLink: "https://getprojectidea.vercel.app",
-        sourceCode: "https://github.com/analystsayan/get-project-idea",
-        gotoProject: "/projects/sales-insights-dashboard",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/atliq-tech-sales-insights-dashboard-with-powerbi",
         image: "/media/image/projectimg/sales-insights-dashboard.png"
     },
     {
@@ -22,17 +24,17 @@ const projects = [
         tech: "HTML • CSS • JavaScript",
         filter: "webdev",
         liveLink: "https://sayanmondal.in/resume",
-        sourceCode: "https://github.com/analystsayan/Portfolio",
+        gitHub: "#",
         gotoProject: "/projects/portfolio-website",
         image: "/media/image/projectimg/portfolioImage.png"
     },
     {
-        title: "My Sql Reporting",
+        title: "BokmyShow Reporting with My SQL",
         tech: "My SQL • Query • Reporting",
         filter: "sql",
-        liveLink: "https://sayanmondal.in/resume",
-        sourceCode: "https://github.com/analystsayan/Portfolio",
-        gotoProject: "/projects/my-sql-reporting",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/bookmyshow-reporting-with-mysql",
         image: "/media/image/projectimg/my-sql-reporting.png"
     }
 ];
@@ -50,13 +52,13 @@ projects.forEach(project => {
         .split(',')
         .join(' '); // turn it into space-separated list
 
-    card.className = "resume-project-card";
+    card.className = "project-card";
     card.setAttribute("data-tags", tags); // ← Used for filtering
 
     card.innerHTML = `
         <a href="${project.gotoProject}" class="project-link">
-            <div class="resume-project-card-image" style="background-image: url(${project.image});"></div>
-            <div class="resume-project-card-content">
+            <div class="project-card-image" style="background-image: url(${project.image});"></div>
+            <div class="project-card-content">
                 <h3>${project.title}</h3>
                 <p>${project.tech}</p>
             </div>
@@ -77,7 +79,7 @@ filterButtons.forEach(btn => {
         btn.classList.add('active');
 
         const tag = btn.dataset.tag.toLowerCase(); // like 'html', 'powerbi', or 'all'
-        const allCards = document.querySelectorAll('.resume-project-card');
+        const allCards = document.querySelectorAll('.project-card');
 
         allCards.forEach(card => {
             const tags = card.dataset.tags; // comes from data-tags above
@@ -90,5 +92,3 @@ filterButtons.forEach(btn => {
         });
     });
 });
-
-

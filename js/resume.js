@@ -1,34 +1,38 @@
 const featuredProjects = [
     {
-        title: "Sales Data Analysis",
+        title: "AtliQ Hardware Sales Data Analysis with Excel",
         tech: "Excel • Power Query • Power Pivot",
-        liveLink: "https://microsoftclonebyas.vercel.app",
-        sourceCode: "https://github.com/analystsayan/microsoft-landing-tailwind",
-        gotoProject: "/projects/sales-data-analysis",
+        filter: "excel",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/atliq-hardware-sales-analysis-with-excel",
         image: "/media/image/projectimg/sales-data-analysis.png"
     },
     {
-        title: "Sales Insights Dashboard",
+        title: "AtliQ Tech Sales Insights Dashboard with Power BI",
         tech: "Power BI • My SQL • Power BI Service",
-        liveLink: "https://getprojectidea.vercel.app",
-        sourceCode: "https://github.com/analystsayan/get-project-idea",
-        gotoProject: "/projects/sales-insights-dashboard",
+        filter: "powerbi sql",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/atliq-tech-sales-insights-dashboard-with-powerbi",
         image: "/media/image/projectimg/sales-insights-dashboard.png"
     },
     {
         title: "Portfolio Website",
         tech: "HTML • CSS • JavaScript",
+        filter: "webdev",
         liveLink: "https://sayanmondal.in/resume",
-        sourceCode: "https://github.com/analystsayan/Portfolio",
+        gitHub: "#",
         gotoProject: "/projects/portfolio-website",
         image: "/media/image/projectimg/portfolioImage.png"
     },
     {
-        title: "My Sql Reporting",
+        title: "BokmyShow Reporting with My SQL",
         tech: "My SQL • Query • Reporting",
-        liveLink: "https://sayanmondal.in/resume",
-        sourceCode: "https://github.com/analystsayan/Portfolio",
-        gotoProject: "/projects/my-sql-reporting",
+        filter: "sql",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/bookmyshow-reporting-with-mysql",
         image: "/media/image/projectimg/my-sql-reporting.png"
     }
 ];
@@ -37,11 +41,11 @@ const featuredProjectContainer = document.getElementById("featuredProjectContain
 
 featuredProjects.forEach(project => {
     const card = document.createElement("div");
-    card.className = "resume-project-card";
+    card.className = "project-card";
     card.innerHTML = `
         <a href="${project.gotoProject}" class="project-link">
-            <div class="resume-project-card-image" style="background-image: url(${project.image});"></div>
-            <div class="resume-project-card-content">
+            <div class="project-card-image" style="background-image: url(${project.image});"></div>
+            <div class="project-card-content">
                 <h3>${project.title}</h3>
                 <p>${project.tech}</p>
             </div>
