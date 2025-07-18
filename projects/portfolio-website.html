@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="/css/hearder.css" />
     <link rel="stylesheet" href="/css/sidebar.css" />
     <link rel="stylesheet" href="/css/footer.css" />
-    <link rel="stylesheet" href="/css/resume.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
     <link rel="manifest" href="/manifest.json">
 
     <!-- Font Awesome Icons -->
@@ -77,11 +77,11 @@
             <a href="/" class="header-logo" title="Analyst Sayan"><img src="/media/image/logo/favicon.png"
                     alt="Analyst Sayan"></a>
             <!-- Header Search -->
-            <div class="nav-button">
+            <!-- <div class="nav-button">
                 <p id="projectBtn">Projects</p>
                 <p id="experienceBtn">Experience</p>
                 <p id="educationBtn">Education</p>
-            </div>
+            </div> -->
         </header>
     </nav>
 
@@ -90,6 +90,91 @@
     <!-- Main Content -->
     <main class="main-content">
 
+        <div class="file-path">
+            <p><a href="/projects">Projects</a><i class="fa-solid fa-chevron-right fa-xs"></i>
+                Portfolio Website</p>
+        </div>
+
+        <div class="project-details-container">
+            <div class="project-details">
+                <section class="project-header">
+                    <img src="/media//image/projectimg/portfolioImage.png">
+                    <h1>Portfolio Website</h1>
+                    <div class="meta">
+                        <p>Created on <time datetime="2024-05-31">May 31, 2024</time></p>
+                        <p>Tools : HTML • CSS • JavaScript</p>
+                    </div>
+                </section>
+                <hr>
+                <section class="project-description">
+                    <h4><i class="fa-solid fa-scroll fa-xl"></i> Project Description</h4>
+                    <p>
+                        Hi, I’m Sayan Mondal, a passionate Data Analyst from Kolkata, India, with a background in Information Technology (B.Sc IT) specialized in Data Science. Over time, I’ve developed a keen interest in web development, which allows me to merge creativity with data-driven thinking.
+                        This portfolio website is my digital identity — a space to showcase my professional journey, analytical projects, skills, and the real-world problems I’ve solved using data and technology. It also acts as a central hub to share my resume, project demos, reports, and links to my work, including blogs and photography.
+                    </p>
+                    <p>
+                        🗓️ First Deployed: 29th May, 2024<br>Built With:HTML, CSS, JavaScript (Vanilla)
+                    </p>
+                </section>
+                <section class="project-goals-container">
+                    <div class="project-goals">
+                        <h4><i class="fa-solid fa-bullseye fa-xl"></i> Project Goals</h4>
+                        <ul>
+                            <li>✔ Showcase my data analysis projects with clear insights, reports, and visualizations.</li>
+                            <li>✔ Provide a centralized platform for recruiters and collaborators to view my resume and work.</li>
+                            <li>✔ Continuously update with new learnings, blogs, and personal initiatives like Shop & School of Basics.</li>
+                            <li>✔ Maintain a clean, responsive, and user-friendly interface optimized for all devices.</li>
+                        </ul>
+                    </div>
+                </section>
+                <hr>
+                <section class="project-evaluation">
+                    <h4><i class="fa-solid fa-person-digging fa-xl"></i> Project Evaluation</h4>
+                    <p>Website Purpose & Identity</p>
+                    <div class="code-block">
+                        Designed to present my work as a Data Analyst, the website serves as a central hub for showcasing projects, resume, blogs, and professional presence under the brand Analyst Sayan.
+                    </div>
+                    <p>First Deployment & Updates</p>
+                    <div class="code-block">
+                        The site was first launched on 29 May 2024. Since then, it has evolved with dynamic features like embedded PDFs, video presentations, and project-specific pages for scalable updates.
+                    </div>
+                    <p>Technology Used</p>
+                    <div class="code-block">
+                        Built with clean HTML, CSS, and JavaScript — avoiding frameworks for full control. It uses responsive design, modular structure, and integrates Google Sheets (on it) for dynamic linking.
+                    </div>
+                    <p>Strategic Impact</p>
+                    <div class="code-block">
+                        The portfolio boosts online visibility, simplifies project sharing, and helps in professional positioning. It's a foundation for future growth, including blog publishing and product showcases.
+                    </div>
+                </section>
+                <hr>
+                <section class="project-presentation">
+                    <h4><i class="fa-solid fa-video fa-xl"></i> Project Presentation</h4>
+                    <div class="video-wrapper">
+                        Soon
+                    </div>
+                    <div class="dwnld-presentation">
+                        <a class="global-btn"
+                            href="#"
+                            alt="Download Presentation">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                                <path
+                                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                            </svg>
+                            Download Presentation(Soon)
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="project-report-container">
+            <section class="project-report">
+                <h4><i class="fa-solid fa-file-pdf fa-xl"></i> Project Report</h4>
+                <div class="pdf-wrapper" id="pdfWrapper">
+                    Soon
+                </div>
+            </section>
+        </div>
     </main>
 
     <!-- Dark Overlay -->
@@ -105,8 +190,7 @@
 
     <!-- External JavaScript -->
     <script src="/js/sidebar.js" defer></script>
-    <script src="js/project.js" defer></script>
-    <script src="js/resume.js" defer></script>
+    <script src="/js/projects.js" defer></script>
     <script src="/js/global.js" defer></script>
 
 </body>

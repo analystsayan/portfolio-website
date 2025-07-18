@@ -43,8 +43,8 @@
 
 #backToTopBtn {
     position: fixed;
-    bottom: 8%;
-    right: 50%;
+    bottom: 30px;
+    right: 50px;
     transform: translateX(50%);
     font-size: 20px;
     height: 52px;
@@ -77,9 +77,18 @@ body::-webkit-scrollbar {
     /* For Chrome, Safari, and Opera */
 }
 
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--hover-bg);
+    width: 100%;
+    opacity: 1;
+    border-radius: 4px;
+}
+
 .fixed-contact {
     position: fixed;
-    right: 10px;
+    left: 10px;
     bottom: 30px;
     font-size: 2vh;
     color: var(--off-white);
@@ -122,7 +131,7 @@ body::-webkit-scrollbar {
     height: 12px;
     border-radius: 50%;
     position: absolute;
-    right: -5px;
+    left: -5px;
     bottom: -4px;
 }
 
