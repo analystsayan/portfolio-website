@@ -1,5 +1,3 @@
-
-
 const projects = [
     {
         title: "AtliQ Hardware Sales Data Analysis with Excel",
@@ -39,7 +37,7 @@ const projects = [
     }
 ];
 
-const projectContainer = document.getElementById("ProjectContainer");
+const projectContainer = document.getElementById("projectContainer");
 
 projects.forEach(project => {
     const card = document.createElement("div");
@@ -91,44 +89,4 @@ filterButtons.forEach(btn => {
             }
         });
     });
-});
-
-
-
-
-
-// getyoutubeurl
-
-document.addEventListener("DOMContentLoaded", () => {
-    const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vR8VJkViYV5cnn_HZ2WzgLo5Thon843r1BXl8AeP74cFcHksXMXWIWPJvewcUb-BAUaF1pUoAngm_Ts/pub?output=csv";
-
-    const currentPage = window.location.pathname
-        .split("/")
-        .pop()
-        .replace(".html", "")
-        .toLowerCase();
-
-    fetch(sheetUrl)
-        .then(response => response.text())
-        .then(csvText => {
-            const rows = csvText.trim().split("\n").map(row => row.split(","));
-            const headers = rows[0];
-            const data = rows.slice(1);
-
-            const pageIndex = headers.indexOf("page");
-            const videoIndex = headers.indexOf("video_link");
-
-            const match = data.find(row => row[pageIndex] === currentPage);
-            if (match && match[videoIndex]) {
-                const videoUrl = match[videoIndex];
-                const videoId = new URL(videoUrl).searchParams.get("v");
-
-                if (videoId) {
-                    document.getElementById("youtube-video").src = `https://www.youtube.com/embed/${videoId}`;
-                }
-            }
-        })
-        .catch(error => {
-            console.error("Error loading video:", error);
-        });
 });

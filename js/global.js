@@ -1,9 +1,9 @@
 // func to toggle and close the sidebar for mobile
 document.addEventListener('DOMContentLoaded', () => {
     // Get the menu toggle button (to open the sidebar)
-    const menuToggle = document.getElementById('menuToggle');
+    const sidebarToggle = document.getElementById('sidebarToggle');
     // Get the menu toggle close button (to close the sidebar)
-    const menuToggleClose = document.getElementById('menuToggleClose');
+    const sidebarClose = document.getElementById('sidebarClose');
     // Get the sidebar element
     const sidebar = document.querySelector('aside');
     // Get the overlay element
@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchEndX = 0;
 
     // Function to open the sidebar and show the overlay
-    menuToggle.addEventListener('click', () => {
+    sidebarToggle.addEventListener('click', () => {
         sidebar.classList.add('open'); // Add the 'open' class to open the sidebar
         overlay.classList.add('active'); // Show the overlay
     });
 
     // Function to close the sidebar and hide the overlay
-    menuToggleClose.addEventListener('click', () => {
+    sidebarClose.addEventListener('click', () => {
         sidebar.classList.remove('open'); // Remove the 'open' class to close the sidebar
         overlay.classList.remove('active'); // Hide the overlay
     });

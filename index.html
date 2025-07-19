@@ -2,107 +2,87 @@
 <html lang="en">
 
 <head>
-  <!-- Character Encoding -->
+  <!-- Character Encoding & Responsive Meta -->
   <meta charset="UTF-8" />
-
-  <!-- Responsive Design -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Title -->
+  <!-- SEO & Social Meta -->
   <title>Portfolio – Sayan Mondal (Analyst Sayan) | Data Analyst</title>
-
-  <!-- SEO Meta Description -->
-  <meta property="description"
+  <meta name="description"
     content="Explore Sayan Mondal's professional portfolio featuring his work as a Data Analyst & Frontend Developer, based in Kolkata. Check out his resume, projects, and experience." />
-
-  <!-- SEO Keywords -->
   <meta name="keywords"
     content="Sayan Mondal, Analyst Sayan, portfolio, data analyst, resume, projects, professional portfolio, responsive portfolio, Kolkata developer" />
-
-  <!-- Author -->
   <meta name="author" content="Sayan Mondal" />
+  <meta name="robots" content="index, follow">
 
-  <!-- Open Graph Tags for Social Media -->
+  <!-- Open Graph & Twitter Meta -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Analyst Sayan Portfolio | Sayan Mondal | Data Analyst" />
   <meta property="og:description"
     content="Welcome to the detailed portfolio of Sayan Mondal, data analyst & frontend developer based in Kolkata." />
   <meta property="og:image" content="https://www.sayanmondal.in/media/image/user/linkpreview.png" />
-  <meta property="og:site_name" content="https://www.sayanmondal.in/media/user/linkpreview.png" />
+  <meta property="og:site_name" content="Sayan Mondal Portfolio" />
   <meta property="og:url" content="https://www.sayanmondal.in" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Analyst Sayan Portfolio | Sayan Mondal | Data Analyst | Frontend Developer" />
-  <meta property="twitter:description"
+  <meta name="twitter:description"
     content="Explore Sayan Mondal's professional portfolio featuring his work as a Data Analyst & Frontend Developer, based in Kolkata. Check out his resume, projects, and experience." />
   <meta name="twitter:image" content="https://www.sayanmondal.in/media/image/user/linkpreview.png" />
   <meta name="twitter:site" content="@analystsayan" />
 
-  <!-- google ad sense -->
-  <meta name="google-adsense-account" content="ca-pub-3166613241260963">
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3166613241260963"
-    crossorigin="anonymous"></script>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="any" href="/media/image/logo/mainfavicon.png" />
+  <!-- Icons & Manifest -->
+  <link rel="icon" type="image/png" href="/media/image/logo/mainfavicon.png" />
   <link rel="apple-touch-icon" href="/media/image/logo/mainfavicon.png" sizes="192x192">
   <link rel="apple-touch-icon" href="/media/image/logo/mainfavicon.png" sizes="512x512">
-
-  <!-- Shortcut Icon -->
   <link rel="shortcut icon" href="/media/image/logo/mainfavicon.png" type="image/x-icon" />
+  <link rel="manifest" href="/manifest.json">
 
-  <!-- Canonical URL -->
+  <!-- Canonical & Search Engine -->
   <link rel="canonical" href="https://www.sayanmondal.in" />
-
-  <!-- Image for Search Engines -->
   <link rel="image_src" href="/media/image/user/linkpreview.png" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/hero.css" />
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/global.css" />
-  <link rel="stylesheet" href="/css/hearder.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/hero.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="/css/sidebar.css" />
   <link rel="stylesheet" href="/css/footer.css" />
-  <link rel="manifest" href="/manifest.json">
-  <!-- Font Awesome Icons -->
+
+  <!-- Icons -->
   <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  
-  <button id="backToTopBtn" title="Go to top">⬆</button>
-
+  <button id="backToTopBtn" title="Go to top" aria-label="Back to Top">⬆</button>
   <div id="top"></div>
-  <nav id="navBar" class="navbar">
-    <!-- Header Section -->
-    <header class="header"> <!-- Header Logo -->
-      <svg id="menuToggle" class="hamburger open-menu global-btn" xmlns="http://www.w3.org/2000/svg" height="24px"
-        viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+  <!-- Header -->
+  <header id="header" class="header" aria-label="Header">
+    <!-- Hamburger for mobile -->
+    <button id="sidebarToggle" class="hamburger sidebar-toggle global-btn" aria-label="Open Sidebar" aria-controls="sideBar"
+      aria-expanded="false" type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"
+        aria-label="Open Sidebar">
         <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
       </svg>
-      <a href="/" class="header-logo" title="Analyst Sayan"><img src="/media/image/logo/favicon.png"
-          alt="Analyst Sayan"></a> <!-- Header Search -->
-      <div class="nav-button">
-        <p id="aboutmeBtn" class="global-btn">About</p>
-        <p id="contactmeBtn" class="global-btn">Contact</p>
-      </div>
-    </header>
-  </nav>
+    </button>
+    <!-- Site logo -->
+    <a href="/" class="header-logo" title="Home"><img src="/media/image/logo/favicon.png" alt="Analyst Sayan" /></a>
+    <!-- Header Navigation -->
+    <nav class="header-navigation" aria-label="Header Navigation">
+      <button id="aboutmeBtn" class="global-btn" type="button">About</button>
+      <button id="contactmeBtn" class="global-btn" type="button">Contact</button>
+    </nav>
+  </header>
 
+  <!-- Sidebar -->
+  <aside id="sideBar" class="sidebar" aria-label="Sidebar"></aside>
 
-  <aside id="sideBar" class="sidebar"></aside>
-
-
-  <main class="main-content">
-    <!-- <div class="welcome">
-      <p>hello and welcome to the play ground of Sayan. I always play with various tech with a touch of creativity.</p>
-    </div> -->
+  <main class="main-content" role="main">
+    <!-- Hero Section -->
     <section id="heroSection">
       <div class="content">
-        <!-- Left Section -->
         <div class="content-heading">
           <h2>I am Sayan</h2>
           <h1>Data Analyst <br />Based in Kolkata</h1>
@@ -113,30 +93,28 @@
               Power BI</strong> to boost <strong>efficiency by 20%</strong> through automation and data insights.
           </p>
           <div class="landing-accent">
-            <a href="/resume" class="global-btn">
-              <div class="cv-btn">Visit Resume</div>
+            <a href="/resume" class="global-btn" aria-label="View Resume">
+              <span class="cv-btn">Visit Resume</span>
             </a>
-            <!-- Social Links -->
             <div class="social-links">
-              <a class="global-btn" aria-label="Connect on Linkedin" href="https://www.linkedin.com/in/analystsayan/" target="_blank"><i
-                  class="fa-brands fa-linkedin-in"></i></a>
-              <a class="global-btn" aria-label="Checkout my Github" href="https://github.com/analystsayan/" target="_blank"><i
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/analystsayan/" target="_blank"
+                class="global-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a aria-label="GitHub" href="https://github.com/analystsayan/" target="_blank" class="global-btn"><i
                   class="fa-brands fa-github"></i></a>
-              <a class="global-btn" aria-label="Subscribe to Youtube" href="https://youtube.com/@analystsayan" target="_blank"><i
+              <a aria-label="YouTube" href="https://youtube.com/@analystsayan" target="_blank" class="global-btn"><i
                   class="fa-brands fa-youtube"></i></a>
-              <a class="global-btn" aria-label="Follow on Instagram" href="https://www.instagram.com/analystsayan/" target="_blank"><i
-                  class="fa-brands fa-instagram"></i></a>
-              <a class="global-btn" aria-label="Follow on Facebook" href="https://www.facebook.com/analystsayan/" target="_blank"><i
-                  class="fa-brands fa-facebook"></i></a>
-              <a class="global-btn" aria-label="Telegram channel here" href="https://t.me/analystsayan" target="_blank"><i
+              <a aria-label="Instagram" href="https://www.instagram.com/analystsayan/" target="_blank"
+                class="global-btn"><i class="fa-brands fa-instagram"></i></a>
+              <a aria-label="Facebook" href="https://www.facebook.com/analystsayan/" target="_blank"
+                class="global-btn"><i class="fa-brands fa-facebook"></i></a>
+              <a aria-label="Telegram" href="https://t.me/analystsayan" target="_blank" class="global-btn"><i
                   class="fa-brands fa-telegram"></i></a>
             </div>
           </div>
         </div>
-        <!-- Right Section -->
         <div class="content-image">
           <div class="image-wrapper">
-            <img src="media/image/user/1734443114302.jpg" alt="Sayan" />
+            <img src="/media/image/user/1734443114302.jpg" alt="Sayan Mondal portrait" loading="lazy" />
           </div>
         </div>
       </div>
@@ -151,7 +129,7 @@
         </div>
         <div class="smry-div">
           <h3>10</h3>
-          <p>Happy<br>Clints</p>
+          <p>Happy<br>Clients</p>
         </div>
         <div class="smry-div">
           <h3>13+</h3>
@@ -160,11 +138,10 @@
       </div>
     </section>
 
-    <!-- <section id="gallerySection" class="gallery"></section> -->
-
+    <!-- About Me Section -->
     <section id="aboutmeSection" class="aboutme">
       <h1 class="index-heading">About Me</h1>
-      <hr>
+      <hr />
       <div class="about-child">
         <div class="about personal">
           <ul>
@@ -194,69 +171,80 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contactSection" class="contact">
       <h1 class="index-heading">Contact Me</h1>
-      <hr>
+      <hr />
       <div class="contact-details">
         <div class="contact-form">
-          <h2 class="index-heading">Lemme help you !</h2>
-          <p>
-            I design and code beautifully simple things and I love what I do. Just simple like that!
-          </p>
+          <h2 class="index-heading">Lemme help you!</h2>
+          <p>I design and code beautifully simple things and I love what I do. Just simple like that!</p>
           <form>
             <div class="form-group">
-              <input type="text" placeholder="First name">
-              <input type="text" placeholder="Last name">
+              <label for="first-name">First name</label>
+              <input id="first-name" type="text" placeholder="First name" autocomplete="given-name" />
+              <label for="last-name">Last name</label>
+              <input id="last-name" type="text" placeholder="Last name" autocomplete="family-name" />
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Email address">
-              <input type="tel" placeholder="Phone number">
+              <label for="email">Email address</label>
+              <input id="email" type="email" placeholder="Email address" autocomplete="email" required />
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" placeholder="Phone number" autocomplete="tel" />
             </div>
-            <select>
-              <option>—Please choose an option—</option>
-              <option>Web Development</option>
-              <option>Web Design</option>
-              <option>Graphic Design</option>
-              <option>Social Media Management</option>
+            <label for="services">Service</label>
+            <select id="services">
+              <option value="">—Please choose an option—</option>
+              <option value="webdev">Data Analysis</option>
+              <option value="webdesign">Graphic Design</option>
+              <option value="graphic">Web Development</option>
             </select>
-            <textarea placeholder="Message"></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Message"></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>
         <div class="contact-info">
-          <a href="tel:+919547254491" class="global-btn">
+          <a href="tel:+919547254491" class="global-btn" aria-label="Call Phone">
             <div class="info-item">
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                  width="24px" fill="#e8eaed">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#e8eaed">
                   <path
                     d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
-                </svg></span>
+                </svg>
+              </span>
               <div>
                 <h4>Phone</h4>
                 <p>9547254491</p>
               </div>
             </div>
           </a>
-          <a href="mailto:analystsayan1@gmail.com" class="global-btn">
+          <a href="mailto:analystsayan1@gmail.com" class="global-btn" aria-label="Send Email">
             <div class="info-item">
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                  width="24px" fill="#e8eaed">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#e8eaed">
                   <path
                     d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
-                </svg></span>
+                </svg>
+              </span>
               <div>
                 <h4>Email</h4>
                 <p>analystsayan1@mail.com</p>
               </div>
             </div>
           </a>
-          <a href="https://shorturl.at/sJsPh" class="global-btn">
+          <a href="https://shorturl.at/sJsPh" class="global-btn" aria-label="Location">
             <div class="info-item">
-              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                  width="24px" fill="#e8eaed">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                  fill="#e8eaed">
                   <path
                     d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
-                </svg></span>
+                </svg>
+              </span>
               <div>
                 <h4>Location</h4>
                 <p>Kolkata, India</p>
@@ -268,44 +256,28 @@
     </section>
   </main>
 
-  <a class="fixed-contact global-btn" href="https://wa.me/9547254491" target="_blank">
+  <!-- WhatsApp Floating "Say Hi" Button -->
+  <a class="fixed-contact global-btn" href="https://wa.me/9547254491" target="_blank" aria-label="WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
       <path
         d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
     </svg>
     <span class="contact-text">Say Hi</span>
   </a>
-  
 
-  <!-- Dark Overlay -->
+  <!-- Overlay for sidebar/modal -->
   <div id="overlay"></div>
 
   <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
-      <p>© 2025 Sayan Mondal. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/disclaimer.html">Disclaimer</a>
-        <a href="/terms-and-conditions.html">Terms & Conditions</a>
-      </div>
-      <div class="social-icons">
-        <a href="https://instagram.com/sayandiaries" target="_blank" class="global-btn" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://linkedin.com/in/analystsayan" target="_blank" class="global-btn" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="mailto:analystsayan1@gmail.com" class="global-btn" aria-label="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer" id="footerSection"></footer>
 
-
+  <!-- JavaScript -->
   <script src="js/sidebar.js" defer></script>
   <script src="js/global.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <noscript>
+    <p>For the best experience, please enable JavaScript.</p>
+  </noscript>
 </body>
 
 </html>

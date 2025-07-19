@@ -1,3 +1,6 @@
+/* ------------------------------------------
+    Font Imports & Global Variables
+------------------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
 :root {
@@ -12,11 +15,12 @@
     --off-white: #f1faee;
     --hover-color: #8C84FF;
     --hover-bg: #68677069;
+    --border-color: #24253f;
 
     --special-card-font-header: #9eed00;
     --special-card-font-para: #00ffff;
-    --btnBg: linear-gradient(45deg, #5C59FF, #2a2880);
-    --btnBgHover: linear-gradient(45deg, #2a2880, #5C59FF);
+    --btnBg: linear-gradient(45deg, #5C59FF, #5C59FF);
+    --btnBgHover: linear-gradient(45deg, #2a2880, #2a2880);
     --heading: linear-gradient(to right, #5c59ff, #fff);
     --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
 
@@ -31,16 +35,22 @@
     --space-md:  1em;
 }
 
+/* ------------------------------------------
+    CSS Reset & Base
+------------------------------------------ */
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     scrollbar-width: thin;
     scrollbar-color: var(--hover-color) #141348;
-    font-family: "Sora", serif;
+    font-family: "Sora", sans-serif;
     box-sizing: border-box;
 }
 
+/* ------------------------------------------
+    "Back to Top" Button
+------------------------------------------ */
 #backToTopBtn {
     position: fixed;
     bottom: 30px;
@@ -55,28 +65,32 @@
     border-radius: 50%;
     cursor: pointer;
     display: none;
-    transition: ease-in 0.3s ease;
+    transition: background 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
 
+/* ------------------------------------------
+    Global Scrollbar & Body styles
+------------------------------------------ */
 html {
     scrollbar-width: none;
 }
 
 body {
     background-color: var(--background-color);
-    color: var(--font-color);
+    color: var(--font-color-primary);
     overflow-x: hidden;
-    -ms-overflow-style: none;
-    /* For Internet Explorer */
+    -ms-overflow-style: none; /* for IE */
 }
-
 body::-webkit-scrollbar {
     display: none;
-    /* For Chrome, Safari, and Opera */
+    /* Chrome, Safari, Opera */
 }
 
+/* ------------------------------------------
+    Divider Styling
+------------------------------------------ */
 hr {
     border: none;
     height: 1px;
@@ -86,6 +100,9 @@ hr {
     border-radius: 4px;
 }
 
+/* ------------------------------------------
+    Fixed Contact Button
+------------------------------------------ */
 .fixed-contact {
     position: fixed;
     left: 10px;
@@ -93,15 +110,16 @@ hr {
     font-size: 2vh;
     color: var(--off-white);
     background: var(--tertiary-color);
-    padding: .8em 1em;
+    padding: .8em 1em .8em 1.2em;
     font-weight: 500;
     border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0.2em;
     cursor: pointer;
     white-space: nowrap;
-    z-index: 997;
+    z-index: 998;
     transition: all 0.3s ease-in-out;
 }
 
@@ -111,19 +129,16 @@ hr {
     fill: var(--off-white);
     transition: all 0.3s ease-in-out;
 }
-
 .fixed-contact .contact-text {
     display: inline;
     transition: all 0.3s ease-in-out;
 }
-
 .fixed-contact.hide-text .contact-text {
     opacity: 0;
     width: 0;
     overflow: hidden;
     margin-left: 0;
 }
-
 .fixed-contact::after {
     content: "";
     background-color: var(--tertiary-color);
@@ -135,7 +150,9 @@ hr {
     bottom: -4px;
 }
 
-
+/* ------------------------------------------
+    Overlay (used for drawer/backdrop)
+------------------------------------------ */
 #overlay {
     position: fixed;
     top: 0;
@@ -146,33 +163,30 @@ hr {
     z-index: 998;
     display: none;
 }
-
 #overlay.active {
     display: block;
 }
 
+/* ------------------------------------------
+    Buttons & Links (normalize tap/focus)
+------------------------------------------ */
 button,
-a,
-.global-btn{
+.global-btn {
     outline: none;
-    -webkit-tap-highlight-color: transparent; /* 🔥 Removes mobile tap square */
-    -webkit-touch-callout: none; /* Optional: disables iOS text menu */
-    -webkit-user-select: none; /* Optional: no accidental text selection */
+    -webkit-tap-highlight-color: transparent; /* Removes mobile blue tap */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
     user-select: none;
 }
 
-.global-btn:focus {
-    outline: none;
-    box-shadow: none;
-}
-
+/* ------------------------------------------
+    Responsive: Desktop Layout Grid
+------------------------------------------ */
 @media screen and (min-width: 1024px) {
-
     html {
         scrollbar-width: thin;
         scroll-behavior: smooth;
     }
-
     body {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -182,8 +196,11 @@ a,
             "sidebar main"
             "sidebar footer";
     }
-
     main {
         grid-area: main;
+    }
+
+    .fixed-contact {
+        display: none;
     }
 }

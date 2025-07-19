@@ -1,3 +1,7 @@
+/* ------------------------------------------
+    Font Imports & Base Theme Variables
+------------------------------------------ */
+
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
 :root {
@@ -10,7 +14,6 @@
   --font-color-secondary: #def6ffa3;
   --off-white: #f1faee;
   --hover-color: #8C84FF;
-
   --special-card-font-header: #9eed00;
   --special-card-font-para: #00ffff;
   --btnBg: linear-gradient(45deg, var(--accent-color), var(--accent-bg));
@@ -18,6 +21,7 @@
   --heading: linear-gradient(to right, var(--accent-color), var(--font-color-primary));
   --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
   --card-img-bg: linear-gradient(to right, var(--accent-bg), var(--accent-color));
+  /* Add your --radius-* and --space-* variables if using */
 }
 
 * {
@@ -26,33 +30,41 @@
   text-decoration: none;
   scrollbar-width: thin;
   scrollbar-color: var(--hover-color) #141348;
-  font-family: "Sora", serif;
+  font-family: "Sora", sans-serif;
   box-sizing: border-box;
 }
 
-/* Body */
+/* ------------------------------------------
+    Layout & Main Containers
+------------------------------------------ */
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-
 main {
   background-color: var(--background-color);
   text-align: left;
 }
 
-/* Profile Info */
+/* ------------------------------------------
+    Profile Section
+------------------------------------------ */
+
 .profile-info {
   width: 100%;
   position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   flex-direction: row;
-  padding: 1em;
-  text-align: center;
+  padding: var(--space-sm);
+  gap: var(--space-xs);
+  border-bottom: 1px solid var(--border-color, #22223b);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+
+  /* Fancy hex pattern background */
   --s: 30px;
   --c: #0000, var(--primary-color) 0.5deg 119.5deg, #0000 120deg;
   --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
@@ -64,91 +76,78 @@ main {
   background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
 }
 
-/* Profile Image */
-.profile-image img{
+/* profile image */
+.profile-image {
+  display: flex;
+}
+.profile-image img {
   background-size: cover;
   background-position: center;
-  width: clamp(50px, 20vw, 100px);
-  height: clamp(50px, 20vw, 100px);
+  aspect-ratio: 1/1;
+  max-height: 100px;
   border-radius: 50%;
-  margin-right: .5em;
 }
 
-/* Profile details */
+/* Profile Details */
 .profile-details {
-  align-items: start;
-  text-align: left;
   display: flex;
   flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: start;
+  gap: var(--space-xxs);
 }
-
-/* Profile Name */
 .profile-name {
   font-size: clamp(16px, 10vw, 30px);
-  color: var(--font-color-primary);
+  color: var(--off-white);
   font-family: 'Caudex', serif;
 }
-
-/* Profile Username */
 .username {
   font-size: clamp(8px, 5vw, 16px);
   color: var(--font-color-secondary);
 }
 
-/* Btn Container */
-.button-container {
+/* Profile button Container  */
+.profile-button-container {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: .5em;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
 }
-
-/* Email and Resume Btn */
-.email-button,
-.resume-button {
-  white-space: nowrap;
-}
-
-/* Email and Resume Btn Font */
-.email-button a,
-.resume-button a {
+.profile-button-container a {
   background: var(--btnBg);
   color: var(--off-white);
-  /* outline: solid 2px var(--off-white); */
-  padding: 0.6em;
+  padding: var(--space-xs);
   border-radius: var(--radius-full);
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xxs);
   font-size: clamp(10px, 5vw, 16px);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: background step-start 0.3s;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
-
-/* Email and Resume Btn Font Hover*/
-.email-button a:hover,
-.resume-button a:hover {
-  background: var(--btnBgHover);
-}
-
-/* Email and Resume Btn icon */
-.email-button a svg,
-.resume-button a svg {
-  margin-right: 5px;
-  display: flex;
-  align-items: center;
+.profile-button-container a svg {
   fill: var(--off-white);
-  transition: stroke-width 0.3s ease;
+  width: 22px;
+  height: 22px;
+}
+.profile-button-container a:hover {
+  background: var(--btnBgHover);
+  color: var(--font-color-primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
+}
+.profile-button-container a svg:hover {
+  fill: var(--font-color-primary);
 }
 
-/* TechStack Section */
+/* ------------------------------------------
+    Section Headings
+------------------------------------------ */
 
-/* Section Header */
 .section-header {
   padding: var(--space-md) var(--space-sm);
 }
-
-/* Section Title */
 .section-title {
   color: var(--font-color-secondary);
   font-size: clamp(5px, 4vw, 16px);
@@ -156,8 +155,6 @@ main {
   text-align: left;
   max-width: fit-content;
 }
-
-/* Section Bill-board */
 .bill-board {
   width: 100%;
   font-size: clamp(26px, 9vw, 50px);
@@ -171,39 +168,34 @@ main {
   flex-wrap: nowrap;
 }
 
-/* TechStack or Knowledge Container */
+/* ------------------------------------------
+    Tech Stack ("Knowledge") Cards
+------------------------------------------ */
+
 .knowledge-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(163px, 1fr));
   gap: var(--space-xxs);
   padding: 0 var(--space-sm);
 }
-
-/* Knowledge Card */
 .knowledge-card {
-  padding: 10px;
+  padding: var(--space-sm);
   background-color: var(--primary-color);
   border-radius: var(--radius-sm);
-  z-index: 1;
-  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  transition: background-color 0.3s, transform 0.3s;
   overflow: hidden;
   position: relative;
 }
-
-/* Knowledge Card Hover */
 .knowledge-card:hover {
   background-color: var(--secondary-color);
   transform: scale(1);
 }
 
-/* Knowledge Tools Container */
 .knowledge-tools {
   display: flex;
   align-items: center;
   gap: .5em;
 }
-
-/* Knowledge Tools Eliment Icon */
 .box {
   display: inline-block;
   align-items: center;
@@ -212,48 +204,33 @@ main {
   padding: 1px;
   border-radius: 50%;
 }
-
-/* Knowledge Tools Eliment Icon Color */
-.red {
-  background-color: #ff605c;
-}
-
-/* Knowledge Tools Eliment Icon Color */
-.yellow {
-  background-color: #ffbd44;
-}
-
-/* Knowledge Tools Eliment Icon Color */
-.green {
-  background-color: #00ca4e;
-}
-
-/* Knowledge card Content */
+.red { background-color: #ff605c; }
+.yellow { background-color: #ffbd44; }
+.green { background-color: #00ca4e; }
 .knowledge-card-content {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 1.4;
   text-align: left;
 }
-
-/* Knowledge Card Header */
 .knowledge-card-content h4 {
   color: var(--special-card-font-header);
   font-size: 14px;
   font-family: "Fira Code", monospace;
 }
-
-/* Knowledge Card details */
 .knowledge-card-content p {
   font-size: 14px;
   color: var(--special-card-font-para);
   font-family: "Fira Code", monospace;
 }
 
-/* Experience Container */
+/* ------------------------------------------
+    Experience Section
+------------------------------------------ */
+
 .exp-container {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   text-align: center;
   justify-content: center;
   padding: 0 var(--space-sm);
@@ -262,7 +239,6 @@ main {
   overflow: hidden;
 }
 
-/* experience card */
 .exp-card {
   width: 100%;
 }
@@ -277,18 +253,14 @@ main {
   color: var(--font-color-secondary);
   white-space: nowrap;
   pointer-events: none;
-  /* Prevent interaction */
   z-index: 5;
-  /* Ensure it stays on top */
 }
 
-/* Exprience Number */
+/* Experience Number */
 .exp-num {
   font-size: 80px;
   color: var(--font-color-secondary);
 }
-
-/* Experience Toggle Button */
 .exp-toggle {
   width: 100%;
   background-color: var(--secondary-color);
@@ -304,44 +276,22 @@ main {
   padding: var(--space-sm);
   white-space: nowrap;
 }
-
-/* exp Toggle Btn Hover*/
 .exp-toggle:hover {
   background-color: var(--primary-color);
 }
-
-/* Show content when active */
 .exp-card.active .exp-content {
   display: block;
 }
-
-/* Rotate icon when active */
-.exp-card.active .exp-toggle::before {
-  transform: rotate(45deg);
-}
 .exp-toggle span {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: .3em;
 }
+/* Role-based company coloring */
+.exp-card .pispl { color: #599bff; fill: #599bff; }
+.exp-card .wow-momo { color: #ff6f00; fill: #ff6f00; }
+.exp-card .think-again-lab { color: #ffee00; fill: #ffee00; }
 
-/* Experience company color */
-.exp-card .pispl {
-  color: #599bff;
-  fill: #599bff;
-}
-
-.exp-card .wow-momo {
-  color: #ff6f00;
-  fill: #ff6f00;
-}
-
-.exp-card .think-again-lab {
-  color: #ffee00;
-  fill: #ffee00;
-}
-
-/* Experience Content */
 .exp-content {
   width: 100%;
   background: var(--secondary-color);
@@ -349,8 +299,6 @@ main {
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
   border-bottom: 1px solid #ff2b52;
 }
-
-/* Additional Styling for experience details*/
 .exp-content ol,
 .exp-content ol li {
   list-style: none;
@@ -361,7 +309,10 @@ main {
   text-align: left;
 }
 
-/* Education Grid Layout */
+/* ------------------------------------------
+    Education Section
+------------------------------------------ */
+
 .school-info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -369,40 +320,32 @@ main {
   padding: 0 var(--space-sm);
 }
 
-/* School Card Container */
 .school-card {
   background-color: var(--primary-color);
   border-radius: var(--radius-sm);
   overflow: hidden;
   text-align: center;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background 0.3s, transform 0.3s;
 }
-
 .school-card:hover {
   transform: scale(1.04);
   background: var(--secondary-color);
 }
-
-/* School Logo Styling */
 .school-logo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-top: 20px;
 }
-
-/* School Details Styling */
 .school-details {
   padding: 20px;
 }
-
 .school-name {
   color: var(--off-white);
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
 }
-
 .course,
 .stream,
 .year {
@@ -411,7 +354,9 @@ main {
   margin: 5px 0;
 }
 
-/* achive-container */
+/* ------------------------------------------
+    Achievements / Cards
+------------------------------------------ */
 
 .achievement-container {
   display: grid;
@@ -431,23 +376,18 @@ main {
   perspective: 1000px;
   box-shadow: 0 0 0 5px var(--secondary-color);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
   z-index: 0;
   cursor: pointer;
 }
-
 .card img {
   width: 100%;
   background-size: cover;
   fill: var(--primary-color);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .card:hover {
-  transform: scale(1.04);
   box-shadow: 0px 0px 70px var(--off-white);
 }
-
 .card__content {
   position: absolute;
   top: 0;
@@ -461,11 +401,9 @@ main {
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .card:hover .card__content {
   transform: rotateX(0deg);
 }
-
 .card__title {
   margin: 0;
   font-size: 22px;
@@ -473,13 +411,11 @@ main {
   font-weight: 600;
   margin-bottom: var(--space-sm);
 }
-
 .card:hover img {
   scale: 0;
 }
-
 .card__description {
-  font-size: 16px;
+  font-size: .9rem;
   color: var(--font-color-secondary);
   padding-left: 20px;
   list-style-position: outside;
@@ -487,20 +423,20 @@ main {
   text-align: justify;
 }
 
+/* ------------------------------------------
+    Social Container
+------------------------------------------ */
 
-/* social container */
 .social-container {
   width: 100%;
   padding: 1em 0;
   background-color: var(--primary-color);
   color: var(--font-color-2);
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-bottom: .5em;
 }
-
 .social-container i {
   color: var(--font-color-secondary);
   font-size: 30px;
@@ -512,59 +448,51 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: font-size ease-out 0.3s, background-color 0.3s;
+  transition: font-size 0.3s, background-color 0.3s;
 }
-
 .social-container i:hover {
   font-size: 36px;
   background-color: var(--secondary-color);
 }
 
-/* Media query for mobile view */
+/* ------------------------------------------
+    Desktop Tweaks (≥1024px)
+------------------------------------------ */
+
 @media screen and (min-width: 1024px) {
-
   main {
-    margin-right: var(--space-sm);
+    padding: 0 var(--space-xs);
   }
-  
   .profile-info {
-    border-radius: var(--radius-sm);
+    width: 100%;
+    margin-left: unset;
   }
-
-  /* Section Bill-board */
   .bill-board {
     width: fit-content;
   }
-
-  /* TechStack or Knowledge Container */
   .knowledge-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-sm);
     padding: 0 var(--space-sm);
   }
-
-  /* Knowledge Card Hover */
   .knowledge-card:hover {
     transform: scale(1.04);
   }
-  
-  /* Experience Container */
   .exp-container {
     flex-direction: row;
     gap: var(--space-sm);
     padding: 0 var(--space-sm);
   }
-
   .school-info-grid {
     padding: 0 var(--space-sm);
   }
-
   .achievement-container {
     gap: calc(var(--space-sm) * 2);
     padding: 0 calc(var(--space-sm) * 2);
   }
-
-  /* social container */
+  .card:hover {
+    transform: scale(1.04);
+  }
   .social-container {
     border-radius: var(--radius-sm);
     margin-bottom: 0;

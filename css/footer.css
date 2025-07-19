@@ -1,60 +1,79 @@
-footer {
+/* ------------------------------------------
+    Footer Section Styling
+------------------------------------------ */
+
+#footerSection {
     background: var(--background-color);
     padding-top: var(--space-sm);
 }
 
-.footer {
+.footer-container {
     background-color: var(--primary-color);
     color: var(--off-white);
     text-align: center;
-    padding: 1.5em 1em;
-    font-size: 0.9rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.footer-container {
+    padding: 1.5em var(--space-md);
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border-color, #22223b);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 24px rgba(90, 96, 172, 0.07);
     width: 100%;
+    margin: 0 auto;
 }
 
+/* Footer Links */
 .footer-links {
-    margin: 1em 0;
+    margin: var(--space-md) 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
 }
-
 .footer-links a {
-    margin: 0 0.5em;
     color: var(--off-white);
     text-decoration: none;
     font-weight: 500;
     white-space: nowrap;
-    transition: text-decoration 0.3s ease;
+    padding: 0.2em 0.7em;
+    border-radius: var(--radius-full);
+    transition: background 0.2s, color 0.2s;
+}
+.footer-links a:hover, .footer-links a:focus {
+    background: var(--hover-bg);
+    color: var(--accent-color);
+    outline: none;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+/* Social Icons */
+.social-icons {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
-
-.social-icons a i {
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-bg);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: background 0.2s, transform 0.2s;
+    outline: none;
+}
+.social-icons a:focus, .social-icons a:hover {
+    background: var(--accent-color);
+    transform: scale(1.08);
+}
+.social-icons i {
+    color: var(--off-white);
     font-size: 20px;
     vertical-align: middle;
-    margin-right: var(--space-xs);
-    filter: brightness(0) invert(1);
-    /* makes SVG white */
-    transition: transform 0.2s ease;
 }
-
-.social-icons a:hover i {
-    transform: scale(1.1);
-}
-
 
 @media screen and (min-width: 1024px) {
     footer {
         grid-area: footer;
-        margin-bottom: var(--space-xs);
-    }
-
-    .footer {
-        border-radius: var(--radius-sm);
-        margin-right: .5em;
     }
 }

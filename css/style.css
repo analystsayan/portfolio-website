@@ -1,3 +1,9 @@
+/* ------------------------------------------
+    About Me, Contact, and Disclaimer Section Styling
+    (Home Page, After Hero)
+------------------------------------------ */
+
+/* About Me Section */
 .aboutme {
     position: relative;
     width: 100%;
@@ -37,7 +43,7 @@
     padding: 1.5em;
     list-style-position: outside;
     border-radius: var(--radius-sm);
-    transition: all .5s ease-in-out;
+    transition: background 0.5s, color 0.5s, box-shadow 0.5s, transform 0.5s;
     position: relative;
     overflow: hidden;
     line-height: 1.4;
@@ -47,8 +53,6 @@
 .about:hover {
     color: var(--off-white);
     background: var(--secondary-color);
-    transform: scale(1.03);
-    /* Slight zoom-in effect */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
 }
 
@@ -58,6 +62,7 @@
     gap: .5em;
 }
 
+/* Contact Section */
 .contact {
     display: flex;
     flex-direction: column;
@@ -95,6 +100,7 @@
     flex-direction: column;
 }
 
+/* Inputs/Selects/Textareas/Buttons */
 .contact-form input,
 .contact-form select,
 .contact-form textarea,
@@ -102,15 +108,9 @@
     width: 100%;
     padding: 1.5em;
     border-radius: var(--radius-md);
-    border: none;
-    margin-bottom: 15px;
     border: solid 1px var(--secondary-color);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.614);
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+    margin: var(--space-xxs) 0 var(--space-md) 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.61);
     background-color: var(--background-color);
     color: #ffffff;
 }
@@ -120,12 +120,22 @@
     resize: none;
 }
 
+/* Focus Outline – Accessibility */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus,
+.contact-form button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 .contact-form button {
     background: var(--btnBg);
     color: white;
     cursor: pointer;
     font-size: 16px;
     border: none;
+    transition: background 0.3s;
 }
 
 .contact-form button:hover {
@@ -167,14 +177,12 @@
     color: var(--font-color-primary);
 }
 
+/* Responsive Desktop Layout */
 @media screen and (min-width: 1024px) {
-
-    .gallery img:hover {
-        scale: 1.2;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
+    .about:hover {
+        transform: scale(1.03);
     }
-
+    
     .about-child {
         flex-direction: row;
         gap: 2em;
@@ -188,9 +196,16 @@
     .contact-form {
         width: 50%;
     }
+
+    /* Optional Example: If you use a gallery in this area */
+    .gallery img:hover {
+        scale: 1.2;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
 }
 
-/* Disclaimer Page */
+/* Disclaimer Section */
 .disclaimer-section {
     width: 100%;
     text-align: left;
@@ -201,7 +216,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .disclaimer-section h1,

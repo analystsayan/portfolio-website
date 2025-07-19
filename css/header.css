@@ -1,0 +1,91 @@
+/* ------------------------------------------
+    Navigation & Header Bar Styles
+------------------------------------------ */
+
+/* Sticky top navigation with glass/blur effect */
+.header {
+    width: 100%;
+    height: 55px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-xs) var(--space-xs);
+    background: #00000029;
+    color: var(--font-color-secondary);
+    border-bottom: 1px solid var(--border-color, #22223b);
+    backdrop-filter: blur(800px);
+    user-select: none;
+    z-index: 997;
+}
+
+/* Hamburger (mobile) */
+.sidebar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.sidebar-toggle svg {
+    height: 40px;
+    width: 40px;
+    fill: var(--off-white);
+}
+
+/* Header Navigation */
+.header-navigation {
+    display: flex;
+    gap: var(--space-xxs);
+}
+.header-navigation a,
+.header-navigation button {
+    font-size: clamp(4px, 1.8vh, 16px);
+    color: var(--off-white);
+    background: transparent;
+    border: none;
+    padding: var(--space-xs);
+    font-weight: 500;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    cursor: pointer;
+}
+.header-navigation a:hover,
+.header-navigation button:hover {
+    color: var(--font-color-primary);
+    background: var(--hover-bg);
+}
+
+/* Logo (hidden on mobile by default) */
+.header-logo {
+    display: none;
+}
+
+/* ------------------------------------------
+    Desktop Styles: ≥1024px
+------------------------------------------ */
+
+@media screen and (min-width: 1024px) {
+
+    .sidebar-toggle {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        grid-area: navbar;
+    }
+
+    .header-logo {
+        display: block;
+        display: flex;
+    }
+    .header-logo img {
+        max-height: 40px;
+        max-width: 40px;
+        cursor: pointer;
+    }
+}

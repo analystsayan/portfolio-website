@@ -1,9 +1,14 @@
+/* ------------------------------------------
+    Main Wrapper & Section
+------------------------------------------ */
+
+/* Prevent unwanted horizontal scrolling globally */
 main {
     overflow-x: hidden;
 }
 
+/* Hero Section Layout: Full width, vertical stack, mobile-first */
 #heroSection {
-    /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -13,11 +18,14 @@ main {
     padding: 0 1em 2em;
 }
 
+/* If you ever use .hero:after for a blurred background, hidden by default (mobile) */
 .hero:after {
     display: none;
 }
 
-/* Left Content */
+/* ------------------------------------------
+    Hero Content Grid (Mobile-first Layout)
+------------------------------------------ */
 .content {
     width: 100%;
     display: grid;
@@ -32,6 +40,7 @@ main {
         "box3";
 }
 
+/* Hero section top heading */
 .content-heading {
     grid-area: box1;
     display: flex;
@@ -41,7 +50,6 @@ main {
     gap: .5em;
     margin-top: 1em;
 }
-
 .content h2 {
     font-size: 1rem;
     text-align: center;
@@ -49,7 +57,6 @@ main {
     white-space: nowrap;
     color: var(--font-color-primary);
 }
-
 .content h1 {
     font-size: 2rem;
     text-align: center;
@@ -62,6 +69,7 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
+/* Profile Image */
 .content-image {
     grid-area: box2;
     display: flex;
@@ -69,7 +77,6 @@ main {
     justify-content: center;
     align-items: center;
 }
-
 .image-wrapper {
     filter: brightness(1.1);
     width: 62%;
@@ -79,18 +86,17 @@ main {
     outline: 2px solid #7247ff81;
     transition: all 0.5s ease;
 }
-
 .image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease;
 }
-
 .image-wrapper:hover {
     outline: 3px solid var(--accent-color);
 }
 
+/* Description Paragraph & CTA */
 .content-details {
     grid-area: box3;
     display: flex;
@@ -99,7 +105,6 @@ main {
     align-items: center;
     gap: 1em;
 }
-
 .content p {
     width: 100%;
     text-align: justify;
@@ -110,15 +115,15 @@ main {
     padding: 0 1em;
 }
 
+/* Resume & Socials CTA */
 .landing-accent {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: calc(var(--space-sm) * 2);
 }
-
 .cv-btn {
     background: var(--btnBg);
     color: var(--font-color-primary);
@@ -126,35 +131,33 @@ main {
     font-size: 2vh;
     border: none;
     border-radius: var(--radius-full);
-    margin-right: 0;
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.3s ease;
 }
-
 .cv-btn:hover {
     background: var(--btnBgHover);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
 }
 
+/* Hero Social Links */
 .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
 }
-
 .social-links a {
     font-size: 1.5rem;
     color: var(--font-color-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .social-links a:hover {
     color: var(--font-color-primary);
 }
 
+/* Summary Panel ("stats" row) */
 .smry {
     color: var(--font-color-primary);
     width: 100%;
@@ -163,25 +166,27 @@ main {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 1em;
 }
-
 .smry-div {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: .5em;
 }
-
 .smry h3 {
     font-size: clamp(24px, 10vw, 50px);
 }
-
 .smry p {
     font-size: clamp(12px, 1.2vw, 24px);
 }
 
-
+/* ------------------------------------------
+    Desktop/Tablet Layout (≥1024px)
+------------------------------------------ */
 @media screen and (min-width: 1024px) {
-
+    #heroSection {
+        padding: var(--space-sm);
+    }
+    /* Decorative blurred blob (very subtle background effect) */
     .hero:after {
         content: "";
         position: absolute;
@@ -199,7 +204,7 @@ main {
         display: block;
     }
 
-    /* Left Content */
+    /* Hero section switches to two-column grid, with image on right */
     .content {
         width: 100%;
         text-align: left;
@@ -213,11 +218,9 @@ main {
     .content h2 {
         font-size: clamp(16px, 1.5vw, 28px);
     }
-
     .content h1 {
         font-size: clamp(30px, 4vw, 55px);
     }
-
     .content p {
         font-size: clamp(16px, 1vw, 28px);
         padding: 0;
@@ -228,12 +231,10 @@ main {
         height: 100%;
         justify-content: end;
     }
-
     .content-details {
         height: 100%;
         padding: 0 1em;
     }
-
     .content-image {
         width: 100%;
         display: flex;
@@ -247,11 +248,9 @@ main {
         justify-content: left;
         gap: 2em;
     }
-
     .image-wrapper {
         transform: rotate(5deg);
     }
-
     .image-wrapper:hover {
         transform: rotate(0deg);
     }
@@ -260,11 +259,9 @@ main {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
-
     .smry h3 {
         font-size: clamp(24px, 10vw, 50px);
     }
-
     .smry p {
         font-size: clamp(12px, 1.2vw, 24px);
     }
