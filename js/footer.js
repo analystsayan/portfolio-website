@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <a href="/terms-and-conditions">Terms & Conditions</a>
         </nav>
         <div class="social-icons">
-            <a href="https://linkedin.com/in/analystsayan" target="_blank" aria-label="LinkedIn" class="global-btn">
+            <a href="https://linkedin.com/in/analystsayan" target="_blank" aria-label="LinkedIn" class="button-nature">
                 <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="mailto:analystsayan1@gmail.com" aria-label="Email" class="global-btn">
+            <a href="mailto:analystsayan1@gmail.com" aria-label="Email" class="button-nature">
                 <i class="fa-solid fa-envelope"></i>
             </a>
         </div>

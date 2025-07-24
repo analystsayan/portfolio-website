@@ -55,7 +55,7 @@ main {
     text-align: center;
     font-weight: 700;
     white-space: nowrap;
-    color: var(--font-color-primary);
+    color: var(--off-white);
 }
 .content h1 {
     font-size: 2rem;
@@ -83,17 +83,17 @@ main {
     background: var(--primary-color);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    outline: 2px solid #7247ff81;
+    outline: 2px solid var(--accent-color-secondary);
     transition: all 0.5s ease;
 }
 .image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
     transition: all 0.5s ease;
 }
 .image-wrapper:hover {
-    outline: 3px solid var(--accent-color);
+    outline: 4px solid var(--accent-color);
 }
 
 /* Description Paragraph & CTA */
@@ -124,21 +124,6 @@ main {
     align-items: center;
     gap: calc(var(--space-sm) * 2);
 }
-.cv-btn {
-    background: var(--btnBg);
-    color: var(--font-color-primary);
-    padding: 0.8em;
-    font-size: 2vh;
-    border: none;
-    border-radius: var(--radius-full);
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-.cv-btn:hover {
-    background: var(--btnBgHover);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
-}
 
 /* Hero Social Links */
 .social-links {
@@ -154,12 +139,12 @@ main {
     transition: color 0.3s ease;
 }
 .social-links a:hover {
-    color: var(--font-color-primary);
+    color: var(--font-color);
 }
 
 /* Summary Panel ("stats" row) */
 .smry {
-    color: var(--font-color-primary);
+    color: var(--off-white);
     width: 100%;
     display: grid;
     gap: 1em;
@@ -196,8 +181,8 @@ main {
         height: 308px;
         border-radius: 50%;
         background: var(--primary-color);
-        background: -o-linear-gradient(190deg, var(--accent-bg) 0%, rgba(115, 67, 210, 0) 100%);
-        background: linear-gradient(260deg, var(--accent-bg) 0%, rgba(115, 67, 210, 0) 100%);
+        background: -o-linear-gradient(190deg, var(--accent-color) 0%, rgba(115, 67, 210, 0) 100%);
+        background: linear-gradient(260deg, var(--accent-color) 0%, rgba(115, 67, 210, 0) 100%);
         -webkit-filter: blur(150px);
         filter: blur(150px);
         z-index: -1;

@@ -140,17 +140,64 @@ let lastScrollTop = 0;
 const contactBtn = document.querySelector('.fixed-contact');
 
 window.addEventListener('scroll', () => {
-let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-if (scrollTop > lastScrollTop) {
-      // Scrolling Down
-    contactBtn.classList.add('hide-text');
-} else {
-      // Scrolling Up
-    contactBtn.classList.remove('hide-text');
-}
+    if (scrollTop > lastScrollTop) {
+        // Scrolling Down
+        contactBtn.classList.add('hide-text');
+    } else {
+        // Scrolling Up
+        contactBtn.classList.remove('hide-text');
+    }
 
-lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scroll
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scroll
 }, false);
+
+
+
+(function () {
+    const themeKey = 'theme';
+    const root = document.documentElement;
+    const radios = document.querySelectorAll('input[name="theme"]');
+
+    // Apply theme and save preference
+    function setTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        localStorage.setItem(themeKey, theme);
+    }
+
+    // Get stored or system preference
+    function getPreferredTheme() {
+        const stored = localStorage.getItem(themeKey);
+        if (stored) return stored;
+
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            return 'light';
+        }
+        return 'dark'; // default
+    }
+
+    // Initialize radios and theme on page load
+    const preferred = getPreferredTheme();
+    setTheme(preferred);
+
+    radios.forEach(radio => {
+        radio.checked = radio.value === preferred;
+        radio.addEventListener('change', () => {
+            if (radio.checked) {
+                setTheme(radio.value);
+            }
+        });
+    });
+
+    // Listen for system changes if user hasn't selected manually
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+        if (!localStorage.getItem(themeKey)) {
+            const newTheme = e.matches ? 'light' : 'dark';
+            setTheme(newTheme);
+            radios.forEach(radio => radio.checked = radio.value === newTheme);
+        }
+    });
+})();
 
 

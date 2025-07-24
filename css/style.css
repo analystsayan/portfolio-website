@@ -19,7 +19,7 @@
 
 .index-heading {
     width: fit-content;
-    background-image: var(--heading2);
+    background-image: var(--heading);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -48,15 +48,18 @@
     overflow: hidden;
     line-height: 1.4;
     text-align: justify;
+    border-bottom: 1px solid var(--border-color);
+
 }
 
 .about:hover {
     color: var(--off-white);
     background: var(--secondary-color);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
+    box-shadow: 0 0 5px var(--secondary-color);
 }
 
 .about ul {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: .5em;
@@ -89,15 +92,20 @@
     padding: 1.5em;
     border-radius: var(--radius-sm);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .contact-form p {
-    color: var(--font-color-primary);
+    color: var(--off-white);
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
+}
+
+.form-group label {
+    color: var(--off-white);
 }
 
 /* Inputs/Selects/Textareas/Buttons */
@@ -112,7 +120,7 @@
     margin: var(--space-xxs) 0 var(--space-md) 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.61);
     background-color: var(--background-color);
-    color: #ffffff;
+    color: var(--font-color-secondary);
 }
 
 .contact-form textarea {
@@ -125,21 +133,22 @@
 .contact-form select:focus,
 .contact-form textarea:focus,
 .contact-form button:focus {
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--accent-color-secondary);
     outline-offset: 2px;
 }
 
 .contact-form button {
-    background: var(--btnBg);
-    color: white;
+    background: var(--accent-color);
+    color: #f9f9f9;
     cursor: pointer;
     font-size: 16px;
     border: none;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: none;
 }
 
 .contact-form button:hover {
-    background: var(--btnBgHover);
+    background: var(--accent-color-secondary);
 }
 
 .contact-info {
@@ -156,14 +165,19 @@
 }
 
 .info-item .icon {
-    background: var(--btnBg);
-    color: white;
+    background: var(--accent-color);
+    color: var(--off-white);
     font-size: 20px;
     border-radius: 50%;
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.3s ease;
+}
+
+.info-item:hover .icon {
+    background: var(--accent-color-secondary);
 }
 
 .info-item h4 {
@@ -174,7 +188,7 @@
 
 .info-item p {
     font-size: 14px;
-    color: var(--font-color-primary);
+    color: var(--off-white);
 }
 
 /* Responsive Desktop Layout */

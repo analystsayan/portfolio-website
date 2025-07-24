@@ -38,19 +38,27 @@
     },
     {
       "source": "/todolist-as",
-      "destination": "/todolist-as.html"
+      "destination": "/todolist.html"
     },
     {
       "source": "/project-finder-as",
-      "destination": "/project-finder-as.html"
+      "destination": "/project-finder.html"
     },
     {
-      "source": "/facebook-clone-as",
-      "destination": "/facebook-clone-as.html"
+      "source": "/facebook-clone",
+      "destination": "/facebook-clone.html"
     },
     {
-      "source": "/microsoft-clone-as",
-      "destination": "/microsoft-clone-as.html"
+      "source": "/microsoft-clone",
+      "destination": "/microsoft-clone.html"
+    },
+    {
+      "source": "/weather",
+      "destination": "/weather.html"
+    },
+    {
+      "source": "/settings",
+      "destination": "/settings.html"
     }
   ],
   "cleanUrls": true

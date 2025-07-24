@@ -4,7 +4,7 @@
 
 #footerSection {
     background: var(--background-color);
-    padding-top: var(--space-sm);
+    padding-top: var(--space-xs);
 }
 
 .footer-container {
@@ -13,7 +13,7 @@
     text-align: center;
     padding: 1.5em var(--space-md);
     font-size: 0.95rem;
-    border-top: 1px solid var(--border-color, #22223b);
+    border-top: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 24px rgba(90, 96, 172, 0.07);
     width: 100%;
@@ -39,8 +39,7 @@
     transition: background 0.2s, color 0.2s;
 }
 .footer-links a:hover, .footer-links a:focus {
-    background: var(--hover-bg);
-    color: var(--accent-color);
+    background: var(--secondary-color);
     outline: none;
 }
 
@@ -55,7 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--accent-bg);
+    background: var(--tertiary-color);
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -70,10 +69,19 @@
     color: var(--off-white);
     font-size: 20px;
     vertical-align: middle;
+    transition: all 0.3s ease;
+}
+.social-icons a:hover i {
+    color: var(--primary-color);
 }
 
 @media screen and (min-width: 1024px) {
     footer {
         grid-area: footer;
     }
+
+    .footer-container {
+        border-radius: unset;
+    }       
+
 }

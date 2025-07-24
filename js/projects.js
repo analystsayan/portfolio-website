@@ -34,6 +34,42 @@ const projects = [
         gitHub: "#",
         gotoProject: "/projects/bookmyshow-reporting-with-mysql",
         image: "/media/image/projectimg/my-sql-reporting.png"
+    },
+    {
+        title: "Microsoft Landing Page Clone",
+        tech: "HTML • Tailwind CSS • JavaScript",
+        filter: "webdev",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/microsoft-clone",
+        image: "/media/image/projectimg/microsoft-clone.png"
+    },
+    {
+        title: "Project Finder",
+        tech: "HTML • CSS • JavaScript",
+        filter: "webdev",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/project-finder",
+        image: "/media/image/projectimg/project-finder.png"
+    },
+    {
+        title: "Facebook Login Page Clone",
+        tech: "HTML • CSS • JavaScript",
+        filter: "webdev",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/facebook-clone",
+        image: "/media/image/projectimg/facebook2.png"
+    },
+    {
+        title: "Todo List",
+        tech: "HTML • CSS • JavaScript",
+        filter: "webdev",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/todolist",
+        image: "/media/image/projectimg/todo-list.png"
     }
 ];
 

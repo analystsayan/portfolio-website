@@ -1,3 +1,5 @@
+
+
 /*------------------------------------------
     Filter Bar (Project Tag Buttons)
 ------------------------------------------*/
@@ -50,8 +52,8 @@
 }
 
 .filter-btn.active {
-    background-image: var(--btnBg);
-    color: var(--off-white);
+    background: var(--accent-color);
+    color: #fff;
     transform: scale(1.05);
 }
 
@@ -73,31 +75,36 @@
 
 .project-link {
     text-decoration: none;
-    color: var(--font-color-primary);
+    color: var(--font-color);
     display: flex;
     flex-direction: column;
-    height: 260px;
+    height: 270px;
 }
 
 .project-card {
     max-width: 530px;
-    height: 100%;
     background-color: var(--primary-color);
+    box-shadow: 1px 1px 3px #0115223e;
     border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-bottom: 1px solid var(--border-color, #22223b);
-    transition: ease opacity 0.5s, height 0.5s, transform 0.3s, background-color 0.3s;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
     pointer-events: auto;
     position: relative;
     overflow: hidden;
 }
 
+.project-card:hover {
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color-hover)
+}
+
 /* Project Card Image */
 .project-card-image {
-    background: #fff;
-    height: 60%;
+    background-color: var(--tertiary-color);
+    height: 55%;
     background-size: cover;
     background-position: center;
     z-index: 2;
@@ -106,8 +113,8 @@
 
 /* Project Card Content */
 .project-card-content {
-    height: 40%;
-    padding: var(--space-md);
+    height: 45%;
+    padding: calc(var(--space-md) *2) var(--space-sm);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -153,14 +160,14 @@
 
 .button-icon {
     display: flex;
-    border: 3px var(--font-color-primary) solid;
+    border: 3px var(--font-color) solid;
     width: fit-content;
     height: fit-content;
     cursor: pointer;
 }
 
 .icon {
-    background-color: var(--font-color-primary);
+    background-color: var(--font-color);
     padding: 10px 10px 5px 10px;
 }
 .icon i {
@@ -194,13 +201,13 @@
     font-weight: bold;
 }
 .top {
-    background: var(--btnBgHover);
-    color: var(--font-color-primary);
+    background: var(--accent-color);
+    color: var(--font-color);
     transform: rotateX(-90deg) translate3d(0, 13.5px, 2em);
 }
 .front {
     background: var(--secondary-color);
-    color: var(--font-color-primary);
+    color: var(--font-color);
     transform: translate3d(0, 0, 1em);
 }
 
@@ -211,7 +218,7 @@
 .file-path {
     min-height: 60px;
     color: var(--off-white);
-    padding: var(--space-xs) var(--space-sm);
+    padding: var(--space-md);
     background-color: var(--background-color);
     font-size: .8rem;
     font-weight: 300;
@@ -237,18 +244,20 @@
 /*------------------------------------------
     Project Details Page Styles
 ------------------------------------------*/
-
+.main-container {
+    background-color: var(--background-color);
+}
 .project-details-container {
     min-height: 100vh;
     margin: 0 var(--space-xs);
     border-radius: var(--radius-sm);
+    background-color: var(--primary-color);
 }
 
 .project-details {
     max-width: 600px;
     margin: auto;
-    color: #ffffffa8;
-    background: var(--primary-color);
+    color: var(--off-white);
     border-radius: var(--radius-sm);
     padding-bottom: var(--space-xxs);
 }
@@ -264,7 +273,7 @@
     font-size: 1.6rem;
     text-align: left;
     margin: var(--space-xs);
-    background-image: var(--heading);
+    background: var(--heading);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -330,7 +339,7 @@
 .code-block {
     font-family: 'Fira Code', monospace;
     background-color: var(--background-color);
-    color: #d4d4d4;
+    color: var(--font-color-secondary);
     padding: var(--space-sm);
     margin-bottom: var(--space-md);
     border-radius: var(--radius-sm);
@@ -361,23 +370,6 @@
     display: flex;
     justify-content: center;
 }
-.dwnld-presentation a {
-    width: fit-content;
-    padding: var(--space-xs) var(--space-md);
-    background-image: var(--btnBg);
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--off-white);
-}
-.dwnld-presentation a svg {
-    fill: var(--off-white);
-}
-.dwnld-presentation:hover a {
-    background-image: var(--btnBgHover);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
-}
 
 /* PDF/Report Viewer */
 .project-report-container {
@@ -386,7 +378,7 @@
     border-radius: var(--radius-md);
 }
 .project-report-container h4 {
-    color: #ffff77;
+    color: #4e148c;
     margin: var(--space-md) calc(var(--space-sm)*2);
 }
 
@@ -437,7 +429,7 @@
     /* file path  */
     .file-path {
         min-height: unset;
-        padding: var(--space-xs);
+        padding: var(--space-md);
         font-weight: 300;
         display: flex;
         align-items: center;
@@ -445,26 +437,25 @@
         top: 55px;
     }
 
+    .project-card-container {
+        gap: var(--space-sm);
+        padding: 0 var(--space-sm);
+    }
+
     /* Card hover (with image zoom) */
     .project-card:hover {
-        background-color: var(--secondary-color);
         transform: scale(1.04);
     }
     .project-card:hover .project-card-image {
         transform: scale(1.05);
     }
 
-    .project-card-container {
-        gap: var(--space-sm);
-        padding: 0 var(--space-sm);
-    }
-
     /* Details layout refinements for desktop */
     .project-details-container {
         margin: unset;
         margin-right: var(--space-xs);
-        background-color: var(--primary-color);
         border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+        background-color: var(--background-color);
     }
     .project-details {
         background-color: var(--secondary-color);
@@ -481,7 +472,6 @@
         padding: 0;
         margin-right: var(--space-xs);
         margin-bottom: 0;
-        background-color: var(--primary-color);
         border-radius: 0 0 var(--radius-sm) var(--radius-sm);
     }
     .project-report {

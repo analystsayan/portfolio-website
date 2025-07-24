@@ -4,23 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
-:root {
+:root,
+[data-theme="dark"] {
   --background-color: #010006;
-  --primary-color: #011522;
-  --secondary-color: #152238;
-  --accent-color: #5C59FF;
-  --accent-bg: #2a2880;
-  --font-color-primary: #FFFFFF;
-  --font-color-secondary: #def6ffa3;
-  --off-white: #f1faee;
-  --hover-color: #8C84FF;
-  --special-card-font-header: #9eed00;
-  --special-card-font-para: #00ffff;
-  --btnBg: linear-gradient(45deg, var(--accent-color), var(--accent-bg));
-  --btnBgHover: linear-gradient(45deg, var(--accent-bg), var(--accent-color));
-  --heading: linear-gradient(to right, var(--accent-color), var(--font-color-primary));
-  --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
-  --card-img-bg: linear-gradient(to right, var(--accent-bg), var(--accent-color));
+  /* Add your --radius-* and --space-* variables if using */
+}
+[data-theme="light"] {
+  --background-color: #ffffff;
   /* Add your --radius-* and --space-* variables if using */
 }
 
@@ -43,6 +33,7 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
 main {
   background-color: var(--background-color);
   text-align: left;
@@ -80,6 +71,7 @@ main {
 .profile-image {
   display: flex;
 }
+
 .profile-image img {
   background-size: cover;
   background-position: center;
@@ -97,11 +89,13 @@ main {
   align-items: start;
   gap: var(--space-xxs);
 }
+
 .profile-name {
   font-size: clamp(16px, 10vw, 30px);
   color: var(--off-white);
   font-family: 'Caudex', serif;
 }
+
 .username {
   font-size: clamp(8px, 5vw, 16px);
   color: var(--font-color-secondary);
@@ -115,31 +109,6 @@ main {
   justify-content: center;
   gap: var(--space-xs);
 }
-.profile-button-container a {
-  background: var(--btnBg);
-  color: var(--off-white);
-  padding: var(--space-xs);
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  gap: var(--space-xxs);
-  font-size: clamp(10px, 5vw, 16px);
-  white-space: nowrap;
-  transition: all 0.3s ease-in-out;
-}
-.profile-button-container a svg {
-  fill: var(--off-white);
-  width: 22px;
-  height: 22px;
-}
-.profile-button-container a:hover {
-  background: var(--btnBgHover);
-  color: var(--font-color-primary);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px var(--accent-color);
-}
-.profile-button-container a svg:hover {
-  fill: var(--font-color-primary);
-}
 
 /* ------------------------------------------
     Section Headings
@@ -148,20 +117,22 @@ main {
 .section-header {
   padding: var(--space-md) var(--space-sm);
 }
+
 .section-title {
   color: var(--font-color-secondary);
-  font-size: clamp(5px, 4vw, 16px);
+  font-size: clamp(5px, 3vw, 16px);
   position: relative;
   text-align: left;
   max-width: fit-content;
 }
+
 .bill-board {
   width: 100%;
   font-size: clamp(26px, 9vw, 50px);
   text-align: left;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  background-image: var(--heading2);
+  background-image: var(--heading);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -178,16 +149,20 @@ main {
   gap: var(--space-xxs);
   padding: 0 var(--space-sm);
 }
+
 .knowledge-card {
   padding: var(--space-sm);
   background-color: var(--primary-color);
   border-radius: var(--radius-sm);
   transition: background-color 0.3s, transform 0.3s;
+  border-bottom: solid 1px var(--border-color);
   overflow: hidden;
   position: relative;
 }
+
 .knowledge-card:hover {
   background-color: var(--secondary-color);
+  border-bottom: solid 1px var(--border-color-hover);
   transform: scale(1);
 }
 
@@ -196,6 +171,7 @@ main {
   align-items: center;
   gap: .5em;
 }
+
 .box {
   display: inline-block;
   align-items: center;
@@ -204,25 +180,102 @@ main {
   padding: 1px;
   border-radius: 50%;
 }
-.red { background-color: #ff605c; }
-.yellow { background-color: #ffbd44; }
-.green { background-color: #00ca4e; }
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
 .knowledge-card-content {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 1.4;
   text-align: left;
 }
+
 .knowledge-card-content h4 {
   color: var(--special-card-font-header);
   font-size: 14px;
   font-family: "Fira Code", monospace;
 }
+
 .knowledge-card-content p {
   font-size: 14px;
   color: var(--special-card-font-para);
   font-family: "Fira Code", monospace;
 }
+
+/* Explore all button */
+/* From Uiverse.io by Creatlydev */
+.explore-button-container {
+  width: 100%;
+  display: flex;
+}
+.explore-button {
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.75rem;
+  margin: var(--space-xs) auto;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 10rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  padding-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+
+.explore-button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: var(--accent-color);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.explore-button:hover {
+  background-color: var(--accent-color-secondary);
+  transform: scale(1.03);
+}
+
+.explore-button:hover .button__icon-wrapper {
+  color: #000;
+}
+
+.explore-button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.explore-button:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.explore-button:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
+}
+
 
 /* ------------------------------------------
     Experience Section
@@ -261,6 +314,7 @@ main {
   font-size: 80px;
   color: var(--font-color-secondary);
 }
+
 .exp-toggle {
   width: 100%;
   background-color: var(--secondary-color);
@@ -276,29 +330,51 @@ main {
   padding: var(--space-sm);
   white-space: nowrap;
 }
+
 .exp-toggle:hover {
   background-color: var(--primary-color);
 }
+
 .exp-card.active .exp-content {
   display: block;
 }
+
 .exp-toggle span {
   display: flex;
   align-items: flex-start;
   gap: .3em;
 }
+
 /* Role-based company coloring */
-.exp-card .pispl { color: #599bff; fill: #599bff; }
-.exp-card .wow-momo { color: #ff6f00; fill: #ff6f00; }
-.exp-card .think-again-lab { color: #ffee00; fill: #ffee00; }
+.exp-card .pispl {
+  color: #599bff;
+  fill: #599bff;
+  text-shadow: .8px .8px 0px #000000;
+  filter: drop-shadow(.8px .8px 0px #000000);
+}
+
+.exp-card .wow-momo {
+  color: #ff6f00;
+  fill: #ff6f00;
+  text-shadow: .8px .8px 0px #000000;
+  filter: drop-shadow(.8px .8px 0px #000000);
+}
+
+.exp-card .think-again-lab {
+  color: #ffee00;
+  fill: #ffee00;
+  text-shadow: .8px .8px 0px #000000;
+  filter: drop-shadow(.8px .8px 0px #000000);
+}
 
 .exp-content {
   width: 100%;
   background: var(--secondary-color);
   display: none;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  border-bottom: 1px solid #ff2b52;
+  border-bottom: 1px solid var(--border-color-hover);
 }
+
 .exp-content ol,
 .exp-content ol li {
   list-style: none;
@@ -325,27 +401,33 @@ main {
   border-radius: var(--radius-sm);
   overflow: hidden;
   text-align: center;
+  border-bottom: 1px solid var(--border-color);
   transition: background 0.3s, transform 0.3s;
 }
+
 .school-card:hover {
-  transform: scale(1.04);
   background: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color-hover);
 }
+
 .school-logo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin-top: 20px;
 }
+
 .school-details {
   padding: 20px;
 }
+
 .school-name {
   color: var(--off-white);
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
 }
+
 .course,
 .stream,
 .year {
@@ -379,15 +461,18 @@ main {
   z-index: 0;
   cursor: pointer;
 }
+
 .card img {
   width: 100%;
   background-size: cover;
   fill: var(--primary-color);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .card:hover {
   box-shadow: 0px 0px 70px var(--off-white);
 }
+
 .card__content {
   position: absolute;
   top: 0;
@@ -401,9 +486,11 @@ main {
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
 .card:hover .card__content {
   transform: rotateX(0deg);
 }
+
 .card__title {
   margin: 0;
   font-size: 22px;
@@ -411,9 +498,11 @@ main {
   font-weight: 600;
   margin-bottom: var(--space-sm);
 }
+
 .card:hover img {
   scale: 0;
 }
+
 .card__description {
   font-size: .9rem;
   color: var(--font-color-secondary);
@@ -437,6 +526,7 @@ main {
   justify-content: space-evenly;
   margin-bottom: .5em;
 }
+
 .social-container i {
   color: var(--font-color-secondary);
   font-size: 30px;
@@ -450,6 +540,7 @@ main {
   justify-content: center;
   transition: font-size 0.3s, background-color 0.3s;
 }
+
 .social-container i:hover {
   font-size: 36px;
   background-color: var(--secondary-color);
@@ -463,36 +554,49 @@ main {
   main {
     padding: 0 var(--space-xs);
   }
+
   .profile-info {
     width: 100%;
     margin-left: unset;
   }
+
   .bill-board {
     width: fit-content;
   }
+
   .knowledge-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-sm);
     padding: 0 var(--space-sm);
   }
+
   .knowledge-card:hover {
     transform: scale(1.04);
   }
+
   .exp-container {
     flex-direction: row;
     gap: var(--space-sm);
     padding: 0 var(--space-sm);
   }
+
   .school-info-grid {
     padding: 0 var(--space-sm);
   }
+
+  .school-card:hover {
+    transform: scale(1.04);
+  }
+
   .achievement-container {
     gap: calc(var(--space-sm) * 2);
     padding: 0 calc(var(--space-sm) * 2);
   }
+
   .card:hover {
     transform: scale(1.04);
   }
+
   .social-container {
     border-radius: var(--radius-sm);
     margin-bottom: 0;

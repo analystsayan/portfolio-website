@@ -3,26 +3,30 @@
 ------------------------------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
-:root {
+:root,
+[data-theme="dark"] {
     --background-color: #0a0f15;
     --primary-color: #011522;
     --secondary-color: #152238;
     --tertiary-color: #222e43;
-    --accent-color: #5C59FF;
-    --accent-bg: #2a2880;
-    --font-color-primary: #FFFFFF;
+
+    --font-color: #FFFFFF;
     --font-color-secondary: #def6ffa3;
     --off-white: #f1faee;
-    --hover-color: #8C84FF;
+
+    --accent-color: #5C59FF;
+    --accent-color-secondary: #918fff;
+
     --hover-bg: #68677069;
     --border-color: #24253f;
+    --border-color-hover: #5C59FF;
 
     --special-card-font-header: #9eed00;
     --special-card-font-para: #00ffff;
-    --btnBg: linear-gradient(45deg, #5C59FF, #5C59FF);
-    --btnBgHover: linear-gradient(45deg, #2a2880, #2a2880);
-    --heading: linear-gradient(to right, #5c59ff, #fff);
-    --heading2: linear-gradient(to right, var(--accent-color), var(--hover-color));
+    --heading: linear-gradient(145deg, var(--accent-color), var(--off-white));
+    --button-hover-shadow: 0 0 5px var(--border-color-hover);
+
+    --logo-image: url('/media/image/logo/logo-dark.png');
 
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -30,9 +34,44 @@
     --radius-full: 999px;
 
     --space-xxs: 0.4em;
-    --space-xs:  0.6em;
-    --space-sm:  0.8em;
-    --space-md:  1em;
+    --space-xs: 0.6em;
+    --space-sm: 0.8em;
+    --space-md: 1em;
+}
+
+[data-theme="light"] {
+    --background-color: #ffffff;
+    --primary-color: #e3f2fd;
+    --secondary-color: #bbdefb;
+    --tertiary-color: #90caf9;
+
+    --font-color: #001233;
+    --font-color-secondary: #023d8ac3;
+    --off-white: #002855;
+
+    --accent-color: #001c55;
+    --accent-color-secondary: #0e6ba8;
+
+    --hover-bg: #edeafb;
+    --border-color: #ade8f4;
+    --border-color-hover: #fb8500;
+
+    --special-card-font-header: #212529;
+    --special-card-font-para: #343a40;
+    --heading: linear-gradient(145deg, var(--accent-color), var(--font-color));
+    --button-hover-shadow: 0 0 6px var(--border-color-hover);
+
+    --logo-image: url('/media/image/logo/logo-light.png');
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 999px;
+
+    --space-xxs: 0.4em;
+    --space-xs: 0.6em;
+    --space-sm: 0.8em;
+    --space-md: 1em;
 }
 
 /* ------------------------------------------
@@ -43,7 +82,7 @@
     padding: 0;
     text-decoration: none;
     scrollbar-width: thin;
-    scrollbar-color: var(--hover-color) #141348;
+    scrollbar-color: var(--accent-color-secondary) var(--primary-color);
     font-family: "Sora", sans-serif;
     box-sizing: border-box;
 }
@@ -79,13 +118,19 @@ html {
 
 body {
     background-color: var(--background-color);
-    color: var(--font-color-primary);
+    color: var(--font-color);
     overflow-x: hidden;
-    -ms-overflow-style: none; /* for IE */
+    -ms-overflow-style: none;
+    /* for IE */
 }
+
 body::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari, Opera */
+}
+
+main {
+    min-height: 100vh;
 }
 
 /* ------------------------------------------
@@ -129,16 +174,19 @@ hr {
     fill: var(--off-white);
     transition: all 0.3s ease-in-out;
 }
+
 .fixed-contact .contact-text {
     display: inline;
     transition: all 0.3s ease-in-out;
 }
+
 .fixed-contact.hide-text .contact-text {
     opacity: 0;
     width: 0;
     overflow: hidden;
     margin-left: 0;
 }
+
 .fixed-contact::after {
     content: "";
     background-color: var(--tertiary-color);
@@ -153,6 +201,38 @@ hr {
 /* ------------------------------------------
     Overlay (used for drawer/backdrop)
 ------------------------------------------ */
+/* From Uiverse.io by Yaya12085 */
+
+.global-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs) var(--space-sm);
+    cursor: pointer;
+    gap: var(--space-xxs);
+    border-radius: var(--radius-full);
+    background: var(--accent-color);
+    color: #f9f9f9;
+    transition: all .3s ease;
+}
+
+.global-button:hover {
+    background: var(--accent-color-secondary);
+    color: #fff;
+    box-shadow: 0 0 10px var(--accent-color-secondary);
+    transform: scale(1.03);
+}
+
+.global-button:hover svg {
+    fill: #fff;
+}
+
+.global-button svg {
+    width: 20px;
+    fill: #fff;
+    transition: .3s ease;
+}
+
 #overlay {
     position: fixed;
     top: 0;
@@ -163,6 +243,7 @@ hr {
     z-index: 998;
     display: none;
 }
+
 #overlay.active {
     display: block;
 }
@@ -171,9 +252,10 @@ hr {
     Buttons & Links (normalize tap/focus)
 ------------------------------------------ */
 button,
-.global-btn {
+.button-nature {
     outline: none;
-    -webkit-tap-highlight-color: transparent; /* Removes mobile blue tap */
+    -webkit-tap-highlight-color: transparent;
+    /* Removes mobile blue tap */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     user-select: none;
@@ -187,6 +269,7 @@ button,
         scrollbar-width: thin;
         scroll-behavior: smooth;
     }
+
     body {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -196,6 +279,7 @@ button,
             "sidebar main"
             "sidebar footer";
     }
+
     main {
         grid-area: main;
     }
