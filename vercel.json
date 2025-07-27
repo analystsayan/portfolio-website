@@ -37,11 +37,11 @@
       "destination": "/portfolio-website.html"
     },
     {
-      "source": "/todolist-as",
+      "source": "/todolist",
       "destination": "/todolist.html"
     },
     {
-      "source": "/project-finder-as",
+      "source": "/project-finder",
       "destination": "/project-finder.html"
     },
     {

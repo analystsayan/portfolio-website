@@ -14,7 +14,7 @@ const featuredProjects = [
         filter: "powerbi sql",
         liveLink: "#",
         gitHub: "#",
-        gotoProject: "/projects/atliq-tech-sales-insights-dashboard-with-powerbi",
+        gotoProject: "/projects/atliq-tech-sales-dashboard-with-powerbi",
         image: "/media/image/projectimg/sales-insights-dashboard.png"
     },
     {

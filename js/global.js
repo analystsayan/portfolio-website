@@ -109,95 +109,77 @@ function toggleMaxSidebar() {
 
 
 
-// tap to top
-// Show button when scrolled 10% of the page height
-window.addEventListener("scroll", function () {
-    const scrollBtn = document.getElementById("backToTopBtn");
-    const scrollY = window.scrollY || window.pageYOffset;
-    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
-
-    if (scrollY > documentHeight * 0.1) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-});
-
-// Smooth scroll to top on click
-document.getElementById("backToTopBtn").addEventListener("click", function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
-});
 
 
 
 
 
+// whats app 
 
-let lastScrollTop = 0;
-const contactBtn = document.querySelector('.fixed-contact');
+// let lastScrollTop = 0;
+// const contactBtn = document.querySelector('.fixed-contact');
 
-window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+// window.addEventListener('scroll', () => {
+//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop) {
-        // Scrolling Down
-        contactBtn.classList.add('hide-text');
-    } else {
-        // Scrolling Up
-        contactBtn.classList.remove('hide-text');
-    }
+//     if (scrollTop > lastScrollTop) {
+//         // Scrolling Down
+//         contactBtn.classList.add('hide-text');
+//     } else {
+//         // Scrolling Up
+//         contactBtn.classList.remove('hide-text');
+//     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scroll
-}, false);
+//     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scroll
+// }, false);
 
 
 
-(function () {
-    const themeKey = 'theme';
-    const root = document.documentElement;
-    const radios = document.querySelectorAll('input[name="theme"]');
+// Theme toggle functionality
 
-    // Apply theme and save preference
-    function setTheme(theme) {
-        root.setAttribute('data-theme', theme);
-        localStorage.setItem(themeKey, theme);
-    }
+// (function () {
+//     const themeKey = 'theme';
+//     const root = document.documentElement;
+//     const radios = document.querySelectorAll('input[name="theme"]');
 
-    // Get stored or system preference
-    function getPreferredTheme() {
-        const stored = localStorage.getItem(themeKey);
-        if (stored) return stored;
+//     // Apply theme and save preference
+//     function setTheme(theme) {
+//         root.setAttribute('data-theme', theme);
+//         localStorage.setItem(themeKey, theme);
+//     }
 
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            return 'light';
-        }
-        return 'dark'; // default
-    }
+//     // Get stored or system preference
+//     function getPreferredTheme() {
+//         const stored = localStorage.getItem(themeKey);
+//         if (stored) return stored;
 
-    // Initialize radios and theme on page load
-    const preferred = getPreferredTheme();
-    setTheme(preferred);
+//         if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+//             return 'light';
+//         }
+//         return 'dark'; // default
+//     }
 
-    radios.forEach(radio => {
-        radio.checked = radio.value === preferred;
-        radio.addEventListener('change', () => {
-            if (radio.checked) {
-                setTheme(radio.value);
-            }
-        });
-    });
+//     // Initialize radios and theme on page load
+//     const preferred = getPreferredTheme();
+//     setTheme(preferred);
 
-    // Listen for system changes if user hasn't selected manually
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
-        if (!localStorage.getItem(themeKey)) {
-            const newTheme = e.matches ? 'light' : 'dark';
-            setTheme(newTheme);
-            radios.forEach(radio => radio.checked = radio.value === newTheme);
-        }
-    });
-})();
+//     radios.forEach(radio => {
+//         radio.checked = radio.value === preferred;
+//         radio.addEventListener('change', () => {
+//             if (radio.checked) {
+//                 setTheme(radio.value);
+//             }
+//         });
+//     });
+
+//     // Listen for system changes if user hasn't selected manually
+//     window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+//         if (!localStorage.getItem(themeKey)) {
+//             const newTheme = e.matches ? 'light' : 'dark';
+//             setTheme(newTheme);
+//             radios.forEach(radio => radio.checked = radio.value === newTheme);
+//         }
+//     });
+// })();
 
 

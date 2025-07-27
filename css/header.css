@@ -15,7 +15,7 @@
     /* background: #00000029; */
     color: var(--font-color-secondary);
     border-bottom: 1px solid var(--border-color, #22223b);
-    backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
     user-select: none;
     z-index: 997;
 }

@@ -5,7 +5,7 @@
 
 :root,
 [data-theme="dark"] {
-    --background-color: #0a0f15;
+    --background-color: #070b10;
     --primary-color: #011522;
     --secondary-color: #152238;
     --tertiary-color: #222e43;
@@ -15,7 +15,7 @@
     --off-white: #f1faee;
 
     --accent-color: #5C59FF;
-    --accent-color-secondary: #918fff;
+    --accent-color-secondary: #4441ff;
 
     --hover-bg: #68677069;
     --border-color: #24253f;
@@ -39,9 +39,9 @@
     --space-md: 1em;
 }
 
-[data-theme="light"] {
+/* [data-theme="light"] {
     --background-color: #ffffff;
-    --primary-color: #e3f2fd;
+    --primary-color: #e6f4ff;
     --secondary-color: #bbdefb;
     --tertiary-color: #90caf9;
 
@@ -49,7 +49,7 @@
     --font-color-secondary: #023d8ac3;
     --off-white: #002855;
 
-    --accent-color: #001c55;
+    --accent-color: #553900;
     --accent-color-secondary: #0e6ba8;
 
     --hover-bg: #edeafb;
@@ -72,7 +72,7 @@
     --space-xs: 0.6em;
     --space-sm: 0.8em;
     --space-md: 1em;
-}
+} */
 
 /* ------------------------------------------
     CSS Reset & Base
@@ -91,22 +91,34 @@
     "Back to Top" Button
 ------------------------------------------ */
 #backToTopBtn {
+    height: 56px;
+    width: 56px;
+    padding: 8px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
     position: fixed;
-    bottom: 30px;
-    right: 50px;
-    transform: translateX(50%);
+    bottom: 50px;
+    right: 30px;
+    z-index: 999;
+    display: none; /* Hidden by default! */
+}
+.back-to-top-btn {
+    width: 100%;
+    height: 100%;
     font-size: 20px;
-    height: 52px;
-    width: 52px;
     background: var(--tertiary-color);
     color: var(--off-white, #fff);
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    display: none;
     transition: background 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 999;
+    z-index: 1000;
+}
+.back-to-top-btn:hover,
+.back-to-top-btn:focus{
+    background: var(--accent-color-secondary);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 /* ------------------------------------------
@@ -198,9 +210,8 @@ hr {
     bottom: -4px;
 }
 
-/* ------------------------------------------
-    Overlay (used for drawer/backdrop)
------------------------------------------- */
+
+
 /* From Uiverse.io by Yaya12085 */
 
 .global-button {
@@ -233,12 +244,16 @@ hr {
     transition: .3s ease;
 }
 
+/* ------------------------------------------
+    Overlay (used for drawer/backdrop)
+------------------------------------------ */
+
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.83);
     z-index: 998;
     display: none;

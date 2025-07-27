@@ -83,14 +83,14 @@ main {
     background: var(--primary-color);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    outline: 2px solid var(--accent-color-secondary);
+    outline: 1px solid var(--accent-color);
     transition: all 0.5s ease;
 }
 .image-wrapper img {
     width: 100%;
     height: 100%;
+    background-position: center;
     background-size: cover;
-    transition: all 0.5s ease;
 }
 .image-wrapper:hover {
     outline: 4px solid var(--accent-color);
