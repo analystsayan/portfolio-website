@@ -48,11 +48,11 @@ experiences.forEach((exp) => {
     card.innerHTML = `
         <p class="exp-num">${exp.id}</p>
         <button class="exp-toggle">
-        <span class="${exp.iconClass}">${exp.company}
-            <svg class="${exp.iconClass}" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-            </svg>
-        </span>${exp.role}<br />${exp.duration}
+            <span class="${exp.iconClass}">${exp.company}
+                <svg class="${exp.iconClass}" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                </svg>
+            </span>${exp.role}<br /><div class="exp-duration">${exp.duration}</div>
         </button>
         <div class="exp-content">
         <ol>

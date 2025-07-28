@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-        const offset = 70; // height of your fixed header
+        const offset = 55; // height of your fixed header
         const topPos = section.getBoundingClientRect().top + window.pageYOffset - offset;
 
         window.scrollTo({
@@ -181,5 +181,3 @@ function toggleMaxSidebar() {
 //         }
 //     });
 // })();
-
-

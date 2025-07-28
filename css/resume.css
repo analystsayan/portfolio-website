@@ -317,7 +317,7 @@ main {
 
 .exp-toggle {
   width: 100%;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   border: none;
   outline: none;
   color: var(--off-white);
@@ -332,7 +332,7 @@ main {
 }
 
 .exp-toggle:hover {
-  background-color: var(--primary-color);
+  background-color: var(--tertiary-color);
 }
 
 .exp-card.active .exp-content {
@@ -343,6 +343,10 @@ main {
   display: flex;
   align-items: flex-start;
   gap: .3em;
+}
+
+.exp-duration {
+  color: var(--font-color-secondary);
 }
 
 /* Role-based company coloring */
@@ -397,28 +401,46 @@ main {
 }
 
 .school-card {
-  background-color: var(--primary-color);
+  position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid var(--border-color);
   transition: background 0.3s, transform 0.3s;
 }
 
 .school-card:hover {
-  background: var(--secondary-color);
   border-bottom: 1px solid var(--border-color-hover);
+}
+
+.school-card:hover .school-details {
+  background-color: var(--secondary-color);
+}
+
+.school-background {
+  width: 100%;
+  background-image: url('/media/image/education.jpg');
+  background-size: cover;
+  background-position: top center;
 }
 
 .school-logo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  margin-top: 20px;
+  margin: var(--space-xs) 0;
 }
 
 .school-details {
+  width: 100%;
+  height: 70%;
   padding: 20px;
+  background-color: var(--primary-color);
+  backdrop-filter: blur(10px);
 }
 
 .school-name {
@@ -442,12 +464,12 @@ main {
 
 .achievement-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--space-md);
   padding: 0 var(--space-sm);
 }
 
-.card {
+.achievement-card {
   position: relative;
   background: var(--primary-color);
   border-radius: var(--radius-sm);
@@ -462,54 +484,56 @@ main {
   cursor: pointer;
 }
 
-.card img {
+.achievement-card img {
   width: 100%;
   background-size: cover;
   fill: var(--primary-color);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.card:hover {
+.achievement-card:hover {
   box-shadow: 0px 0px 70px var(--off-white);
 }
 
-.card__content {
+.achievement-card-content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: var(--space-sm);
+  padding: var(--space-md) var(--space-sm);
   box-sizing: border-box;
-  background: var(--primary-color);
+  background: var(--background-color);
+  backdrop-filter: blur(10px);
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow-y: auto;
 }
 
-.card:hover .card__content {
+.achievement-card:hover img {
+  transform: scale(0);
+}
+
+.achievement-card:hover .achievement-card-content {
   transform: rotateX(0deg);
 }
 
-.card__title {
-  margin: 0;
-  font-size: 22px;
+.achievement-card-title {
+  font-size: 1.3rem;
   color: var(--off-white);
   font-weight: 600;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xxs);
 }
 
-.card:hover img {
-  scale: 0;
-}
-
-.card__description {
-  font-size: .9rem;
+.achievement-card-description {
+  font-size: .95rem;
   color: var(--font-color-secondary);
-  padding-left: 20px;
-  list-style-position: outside;
-  list-style-type: disc;
-  text-align: justify;
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs);
 }
 
 /* ------------------------------------------
@@ -593,7 +617,7 @@ main {
     padding: 0 calc(var(--space-sm) * 2);
   }
 
-  .card:hover {
+  .achievement-card:hover {
     transform: scale(1.04);
   }
 

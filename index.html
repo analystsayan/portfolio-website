@@ -49,6 +49,7 @@
   <link rel="stylesheet" href="/css/landing.css" />
   <link rel="stylesheet" href="/css/sidebar.css" />
   <link rel="stylesheet" href="/css/footer.css" />
+  <link rel="stylesheet" href="/css/animation.css" />
 
   <!-- Icons -->
   <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
@@ -137,48 +138,61 @@
         </div>
       </div>
     </section>
-
     <!-- About Me Section -->
     <section id="aboutmeSection" class="aboutme">
-      <h1 class="index-heading">About Me</h1>
-      <hr />
+      <div class="index-heading-container">
+        <h1 class="index-heading">About Me</h1>
+      </div>
       <div class="about-child">
-        <div class="about professional">
-          <ul>
-            <li>➤ <strong>Graduated</strong> from MAKAUT, W.B. with a degree in Information Technology, specializing in
-              Data Science.</li>
-            <li>➤ Have <strong>Expertise</strong> in Data Analysis, Visualization, and Responsive Frontend Development.
-            </li>
-            <li>➤<strong>Passionate</strong> about turning raw data into actionable insights for better decision-making.
-            </li>
-            <li>➤ <strong>Skilled</strong> in Python, SQL, and PowerBI for data analysis along with HTML, Tailwind CSS,
-              React JS for Frontend.</li>
-            <li>➤ <strong>Focused</strong> on optimizing business performance through data-driven strategies and
-              automation.</li>
-          </ul>
+        <!-- Professional Card -->
+        <div class="about about-card about-professional">
+          <div class="about-heading"><i class="fa-solid fa-briefcase"></i>
+            <h2>Professional</h2>
+          </div>
+          <hr>
+          <div class="about-details">
+            <ul>
+              <li><i class="fa-solid fa-graduation-cap"></i> <strong>Graduated</strong> from MAKAUT, W.B. with a degree
+                in
+                Information Technology, specializing in Data Science.</li>
+              <li><i class="fa-solid fa-lightbulb"></i> <strong>Passionate</strong> about turning data into insights for
+                better decisions and <strong>Focused</strong> on optimization & automation.</li>
+              <li><i class="fa-solid fa-laptop-code"></i> <strong>Skilled</strong> in MS Excel, Python, SQL, PowerBI,
+                HTML,
+                Tailwind CSS</li>
+              <li><i class="fa-solid fa-chart-simple"></i> <strong>Expertise</strong> in Data Analysis, Visualization,
+                Responsive Frontend Development.</li>
+            </ul>
+          </div>
         </div>
-        <div class="about personal">
+        <!-- Personal Card -->
+        <div class="about about-card about-personal">
+          <div class="about-heading"><i class="fa-solid fa-user"></i>
+            <h2>Personal</h2>
+          </div>
+          <hr />
           <ul>
-            <li>➤ Hailing from a very small village called Malikota near Joyrambati in Bankura District</li>
-            <li>➤ Completed schooling at Lego R.B.R.K Vidyapith and secondary education at Aswinkota V.V. High School
+            <li><i class="fa-solid fa-map-marker-alt"></i> Hailing from Malikota village near Joyrambati, Bankura
+              District</li>
+            <li><i class="fa-solid fa-school"></i> Schooled at Lego R.B.R.K Vidyapith & Aswinkota V.V. High School</li>
+            <li><i class="fa-solid fa-users"></i> Joined <strong>NCC</strong> and attended 9+ camps across the state
+              that build my discipline, focus and strong
+              team lead experience.</li>
+            <li><i class="fa-solid fa-award"></i> Won <strong>1st position</strong> in 25m Rifle at Thal Sainik Camp at
+              Delhi in 2015 and later awarded with <strong>Governor Medal</strong> by Governor of West Bengal in 2016.
             </li>
-            <li>➤ Joined <strong>NCC (National Cadet Corps)</strong> during secondary school gaining discipline,
-              leadership and teamwork.</li>
-            <li>➤ Achieved <strong>1st position</strong> in the 25m Rifle Shooting Competition at the National Thal
-              Sainik
-              Camp, Delhi.</li>
-            <li>➤ Key strong points in my life are <strong>discipline and focus</strong>. Resilience has shaped my
-              ability
-              to overcome challenges.</li>
           </ul>
         </div>
       </div>
     </section>
 
+
+
     <!-- Contact Section -->
     <section id="contactSection" class="contact">
-      <h1 class="index-heading">Contact Me</h1>
-      <hr />
+      <div class="index-heading-container">
+        <h1 class="index-heading">Contact Me</h1>
+      </div>
       <div class="contact-details">
         <div class="contact-form">
           <p>I turn messy data into best business insights. Creating Dashboard with Excel and Power BI.Besids I love to
@@ -280,6 +294,7 @@
   <script src="js/global.js" defer></script>
   <script src="/js/features.js" defer></script>
   <script src="js/footer.js" defer></script>
+  <script src="js/animation.js" defer></script>
   <noscript>
     <p>For the best experience, please enable JavaScript.</p>
   </noscript>

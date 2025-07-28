@@ -1,0 +1,113 @@
+/* ------------------------------------------
+    Scroll Reveal: Keyframes and Utility Styles
+------------------------------------------ */
+
+/* Slide Up & Fade In Animation */
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial hidden and shifted state for target elements */
+#heroSection>.content>*,
+.smry>.smry-div,
+.achievement-card,
+.school-card,
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Triggered reveal animation */
+#heroSection>.content>*.reveal,
+.smry>.smry-div.reveal,
+.achievement-card.reveal,
+.school-card.reveal,
+.project-card.reveal {
+    animation: slideUpFadeIn 0.6s forwards;
+}
+
+/* Staggered delays for Hero content children */
+#heroSection>.content>*.reveal:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+#heroSection>.content>*.reveal:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#heroSection>.content>*.reveal:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+/* Staggered delays for Summary stats */
+.smry>.smry-div.reveal:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.smry>.smry-div.reveal:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.smry>.smry-div.reveal:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.smry>.smry-div.reveal:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Staggered delays for About Me section's children */
+.aboutme.reveal>*:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.aboutme.reveal>*:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.aboutme.reveal>*:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+.aboutme.reveal>*:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Staggered delays for Contact section's children */
+.contact.reveal>*:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.contact.reveal>*:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.contact.reveal>*:nth-child(3) {
+    animation-delay: 0.45s;
+}
+
+/* Optional: General smooth fade-in for cards */
+.achievement-card,
+.school-card,
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.achievement-card.reveal,
+.school-card.reveal,
+.project-card.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.15s;
+}

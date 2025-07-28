@@ -42,16 +42,16 @@ function renderAchievements() {
 
     achievementsData.forEach(({ imgSrc, learnings }) => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("achievement-card");
 
         card.innerHTML = `
         <img src="${imgSrc}" />
-        <div class="card__content">
-            <p class="card__title">
+        <div class="achievement-card-content">
+            <p class="achievement-card-title">
             <i class="fa-solid fa-bookmark"></i> Key Learnings
             </p>
-            <ul class="card__description">
-            ${learnings.map(learning => `<li>${learning}</li>`).join("")}
+            <ul class="achievement-card-description">
+            ${learnings.map(learning => `<li>☑ ${learning}</li>`).join("")}
             </ul>
         </div>
         `;

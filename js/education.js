@@ -33,7 +33,9 @@ function renderEducation() {
         card.classList.add("school-card");
 
         card.innerHTML = `
-        <img src="${imgSrc}" alt="${alt}" class="school-logo" />
+        <div class="school-background">
+            <img src="${imgSrc}" alt="${alt}" class="school-logo" />
+        </div>
         <div class="school-details">
             <h3 class="school-name">${schoolName}</h3>
             <p class="course">Course: ${course}</p>
