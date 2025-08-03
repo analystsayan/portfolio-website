@@ -1,10 +1,19 @@
 const projects = [
     {
+        title: "F&P-sales-analysis-with-excel",
+        tech: "MS Excel • Power Query • Power Pivot • Pivot Table",
+        filter: "excel",
+        liveLink: "#",
+        gitHub: "https://github.com/analystsayan/fnp-sales-analysis",
+        gotoProject: "/projects/fnp-sales-analysis-with-excel",
+        image: "/media/image/projectimg/fnp-sales-analysis.png"
+    },
+    {
         title: "AtliQ Hardware Sales Data Analysis with Excel",
         tech: "Excel • Power Query • Power Pivot",
         filter: "excel",
         liveLink: "#",
-        gitHub: "#",
+        gitHub: "https://github.com/analystsayan/atliq-hardware-sales-data-analysis",
         gotoProject: "/projects/atliq-hardware-sales-analysis-with-excel",
         image: "/media/image/projectimg/sales-data-analysis.png"
     },

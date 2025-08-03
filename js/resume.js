@@ -1,5 +1,14 @@
 const featuredProjects = [
     {
+        title: "F&P-sales-analysis-with-excel",
+        tech: "MS Excel • Power Query • Power Pivot • Pivot Table",
+        filter: "excel",
+        liveLink: "#",
+        gitHub: "#",
+        gotoProject: "/projects/fnp-sales-analysis-with-excel",
+        image: "/media/image/projectimg/fnp-sales-analysis.png"
+    },
+    {
         title: "AtliQ Hardware Sales Data Analysis with Excel",
         tech: "Excel • Power Query • Power Pivot",
         filter: "excel",
@@ -25,15 +34,6 @@ const featuredProjects = [
         gitHub: "#",
         gotoProject: "/projects/portfolio-website",
         image: "/media/image/projectimg/portfolioImage.png"
-    },
-    {
-        title: "BokmyShow Reporting with My SQL",
-        tech: "My SQL • Query • Reporting",
-        filter: "sql",
-        liveLink: "#",
-        gitHub: "#",
-        gotoProject: "/projects/bookmyshow-reporting-with-mysql",
-        image: "/media/image/projectimg/my-sql-reporting.png"
     }
 ];
 
