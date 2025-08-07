@@ -158,11 +158,11 @@ hr {
     border-radius: 4px;
 }
 
-.index-heading-container {
+/* .index-heading-container {
     background-image: linear-gradient(to bottom, var(--tertiary-color), var(--background-color));
     padding: var(--space-md) var(--space-sm);
     border-radius: var(--radius-full);
-}
+} */
 
 .index-heading {
     background-image: var(--heading);

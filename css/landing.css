@@ -11,7 +11,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: var(--tertiary-color);
+    background-color: #000;
     padding: var(--space-md) var(--space-sm);
     gap: var(--space-md);
 }
@@ -58,7 +58,6 @@
 
 .about-heading h2 {
     font-size: 1.3rem;
-
 }
 
 .about ul {
