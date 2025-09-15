@@ -63,10 +63,3 @@ experiences.forEach((exp) => {
 
     expContainer.appendChild(card);
 });
-
-// Insert "Click Here" text only once
-const hoverText = document.createElement("div");
-hoverText.id = "hoverText";
-hoverText.className = "exp-card-hover-text";
-hoverText.textContent = "Click Here";
-expContainer.insertBefore(hoverText, expContainer.firstChild);

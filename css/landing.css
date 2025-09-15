@@ -11,9 +11,9 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #000;
     padding: var(--space-md) var(--space-sm);
     gap: var(--space-md);
+    background: var(--bg-dark);
 }
 
 .about-child {
@@ -22,18 +22,19 @@
     flex-direction: column;
     justify-content: center;
     gap: var(--space-md);
+    background: transparent;
 }
 
 .about {
     flex: 1 1 330px;
-    background: linear-gradient(120deg, var(--background-color) 75%, var(--primary-color) 105%);
-    color: var(--font-color-secondary);
+    background: linear-gradient(45deg, var(--bg) 90%, var(--bg-light) 10%);
+    color: var(--text-muted);
     padding: calc(var(--space-md) * 2) calc(var(--space-sm) * 2);
-    border-radius: var(--radius-lg);
-    border-bottom: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    border: solid 1px var(--border);
     box-shadow: 0 3px 22px 0 rgba(64, 88, 158, 0.10);
     position: relative;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -42,9 +43,8 @@
 }
 
 .about:hover {
-    background: var(--primary-color);
-    box-shadow: 0 0px 25px 0 var(--accent-color);
-    border-bottom: 2px solid var(--border-color-hover);
+    background: linear-gradient(45deg, var(--bg) 10%, var(--bg-light) 90%);
+    box-shadow: 0 0px 5px 0 var(--accent);
 }
 
 .about-heading {
@@ -53,7 +53,7 @@
     gap: var(--space-xs);
     font-size: 1.5rem;
     align-self: self-start;
-    color: var(--off-white);
+    color: var(--text);
 }
 
 .about-heading h2 {
@@ -75,19 +75,19 @@
     align-items: flex-start;
     gap: 0;
     font-size: 1.05em;
-    color: var(--font-color-secondary);
+    color: var(--text-muted);
     line-height: 1.7;
 }
 
 .about ul li i {
     font-size: 1.2em;
-    color: var(--accent-color);
+    color: var(--accent);
     min-width: 1.4em;
     opacity: .85;
 }
 
 .about ul li strong {
-    color: var(--off-white);
+    color: var(--text);
     font-weight: 500;
 }
 
@@ -99,6 +99,7 @@
     text-align: center;
     padding: var(--space-md) var(--space-sm);
     gap: var(--space-md);
+    background: var(--bg-dark);
 }
 
 .contact-details {
@@ -114,15 +115,14 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    background-color: var(--primary-color);
+    background: var(--bg);
     padding: 1.5em;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    border: solid 1px var(--border);
 }
 
 .contact-form p {
-    color: var(--off-white);
+    color: var(--text);
 }
 
 .form-group {
@@ -131,7 +131,7 @@
 }
 
 .form-group label {
-    color: var(--off-white);
+    color: var(--text);
 }
 
 /* Inputs/Selects/Textareas/Buttons */
@@ -140,18 +140,21 @@
 .contact-form textarea,
 .contact-form button {
     width: 100%;
-    padding: 1.5em;
-    border-radius: var(--radius-md);
-    border: solid 1px var(--secondary-color);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    border: solid 1px var(--border);
     margin: var(--space-xxs) 0 var(--space-md) 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.61);
-    background-color: var(--background-color);
-    color: var(--font-color-secondary);
+    background: var(--bg);
+    color: var(--text);
 }
 
 .contact-form textarea {
     height: 100px;
     resize: none;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--blur-bg);
 }
 
 /* Focus Outline – Accessibility */
@@ -159,12 +162,12 @@
 .contact-form select:focus,
 .contact-form textarea:focus,
 .contact-form button:focus {
-    outline: 2px solid var(--accent-color-secondary);
+    outline: 2px solid var(--accent-secondary);
     outline-offset: 2px;
 }
 
 .contact-form button {
-    background: var(--accent-color);
+    background: var(--accent);
     color: #f9f9f9;
     cursor: pointer;
     font-size: 16px;
@@ -174,7 +177,7 @@
 }
 
 .contact-form button:hover {
-    background: var(--accent-color-secondary);
+    background: var(--accent-secondary);
 }
 
 .contact-info {
@@ -191,30 +194,32 @@
 }
 
 .info-item .icon {
-    background: var(--accent-color);
-    color: var(--off-white);
+    background: var(--accent);
+    color: var(--text);
     font-size: 20px;
     border-radius: 50%;
     padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .info-item:hover .icon {
-    background: var(--accent-color-secondary);
+    background: var(--accent-secondary);
+    box-shadow: 0 0 10px var(--accent-secondary);
+    transform: rotate(360deg) scale(1.1);
 }
 
 .info-item h4 {
     font-size: 16px;
     margin: 0;
-    color: var(--font-color-secondary);
+    color: var(--text-muted);
 }
 
 .info-item p {
     font-size: 14px;
-    color: var(--off-white);
+    color: var(--text);
 }
 
 /* Responsive Desktop Layout */

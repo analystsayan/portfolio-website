@@ -5,7 +5,7 @@
 /* From Uiverse.io by Pradeepsaranbishnoi */
 .mydict:focus {
     outline: 0;
-    border-color: var(--accent-color);
+    border-color: var(--accent);
     box-shadow: 0 0 0 4px #b5c9fc;
 }
 
@@ -27,16 +27,16 @@
 }
 
 .mydict input[type="radio"]:checked+span {
-    box-shadow: 0 0 0 0.0625em var(--accent-color);
-    background-color: #dee7ff;
+    box-shadow: 0 0 0 0.0625em var(--accent);
+    background: #dee7ff;
     z-index: 1;
-    color: var(--accent-color);
+    color: var(--accent);
 }
 
 .mydict label span {
     display: block;
     cursor: pointer;
-    background-color: #fff;
+    background: #fff;
     padding: 0.375em .75em;
     position: relative;
     margin-left: .0625em;
@@ -44,7 +44,7 @@
     letter-spacing: .05em;
     color: #3e4963;
     text-align: center;
-    transition: background-color .5s ease;
+    transition: all 0.3s ease;
 }
 
 .mydict label:first-child span {

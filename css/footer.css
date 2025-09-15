@@ -3,17 +3,16 @@
 ------------------------------------------ */
 
 #footerSection {
-    background: var(--background-color);
     padding-top: var(--space-xs);
 }
 
 .footer-container {
-    background-color: var(--primary-color);
-    color: var(--off-white);
+    background: var(--bg);
+    color: var(--text);
     text-align: center;
     padding: 1.5em var(--space-md);
     font-size: 0.95rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border);
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 24px rgba(90, 96, 172, 0.07);
     width: 100%;
@@ -23,23 +22,23 @@
 /* Footer Links */
 .footer-links {
     margin: var(--space-md) 0;
-    background-color: transparent;
+    background: transparent;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: var(--space-md);
 }
 .footer-links a {
-    color: var(--off-white);
+    color: var(--text);
     text-decoration: none;
     font-weight: 500;
     white-space: nowrap;
     padding: 0.2em 0.7em;
     border-radius: var(--radius-full);
-    transition: background 0.2s, color 0.2s;
+    transition: all 0.3s ease;
 }
 .footer-links a:hover, .footer-links a:focus {
-    background: var(--secondary-color);
+    background: var(--bg-light);
     outline: none;
 }
 
@@ -54,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--tertiary-color);
+    background: var(--bg-light);
     border-radius: 50%;
     width: 36px;
     height: 36px;
@@ -62,17 +61,17 @@
     outline: none;
 }
 .social-icons a:focus, .social-icons a:hover {
-    background: var(--accent-color);
+    background: var(--accent);
     transform: scale(1.08);
 }
 .social-icons i {
-    color: var(--off-white);
+    color: var(--text);
     font-size: 20px;
     vertical-align: middle;
     transition: all 0.3s ease;
 }
 .social-icons a:hover i {
-    color: var(--primary-color);
+    color: var(--bg-light);
 }
 
 @media screen and (min-width: 1024px) {

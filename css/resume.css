@@ -4,26 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
 
-:root,
-[data-theme="dark"] {
-  --background-color: #010006;
-  /* Add your --radius-* and --space-* variables if using */
-}
-[data-theme="light"] {
-  --background-color: #ffffff;
-  /* Add your --radius-* and --space-* variables if using */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  scrollbar-width: thin;
-  scrollbar-color: var(--hover-color) #141348;
-  font-family: "Sora", sans-serif;
-  box-sizing: border-box;
-}
-
 /* ------------------------------------------
     Layout & Main Containers
 ------------------------------------------ */
@@ -35,7 +15,6 @@ body {
 }
 
 main {
-  background-color: var(--background-color);
   text-align: left;
 }
 
@@ -52,30 +31,32 @@ main {
   flex-direction: row;
   padding: var(--space-sm);
   gap: var(--space-xs);
-  border-bottom: 1px solid var(--border-color, #22223b);
+  border-bottom: 1px solid var(--border);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 
   /* Fancy hex pattern background */
   --s: 30px;
-  --c: #0000, var(--primary-color) 0.5deg 119.5deg, #0000 120deg;
+  --c: #0000, var(--bg) 0.5deg 119.5deg, #0000 120deg;
   --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
   --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));
   --g3: conic-gradient(from -60deg at 50% calc(175% / 12), var(--c));
   background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
     var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
-    var(--g3) 0 calc(1.73 * var(--s)) var(--secondary-color);
+    var(--g3) 0 calc(1.73 * var(--s)) var(--bg-light);
   background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
 }
 
 /* profile image */
 .profile-image {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  background: var(--text-muted);
+  border-radius: 50%;
 }
 
 .profile-image img {
-  background-size: cover;
-  background-position: center;
-  aspect-ratio: 1/1;
   max-height: 100px;
   border-radius: 50%;
 }
@@ -92,13 +73,13 @@ main {
 
 .profile-name {
   font-size: clamp(16px, 10vw, 30px);
-  color: var(--off-white);
+  color: var(--text);
   font-family: 'Caudex', serif;
 }
 
 .username {
   font-size: clamp(8px, 5vw, 16px);
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
 }
 
 /* Profile button Container  */
@@ -119,7 +100,7 @@ main {
 }
 
 .section-title {
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
   font-size: clamp(5px, 3vw, 16px);
   position: relative;
   text-align: left;
@@ -152,17 +133,16 @@ main {
 
 .knowledge-card {
   padding: var(--space-sm);
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--bg) 80%, var(--bg-light));
   border-radius: var(--radius-sm);
-  transition: background-color 0.3s, transform 0.3s;
-  border-bottom: solid 1px var(--border-color);
+  border: solid 1px var(--border);
   overflow: hidden;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .knowledge-card:hover {
-  background-color: var(--secondary-color);
-  border-bottom: solid 1px var(--border-color-hover);
+  background: linear-gradient(315deg, var(--bg), var(--bg-light));
   transform: scale(1);
 }
 
@@ -182,15 +162,15 @@ main {
 }
 
 .red {
-  background-color: #ff605c;
+  background: #ff605c;
 }
 
 .yellow {
-  background-color: #ffbd44;
+  background: #ffbd44;
 }
 
 .green {
-  background-color: #00ca4e;
+  background: #00ca4e;
 }
 
 .knowledge-card-content {
@@ -201,14 +181,14 @@ main {
 }
 
 .knowledge-card-content h4 {
-  color: var(--special-card-font-header);
+  color: #9eed00;
   font-size: 14px;
   font-family: "Fira Code", monospace;
 }
 
 .knowledge-card-content p {
   font-size: 14px;
-  color: var(--special-card-font-para);
+  color: #00ffff;
   font-family: "Fira Code", monospace;
 }
 
@@ -227,7 +207,7 @@ main {
   align-items: center;
   gap: 0.75rem;
   margin: var(--space-xs) auto;
-  background-color: var(--accent-color);
+  background: var(--accent);
   color: #fff;
   border-radius: 10rem;
   font-weight: 600;
@@ -244,8 +224,8 @@ main {
   width: 25px;
   height: 25px;
   position: relative;
-  color: var(--accent-color);
-  background-color: #fff;
+  color: var(--accent);
+  background: #fff;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -253,7 +233,7 @@ main {
 }
 
 .explore-button:hover {
-  background-color: var(--accent-color-secondary);
+  background: var(--accent-secondary);
   transform: scale(1.03);
 }
 
@@ -296,43 +276,34 @@ main {
   width: 100%;
 }
 
-.exp-card-hover-text {
-  position: absolute;
-  display: none;
-  background-color: var(--primary-color);
-  padding: 5px;
-  border-radius: var(--radius-sm);
-  font-size: 12px;
-  color: var(--font-color-secondary);
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 5;
-}
-
 /* Experience Number */
 .exp-num {
   font-size: 80px;
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
 }
 
 .exp-toggle {
   width: 100%;
-  background-color: var(--primary-color);
+  background: var(--bg);
   border: none;
   outline: none;
-  color: var(--off-white);
+  color: var(--text);
   font-size: 1.2rem;
   font-weight: 600;
   text-align: left;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border-top: solid 1px var(--border);
+  border-left: solid 1px var(--border);
+  border-right: solid 1px var(--border);
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   padding: var(--space-sm);
   white-space: nowrap;
+  transition: background 0.3s;
 }
 
-.exp-toggle:hover {
-  background-color: var(--tertiary-color);
+.exp-toggle:hover,
+.exp-card.active {
+  background: var(--bg-light);
 }
 
 .exp-card.active .exp-content {
@@ -342,11 +313,10 @@ main {
 .exp-toggle span {
   display: flex;
   align-items: flex-start;
-  gap: .3em;
 }
 
 .exp-duration {
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
 }
 
 /* Role-based company coloring */
@@ -373,16 +343,16 @@ main {
 
 .exp-content {
   width: 100%;
-  background: var(--secondary-color);
+  background: var(--bg);
   display: none;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  border-bottom: 1px solid var(--border-color-hover);
+  border-bottom: 1px solid var(--highlight);
 }
 
 .exp-content ol,
 .exp-content ol li {
   list-style: none;
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
   padding: .4em;
   font-size: 1rem;
   margin: 0;
@@ -401,6 +371,7 @@ main {
 }
 
 .school-card {
+  background: var(--bg);
   position: relative;
   border-radius: var(--radius-sm);
   overflow: hidden;
@@ -409,19 +380,15 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--border-color);
-  transition: background 0.3s, transform 0.3s;
+  border: 1px solid var(--border);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.school-card:hover {
-  border-bottom: 1px solid var(--border-color-hover);
+.school-card:hover{
+  background: var(--bg-light);
 }
 
-.school-card:hover .school-details {
-  background-color: var(--secondary-color);
-}
-
-.school-background {
+.school-image {
   width: 100%;
   background-image: url('/media/image/education.jpg');
   background-size: cover;
@@ -439,12 +406,11 @@ main {
   width: 100%;
   height: 70%;
   padding: 20px;
-  background-color: var(--primary-color);
   backdrop-filter: blur(10px);
 }
 
 .school-name {
-  color: var(--off-white);
+  color: var(--text);
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
@@ -454,7 +420,7 @@ main {
 .stream,
 .year {
   font-size: 14px;
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
   margin: 5px 0;
 }
 
@@ -471,14 +437,14 @@ main {
 
 .achievement-card {
   position: relative;
-  background: var(--primary-color);
+  background: var(--bg);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  box-shadow: 0 0 0 5px var(--secondary-color);
+  box-shadow: 0 0 0 5px var(--bg-light);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 0;
   cursor: pointer;
@@ -487,12 +453,11 @@ main {
 .achievement-card img {
   width: 100%;
   background-size: cover;
-  fill: var(--primary-color);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .achievement-card:hover {
-  box-shadow: 0px 0px 70px var(--off-white);
+  box-shadow: 0px 0px 70px var(--primary);
 }
 
 .achievement-card-content {
@@ -503,7 +468,7 @@ main {
   height: 100%;
   padding: var(--space-md) var(--space-sm);
   box-sizing: border-box;
-  background: var(--background-color);
+  background: var(--bg);
   backdrop-filter: blur(10px);
   transform: rotateX(-90deg);
   transform-origin: bottom;
@@ -521,14 +486,14 @@ main {
 
 .achievement-card-title {
   font-size: 1.3rem;
-  color: var(--off-white);
+  color: var(--text);
   font-weight: 600;
   margin-bottom: var(--space-xxs);
 }
 
 .achievement-card-description {
   font-size: .95rem;
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
   list-style: none;
   text-align: left;
   display: flex;
@@ -543,8 +508,8 @@ main {
 .social-container {
   width: 100%;
   padding: 1em 0;
-  background-color: var(--primary-color);
-  color: var(--font-color-2);
+  background: var(--bg);
+  color: var(--text-muted);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -552,7 +517,7 @@ main {
 }
 
 .social-container i {
-  color: var(--font-color-secondary);
+  color: var(--text-muted);
   font-size: 30px;
   padding: 30px;
   height: 20px;
@@ -562,12 +527,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: font-size 0.3s, background-color 0.3s;
+  transition: font-size 0.3s, background 0.3s;
 }
 
 .social-container i:hover {
   font-size: 36px;
-  background-color: var(--secondary-color);
+  background: var(--blur-bg);
 }
 
 /* ------------------------------------------

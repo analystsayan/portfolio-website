@@ -5,16 +5,16 @@
 /* Sticky top navigation with glass/blur effect */
 .header {
     width: 100%;
-    height: 55px;
+    height: 60px;
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: var(--space-xs) var(--space-xs);
-    /* background: #00000029; */
-    color: var(--font-color-secondary);
-    border-bottom: 1px solid var(--border-color, #22223b);
+    background: var(--bg);
+    color: var(--text);
+    border-bottom: 1px solid var(--blur-bg);
     backdrop-filter: blur(20px);
     user-select: none;
     z-index: 997;
@@ -34,8 +34,8 @@
 .sidebar-toggle svg {
     height: 40px;
     width: 40px;
-    fill: var(--off-white);
-    filter: drop-shadow(0 0 1px var(--background-color));
+    fill: var(--text);
+    filter: drop-shadow(0 0 1px var(--bg));
 }
 
 /* Header Navigation */
@@ -46,8 +46,8 @@
 .header-navigation a,
 .header-navigation button {
     font-size: clamp(4px, 1.8vh, 16px);
-    color: var(--off-white);
-    text-shadow: 0 0 1px var(--background-color);
+    color: var(--text);
+    text-shadow: 0 0 1px var(--bg);
     background: transparent;
     border: none;
     padding: var(--space-xs);
@@ -58,8 +58,8 @@
 }
 .header-navigation a:hover,
 .header-navigation button:hover {
-    color: var(--font-color);
-    background: var(--secondary-color);
+    color: var(--text);
+    background: var(--blur-bg);
 }
 
 /* Logo (hidden on mobile by default) */

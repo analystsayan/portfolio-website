@@ -33,7 +33,7 @@ function renderEducation() {
         card.classList.add("school-card");
 
         card.innerHTML = `
-        <div class="school-background">
+        <div class="school-image">
             <img src="${imgSrc}" alt="${alt}" class="school-logo" />
         </div>
         <div class="school-details">

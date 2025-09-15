@@ -8,7 +8,8 @@ aside {
     left: -300px;
     width: 250px;
     height: 100vh;
-    border-right: 1px solid var(--border-color, #22223b);
+    border-right: 1px solid var(--blur-bg);
+    background: var(--bg);
     transition: all 0.3s ease-in-out;
     z-index: 999;
     user-select: none;
@@ -26,7 +27,7 @@ aside.closed {
 .sidebardiv {
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: brightness(0.7);
     overflow: hidden;
     overflow-y: auto;
     text-wrap: nowrap;
@@ -43,7 +44,7 @@ aside.closed {
 }
 .sidebar > .sidebardiv > ul > li:first-child .logo {
     font-weight: 600;
-    color: var(--off-white);
+    color: var(--text);
     justify-content: center;
     font-size: 1.5rem;
     margin: 0;
@@ -55,7 +56,7 @@ aside.closed {
 .sidebar-category {
     border-radius: var(--radius-full);
     padding: var(--space-xxs) var(--space-sm) 0 var(--space-sm);
-    color: var(--font-color-secondary);
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     font-size: 0.95rem;
@@ -68,7 +69,7 @@ aside.closed {
     border-radius: var(--radius-full);
     padding: 0.6em 0.8em;
     text-decoration: none;
-    color: var(--off-white);
+    color: var(--text);
     display: flex;
     align-items: center;
     gap: 1.2em;
@@ -78,12 +79,12 @@ aside.closed {
 }
 
 .sidebar-btn:hover {
-    background-color: #4441ff26;
+    background: var(--blur-bg);
 }
 
 /* Active (current page) sidebar button */
 .sidebar-btn.active {
-    background-color: #4441ff7c;
+    background: var(--blur-bg);
 }
 
 /* Sidebar navigation list style */
@@ -95,7 +96,7 @@ aside.closed {
     height: 24px;
     width: 24px;
     flex-shrink: 0;
-    fill: var(--off-white);
+    fill: var(--text);
     transition: all 0.3s ease-in-out;
 }
 
@@ -111,7 +112,7 @@ aside.closed {
     position: relative;
     margin-left: auto;
     cursor: pointer;
-    fill: var(--off-white) !important;
+    fill: var(--text) !important;
 }
 
 /* ------------------------------------------
@@ -121,9 +122,6 @@ aside.closed {
     aside {
         grid-area: sidebar;
         position: sticky;
-        background-image: url('/media/image/sidebar.jpg');
-        background-position: center;
-        background-size: cover;
     }
 
     /* Shrink logo row font and space */
@@ -142,7 +140,7 @@ aside.closed {
         border-radius: var(--radius-sm);
         background: none;
         cursor: pointer;
-        transition: background 0.3s, color 0.3s;
+        transition: all 0.3s ease-in-out;
         display: block;
     }
     #toggle-btn svg {
@@ -152,7 +150,7 @@ aside.closed {
         transform: rotate(180deg);
     }
     #toggle-btn:hover {
-        background-color: var(--secondary-color);
+        background: var(--secondary);
     }
 
     /* Mini sidebar mode */
@@ -163,7 +161,7 @@ aside.closed {
         display: none;
     }
     .sidebar.close .sidebar-btn {
-        color: var(--primary-color);
+        color: var(--bg-light);
     }
     .sidebar.close .sidebardiv .logo {
         display: none;
