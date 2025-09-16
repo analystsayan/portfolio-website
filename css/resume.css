@@ -139,7 +139,8 @@ main {
   padding: var(--space-sm);
   background: linear-gradient(135deg, var(--bg) 80%, var(--bg-light));
   border-radius: var(--radius-sm);
-  border: solid 1px var(--border);
+  border: solid 1px var(--border-muted);
+  border-bottom-color: var(--highlight);
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease-in-out;
@@ -148,6 +149,7 @@ main {
 .knowledge-card:hover {
   background: linear-gradient(315deg, var(--bg), var(--bg-light));
   transform: scale(1);
+  border-color: var(--border);
 }
 
 .knowledge-tools {
@@ -294,14 +296,14 @@ main {
   font: var(--p);
   font-weight: 500;
   color: var(--text);
-  border: solid 1px var(--border);
+  border: solid 1px var(--border-muted);
   border-radius: var(--radius-sm);
-  padding: var(--space-md) var(--space-xxs);
-  transition: transform 0.3s ease, background 0.3s ease;
+  padding: var(--space-md) var(--space-xs);
+  transition: all 0.3s ease;
 }
 .exp-toggle:hover,
 .exp-toggle.active {
-  background: var(--bg-light);
+  border-color: var(--border);
 }
 .exp-toggle.active {
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -341,11 +343,10 @@ main {
 .exp-btn {
   background: var(--bg-light);
   color: var(--text);
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: var(--space-xxs);
   outline: none;
-  border: solid 1px var(--border);
+  border: none;
   padding: var(--space-xxs) var(--space-md);
   font: var(--p);
   font-weight: 500;
@@ -357,6 +358,9 @@ main {
 .exp-btn:hover {
   background: var(--blur-bg);
 }
+.exp-btn i {
+  margin-left: var(--space-xxs);
+}
 #viewLess {
   display: none;
 }
@@ -365,7 +369,7 @@ main {
   background: var(--bg);
   display: none;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  border: 1px solid var(--border);
+  border: solid 1px var(--border);
   border-top: none;
   border-bottom-color: var(--highlight);
 }
@@ -400,12 +404,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
-  transition: background 0.3s ease, transform 0.3s ease;
+  border: 1px solid var(--border-muted);
+  border-bottom-color: var(--highlight);
+  transition: all 0.3s ease;
 }
 
 .school-card:hover{
   background: var(--bg-light);
+  border-color: var(--border);
 }
 
 .school-image {
@@ -580,10 +586,6 @@ main {
     flex-direction: row;
     gap: var(--space-sm);
     padding: var(--space-sm);
-  }
-
-  .exp-toggle:hover {
-    transform: scale(1.04);
   }
 
   .school-info-grid {

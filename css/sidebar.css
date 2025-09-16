@@ -113,6 +113,10 @@ aside.closed {
     margin-left: auto;
     cursor: pointer;
     fill: var(--text) !important;
+    border-radius: var(--radius-sm);
+}
+.sidebar-close:hover {
+    background: var(--blur-bg);
 }
 
 /* ------------------------------------------

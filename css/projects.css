@@ -73,10 +73,10 @@
 }
 
 .project-card {
-    max-width: 530px;
+    max-width: 380px;
     background: var(--bg);
-    border: solid 1px var(--border);
-    border-radius: var(--radius-md);
+    border: solid 1px var(--border-muted);
+    border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +94,7 @@
 /* Project Card Image */
 .project-card-image {
     background: var(--bg-light);
-    height: 55%;
+    height: 50%;
     background-size: cover;
     background-position: center;
     z-index: 2;
@@ -104,14 +104,13 @@
 /* Project Card Content */
 .project-card-content {
     height: 45%;
-    padding: calc(var(--space-md) *2) var(--space-sm);
+    padding: var(--space-sm);
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     text-decoration: none;
     z-index: 1;
-    gap: var(--space-xs);
 }
 
 /* Project Card Title */
@@ -314,7 +313,7 @@
 .project-evaluation p {
     margin-bottom: var(--space-xs);
     font-weight: 500;
-    color: var(--text);
+    color: var(--secondary);
 }
 
 .project-evaluation img {

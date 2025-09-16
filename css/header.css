@@ -29,7 +29,10 @@
     background: transparent;
     transition: all 0.3s ease;
     cursor: pointer;
-    
+    border-radius: var(--radius-sm);
+}
+.sidebar-toggle:hover {
+    background: var(--blur-bg);
 }
 .sidebar-toggle svg {
     height: 40px;
