@@ -1,18 +1,13 @@
 /* ------------------------------------------
     Footer Section Styling
 ------------------------------------------ */
-
-#footerSection {
-    padding-top: var(--space-xs);
-}
-
 .footer-container {
-    background: var(--bg);
+    background: var(--bg-dark);
     color: var(--text);
     text-align: center;
     padding: 1.5em var(--space-md);
     font-size: 0.95rem;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--blur-bg);
     border-radius: var(--radius-sm);
     box-shadow: 0 2px 24px rgba(90, 96, 172, 0.07);
     width: 100%;

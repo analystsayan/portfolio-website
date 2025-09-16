@@ -12,12 +12,12 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--space-xs) var(--space-xs);
-    background: var(--bg);
+    background: var(--bg-dark);
     color: var(--text);
     border-bottom: 1px solid var(--blur-bg);
     backdrop-filter: blur(20px);
     user-select: none;
-    z-index: 997;
+    z-index: 999;
 }
 
 /* Hamburger (mobile) */
@@ -45,13 +45,12 @@
 }
 .header-navigation a,
 .header-navigation button {
-    font-size: clamp(4px, 1.8vh, 16px);
+    font: var(--p);
     color: var(--text);
     text-shadow: 0 0 1px var(--bg);
     background: transparent;
     border: none;
     padding: var(--space-xs);
-    font-weight: 500;
     border-radius: var(--radius-full);
     white-space: nowrap;
     cursor: pointer;

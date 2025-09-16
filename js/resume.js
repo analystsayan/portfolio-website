@@ -65,7 +65,6 @@ featuredProjects.forEach(project => {
 content for elements with the class name "exp-card". Here's a breakdown of what it does: */
 //function to show exp-content and hover effect too
 document.querySelectorAll(".exp-card").forEach((card) => {
-    const hoverText = document.getElementById("hoverText");
     const toggleButton = card.querySelector(".exp-toggle");
     const expContent = card.querySelector(".exp-content");
 
@@ -74,8 +73,10 @@ document.querySelectorAll(".exp-card").forEach((card) => {
         // Toggle the visibility of exp-content
         if (expContent.style.display === "block") {
             expContent.style.display = "none";
+            toggleButton.classList.remove("active");
         } else {
             expContent.style.display = "block";
+            toggleButton.classList.add("active");
         }
     });
 });

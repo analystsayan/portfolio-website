@@ -2,7 +2,24 @@
     About Me, Contact, and Disclaimer Section Styling
     (Home Page, After Hero)
 ------------------------------------------ */
-
+.pattern-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    --s: 60px;
+    --c1: var(--bg-dark);
+    --c2: var(--bg-light);
+    --_g: radial-gradient(25% 25% at 25% 25%,
+            var(--c1) 99%,
+            rgba(0, 0, 0, 0) 101%);
+    background: var(--_g) var(--s) var(--s) / calc(2 * var(--s)) calc(2 * var(--s)),
+        var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)),
+        radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s) var(--s),
+        repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%) calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);
+}
 .aboutme {
     position: relative;
     width: 100%;
@@ -13,10 +30,9 @@
     justify-content: center;
     padding: var(--space-md) var(--space-sm);
     gap: var(--space-md);
-    background: var(--bg-dark);
 }
 
-.about-child {
+.aboutme-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -25,13 +41,15 @@
     background: transparent;
 }
 
-.about {
+.about-card {
     flex: 1 1 330px;
-    background: linear-gradient(45deg, var(--bg) 90%, var(--bg-light) 10%);
-    color: var(--text-muted);
+    /* background: linear-gradient(45deg, var(--bg) 90%, var(--bg-light) 10%); */
+    backdrop-filter: blur(10px);
+    color: var(--text);
     padding: calc(var(--space-md) * 2) calc(var(--space-sm) * 2);
     border-radius: var(--radius-md);
     border: solid 1px var(--border);
+    border-top-color: var(--highlight);
     box-shadow: 0 3px 22px 0 rgba(64, 88, 158, 0.10);
     position: relative;
     transition: all 0.3s ease;
@@ -40,10 +58,12 @@
     flex-direction: column;
     align-items: start;
     gap: var(--space-md);
+    z-index: 2;
 }
 
-.about:hover {
-    background: linear-gradient(45deg, var(--bg) 10%, var(--bg-light) 90%);
+.about-card:hover {
+    /* background: linear-gradient(45deg, var(--bg) 10%, var(--bg-light) 90%); */
+    background: #ffffff05;
     box-shadow: 0 0px 5px 0 var(--accent);
 }
 
@@ -51,16 +71,18 @@
     display: flex;
     align-items: center;
     gap: var(--space-xs);
-    font-size: 1.5rem;
-    align-self: self-start;
     color: var(--text);
 }
 
-.about-heading h2 {
-    font-size: 1.3rem;
+.about-heading i {
+    font-size: var(--icon-md);
 }
 
-.about ul {
+.about-heading h2 {
+    font: var(--h3);
+}
+
+.about-card ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
@@ -68,27 +90,26 @@
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     grid-gap: 1.5em;
     flex-direction: column;
-    gap: 1.18em;
+    gap: var(--space-xs);
 }
 
-.about ul li {
+.about-card ul li {
     align-items: flex-start;
     gap: 0;
-    font-size: 1.05em;
-    color: var(--text-muted);
+    font: var(--p);
+    color: var(--text);
     line-height: 1.7;
 }
 
-.about ul li i {
-    font-size: 1.2em;
-    color: var(--accent);
-    min-width: 1.4em;
-    opacity: .85;
+.about-card ul li i {
+    font-size: var(--icon-sm);
+    color: var(--secondary);
+    margin-right: var(--space-xxs);
 }
 
-.about ul li strong {
+strong {
     color: var(--text);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Contact Section */
@@ -152,6 +173,7 @@
     height: 100px;
     resize: none;
 }
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
     color: var(--blur-bg);
@@ -167,11 +189,11 @@
 }
 
 .contact-form button {
-    background: var(--accent);
+    background: var(--bg-light);
     color: #f9f9f9;
     cursor: pointer;
     font-size: 16px;
-    border: none;
+    border: solid 1px var(--border);
     transition: all 0.3s ease;
     box-shadow: none;
 }
@@ -228,11 +250,12 @@
         padding: calc(var(--space-md) * 2);
         gap: calc(var(--space-md) * 2);
     }
+
     .about:hover {
         transform: scale(1.03);
     }
 
-    .about-child {
+    .aboutme-container {
         flex-direction: row;
         gap: calc(var(--space-md) * 2);
     }

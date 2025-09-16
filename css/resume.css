@@ -1,10 +1,4 @@
 /* ------------------------------------------
-    Font Imports & Base Theme Variables
------------------------------------------- */
-
-@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
-
-/* ------------------------------------------
     Layout & Main Containers
 ------------------------------------------ */
 
@@ -68,17 +62,16 @@ main {
   text-align: left;
   justify-content: center;
   align-items: start;
-  gap: var(--space-xxs);
 }
 
 .profile-name {
-  font-size: clamp(16px, 10vw, 30px);
-  color: var(--text);
+  font: var(--h1);
   font-family: 'Caudex', serif;
+  color: var(--text);
 }
 
 .username {
-  font-size: clamp(8px, 5vw, 16px);
+  font: var(--p);
   color: var(--text-muted);
 }
 
@@ -89,6 +82,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
+  margin-top: var(--space-xs);
 }
 
 /* ------------------------------------------
@@ -101,7 +95,9 @@ main {
 
 .section-title {
   color: var(--text-muted);
-  font-size: clamp(5px, 3vw, 16px);
+  font: var(--p2);
+  font-weight: 600;
+  text-transform: uppercase;
   position: relative;
   text-align: left;
   max-width: fit-content;
@@ -109,14 +105,15 @@ main {
 
 .bill-board {
   width: 100%;
-  font-size: clamp(26px, 9vw, 50px);
-  text-align: left;
-  font-family: "Raleway", sans-serif;
+  font: var(--h1);
+  font-family: var(--ff-alt);
   font-weight: 300;
-  background-image: var(--heading);
+  text-align: left;
+  /* background-image: var(--heading);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: var(--secondary);
   flex-wrap: nowrap;
 }
 
@@ -174,22 +171,20 @@ main {
 }
 
 .knowledge-card-content {
-  font-family: "Fira Code", monospace;
-  font-size: 14px;
-  line-height: 1.4;
   text-align: left;
 }
 
 .knowledge-card-content h4 {
   color: #9eed00;
-  font-size: 14px;
-  font-family: "Fira Code", monospace;
+  font: var(--p2);
+  font-family: var(--ff-mono);
+  font-weight: 600;
 }
 
 .knowledge-card-content p {
-  font-size: 14px;
+  font: var(--p2);
   color: #00ffff;
-  font-family: "Fira Code", monospace;
+  font-family: var(--ff-mono);
 }
 
 /* Explore all button */
@@ -210,6 +205,7 @@ main {
   background: var(--accent);
   color: #fff;
   border-radius: 10rem;
+  font: var(--p);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   padding-left: 20px;
@@ -260,7 +256,9 @@ main {
 /* ------------------------------------------
     Experience Section
 ------------------------------------------ */
-
+.exp {
+  padding-bottom: var(--space-md);
+}
 .exp-container {
   display: flex;
   align-items: flex-start;
@@ -278,7 +276,7 @@ main {
 
 /* Experience Number */
 .exp-num {
-  font-size: 80px;
+  font-size: 5rem;
   color: var(--text-muted);
 }
 
@@ -287,36 +285,40 @@ main {
   background: var(--bg);
   border: none;
   outline: none;
-  color: var(--text);
-  font-size: 1.2rem;
+  font: var(--p);
   font-weight: 600;
+  color: var(--text);
   text-align: left;
   cursor: pointer;
-  border-top: solid 1px var(--border);
-  border-left: solid 1px var(--border);
-  border-right: solid 1px var(--border);
-  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  border: solid 1px var(--border);
+  border-radius: var(--radius-sm);
   padding: var(--space-sm);
   white-space: nowrap;
   transition: background 0.3s;
 }
-
 .exp-toggle:hover,
-.exp-card.active {
+.exp-toggle.active {
   background: var(--bg-light);
 }
 
-.exp-card.active .exp-content {
-  display: block;
+.exp-toggle.active {
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  border-bottom: none;
 }
 
 .exp-toggle span {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .exp-duration {
+  font: var(--p);
   color: var(--text-muted);
+}
+
+.pispl, .wow-momo, .think-again-lab {
+  font: var(--h2);
+  font-weight: 600;
 }
 
 /* Role-based company coloring */
@@ -346,15 +348,17 @@ main {
   background: var(--bg);
   display: none;
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
-  border-bottom: 1px solid var(--highlight);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-bottom-color: var(--highlight);
 }
 
 .exp-content ol,
 .exp-content ol li {
   list-style: none;
-  color: var(--text-muted);
+  color: var(--text);
   padding: .4em;
-  font-size: 1rem;
+  font: var(--p);
   margin: 0;
   text-align: left;
 }
@@ -411,8 +415,7 @@ main {
 
 .school-name {
   color: var(--text);
-  font-size: 18px;
-  font-weight: bold;
+  font: var(--h2);
   margin: 10px 0;
 }
 

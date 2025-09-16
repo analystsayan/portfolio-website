@@ -11,7 +11,7 @@ aside {
     border-right: 1px solid var(--blur-bg);
     background: var(--bg);
     transition: all 0.3s ease-in-out;
-    z-index: 999;
+    z-index: 1001;
     user-select: none;
 }
 
@@ -150,7 +150,7 @@ aside.closed {
         transform: rotate(180deg);
     }
     #toggle-btn:hover {
-        background: var(--secondary);
+        background: var(--blur-bg);
     }
 
     /* Mini sidebar mode */

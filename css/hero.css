@@ -13,8 +13,8 @@ main {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    gap: 2em;
-    background: var(--bg);
+    gap: var(--space-md);
+    background: var(--bg-dark);
     padding: 0 1em 2em;
 }
 
@@ -29,7 +29,7 @@ main {
 .content {
     width: 100%;
     display: grid;
-    gap: 1em;
+    gap: var(--space-md);
     text-align: justify;
     align-items: start;
     grid-template-columns: 1fr;
@@ -47,20 +47,19 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .5em;
     margin-top: 1em;
+    z-index: 1;
 }
 .content h2 {
-    font-size: 1rem;
+    font: var(--h2);
+    font-weight: 500;
     text-align: center;
-    font-weight: 700;
     white-space: nowrap;
-    color: var(--text);
+    color: var(--secondary);
 }
 .content h1 {
-    font-size: 2rem;
+    font: var(--h1);
     text-align: center;
-    font-weight: 700;
     line-height: 1.2;
     white-space: nowrap;
     background-image: var(--heading);
@@ -78,12 +77,13 @@ main {
     align-items: center;
 }
 .image-wrapper {
-    width: 62%;
+    width: 60%;
     background: var(--bg-light);
     border-radius: var(--radius-lg);
     overflow: hidden;
     outline: 1px solid var(--border);
     transition: all 0.5s ease;
+    z-index: 1;
 }
 .image-wrapper img {
     width: 100%;
@@ -102,16 +102,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: var(--space-md);
 }
 .content p {
     width: 100%;
     text-align: justify;
-    z-index: 33;
-    font-size: 1rem;
-    color: var(--text-muted);
+    z-index: 1;
+    font: var(--p);
+    color: var(--text);
     line-height: 1.4;
-    padding: 0 1em;
+}
+.content-details strong {
+    font-weight: 600;
 }
 
 /* Resume & Socials CTA */
@@ -131,37 +133,38 @@ main {
     align-items: center;
     gap: 1em;
 }
-.social-links a {
-    font-size: 1.2rem;
+.social-links a i {
+    font-size: var(--icon-sm);
     color: var(--text-muted);
     text-decoration: none;
     transition: all 0.3s ease;
 }
-.social-links a:hover {
+.social-links a i:hover {
     color: var(--text);
-    font-size: 1.6rem;
+    font-size: var(--icon-md);
 }
 
 /* Summary Panel ("stats" row) */
 .smry {
-    color: var(--text);
+    color: var(--secondary);
     width: 100%;
     display: grid;
-    gap: 1em;
+    gap: var(--space-md);
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 1em;
+    padding: 0 var(--space-md);
 }
 .smry-div {
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: .5em;
+    gap: var(--space-xxs);
 }
 .smry h3 {
-    font-size: clamp(24px, 10vw, 50px);
+    font: var(--h1);
 }
 .smry p {
-    font-size: clamp(12px, 1.2vw, 24px);
+    font: var(--p2);
+    color: var(--secondary);
 }
 
 /* ------------------------------------------
@@ -173,21 +176,20 @@ main {
         min-height: 100vh;
     }
     /* Decorative blurred blob (very subtle background effect) */
-    .hero:after {
+    #heroSection:after {
         content: "";
         position: absolute;
-        top: 300px;
-        left: 500px;
+        top: 100px;
+        left: 700px;
         width: 322px;
         height: 308px;
         border-radius: 50%;
-        background: var(--bg-light);
         background: -o-linear-gradient(190deg, var(--accent) 0%, rgba(115, 67, 210, 0) 100%);
         background: linear-gradient(260deg, var(--accent) 0%, rgba(115, 67, 210, 0) 100%);
         -webkit-filter: blur(150px);
         filter: blur(150px);
-        z-index: -1;
         display: block;
+        z-index: 0;
     }
 
     /* Hero section switches to two-column grid, with image on right */
@@ -201,38 +203,29 @@ main {
             "box3 box2";
     }
 
-    .content h2 {
-        font-size: clamp(16px, 1.5vw, 28px);
-    }
-    .content h1 {
-        font-size: clamp(30px, 4vw, 55px);
-    }
-    .content p {
-        font-size: clamp(16px, 1vw, 28px);
-        padding: 0;
-    }
-
     .content-heading {
         padding: 0 1em;
         height: 100%;
         justify-content: end;
+        align-items: start;
+        text-align: left;
+    }
+    .content-heading h1, .content-heading h2 {
+        text-align: left;
+        white-space: normal;
     }
     .content-details {
         height: 100%;
-        padding: 0 1em;
+        padding: 0 var(--space-md);
     }
     .content-image {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
+        padding: var(--space-md);
     }
 
     .landing-accent {
         flex-direction: row;
         justify-content: left;
-        gap: 2em;
+        gap: var(--space-md);
     }
     .image-wrapper {
         transform: rotate(5deg);
@@ -244,11 +237,5 @@ main {
     .smry {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-    }
-    .smry h3 {
-        font-size: clamp(24px, 10vw, 50px);
-    }
-    .smry p {
-        font-size: clamp(12px, 1.2vw, 24px);
     }
 }
