@@ -67,6 +67,8 @@ content for elements with the class name "exp-card". Here's a breakdown of what 
 document.querySelectorAll(".exp-card").forEach((card) => {
     const toggleButton = card.querySelector(".exp-toggle");
     const expContent = card.querySelector(".exp-content");
+    const viewMore = card.querySelector("#viewMore");
+    const viewLess = card.querySelector("#viewLess");
 
     // Toggle Experience Content
     toggleButton.addEventListener("click", () => {
@@ -74,9 +76,13 @@ document.querySelectorAll(".exp-card").forEach((card) => {
         if (expContent.style.display === "block") {
             expContent.style.display = "none";
             toggleButton.classList.remove("active");
+            viewLess.style.display = "none";
+            viewMore.style.display = "block";
         } else {
             expContent.style.display = "block";
             toggleButton.classList.add("active");
+            viewMore.style.display = "none";
+            viewLess.style.display = "block";
         }
     });
 });

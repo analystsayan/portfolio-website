@@ -1,8 +1,9 @@
 const experiences = [
     {
         id: "01",
-        company: "Parekh Integrated Services",
-        role: "Data Analyst",
+        logo: "/media/image/company-logo/pispl-logo.png",
+        company: "Parekh",
+        role: "MIS Executive",
         duration: "Jun 2024 - Oct 2024",
         iconClass: "pispl",
         responsibilities: [
@@ -14,8 +15,9 @@ const experiences = [
     },
     {
         id: "02",
-        company: "Wow Momo Foods",
-        role: "Senior Team Member",
+        logo: "/media/image/company-logo/wow-logo.jpg",
+        company: "Wow Momo",
+        role: "Sr. Team Member",
         duration: "Dec 2023 - June 2024",
         iconClass: "wow-momo",
         responsibilities: [
@@ -27,6 +29,7 @@ const experiences = [
     },
     {
         id: "03",
+        logo: "/media/image/company-logo/tal-logo.png",
         company: "Think Again Lab",
         role: "Data Science Intern",
         duration: "Dec 2022 - Mar 2023",
@@ -47,13 +50,20 @@ experiences.forEach((exp) => {
     card.className = "exp-card";
     card.innerHTML = `
         <p class="exp-num">${exp.id}</p>
-        <button class="exp-toggle">
-            <span class="${exp.iconClass}">${exp.company}
-                <svg class="${exp.iconClass}" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-                <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
-                </svg>
-            </span>${exp.role}<br /><div class="exp-duration">${exp.duration}</div>
-        </button>
+        <div class="exp-toggle">
+            <div class="exp-header">
+                <div class="exp-logo" style="background-image: url(${exp.logo});"></div>
+                <div class="exp-info">
+                    <div class="exp-role">${exp.role}</div>
+                    <div class="exp-company">${exp.company}</div>
+                    <div class="exp-duration">${exp.duration}</div>
+                </div>
+            </div>
+            <div class="exp-btn-container">
+                <button id="viewMore" class="exp-btn view-more">More<i class="fa-solid fa-caret-down"></i></button>
+                <button id="viewLess" class="exp-btn view-less">Less<i class="fa-solid fa-caret-up"></i></button>
+            </div>
+        </div>
         <div class="exp-content">
         <ol>
             ${exp.responsibilities.map(item => `<li>${item}</li>`).join("")}

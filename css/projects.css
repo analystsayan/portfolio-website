@@ -81,10 +81,10 @@
     flex-direction: column;
     justify-content: center;
     border-bottom: 1px solid var(--border);
-    transition: all 0.3s ease;
     pointer-events: auto;
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
@@ -118,7 +118,6 @@
 .project-card h3 {
     font: var(--h3);
     color: var(--text);
-    text-decoration: none;
 }
 
 /* Project Card details */
@@ -126,7 +125,6 @@
     margin: 0;
     font: var(--p);
     color: var(--text-muted);
-    text-decoration: none;
 }
 
 /*------------------------------------------
@@ -138,7 +136,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: var(--space-sm);
+    margin: var(--space-sm) 0;
 }
 
 .github-link {

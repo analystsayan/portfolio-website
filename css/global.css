@@ -33,7 +33,7 @@
     --ff-alt: 'Raleway', sans-serif;
     --ff-mono: 'Fira Code', monospace;
     --h1: bold clamp(36px, 4vw, 56px)/1.4 var(--ff);
-    --h2: bold clamp(24px, 3vw, 40px)/1.4 var(--ff);
+    --h2: bold clamp(28px, 3vw, 40px)/1.4 var(--ff);
     --h3: 500 1.2rem/1.4 var(--ff);
     --p: clamp(16px, 1vw, 20px)/1.4 var(--ff);
     --p2: 0.8rem/1.4 var(--ff);

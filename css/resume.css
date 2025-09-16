@@ -42,6 +42,9 @@ main {
 
 /* profile image */
 .profile-image {
+  width: 100%;
+  max-width: 100px;
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +54,8 @@ main {
 }
 
 .profile-image img {
-  max-height: 100px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
 }
 
@@ -65,14 +69,16 @@ main {
 }
 
 .profile-name {
-  font: var(--h1);
+  font: var(--h2);
   font-family: 'Caudex', serif;
   color: var(--text);
+  white-space: nowrap;
 }
 
 .username {
   font: var(--p);
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* Profile button Container  */
@@ -80,9 +86,10 @@ main {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: var(--space-xs);
   margin-top: var(--space-xs);
+  white-space: nowrap;
 }
 
 /* ------------------------------------------
@@ -105,7 +112,7 @@ main {
 
 .bill-board {
   width: 100%;
-  font: var(--h1);
+  font: var(--h2);
   font-family: var(--ff-alt);
   font-weight: 300;
   text-align: left;
@@ -269,80 +276,90 @@ main {
   flex-direction: column;
   overflow: hidden;
 }
-
 .exp-card {
   width: 100%;
 }
-
 /* Experience Number */
 .exp-num {
   font-size: 5rem;
   color: var(--text-muted);
 }
-
 .exp-toggle {
   width: 100%;
   background: var(--bg);
-  border: none;
-  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xxs);
   font: var(--p);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
-  text-align: left;
-  cursor: pointer;
   border: solid 1px var(--border);
   border-radius: var(--radius-sm);
-  padding: var(--space-sm);
-  white-space: nowrap;
-  transition: background 0.3s;
+  padding: var(--space-md) var(--space-xxs);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 .exp-toggle:hover,
 .exp-toggle.active {
   background: var(--bg-light);
 }
-
 .exp-toggle.active {
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   border-bottom: none;
 }
-
-.exp-toggle span {
+.exp-logo {
+  min-width: 3em;
+  aspect-ratio: 1 / 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-right: var(--space-xxs);
+}
+.exp-header {
   display: flex;
   align-items: center;
 }
-
+.exp-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: left;
+}
+.exp-role {
+  font: var(--h3);
+  color: var(--text);
+}
+.exp-company {
+  font: var(--p);
+  font-weight: 600;
+  color: var(--text-muted);
+}
 .exp-duration {
   font: var(--p);
   color: var(--text-muted);
 }
-
-.pispl, .wow-momo, .think-again-lab {
-  font: var(--h2);
-  font-weight: 600;
+.exp-btn {
+  background: var(--bg-light);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+  outline: none;
+  border: solid 1px var(--border);
+  padding: var(--space-xxs) var(--space-md);
+  font: var(--p);
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
-
-/* Role-based company coloring */
-.exp-card .pispl {
-  color: #599bff;
-  fill: #599bff;
-  text-shadow: .8px .8px 0px #000000;
-  filter: drop-shadow(.8px .8px 0px #000000);
+.exp-btn:hover {
+  background: var(--blur-bg);
 }
-
-.exp-card .wow-momo {
-  color: #ff6f00;
-  fill: #ff6f00;
-  text-shadow: .8px .8px 0px #000000;
-  filter: drop-shadow(.8px .8px 0px #000000);
+#viewLess {
+  display: none;
 }
-
-.exp-card .think-again-lab {
-  color: #ffee00;
-  fill: #ffee00;
-  text-shadow: .8px .8px 0px #000000;
-  filter: drop-shadow(.8px .8px 0px #000000);
-}
-
 .exp-content {
   width: 100%;
   background: var(--bg);
@@ -352,7 +369,6 @@ main {
   border-top: none;
   border-bottom-color: var(--highlight);
 }
-
 .exp-content ol,
 .exp-content ol li {
   list-style: none;
@@ -414,17 +430,15 @@ main {
 }
 
 .school-name {
+  font: var(--h3);
   color: var(--text);
-  font: var(--h2);
-  margin: 10px 0;
 }
 
 .course,
 .stream,
 .year {
-  font-size: 14px;
+  font: var(--p);
   color: var(--text-muted);
-  margin: 5px 0;
 }
 
 /* ------------------------------------------
@@ -488,20 +502,16 @@ main {
 }
 
 .achievement-card-title {
-  font-size: 1.3rem;
+  font: var(--h3);
   color: var(--text);
   font-weight: 600;
-  margin-bottom: var(--space-xxs);
 }
 
 .achievement-card-description {
-  font-size: .95rem;
+  font: var(--p);
   color: var(--text-muted);
   list-style: none;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xxs);
 }
 
 /* ------------------------------------------
@@ -569,7 +579,11 @@ main {
   .exp-container {
     flex-direction: row;
     gap: var(--space-sm);
-    padding: 0 var(--space-sm);
+    padding: var(--space-sm);
+  }
+
+  .exp-toggle:hover {
+    transform: scale(1.04);
   }
 
   .school-info-grid {
