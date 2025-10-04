@@ -187,6 +187,34 @@
       </div>
     </section>
 
+    <section id="digitalPortfolio" class="digital-portfolio">
+      <div class="index-heading-container">
+        <h1 class="index-heading">Digital Work</h1>
+        <p class="index-subheading">Portfolio</p>
+      </div>
+
+      <!-- Keep this gallery markup (thumbnails) -->
+      <div class="gallery">
+        <img src="/media/image/digital-portfolio/visiting-card-s4ua-front.png" alt="visiting card front">
+        <img src="/media/image/digital-portfolio/visiting-card-s4ua-back.png" alt="visiting card back">
+        <img src="/media/image/digital-portfolio/arjun-batch-s4ua.png" alt="arjun batch">
+        <img src="/media/image/digital-portfolio/bansher-kella-menu-back-page.jpg" alt="bansher kella menu">
+        <img src="/media/image/digital-portfolio/ssc-mts-special-s4ua.png" alt="ssc mts special">
+        <img src="/media/image/digital-portfolio/wb-ssc-special-batch-s4ua.png" alt="wb ssc special">
+        <img src="/media/image/digital-portfolio/minimal-green-wallpaper-for-pc.png" alt="minimal green wallpaper">
+        <img src="/media/image/digital-portfolio/minimal-dark-wallpaper-eat-code-sleep-repeat.png"
+          alt="minimal dark wallpaper">
+      </div>
+    </section>
+
+    <!-- Fullscreen overlay placed after the section (single image element inside) -->
+    <div id="fullscreenOverlay" class="fullscreen-overlay" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <button class="back-btn" id="backBtn" aria-label="Close image viewer"><i class="fa-solid fa-angle-left"></i> Back</button>
+      <div class="overlay-inner" tabindex="-1">
+        <img id="fullscreenImg" src="" alt="fullscreen view">
+      </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contactSection" class="contact">
       <div class="index-heading-container">
@@ -197,9 +225,9 @@
           <form>
             <div class="form-group">
               <label for="first-name">First Name</label>
-              <input id="first-name" type="text" placeholder="First name" autocomplete="given-name" required/>
+              <input id="first-name" type="text" placeholder="First name" autocomplete="given-name" required />
               <label for="last-name">Last Name</label>
-              <input id="last-name" type="text" placeholder="Last name" autocomplete="family-name" required/>
+              <input id="last-name" type="text" placeholder="Last name" autocomplete="family-name" required />
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
@@ -230,7 +258,7 @@
                 </svg>
               </span>
               <div>
-                <h4>Phone</h4>
+                <h4>Call / Whatsapp</h4>
                 <p>9547254491</p>
               </div>
             </div>
@@ -246,7 +274,7 @@
               </span>
               <div>
                 <h4>Email</h4>
-                <p>analystsayan1@mail.com</p>
+                <p>analystsayan1@gmail.com</p>
               </div>
             </div>
           </a>
