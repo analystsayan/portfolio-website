@@ -113,31 +113,7 @@ strong {
     font-weight: 600;
 }
 
-.digital-portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-dark);
-    padding: var(--space-md) var(--space-sm);
-    gap: var(--space-md);
-}
 
-.digital-portfolio .gallery {
-    columns: 4 160px;
-    line-height: 1.6em;
-    column-gap: .4em;
-}
-
-.digital-portfolio .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-sm);
-    box-shadow: 0 3px 22px 0 rgba(64, 88, 158, 0.10);
-    transition: all 0.3s ease;
-    cursor: zoom-in;
-    display: inline-block;
-}
 
 /* Fullscreen overlay */
 .fullscreen-overlay {

@@ -9,6 +9,10 @@
       "destination": "/projects.html"
     },
     {
+      "source": "/digital-canvas",
+      "destination": "/digital-canvas.html"
+    },
+    {
       "source": "/terms-and-conditions",
       "destination": "/terms-and-conditions.html"
     },
