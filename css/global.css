@@ -5,7 +5,7 @@
 
 :root {
     --bg-dark: oklch(0.08 0.035 264);
-    --bg: oklch(0.16 0.035 264);
+    --bg: oklch(0.16 0.03 264);
     --bg-light: oklch(0.24 0.035 264);
     --text: oklch(0.96 0.08 264);
     --text-muted: oklch(0.66 0.035 264);

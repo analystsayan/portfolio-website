@@ -137,7 +137,7 @@ main {
 
 .knowledge-card {
   padding: var(--space-sm);
-  background: linear-gradient(135deg, var(--bg) 80%, var(--bg-light));
+  background: var(--bg);
   border-radius: var(--radius-sm);
   border: solid 1px var(--border-muted);
   border-bottom-color: var(--highlight);
@@ -147,7 +147,7 @@ main {
 }
 
 .knowledge-card:hover {
-  background: linear-gradient(315deg, var(--bg), var(--bg-light));
+  background: var(--bg-light);
   transform: scale(1);
   border-color: var(--border);
 }
