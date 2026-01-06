@@ -134,14 +134,14 @@ main {
     gap: 1em;
 }
 .social-links a i {
-    font-size: var(--icon-sm);
+    font-size: var(--icon-md);
     color: var(--text-muted);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 .social-links a i:hover {
     color: var(--text);
-    font-size: var(--icon-md);
+    font-size: var(--icon-lg);
 }
 
 /* Summary Panel ("stats" row) */
